@@ -1,0 +1,882 @@
+[
+    {
+        "question": "Question1",
+        "question_paragraph": "Where does the swap space reside?",
+        "options": [
+            "RAM",
+            "Disk",
+            "ROM",
+            "On-chip cache"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "The Boolean function with the Karnaugh mapis:",
+        "options": [
+            "(A+C).D+B",
+            "(A+B).C+D",
+            "(A+D).C+B",
+            "(A+C).B+D"
+        ],
+        "image_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/q6.png"
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "The amount of ROM needed to implement a 4 bit multiplier is",
+        "options": [
+            "64 bits",
+            "128 bits",
+            "1 Kbits",
+            "2 Kbits"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "In a k-way set associative cache, the cache is divided into v sets, each of which consists of k lines. The lines of a set are placed in sequence one after another. The lines in set s are sequenced before the lines in set (s+1). The main memory blocks are numbered 0 onwards. The main memory block numbered j must be mapped to any one of the cache lines from.",
+        "options": [
+            "(j mod v) * k to (j mod v) * k + (k-1)",
+            "(j mod v) to (j mod v) + (k-1)",
+            "(j mod k) to (j mod k) + (v-1)",
+            "(j mod k) * v to (j mod k) * v + (v-1)"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "Consider the following sequence of micro-operations.MBR \u2190 PC \r\n     MAR \u2190 X  \r\n     PC \u2190 Y  \r\n     Memory \u2190 MBRWhich one of the following is a possible operation performed by this sequence?",
+        "options": [
+            "Instruction fetch",
+            "Operand fetch",
+            "Conditional branch",
+            "Initiation of interrupt service"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Consider an instruction pipeline with five stages without any branch prediction: Fetch Instruction (FI), Decode Instruction (DI), Fetch Operand (FO), Execute Instruction (EI) and Write Operand (WO). The stage delays for FI, DI, FO, EI and WO are 5 ns, 7 ns, 10 ns, 8 ns and 6 ns, respectively. There are intermediate storage buffers after each stage and the delay of each buffer is 1 ns. A program consisting of 12 instructions I1, I2, I3, \u2026, I12 is executed in this pipelined processor. Instruction I4 is the only branch instruction and its branch target is I9. If the branch is taken during the execution of this program, the time (in ns) needed to complete the program is",
+        "options": [
+            "132",
+            "165",
+            "176",
+            "328"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "A RAM chip has a capacity of 1024 words of 8 bits each (1K \u00d7 8). The number of 2 \u00d7 4 decoders with enable line needed to construct a 16K \u00d7 16 RAM from 1K \u00d7 8 RAM is",
+        "options": [
+            "4",
+            "5",
+            "6",
+            "7"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "The following code segment is executed on a processor which allows only register operands in its instructions. Each instruction can have atmost two source operands and one destination operand. Assume that all variables are dead after this code segment.c = a + b;\r\n   d = c * a;\r\n   e = c + a;\r\n   x = c * c;\r\n   if (x > a) {\r\n      y = a * a;\r\n   }\r\n   else {\r\n     d = d * d;\r\n     e = e * e;\r\n  }Suppose the instruction set architecture of the processor has only two registers. The only allowed compiler optimization is code motion, which moves statements from one place to another while preserving correctness. What is the minimum number of spills to memory in the compiled code?",
+        "options": [
+            "0",
+            "1",
+            "2",
+            "3"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "Consider the same data asabove question. What is the minimum number of registers needed in the instruction set architecture of the processor to compile this code segment without any spill to memory? Do not apply any optimization other than optimizing register allocation.",
+        "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "A computer has a 256 KByte, 4-way set associative, write back data cache with block size of 32 Bytes. The processor sends 32 bit addresses to the cache controller. Each cache tag directory entry contains, in addition to address tag, 2 valid bits, 1 modified bit and 1 replacement bit.\r\nThe number of bits in the tag field of an address is",
+        "options": [
+            "11",
+            "14",
+            "16",
+            "27"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question11",
+        "question_paragraph": "Register renaming is done in pipelined processors",
+        "options": [
+            "as an alternative to register allocation at compile time",
+            "for efficient access to function parameters and local variables",
+            "to handle certain kinds of hazards",
+            "as part of address translation"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question12",
+        "question_paragraph": "Consider the data given inprevious question. The size of the cache tag directory is",
+        "options": [
+            "160 Kbits",
+            "136 bits",
+            "40 Kbits",
+            "32 bits"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question13",
+        "question_paragraph": "Consider a hypothetical processor with an instruction of type LW R1, 20(R2), which during execution reads a 32-bit word from memory and stores it in a 32-bit register R1. The effective address of the memory location is obtained by the addition of a constant 20 and the contents of register R2. Which of the following best reflects the addressing mode implemented by this instruction for operand in memory?",
+        "options": [
+            "Immediate Addressing",
+            "Register Addressing",
+            "Register Indirect Scaled Addressing",
+            "Base Indexed Addressing"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question14",
+        "question_paragraph": "On a non-pipelined sequential processor, a program segment, which is a part of the interrupt service routine, is given to transfer 500 bytes from an I/O device to memory.",
+        "options": [
+            "3.4",
+            "4.4",
+            "5.1",
+            "6.7"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question15",
+        "question_paragraph": "Consider evaluating the following expression tree on a machine with load-store architecture in which memory can be accessed only through load and store instructions. The variables a, b, c, d and e initially stored in memory. The binary operators used in this expression tree can be evaluate by the machine only when the operands are in registers. The instructions produce results only in a register. If no intermediate results can be stored in memory, what is the minimum number of registers needed to evaluate this expression?",
+        "options": [
+            "2",
+            "9",
+            "5",
+            "3"
+        ],
+        "image_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/Tree_gate_cs_2011.jpg"
+    },
+    {
+        "question": "Question16",
+        "question_paragraph": "Consider an instruction pipeline with four stages (S1, S2, S3 and S4) each with combinational circuit only. The pipeline registers are required between each stage and at the end of the last stage. Delays for the stages and for the pipeline registers are as given in the figure:What is the approximate speed up of the pipeline in steady state under ideal conditions when compared to the corresponding non-pipeline implementation?",
+        "options": [
+            "4.0",
+            "2.5",
+            "1.1",
+            "3.0"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2013/12/GATECS2011Q41.png"
+    },
+    {
+        "question": "Question17",
+        "question_paragraph": "An 8KB direct-mapped write-back cache is organized as multiple blocks, each of size 32-bytes. The processor generates 32-bit addresses. The cache controller maintains the tag information for each cache block comprising of the following.\r\n                1 Valid bit\r\n                1 Modified bit\r\nAs many bits as the minimum needed to identify the memory block mapped in the cache. What is the total size of memory needed at the cache controller to store meta-data (tags) for the cache?",
+        "options": [
+            "4864 bits",
+            "6144 bits",
+            "6656 bits",
+            "5376 bits"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question18",
+        "question_paragraph": "A main memory unit with a capacity of 4 megabytes is built using 1M \u00d7 1-bit DRAM chips. Each DRAM chip has 1K rows of cells with 1K cells in each row. The time taken for a single refresh operation is 100 nanoseconds. The time required to perform one refresh operation on all the cells in the memory unit is:-A.100 nanosecondsB.100\u00d7210nanosecondsC.100\u00d7220nanosecondsD.3200\u00d7220nanoseconds",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question19",
+        "question_paragraph": "A 5-stage pipelined processor has Instruction Fetch(IF),Instruction Decode(ID),Operand Fetch(OF),Perform Operation(PO)and Write Operand(WO)stages.The IF,ID,OF and WO stages take 1 clock cycle each for any instruction.The PO stage takes 1 clock cycle for ADD and SUB instructions,3 clock cycles for MUL instruction,and 6 clock cycles for DIV instruction respectively.Operand forwarding is used in the pipeline.What is the number of clock cycles needed to execute the following sequence of instructions?Instruction           Meaning of instruction\r\n  I0 :MUL R2 ,R0 ,R1\t      R2 \u00ac R0 *R1\r\n  I1 :DIV R5 ,R3 ,R4  \t      R5 \u00ac R3/R4\r\n  I2 :ADD R2 ,R5 ,R2\t      R2 \u00ac R5+R2\r\n  I3 :SUB R5 ,R2 ,R6\t      R5 \u00ac R2-R6",
+        "options": [
+            "13",
+            "15",
+            "17",
+            "19"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question20",
+        "question_paragraph": "The program below uses six temporary variables a, b, c, d, e, f.",
+        "options": [
+            "2",
+            "3",
+            "4",
+            "6"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question21",
+        "question_paragraph": "A computer system has an L1 cache, an L2 cache, and a main memory unit connected as shown below. The block\u00a0size in L1 cache is 4 words. The block\u00a0size in L2 cache is 16 words. The memory access times are 2 nanoseconds. 20 nanoseconds and 200 nanoseconds for L1 cache, L2 cache and main memory unit respectively.When there is a miss in L1 cache and a hit in L2 cache, a block is transferred from L2 cache to L1 cache. What is the time taken for this transfer?",
+        "options": [
+            "2 nanoseconds",
+            "20 nanoseconds",
+            "22 nanoseconds",
+            "88 nanoseconds"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2013/12/CSE_201048.gif"
+    },
+    {
+        "question": "Question22",
+        "question_paragraph": "Consider the data fromabove question. When there is a miss in both L1 cache and L2 cache, first a block is transferred from main memory to L2 cache, and then a block is transferred from L2 cache to L1 cache. What is the total time taken for these transfers?",
+        "options": [
+            "222 nanoseconds",
+            "888 nanoseconds",
+            "902 nanoseconds",
+            "968 nanoseconds"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question23",
+        "question_paragraph": "How many 32K x 1 RAM chips are needed to provide a memory capacity of 256K-bytes?",
+        "options": [
+            "8",
+            "32",
+            "64",
+            "128"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question24",
+        "question_paragraph": "Consider a 4 stage pipeline processor. \u00a0 The number\u00a0of cycles needed by the four\u00a0instructions I1, I2, I3, I4 in stages S1, S2, S3, S4 is shown below:S1S2S3S4I12111I21322I32113I41222What is the number of cycles needed to execute the following loop?\r\nFor (i=1 to 2) {I1; I2; I3; I4;}",
+        "options": [
+            "16",
+            "23",
+            "28",
+            "30"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question25",
+        "question_paragraph": "Consider a 4-way set associative cache (initially empty) with total 16 cache blocks. The main memory consists of 256 blocks and the request for memory blocks is in the following order:\r\n\r\n0, 255, 1, 4, 3, 8, 133, 159, 216, 129, 63, 8, 48, 32, 73, 92, 155.\r\n\r\nWhich one of the following memory block will NOT be in cache if LRU replacement policy is used?",
+        "options": [
+            "3",
+            "8",
+            "129",
+            "216"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question26",
+        "question_paragraph": "Which of the following is/are true of the auto-increment addressing mode?I.  It is useful in creating self-relocating code.\r\nII. If it is included in an Instruction Set Architecture, \r\n    then an additional ALU is required for effective address \r\n    calculation.\r\nIII.The amount of increment depends on the size of the data\r\n     item accessed.",
+        "options": [
+            "I only",
+            "II only",
+            "III Only",
+            "II and III only"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question27",
+        "question_paragraph": "Which of the following must be true for the RFE (Return from Exception) instruction on a general purpose processor?I.   It must be a trap instruction\r\nII.  It must be a privileged instruction\r\nIII. An exception cannot be allowed to occur during \r\n     execution of an RFE instruction",
+        "options": [
+            "I only",
+            "II only",
+            "I and II only",
+            "I, II and III only"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question28",
+        "question_paragraph": "For inclusion to hold between two cache levels L1 and L2 in a multi-level cache hierarchy, which of the following are necessary?I. L1 must be a write-through cache\r\nII. L2 must be a write-through cache\r\nIII. The associativity of L2 must be greater than that of L1\r\nIV. The L2 cache must be at least as large as the L1 cache",
+        "options": [
+            "IV only",
+            "I and IV only",
+            "I, III and IV only",
+            "I, II, III and IV"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question29",
+        "question_paragraph": "Which of the following are NOT true in a pipelined processor?I.  Bypassing can handle all RAW hazards.\r\nII. Register renaming can eliminate all register \r\n    carried WAR hazards.\r\nIII. Control hazard penalties can be eliminated by \r\n     dynamic branch prediction.",
+        "options": [
+            "I and II only",
+            "I and III only",
+            "II and III only",
+            "I, II and III"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question30",
+        "question_paragraph": "The use of multiple register windows with overlap causes a reduction in the number of memory accesses for",
+        "options": [
+            "I only",
+            "II only",
+            "III only",
+            "I, II and III"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question31",
+        "question_paragraph": "In an instruction execution pipeline, the earliest that the data TLB (Translation Lookaside Buffer) can be accessed is",
+        "options": [
+            "before effective address calculation has started",
+            "during effective address calculation",
+            "after effective address calculation has completed",
+            "after data cache lookup has completed"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question32",
+        "question_paragraph": "Consider a machine with a 2-way set associative data cache of size 64 Kbytes and block size 16 bytes. The cache is managed using 32 bit virtual addresses and the page size is 4 Kbytes. A program to be run on this machine begins as follows:",
+        "options": [
+            "32 Kbits",
+            "34 Kbits",
+            "64 Kbits",
+            "68 Kbits"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question33",
+        "question_paragraph": "The cache hit ratio for this initialization loop is",
+        "options": [
+            "0%",
+            "25%",
+            "50%",
+            "75%"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question34",
+        "question_paragraph": "Consider a 4-way set associative cache consisting of 128 lines with a line size of 64 words. The CPU generates a 20-bit address of a word in main memory. The number of bits in the TAG, LINE and WORD fields arerespectively:",
+        "options": [
+            "9,6,5",
+            "7, 7, 6",
+            "7, 5, 8",
+            "9, 5, 6"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question35",
+        "question_paragraph": "Consider a pipelined processor with the following four stages:IF: Instruction Fetch\r\nID: Instruction Decode and Operand Fetch\r\nEX: Execute\r\nWB: Write BackThe IF, ID and WB stages take one clock cycle each to complete the operation. The number of clock cycles for the EX stage dependson the instruction. The ADD and SUB instructions need 1 clock cycle and the MUL instruction needs 3 clock cycles in the EX stage. Operand forwarding is used in the pipelined processor. What is the number of clock cycles taken to complete the following sequence of instructions?ADD R2, R1, R0       R2 <- R0 + R1\r\nMUL R4, R3, R2       R4 <- R3 * R2\r\nSUB R6, R5, R4       R6 <- R5 - R4",
+        "options": [
+            "7",
+            "8",
+            "10",
+            "14"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question36",
+        "question_paragraph": "Consider the following program segment. Here R1, R2 and R3 are the general purpose registers.Assume that the content of memory location 3000 is 10 and the content of the register R3 is 2000. The content of each of the memory locations from 2000 to 2010 is 100. The program is loaded from the memory location 1000. All the numbers are in decimal. Assume that the memory is word addressable. The number of memory references for accessing the data in executing the program completely is:",
+        "options": [
+            "10",
+            "11",
+            "20",
+            "21"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2014/02/GATECS200771.png"
+    },
+    {
+        "question": "Question37",
+        "question_paragraph": "Consider the data given in above question. Assume that the memory is word addressable. After the execution of this program, the content of memory location 2010 is:",
+        "options": [
+            "100",
+            "101",
+            "102",
+            "110"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question38",
+        "question_paragraph": "Consider the data given in above questions. Assume that the memory is byte addressable and the word size is 32 bits. If an interrupt occurs during the execution of the instruction \u201cINC R3\u201d, what return address will be pushed on to the stack?",
+        "options": [
+            "1005",
+            "1020",
+            "1024",
+            "1040"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question39",
+        "question_paragraph": "Consider a machine with a byte addressable main memory of 216bytes. Assume that a direct mapped data cache consisting of 32 lines of 64 bytes each is used in the system. A 50 \u00d7 50 two-dimensional array of bytes is stored in the main memory starting from memory location 1100H. Assume that the data cache is initially empty. The complete array is accessed twice. Assume that the contents of the data cache do not change in between the two accesses.\r\nHow many data cache misses will occur in total?",
+        "options": [
+            "40",
+            "50",
+            "56",
+            "59"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question40",
+        "question_paragraph": "Consider the data given in above question.\r\n\r\nWhich of the following lines of the data cache will be replaced by new blocks in accessing the array for the second time?",
+        "options": [
+            "line 4 to line 11",
+            "line 4 to line 12",
+            "line 0 to line 7",
+            "line 0 to line 8"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question41",
+        "question_paragraph": "A CPU has 24-bit instructions. A program starts at address 300 (in decimal). Which one of the following is a legal program counter (all values in decimal)?",
+        "options": [
+            "400",
+            "500",
+            "600",
+            "700"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question42",
+        "question_paragraph": "A machine has a 32-bit architecture, with 1-word long instructions. It has 64 registers, each of which is 32 bits long. It needs to support 45 instructions, which have an immediate operand in addition to two register operands. Assuming that the immediate operand is an unsigned integer, the maximum value of the immediate operand is ____________.",
+        "options": [
+            "16383",
+            "16338",
+            "16388",
+            "16484"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question43",
+        "question_paragraph": "Consider a 6-stage instruction pipeline, where all stages are perfectly balanced. Assume that there is no cycle-time overhead of pipelining. When an application is executing on this 6-stage pipeline, the speedup achieved with respect to non-pipelined execution if 25% of the instructions incur 2 pipeline stall cycles is",
+        "options": [
+            "4",
+            "8",
+            "6",
+            "7"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question44",
+        "question_paragraph": "A 4-way set-associative cache memory unit with a capacity of 16 KB is built using a block size of 8 words. The word length is 32 bits. The size of the physical address space is 4 GB. The number of bits for the TAG field is _____",
+        "options": [
+            "5",
+            "15",
+            "20",
+            "25"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question45",
+        "question_paragraph": "In designing a computer\u2019s cache system, the cache block (or cache line) size is an important parameter. Which one of the following statements is correct in this context?",
+        "options": [
+            "A smaller block size implies better spatial locality",
+            "A smaller block size implies a smaller cache tag and hence lower cache tag overhead",
+            "A smaller block size implies a larger cache tag and hence lower cache hit time",
+            "A smaller block size incurs a lower cache miss penalty"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question46",
+        "question_paragraph": "If the associativity of a processor cache is doubled while keeping the capacity and block size unchanged, which one of the following is guaranteed to be NOT affected?",
+        "options": [
+            "Width of tag comparator",
+            "Width of set index decoder",
+            "Width of way selection multiplexer",
+            "Width of processor to main memory data bus"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question47",
+        "question_paragraph": "Consider a main memory system that consists of 8 memory modules attached to the system bus, which is one word wide. When a write request is made, the bus is occupied for 100 nanoseconds (ns) by the data, address, and control signals. During the same 100 ns, and for 500 ns thereafter, the addressed memory module executes one cycle accepting and storing the data. The (internal) operation of different memory modules may overlap in time, but only one request can be on the bus at any time. The maximum number of stores (of one word each) that can be initiated in 1 millisecond is ____________",
+        "options": [
+            "1000",
+            "10000",
+            "100000",
+            "100"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question48",
+        "question_paragraph": "Consider the following processors (ns stands for nanoseconds). Assume that the pipeline registers have zero latency.P1: Four-stage pipeline with stage \r\n    latencies 1 ns, 2 ns, 2 ns, 1 ns.\r\nP2: Four-stage pipeline with stage \r\n    latencies 1 ns, 1.5 ns, 1.5 ns, 1.5 ns.\r\nP3: Five-stage pipeline with stage \r\n    latencies 0.5 ns, 1 ns, 1 ns, 0.6 ns, 1 ns.\r\nP4: Five-stage pipeline with stage \r\n    latencies 0.5 ns, 0.5 ns, 1 ns, 1 ns, 1.1 ns.Which processor has the highest peak clock frequency?",
+        "options": [
+            "P1",
+            "P2",
+            "P3",
+            "P4"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question49",
+        "question_paragraph": "An instruction pipeline has five stages, namely, instruction fetch (IF), instruction decode and register fetch (ID/RF), instruction execution (EX), memory access (MEM), and register writeback (WB) with stage latencies 1 ns, 2.2 ns, 2 ns, 1 ns, and 0.75 ns, respectively (ns stands for nanoseconds). To gain in terms of frequency, the designers have decided to split the ID/RF stage into three stages (ID, RF1, RF2) each of latency 2.2/3 ns. Also, the EX stage is split into two stages (EX1, EX2) each of latency 1 ns. The new design has a total of eight pipeline stages. A program has 20% branch instructions which execute in the EX stage and produce the next instruction pointer at the end of the EX stage in the old design and at the end of the EX2 stage in the new design. The IF stage stalls after fetching a branch instruction until the next instruction pointer is computed. All instructions other than the branch instruction have an average CPI of one in both the designs. The execution times of this program on the old and the new design are P and Q nanoseconds, respectively. The value of P/Q is __________.",
+        "options": [
+            "1.5",
+            "1.4",
+            "1.8",
+            "2.5"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question50",
+        "question_paragraph": "A CPU has a cache with block size 64 bytes. The main memory has k banks, each bank being c bytes wide. Consecutive c \u2212 byte chunks are mapped on consecutive banks with wrap-around. All the k banks can be accessed in parallel, but two accesses to the same bank must be serialized. A cache block access may involve multiple iterations of parallel bank accesses depending on the amount of data obtained by accessing all the k banks in parallel. Each iteration requires decoding the bank numbers to be accessed in parallel and this takes. k/2 ns The latency of one bank access is 80 ns. If c = 2 and k = 24, the latency of retrieving a cache block starting at address zero from main memory is:",
+        "options": [
+            "92 ns",
+            "104 ns",
+            "172 ns",
+            "184 ns"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question51",
+        "question_paragraph": "A CPU has a five-stage pipeline and runs at 1 GHz frequency. Instruction fetch happens in the first stage of the pipeline. A conditional branch instruction\r\ncomputes the target address and evaluates the condition in the third stage of the pipeline. The processor stops fetching new instructions following a conditional branch until the branch outcome is known. A program executes 109instructions out of which 20% are conditional branches. If each instruction takes one cycle to complete on average, the total execution time of the program is:",
+        "options": [
+            "1.0 second",
+            "1.2 seconds",
+            "1.4 seconds",
+            "1.6 seconds"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question52",
+        "question_paragraph": "Consider two cache organizations: The first one is 32 KB 2-way set associative with 32-byte block size. The second one is of the same size but direct mapped. The size of an address is 32 bits in both cases. A 2-to-1 multiplexer has a latency of 0.6 ns while a kbit comparator has a latency of k/10 ns. The hit latency of the set associative organization is h1 while that of the direct mapped one is h2. The value of h1 is:",
+        "options": [
+            "2.4 ns",
+            "2.3 ns",
+            "1.8 ns",
+            "1.7 ns"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question53",
+        "question_paragraph": "Consider two cache organizations: The first one is 32 KB 2-way set associative with 32-byte block size. The second one is of the same size but direct mapped. The size of an address is 32 bits in both cases. A 2-to-1 multiplexer has a latency of 0.6 ns while a kbit comparator has a latency of k/10 ns. The hit latency of the set associative organization is h1 while that of the direct mapped one is h2. The value of h1 is:",
+        "options": [
+            "2.4 ns",
+            "2.3",
+            "1.8",
+            "1.7"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question54",
+        "question_paragraph": "A CPU has a 32 KB direct mapped cache with 128-byte block size. Suppose A is a twodimensional array of size 512\u00d7512 with elements that occupy 8-bytes each. Consider the following two C code segments, P1 and P2.\r\nP1:Cfor(i=0;i<512;i++){for(j=0;j<512;j++){x+=A[i][j];}}P2:Cfor(i=0;i<512;i++){for(j=0;j<512;j++){x+=A[j][i];}}P1 and P2 are executed independently with the same initial state, namely, the array A is not in the cache and i, j, x are in registers. Let the number of cache misses experienced by P1 be M1 and that for P2 be M2 .\r\n\r\nThe value of M1 is:",
+        "options": [
+            "0",
+            "2048",
+            "16384",
+            "262144"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question55",
+        "question_paragraph": "A CPU has a 32 KB direct mapped cache with 128-byte block size. Suppose A is a twodimensional array of size 512\u00d7512 with elements that occupy 8-bytes each. Consider the following two C code segments, P1 and P2.\r\nP1:Cfor(i=0;i<512;i++){for(j=0;j<512;j++){x+=A[i][j];}}P2:Cfor(i=0;i<512;i++){for(j=0;j<512;j++){x+=A[j][i];}}P1 and P2 are executed independently with the same initial state, namely, the array A is not in the cache and i, j, x are in registers. Let the number of cache misses experienced by P1 be M1 and that for P2 be M2 .\r\n\r\nThe value of the ratio M1/M2 is:",
+        "options": [
+            "0",
+            "1/16",
+            "1/8",
+            "16"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question56",
+        "question_paragraph": "Which one of the following is true for a CPU having a single interrupt request line and a single interrupt grant line?",
+        "options": [
+            "Neither vectored interrupt nor multiple interrupting devices are possible.",
+            "Vectored interrupts are not possible but multiple interrupting devices are possible.",
+            "Vectored interrupts and multiple interrupting devices are both possible.",
+            "Vectored interrupt is possible but multiple in\u00adterrupting devices are not possible."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question57",
+        "question_paragraph": "Consider a three word machine instructionADD A[R0], @ BThe first operand (destination) \"A [R0]\" uses indexed addressing mode with R0 as the index register. The second operand (source) \"@ B\" uses indirect addressing mode. A and B are memory addresses residing at the second and the third words, respectively. The first word of the instruction specifies the opcode, the index register designation and the source and destination addressing modes. During execution of ADD instruction, the two operands are added and stored in the destination (first operand).\r\nThe number of memory cycles needed during the execution cycle of the instruction is",
+        "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question58",
+        "question_paragraph": "Match each of the high level language statements given on the left hand side with the most natural addressing mode from those listed on the right hand side.1 A[1] = B[J];\t     a Indirect addressing\r\n 2 while [*A++];     b Indexed, addressing\r\n 3 int temp = *x;    c Autoincrement",
+        "options": [
+            "(1, c), (2, b), (3, a)",
+            "(1, a), (2, c), (3, b)",
+            "(1, b), (2, c), (3, a)",
+            "(1, a), (2, b), (3, c)"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question59",
+        "question_paragraph": "Consider a direct mapped cache of size 32 KB with block size 32 bytes. The CPU generates 32 bit addresses. The number of bits needed for cache indexing and the number of tag bits are respectively",
+        "options": [
+            "10, 17",
+            "10, 22",
+            "15, 17",
+            "5, 17"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question60",
+        "question_paragraph": "A 5 stage pipelined CPU has the following sequence of stages:",
+        "options": [
+            "8",
+            "10",
+            "12",
+            "15"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question61",
+        "question_paragraph": "Consider the following data path of a CPU.",
+        "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "image_link": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2014/09/GATECS2005Q78.png"
+    },
+    {
+        "question": "Question62",
+        "question_paragraph": "Consider a machine with byte addressable memory of 2^32 bytes divided into blocks of size 32 bytes. Assume a 2-set associative cache having 512 cache lines is used with this machine. The size of tag field in bits is _____",
+        "options": [
+            "18",
+            "16",
+            "19",
+            "21"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question63",
+        "question_paragraph": "A 4-stage pipeline has the stage delays as 150, 120, 160 and 140 nanoseconds respectively. Registers that are used between the stages have a delay of 5 nanoseconds each. Assuming constant clocking rate, the total time taken to process 1000 data items on this pipeline will be",
+        "options": [
+            "120.4 microseconds",
+            "160.5 microseconds",
+            "165.5 microseconds",
+            "590.0 microseconds"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question64",
+        "question_paragraph": "For a pipelined CPU with a single ALU, consider the following situations1. The j + 1-st instruction uses the result of the j-th instruction\r\n    as an operand\r\n2. The execution of a conditional jump instruction\r\n3. The j-th and j + 1-st instructions require the ALU at the same \r\n   timeWhich of the above can cause a hazard ?",
+        "options": [
+            "1 and 2 only",
+            "2 and 3 only",
+            "3 only",
+            "All of above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question65",
+        "question_paragraph": "The performance of a pipelined processor suffers if :",
+        "options": [
+            "the pipeline stages have different delays",
+            "consecutive instructions are dependent on each other",
+            "the pipeline stages share hardware resources",
+            "all of the above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question66",
+        "question_paragraph": "More than one word are put in one cache block to",
+        "options": [
+            "exploit the temporal locality of reference in a program",
+            "exploit the spatial locality of reference in a program",
+            "reduce the miss penalty",
+            "none of the above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question67",
+        "question_paragraph": "Consider the following data path of a simple non-pilelined CPU. The registers A, B, A1, A2, MDR, the bus and the ALU are 8-bit wide. SP and MAR are 16-bit registers. The MUX is of size 8 \u00d7 (2:1) and the DEMUX is of size 8 \u00d7 (1:2). Each memory operation takes 2 CPU clock cycles and uses MAR (Memory Address Register) and MDR (Memory Date Register). SP can be decremented locally.",
+        "options": [
+            "1",
+            "3",
+            "4",
+            "5"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question68",
+        "question_paragraph": "Comparing the time T1 taken for a single instruction on a pipelined CPU with time T2 taken on a non\u00ad pipelined but identical CPU, we can say that",
+        "options": [
+            "T1 <= T2",
+            "T1 >= T2",
+            "T1 < T2",
+            "T1 is T2 plus the time taken for one instruction fetch cycle"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question69",
+        "question_paragraph": "The most appropriate matching for the following pairsX: Indirect addressing            1 : Loops\r\n\r\nY: Immediate addressing           2 : Pointers\r\n\r\nZ: Auto decrement addressing      3: Constantsis",
+        "options": [
+            "X-3, Y-2, Z-1",
+            "X-I, Y-3, Z-2",
+            "X-2, Y-3, Z-1",
+            "X-3, Y-l, Z-2"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question70",
+        "question_paragraph": "For computers based on three-address instruction formats, each address field can be used to specify which of the following:S1: A memory operand\r\nS2: A processor register\r\nS3: An implied accumulator register",
+        "options": [
+            "Either S1 or S2",
+            "Either S2 or S3",
+            "Only S2 and S3",
+            "All of S1, S2 and S3"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question71",
+        "question_paragraph": "Consider a non-pipelined processor with a clock rate of 2.5 gigahertz and average cycles per instruction of four. The same processor is upgraded to a pipelined processor with five stages; but due to the internal pipeline delay, the clock speed is reduced to 2 gigahertz. Assume that there are no stalls in the pipeline. The speed up achieved in this pipelined processor is __________.",
+        "options": [
+            "3.2",
+            "3.0",
+            "2.2",
+            "2.0"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question72",
+        "question_paragraph": "The least number of temporary variables required to create a three-address code in static single assignment form for the expression q + r/3 + s \u2013 t * 5 + u * v/w is",
+        "options": [
+            "4",
+            "8",
+            "7",
+            "9"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question73",
+        "question_paragraph": "Assume that for a certain processor, a read request takes 50 nanoseconds on a cache miss and 5 nanoseconds on a cache hit. Suppose while running a program, it was observed that 80% of the processor\u2019s read requests result in a cache hit. The average read access time in nanoseconds is____________.",
+        "options": [
+            "10",
+            "12",
+            "13",
+            "14"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question74",
+        "question_paragraph": "Consider a processor with byte-addressable memory. Assume that all registers, including Program Counter (PC) and Program Status Word (PSW), are of size 2 bytes. A stack in the main memory is implemented from memory location (0100)16and it grows upward. The stack pointer (SP) points to the top element of the stack. The current value of SP is (016E)16. The CALL  instruction is of two words, the first word is the op-code and the second word is the starting address of the subroutine (one word = 2 bytes). The CALL instruction is implemented as follows:\u2022 Store the current value of PC in the stack.\r\n   \u2022 Store the value of PSW register in the stack.\r\n   \u2022 Load the starting address of the subroutine in PC.The content of PC just before the fetch of a CALL instruction is (5FA0)16. After execution of the CALL instruction, the value of the stack pointer isA.(016A)16B.(016C)16C.(0170)16D.(0172)16",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question75",
+        "question_paragraph": "Consider the sequence of machine instructions given below:",
+        "options": [
+            "11",
+            "12",
+            "13",
+            "14"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question76",
+        "question_paragraph": "Consider a machine with a byte addressable main memory of 220bytes, block size of 16 bytes and a direct mapped cache having 212cache lines. Let the addresses of two consecutive bytes in main memory be (E201F)16and (E2020)16. What are the tag and cache line address (in hex) for main memory address (E201F)16?",
+        "options": [
+            "E, 201",
+            "F, 201",
+            "E, E20",
+            "2, 01F"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question77",
+        "question_paragraph": "Consider the following code sequence having five instructions I1 to I5. Each of these instructions has the following format.OP Ri, Rj, Rkwhere operation OP is performed on contents of registers Rj and Rk and the result is stored in register Ri.I1 : ADD R1, R2, R3\r\n   I2 : MUL R7, R1, R3\r\n   I3 : SUB R4, R1, R5\r\n   I4 : ADD R3, R2, R4\r\n   I5 : MUL R7, R8, R9Consider the following three statements:S1: There is an anti-dependence between instructions I2 and I5.\r\nS2: There is an anti-dependence between instructions I2 and I4.\r\nS3: Within an instruction pipeline an anti-dependence always \r\n    creates one or more stalls.Which one of above statements is/are correct?",
+        "options": [
+            "Only S1 is true",
+            "Only S2 is true",
+            "Only S1 and S2 are true",
+            "Only S2 and S3 are true"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question78",
+        "question_paragraph": "Consider the following reservation table for a pipeline having three stages S1, S2 and S3.Time -->\r\n-----------------------------\r\n      1    2   3    4     5\r\n-----------------------------\r\nS1  | X  |   |   |    |  X |    \r\nS2  |    | X |   | X  |    |\r\nS3  |    |   | X |    |    |The minimum average latency (MAL) is __________",
+        "options": [
+            "3",
+            "2",
+            "1",
+            "4"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question79",
+        "question_paragraph": "What is the minimum size of ROM required to store the complete truth table of an 8-bit x 8-bit multiplier?",
+        "options": [
+            "32 K x 16 bits",
+            "64 K x 16 bits",
+            "16 K x 32 bits",
+            "64 K x 32 bits"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question80",
+        "question_paragraph": "Consider a system with 2 level caches. Access times of Level 1 cache, Level 2 cache and main memory are 1 ns, 10ns, and 500 ns, respectively. The hit rates of Level 1 and Level 2 caches are 0.8 and 0.9, respectively. What is the average access time of the system ignoring the search time within the cache?",
+        "options": [
+            "13.0 ns",
+            "12.8 ns",
+            "12.6 ns",
+            "12.4 ns"
+        ],
+        "image_link": null
+    }
+]

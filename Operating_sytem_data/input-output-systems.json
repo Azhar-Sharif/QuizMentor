@@ -1,0 +1,765 @@
+[
+    {
+        "question": "Question1",
+        "question_paragraph": "Which of the following is major part of time taken when accessing data on the disk?",
+        "options": [
+            "Settle time",
+            "Rotational latency",
+            "Seek time",
+            "Waiting time"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "We describe a protocol of input device communication below. \r\na. Each device has a distinct address \r\nb. The bus controller scans each device  in sequence of increasing address value to determine if the entity wishes to communicate. \r\nc. The device ready to communicate leaves it data in IO register. \r\nd. The data is picked up and the controller moves to step-a above. \r\n       \r\nIdentify the form of communication best describes the IO mode amongst the following:\r\n\r\nSource:nptel",
+        "options": [
+            "Programmed mode of data transfer",
+            "DMA",
+            "Interrupt mode",
+            "Polling"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "From amongst the following given scenarios determine the right one to justify interrupt mode of data-transfer: \r\nSource:nptel",
+        "options": [
+            "Bulk transfer of several kilo-byte",
+            "Moderately large data transfer but more that 1 KB",
+            "Short events like mouse action",
+            "Key board inputs"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "Normally user programs are prevented from handling I/O directly by I/O instructions in them. For CPUs having explicit I/O instructions, such I/O protection is ensured by having the I/O instructions privileged. In a CPU with memory mapped I/O, there is no explicit I/O instruction. Which one of the following is true for a CPU with memory mapped I/O? (GATE CS 2005)",
+        "options": [
+            "I/O protection is ensured by operating system routine(s)",
+            "I/O protection is ensured by a hardware trap",
+            "I/O protection is ensured during system configuration",
+            "I/O protection is not possible"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "Put the following disk scheduling policies results in minimum amount of head movement.",
+        "options": [
+            "FCFS",
+            "Circular SCAN",
+            "Elevator"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Consider a hard disk with 16 recording surfaces (0-15) having 16384 cylinders (0-16383) and each cylinder contains 64 sectors (0-63). Data storage capacity in each sector is 512 bytes. Data are organized cylinder-wise and the addressing format is  <cylinder no., surface no., sector no.> . A file of size 42797 KB is stored in the disk and the starting disk location of the file is <1200, 9, 40>. What is the cylinder number of the last sector of the file, if it is stored in a contiguous manner?",
+        "options": [
+            "1281",
+            "1282",
+            "1283",
+            "1284"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "A file system with 300 GByte disk uses a file descriptor with 8 direct block addresses, 1 indirect block address and 1 doubly indirect block address. The size of each disk block is 128 Bytes and the size of each disk block address is 8 Bytes. The maximum possible file size in this file system is",
+        "options": [
+            "3 Kbytes",
+            "35 Kbytes",
+            "280 Bytes",
+            "Dependent on the size of the disk"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "A computer handles several interrupt sources of which the following are relevant for this question.. Interrupt from CPU temperature sensor (raises interrupt if \r\n  CPU temperature is too high)\r\n. Interrupt from Mouse(raises interrupt if the mouse is moved \r\n  or a button is pressed)\r\n. Interrupt from Keyboard(raises interrupt when a key is \r\n  pressed or released)\r\n. Interrupt from Hard Disk(raises interrupt when a disk \r\n  read is completed)Which one of these will be handled at the HIGHEST priority?",
+        "options": [
+            "Interrupt from Hard Disk",
+            "Interrupt from Mouse",
+            "Interrupt from Keyboard",
+            "Interrupt from CPU temperature sensor"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "An application loads 100 libraries at start-up. Loading each library requires exactly one disk access. The seek time of the disk to a random location is given as 10 ms. Rotational speed of disk is 6000 rpm. If all 100 libraries are loaded from random locations on the disk, how long does it take to load all libraries? (The time to transfer data from the disk block once the head has been positioned at the start of the block may be neglected)",
+        "options": [
+            "0.50 s",
+            "1.50 s",
+            "1.25 s",
+            "1.00 s"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "A CPU generally handles an interrupt by executing an interrupt service routine",
+        "options": [
+            "As soon as an interrupt is raised",
+            "By checking the interrupt register at the end of fetch cycle.",
+            "By checking the interrupt register after finishing the execution of the current instruction.",
+            "By checking the interrupt register at fixed time intervals."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question1",
+        "question_paragraph": "Which of the following is major part of time taken when accessing data on the disk?",
+        "options": [
+            "Settle time",
+            "Rotational latency",
+            "Seek time",
+            "Waiting time"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "We describe a protocol of input device communication below. \r\na. Each device has a distinct address \r\nb. The bus controller scans each device  in sequence of increasing address value to determine if the entity wishes to communicate. \r\nc. The device ready to communicate leaves it data in IO register. \r\nd. The data is picked up and the controller moves to step-a above. \r\n       \r\nIdentify the form of communication best describes the IO mode amongst the following:\r\n\r\nSource:nptel",
+        "options": [
+            "Programmed mode of data transfer",
+            "DMA",
+            "Interrupt mode",
+            "Polling"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "From amongst the following given scenarios determine the right one to justify interrupt mode of data-transfer: \r\nSource:nptel",
+        "options": [
+            "Bulk transfer of several kilo-byte",
+            "Moderately large data transfer but more that 1 KB",
+            "Short events like mouse action",
+            "Key board inputs"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "Normally user programs are prevented from handling I/O directly by I/O instructions in them. For CPUs having explicit I/O instructions, such I/O protection is ensured by having the I/O instructions privileged. In a CPU with memory mapped I/O, there is no explicit I/O instruction. Which one of the following is true for a CPU with memory mapped I/O? (GATE CS 2005)",
+        "options": [
+            "I/O protection is ensured by operating system routine(s)",
+            "I/O protection is ensured by a hardware trap",
+            "I/O protection is ensured during system configuration",
+            "I/O protection is not possible"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "Put the following disk scheduling policies results in minimum amount of head movement.",
+        "options": [
+            "FCFS",
+            "Circular SCAN",
+            "Elevator"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Consider a hard disk with 16 recording surfaces (0-15) having 16384 cylinders (0-16383) and each cylinder contains 64 sectors (0-63). Data storage capacity in each sector is 512 bytes. Data are organized cylinder-wise and the addressing format is  <cylinder no., surface no., sector no.> . A file of size 42797 KB is stored in the disk and the starting disk location of the file is <1200, 9, 40>. What is the cylinder number of the last sector of the file, if it is stored in a contiguous manner?",
+        "options": [
+            "1281",
+            "1282",
+            "1283",
+            "1284"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "A file system with 300 GByte disk uses a file descriptor with 8 direct block addresses, 1 indirect block address and 1 doubly indirect block address. The size of each disk block is 128 Bytes and the size of each disk block address is 8 Bytes. The maximum possible file size in this file system is",
+        "options": [
+            "3 Kbytes",
+            "35 Kbytes",
+            "280 Bytes",
+            "Dependent on the size of the disk"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "A computer handles several interrupt sources of which the following are relevant for this question.. Interrupt from CPU temperature sensor (raises interrupt if \r\n  CPU temperature is too high)\r\n. Interrupt from Mouse(raises interrupt if the mouse is moved \r\n  or a button is pressed)\r\n. Interrupt from Keyboard(raises interrupt when a key is \r\n  pressed or released)\r\n. Interrupt from Hard Disk(raises interrupt when a disk \r\n  read is completed)Which one of these will be handled at the HIGHEST priority?",
+        "options": [
+            "Interrupt from Hard Disk",
+            "Interrupt from Mouse",
+            "Interrupt from Keyboard",
+            "Interrupt from CPU temperature sensor"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "An application loads 100 libraries at start-up. Loading each library requires exactly one disk access. The seek time of the disk to a random location is given as 10 ms. Rotational speed of disk is 6000 rpm. If all 100 libraries are loaded from random locations on the disk, how long does it take to load all libraries? (The time to transfer data from the disk block once the head has been positioned at the start of the block may be neglected)",
+        "options": [
+            "0.50 s",
+            "1.50 s",
+            "1.25 s",
+            "1.00 s"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "A CPU generally handles an interrupt by executing an interrupt service routine",
+        "options": [
+            "As soon as an interrupt is raised",
+            "By checking the interrupt register at the end of fetch cycle.",
+            "By checking the interrupt register after finishing the execution of the current instruction.",
+            "By checking the interrupt register at fixed time intervals."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question1",
+        "question_paragraph": "Which of the following is major part of time taken when accessing data on the disk?",
+        "options": [
+            "Settle time",
+            "Rotational latency",
+            "Seek time",
+            "Waiting time"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "We describe a protocol of input device communication below. \r\na. Each device has a distinct address \r\nb. The bus controller scans each device  in sequence of increasing address value to determine if the entity wishes to communicate. \r\nc. The device ready to communicate leaves it data in IO register. \r\nd. The data is picked up and the controller moves to step-a above. \r\n       \r\nIdentify the form of communication best describes the IO mode amongst the following:\r\n\r\nSource:nptel",
+        "options": [
+            "Programmed mode of data transfer",
+            "DMA",
+            "Interrupt mode",
+            "Polling"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "From amongst the following given scenarios determine the right one to justify interrupt mode of data-transfer: \r\nSource:nptel",
+        "options": [
+            "Bulk transfer of several kilo-byte",
+            "Moderately large data transfer but more that 1 KB",
+            "Short events like mouse action",
+            "Key board inputs"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "Normally user programs are prevented from handling I/O directly by I/O instructions in them. For CPUs having explicit I/O instructions, such I/O protection is ensured by having the I/O instructions privileged. In a CPU with memory mapped I/O, there is no explicit I/O instruction. Which one of the following is true for a CPU with memory mapped I/O? (GATE CS 2005)",
+        "options": [
+            "I/O protection is ensured by operating system routine(s)",
+            "I/O protection is ensured by a hardware trap",
+            "I/O protection is ensured during system configuration",
+            "I/O protection is not possible"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "Put the following disk scheduling policies results in minimum amount of head movement.",
+        "options": [
+            "FCFS",
+            "Circular SCAN",
+            "Elevator"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Consider a hard disk with 16 recording surfaces (0-15) having 16384 cylinders (0-16383) and each cylinder contains 64 sectors (0-63). Data storage capacity in each sector is 512 bytes. Data are organized cylinder-wise and the addressing format is  <cylinder no., surface no., sector no.> . A file of size 42797 KB is stored in the disk and the starting disk location of the file is <1200, 9, 40>. What is the cylinder number of the last sector of the file, if it is stored in a contiguous manner?",
+        "options": [
+            "1281",
+            "1282",
+            "1283",
+            "1284"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "A file system with 300 GByte disk uses a file descriptor with 8 direct block addresses, 1 indirect block address and 1 doubly indirect block address. The size of each disk block is 128 Bytes and the size of each disk block address is 8 Bytes. The maximum possible file size in this file system is",
+        "options": [
+            "3 Kbytes",
+            "35 Kbytes",
+            "280 Bytes",
+            "Dependent on the size of the disk"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "A computer handles several interrupt sources of which the following are relevant for this question.. Interrupt from CPU temperature sensor (raises interrupt if \r\n  CPU temperature is too high)\r\n. Interrupt from Mouse(raises interrupt if the mouse is moved \r\n  or a button is pressed)\r\n. Interrupt from Keyboard(raises interrupt when a key is \r\n  pressed or released)\r\n. Interrupt from Hard Disk(raises interrupt when a disk \r\n  read is completed)Which one of these will be handled at the HIGHEST priority?",
+        "options": [
+            "Interrupt from Hard Disk",
+            "Interrupt from Mouse",
+            "Interrupt from Keyboard",
+            "Interrupt from CPU temperature sensor"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "An application loads 100 libraries at start-up. Loading each library requires exactly one disk access. The seek time of the disk to a random location is given as 10 ms. Rotational speed of disk is 6000 rpm. If all 100 libraries are loaded from random locations on the disk, how long does it take to load all libraries? (The time to transfer data from the disk block once the head has been positioned at the start of the block may be neglected)",
+        "options": [
+            "0.50 s",
+            "1.50 s",
+            "1.25 s",
+            "1.00 s"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "A CPU generally handles an interrupt by executing an interrupt service routine",
+        "options": [
+            "As soon as an interrupt is raised",
+            "By checking the interrupt register at the end of fetch cycle.",
+            "By checking the interrupt register after finishing the execution of the current instruction.",
+            "By checking the interrupt register at fixed time intervals."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question1",
+        "question_paragraph": "Which of the following is major part of time taken when accessing data on the disk?",
+        "options": [
+            "Settle time",
+            "Rotational latency",
+            "Seek time",
+            "Waiting time"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "We describe a protocol of input device communication below. \r\na. Each device has a distinct address \r\nb. The bus controller scans each device  in sequence of increasing address value to determine if the entity wishes to communicate. \r\nc. The device ready to communicate leaves it data in IO register. \r\nd. The data is picked up and the controller moves to step-a above. \r\n       \r\nIdentify the form of communication best describes the IO mode amongst the following:\r\n\r\nSource:nptel",
+        "options": [
+            "Programmed mode of data transfer",
+            "DMA",
+            "Interrupt mode",
+            "Polling"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "From amongst the following given scenarios determine the right one to justify interrupt mode of data-transfer: \r\nSource:nptel",
+        "options": [
+            "Bulk transfer of several kilo-byte",
+            "Moderately large data transfer but more that 1 KB",
+            "Short events like mouse action",
+            "Key board inputs"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "Normally user programs are prevented from handling I/O directly by I/O instructions in them. For CPUs having explicit I/O instructions, such I/O protection is ensured by having the I/O instructions privileged. In a CPU with memory mapped I/O, there is no explicit I/O instruction. Which one of the following is true for a CPU with memory mapped I/O? (GATE CS 2005)",
+        "options": [
+            "I/O protection is ensured by operating system routine(s)",
+            "I/O protection is ensured by a hardware trap",
+            "I/O protection is ensured during system configuration",
+            "I/O protection is not possible"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "Put the following disk scheduling policies results in minimum amount of head movement.",
+        "options": [
+            "FCFS",
+            "Circular SCAN",
+            "Elevator"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Consider a hard disk with 16 recording surfaces (0-15) having 16384 cylinders (0-16383) and each cylinder contains 64 sectors (0-63). Data storage capacity in each sector is 512 bytes. Data are organized cylinder-wise and the addressing format is  <cylinder no., surface no., sector no.> . A file of size 42797 KB is stored in the disk and the starting disk location of the file is <1200, 9, 40>. What is the cylinder number of the last sector of the file, if it is stored in a contiguous manner?",
+        "options": [
+            "1281",
+            "1282",
+            "1283",
+            "1284"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "A file system with 300 GByte disk uses a file descriptor with 8 direct block addresses, 1 indirect block address and 1 doubly indirect block address. The size of each disk block is 128 Bytes and the size of each disk block address is 8 Bytes. The maximum possible file size in this file system is",
+        "options": [
+            "3 Kbytes",
+            "35 Kbytes",
+            "280 Bytes",
+            "Dependent on the size of the disk"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "A computer handles several interrupt sources of which the following are relevant for this question.. Interrupt from CPU temperature sensor (raises interrupt if \r\n  CPU temperature is too high)\r\n. Interrupt from Mouse(raises interrupt if the mouse is moved \r\n  or a button is pressed)\r\n. Interrupt from Keyboard(raises interrupt when a key is \r\n  pressed or released)\r\n. Interrupt from Hard Disk(raises interrupt when a disk \r\n  read is completed)Which one of these will be handled at the HIGHEST priority?",
+        "options": [
+            "Interrupt from Hard Disk",
+            "Interrupt from Mouse",
+            "Interrupt from Keyboard",
+            "Interrupt from CPU temperature sensor"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "An application loads 100 libraries at start-up. Loading each library requires exactly one disk access. The seek time of the disk to a random location is given as 10 ms. Rotational speed of disk is 6000 rpm. If all 100 libraries are loaded from random locations on the disk, how long does it take to load all libraries? (The time to transfer data from the disk block once the head has been positioned at the start of the block may be neglected)",
+        "options": [
+            "0.50 s",
+            "1.50 s",
+            "1.25 s",
+            "1.00 s"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "A CPU generally handles an interrupt by executing an interrupt service routine",
+        "options": [
+            "As soon as an interrupt is raised",
+            "By checking the interrupt register at the end of fetch cycle.",
+            "By checking the interrupt register after finishing the execution of the current instruction.",
+            "By checking the interrupt register at fixed time intervals."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question1",
+        "question_paragraph": "Which of the following is major part of time taken when accessing data on the disk?",
+        "options": [
+            "Settle time",
+            "Rotational latency",
+            "Seek time",
+            "Waiting time"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "We describe a protocol of input device communication below. \r\na. Each device has a distinct address \r\nb. The bus controller scans each device  in sequence of increasing address value to determine if the entity wishes to communicate. \r\nc. The device ready to communicate leaves it data in IO register. \r\nd. The data is picked up and the controller moves to step-a above. \r\n       \r\nIdentify the form of communication best describes the IO mode amongst the following:\r\n\r\nSource:nptel",
+        "options": [
+            "Programmed mode of data transfer",
+            "DMA",
+            "Interrupt mode",
+            "Polling"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "From amongst the following given scenarios determine the right one to justify interrupt mode of data-transfer: \r\nSource:nptel",
+        "options": [
+            "Bulk transfer of several kilo-byte",
+            "Moderately large data transfer but more that 1 KB",
+            "Short events like mouse action",
+            "Key board inputs"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "Normally user programs are prevented from handling I/O directly by I/O instructions in them. For CPUs having explicit I/O instructions, such I/O protection is ensured by having the I/O instructions privileged. In a CPU with memory mapped I/O, there is no explicit I/O instruction. Which one of the following is true for a CPU with memory mapped I/O? (GATE CS 2005)",
+        "options": [
+            "I/O protection is ensured by operating system routine(s)",
+            "I/O protection is ensured by a hardware trap",
+            "I/O protection is ensured during system configuration",
+            "I/O protection is not possible"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "Put the following disk scheduling policies results in minimum amount of head movement.",
+        "options": [
+            "FCFS",
+            "Circular SCAN",
+            "Elevator"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Consider a hard disk with 16 recording surfaces (0-15) having 16384 cylinders (0-16383) and each cylinder contains 64 sectors (0-63). Data storage capacity in each sector is 512 bytes. Data are organized cylinder-wise and the addressing format is  <cylinder no., surface no., sector no.> . A file of size 42797 KB is stored in the disk and the starting disk location of the file is <1200, 9, 40>. What is the cylinder number of the last sector of the file, if it is stored in a contiguous manner?",
+        "options": [
+            "1281",
+            "1282",
+            "1283",
+            "1284"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "A file system with 300 GByte disk uses a file descriptor with 8 direct block addresses, 1 indirect block address and 1 doubly indirect block address. The size of each disk block is 128 Bytes and the size of each disk block address is 8 Bytes. The maximum possible file size in this file system is",
+        "options": [
+            "3 Kbytes",
+            "35 Kbytes",
+            "280 Bytes",
+            "Dependent on the size of the disk"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "A computer handles several interrupt sources of which the following are relevant for this question.. Interrupt from CPU temperature sensor (raises interrupt if \r\n  CPU temperature is too high)\r\n. Interrupt from Mouse(raises interrupt if the mouse is moved \r\n  or a button is pressed)\r\n. Interrupt from Keyboard(raises interrupt when a key is \r\n  pressed or released)\r\n. Interrupt from Hard Disk(raises interrupt when a disk \r\n  read is completed)Which one of these will be handled at the HIGHEST priority?",
+        "options": [
+            "Interrupt from Hard Disk",
+            "Interrupt from Mouse",
+            "Interrupt from Keyboard",
+            "Interrupt from CPU temperature sensor"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "An application loads 100 libraries at start-up. Loading each library requires exactly one disk access. The seek time of the disk to a random location is given as 10 ms. Rotational speed of disk is 6000 rpm. If all 100 libraries are loaded from random locations on the disk, how long does it take to load all libraries? (The time to transfer data from the disk block once the head has been positioned at the start of the block may be neglected)",
+        "options": [
+            "0.50 s",
+            "1.50 s",
+            "1.25 s",
+            "1.00 s"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "A CPU generally handles an interrupt by executing an interrupt service routine",
+        "options": [
+            "As soon as an interrupt is raised",
+            "By checking the interrupt register at the end of fetch cycle.",
+            "By checking the interrupt register after finishing the execution of the current instruction.",
+            "By checking the interrupt register at fixed time intervals."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question1",
+        "question_paragraph": "Which of the following is major part of time taken when accessing data on the disk?",
+        "options": [
+            "Settle time",
+            "Rotational latency",
+            "Seek time",
+            "Waiting time"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "We describe a protocol of input device communication below. \r\na. Each device has a distinct address \r\nb. The bus controller scans each device  in sequence of increasing address value to determine if the entity wishes to communicate. \r\nc. The device ready to communicate leaves it data in IO register. \r\nd. The data is picked up and the controller moves to step-a above. \r\n       \r\nIdentify the form of communication best describes the IO mode amongst the following:\r\n\r\nSource:nptel",
+        "options": [
+            "Programmed mode of data transfer",
+            "DMA",
+            "Interrupt mode",
+            "Polling"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "From amongst the following given scenarios determine the right one to justify interrupt mode of data-transfer: \r\nSource:nptel",
+        "options": [
+            "Bulk transfer of several kilo-byte",
+            "Moderately large data transfer but more that 1 KB",
+            "Short events like mouse action",
+            "Key board inputs"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "Normally user programs are prevented from handling I/O directly by I/O instructions in them. For CPUs having explicit I/O instructions, such I/O protection is ensured by having the I/O instructions privileged. In a CPU with memory mapped I/O, there is no explicit I/O instruction. Which one of the following is true for a CPU with memory mapped I/O? (GATE CS 2005)",
+        "options": [
+            "I/O protection is ensured by operating system routine(s)",
+            "I/O protection is ensured by a hardware trap",
+            "I/O protection is ensured during system configuration",
+            "I/O protection is not possible"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "Put the following disk scheduling policies results in minimum amount of head movement.",
+        "options": [
+            "FCFS",
+            "Circular SCAN",
+            "Elevator"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Consider a hard disk with 16 recording surfaces (0-15) having 16384 cylinders (0-16383) and each cylinder contains 64 sectors (0-63). Data storage capacity in each sector is 512 bytes. Data are organized cylinder-wise and the addressing format is  <cylinder no., surface no., sector no.> . A file of size 42797 KB is stored in the disk and the starting disk location of the file is <1200, 9, 40>. What is the cylinder number of the last sector of the file, if it is stored in a contiguous manner?",
+        "options": [
+            "1281",
+            "1282",
+            "1283",
+            "1284"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "A file system with 300 GByte disk uses a file descriptor with 8 direct block addresses, 1 indirect block address and 1 doubly indirect block address. The size of each disk block is 128 Bytes and the size of each disk block address is 8 Bytes. The maximum possible file size in this file system is",
+        "options": [
+            "3 Kbytes",
+            "35 Kbytes",
+            "280 Bytes",
+            "Dependent on the size of the disk"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "A computer handles several interrupt sources of which the following are relevant for this question.. Interrupt from CPU temperature sensor (raises interrupt if \r\n  CPU temperature is too high)\r\n. Interrupt from Mouse(raises interrupt if the mouse is moved \r\n  or a button is pressed)\r\n. Interrupt from Keyboard(raises interrupt when a key is \r\n  pressed or released)\r\n. Interrupt from Hard Disk(raises interrupt when a disk \r\n  read is completed)Which one of these will be handled at the HIGHEST priority?",
+        "options": [
+            "Interrupt from Hard Disk",
+            "Interrupt from Mouse",
+            "Interrupt from Keyboard",
+            "Interrupt from CPU temperature sensor"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "An application loads 100 libraries at start-up. Loading each library requires exactly one disk access. The seek time of the disk to a random location is given as 10 ms. Rotational speed of disk is 6000 rpm. If all 100 libraries are loaded from random locations on the disk, how long does it take to load all libraries? (The time to transfer data from the disk block once the head has been positioned at the start of the block may be neglected)",
+        "options": [
+            "0.50 s",
+            "1.50 s",
+            "1.25 s",
+            "1.00 s"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "A CPU generally handles an interrupt by executing an interrupt service routine",
+        "options": [
+            "As soon as an interrupt is raised",
+            "By checking the interrupt register at the end of fetch cycle.",
+            "By checking the interrupt register after finishing the execution of the current instruction.",
+            "By checking the interrupt register at fixed time intervals."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question1",
+        "question_paragraph": "Which of the following is major part of time taken when accessing data on the disk?",
+        "options": [
+            "Settle time",
+            "Rotational latency",
+            "Seek time",
+            "Waiting time"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "We describe a protocol of input device communication below. \r\na. Each device has a distinct address \r\nb. The bus controller scans each device  in sequence of increasing address value to determine if the entity wishes to communicate. \r\nc. The device ready to communicate leaves it data in IO register. \r\nd. The data is picked up and the controller moves to step-a above. \r\n       \r\nIdentify the form of communication best describes the IO mode amongst the following:\r\n\r\nSource:nptel",
+        "options": [
+            "Programmed mode of data transfer",
+            "DMA",
+            "Interrupt mode",
+            "Polling"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "From amongst the following given scenarios determine the right one to justify interrupt mode of data-transfer: \r\nSource:nptel",
+        "options": [
+            "Bulk transfer of several kilo-byte",
+            "Moderately large data transfer but more that 1 KB",
+            "Short events like mouse action",
+            "Key board inputs"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "Normally user programs are prevented from handling I/O directly by I/O instructions in them. For CPUs having explicit I/O instructions, such I/O protection is ensured by having the I/O instructions privileged. In a CPU with memory mapped I/O, there is no explicit I/O instruction. Which one of the following is true for a CPU with memory mapped I/O? (GATE CS 2005)",
+        "options": [
+            "I/O protection is ensured by operating system routine(s)",
+            "I/O protection is ensured by a hardware trap",
+            "I/O protection is ensured during system configuration",
+            "I/O protection is not possible"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "Put the following disk scheduling policies results in minimum amount of head movement.",
+        "options": [
+            "FCFS",
+            "Circular SCAN",
+            "Elevator"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Consider a hard disk with 16 recording surfaces (0-15) having 16384 cylinders (0-16383) and each cylinder contains 64 sectors (0-63). Data storage capacity in each sector is 512 bytes. Data are organized cylinder-wise and the addressing format is  <cylinder no., surface no., sector no.> . A file of size 42797 KB is stored in the disk and the starting disk location of the file is <1200, 9, 40>. What is the cylinder number of the last sector of the file, if it is stored in a contiguous manner?",
+        "options": [
+            "1281",
+            "1282",
+            "1283",
+            "1284"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "A file system with 300 GByte disk uses a file descriptor with 8 direct block addresses, 1 indirect block address and 1 doubly indirect block address. The size of each disk block is 128 Bytes and the size of each disk block address is 8 Bytes. The maximum possible file size in this file system is",
+        "options": [
+            "3 Kbytes",
+            "35 Kbytes",
+            "280 Bytes",
+            "Dependent on the size of the disk"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "A computer handles several interrupt sources of which the following are relevant for this question.. Interrupt from CPU temperature sensor (raises interrupt if \r\n  CPU temperature is too high)\r\n. Interrupt from Mouse(raises interrupt if the mouse is moved \r\n  or a button is pressed)\r\n. Interrupt from Keyboard(raises interrupt when a key is \r\n  pressed or released)\r\n. Interrupt from Hard Disk(raises interrupt when a disk \r\n  read is completed)Which one of these will be handled at the HIGHEST priority?",
+        "options": [
+            "Interrupt from Hard Disk",
+            "Interrupt from Mouse",
+            "Interrupt from Keyboard",
+            "Interrupt from CPU temperature sensor"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "An application loads 100 libraries at start-up. Loading each library requires exactly one disk access. The seek time of the disk to a random location is given as 10 ms. Rotational speed of disk is 6000 rpm. If all 100 libraries are loaded from random locations on the disk, how long does it take to load all libraries? (The time to transfer data from the disk block once the head has been positioned at the start of the block may be neglected)",
+        "options": [
+            "0.50 s",
+            "1.50 s",
+            "1.25 s",
+            "1.00 s"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "A CPU generally handles an interrupt by executing an interrupt service routine",
+        "options": [
+            "As soon as an interrupt is raised",
+            "By checking the interrupt register at the end of fetch cycle.",
+            "By checking the interrupt register after finishing the execution of the current instruction.",
+            "By checking the interrupt register at fixed time intervals."
+        ],
+        "image_link": null
+    }
+]

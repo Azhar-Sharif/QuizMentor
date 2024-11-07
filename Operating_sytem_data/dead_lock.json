@@ -1,0 +1,435 @@
+[
+    {
+        "question": "Question1",
+        "question_paragraph": "A computer has six tape drives, with n processes competing for them. Each process may need two drives. What is the maximum value of n for the system to be deadlock free?",
+        "options": [
+            "6",
+            "5",
+            "4",
+            "3"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "Each Process Pi, i= 1.......9 is coded as followsrepeat \r\n    P(mutex)\r\n    {Critical section}\r\n    V(mutex)\r\n foreverThe code for P10is identical except it uses V(mutex) in place of P(mutex). What is the largest number of processes that can be inside the critical section at any moment?",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "None of above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "A solution to the Dining Philosophers Problem which avoids deadlock is:",
+        "options": [
+            "ensure that all philosophers pick up the left fork before the right fork",
+            "ensure that all philosophers pick up the right fork before the left fork",
+            "ensure that one particular philosopher picks up the left fork before the right fork, and that all other philosophers pick up the right fork before the left fork",
+            "None of the above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "A computer system uses the Banker\u2019s Algorithm to deal with deadlocks. Its current state is shown in the table below, where P0, P1, P2 are processes, and R0, R1, R2 are resources types.",
+        "options": [
+            "The current state of the system is possible because this can be part of one of the safe sequence. For example, following this state the system can followP1->P2->P0this sequence andwill not lead to Deadlock, So, yes the system can be in this state",
+            "The system can allocate one unit of resource R1 to P0 and stillwill not lead to Deadlock, again it can still follow P1->P2->P0 sequence."
+        ],
+        "image_link": "https://media.geeksforgeeks.org/wp-content/uploads/20240322115646/alloc_tab.jpg"
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "A system shares 9 tape drives. The current allocation and maximum requirement of tape drives for 4 processes are shown below:Which of the following best describes the current state of the system?",
+        "options": [
+            "Safe, Deadlocked",
+            "Safe, Not Deadlocked",
+            "Not Safe, Deadlocked",
+            "Not Safe, Not Deadlocked"
+        ],
+        "image_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/1-11.png"
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Consider a system with 3 processes that share 4 instances of the same resource type. Each process can request a maximum of K instances. Resource instances can be requested and released only one at a  time. The largest value of K that will always avoid deadlock is _______ .Note -This was Numerical Type question.",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "In a system, there are three types of resources: E, F and G. Four processes P0, P1, P2and P3execute concurrently. At the outset, the processes have declared their maximum resource requirements using a matrix named Max as given below. For example, Max[P2, F] is the maximum number of instances of F that P2would require. The number of instances of the resources allocated to the various processes at any given state is given by a matrix named Allocation.\r\n\r\nConsider a state of the system with the Allocation matrix as shown below, and in which 3 instances of E and 3 instances of F are the only resources available.From the perspective of deadlock avoidance, which one of the following is true?",
+        "options": [
+            "The system is insafestate",
+            "The system is not insafestate, but would besafeif one more instance of E were available",
+            "The system is not insafestate, but would besafeif one more instance of F were available",
+            "The system is not insafestate, but would besafeif one more instance of G were available"
+        ],
+        "image_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/2-8.jpg"
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "What problem is solved by Dijkstra banker\u2019s algorithm?",
+        "options": [
+            "Cache coherence",
+            "Mutual exclusion",
+            "Deadlock recovery",
+            "Deadlock avoidance"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "With single resource, deadlock occurs",
+        "options": [
+            "if there are more than two processes competing for that resources",
+            "if there are only two processes competing for that resources",
+            "if there is a single process competing for that resources",
+            "none of these"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "Which of the following is not a necessary condition for deadlock?",
+        "options": [
+            "Mutual exclusion",
+            "Reentrancy",
+            "Hold and wait",
+            "No pre-emption"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question11",
+        "question_paragraph": "A total of 9 units of a resource type available, and given the safe state shown below, which of the following sequence will be a safe state?Process   Used    Max\r\n  P1        2      7\r\n  P2        1      6\r\n  P3        2      5\r\n  P4        1      4",
+        "options": [
+            "(P4, P1, P3, P2)",
+            "(P4, P2, P1, P3)",
+            "(P4, P2, P3, P1)",
+            "(P3, P1, P2, P4)"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question12",
+        "question_paragraph": "When a process is rolled back as a result of deadlock the difficulty which arises is",
+        "options": [
+            "Starvation",
+            "System throughput",
+            "Low device utilization",
+            "Cycle stealing"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question13",
+        "question_paragraph": "Consider a system having m resources of the same type. These resources are shared by 3 processes A, B, C which have peak time demands of 3, 4, 6 respectively. The minimum value of m that ensures deadlock will never occur is",
+        "options": [
+            "11",
+            "12",
+            "13",
+            "14"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question14",
+        "question_paragraph": "In which of the following four necessary conditions for deadlock processes claim exclusive control of the resources they require?",
+        "options": [
+            "no preemption",
+            "mutual exclusion",
+            "circular wait",
+            "hold and wait"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question15",
+        "question_paragraph": "Consider a system having \"n\" resources of same type. These resources are shared by 3 processes, A, B, C. These have peak demands of 3, 4, and 6 respectively. For what value of \"n\" deadlock won't occur",
+        "options": [
+            "15",
+            "9",
+            "10",
+            "11"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question16",
+        "question_paragraph": "Consider the following process and resource requirement of each process.Type 1        Type 2\r\nProcess         Used  Max      Used  Max\r\n   P1            1     2         1    3\r\n   P2            1     3         1    2\r\n   P3            2     4         1    4Predict the state of this system, assuming that there are a total of 5 instances of resource type 1 and 4 instances of resource type 2.",
+        "options": [
+            "Can go to safe or unsafe state based on sequence",
+            "Safe state",
+            "Unsafe state",
+            "Deadlock state"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question17",
+        "question_paragraph": "Suppose n processes, P1, \u2026. Pn share m identical resource units, which can be reserved and released one at a time. The maximum resource requirement of process Pi is Si, where Si > 0. Which one of the following is a sufficient condition for ensuring that deadlock does not occur?",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gate2009OS.png"
+    },
+    {
+        "question": "Question18",
+        "question_paragraph": "Consider the following snapshot of a system running n processes. Process i is holding Xi instances of a resource R, 1 <= i <= n. currently, all instances of R are occupied. Further, for all i, process i has placed a request for an additional Yi instances while holding the Xi instances it already has. There are exactly two processes p and q such that Yp = Yq = 0. Which one of the following can serve as a necessary condition to guarantee that the system is not approaching a deadlock?",
+        "options": [
+            "min (Xp, Xq) < max (Yk) where k != p and k != q",
+            "Xp + Xq >= min (Yk) where k != p and k != q",
+            "max (Xp, Xq) > 1",
+            "min (Xp, Xq) > 1"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question19",
+        "question_paragraph": "Processes P",
+        "options": [
+            "(i) is false and (ii) is true",
+            "Both (i) and (ii) are false",
+            "(i) is true and (ii) is false",
+            "Both (i) and (ii) are true"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question20",
+        "question_paragraph": "A system contains three programs and each requires three tape units for its operation. The minimum number of tape units which the system must have such that deadlocks never arise is _________.",
+        "options": [
+            "6",
+            "7",
+            "8",
+            "9"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question21",
+        "question_paragraph": "Let m[0]\u2026m[4] be mutexes (binary semaphores) and P[0] \u2026. P[4] be processes.\r\nSuppose each process P[i] executes the following:wait (m[i]); wait(m[(i+1) mode 4]);\r\n\r\n  ------\r\n\r\n  release (m[i]); release (m[(i+1)mod 4]);This could cause:",
+        "options": [
+            "Thrashing",
+            "Deadlock",
+            "Starvation, but not deadlock",
+            "None of the above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question22",
+        "question_paragraph": "A system has 6 identical resources and N processes competing for them. Each process can request atmost 2 resources. Which one of the following values of N could lead to a deadlock?",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question23",
+        "question_paragraph": "Consider the following policies for preventing deadlock in a system with mutually exclusive resources.I. Processes should acquire all their resources at the \r\n   beginning of execution.  If any resource is not  \r\n   available, all resources acquired so far are released.\r\nII. The resources are numbered uniquely, and processes are \r\n    allowed to request for resources only in increasing \r\n    resource numbers.\r\nIII. The resources are numbered uniquely, and processes are\r\n     allowed to request  for resources only in decreasing \r\n     resource numbers.\r\nIV. The resources are numbered uniquely. A process is allowed\r\n    to request only for a resource with resource number larger\r\n    than its currently held resources.Which of the above policies can be used for preventing deadlock?",
+        "options": [
+            "Any one of I and III but not II or IV",
+            "Any one of I, III and IV but not II",
+            "Any one of II and III but not I or IV",
+            "Any one of I, II, III and IV"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question24",
+        "question_paragraph": "A counting semaphore was initialized to 10. Then 6 P (wait) operations and 4 V (signal) operations were completed on this semaphore. The resulting value of the semaphore is",
+        "options": [
+            "0",
+            "8",
+            "10",
+            "12"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question25",
+        "question_paragraph": "An operating system handles requests to resources as follows.\r\nA process (which asks for some resources, uses them for some time and then exits the system) is assigned a unique timestamp are when it starts. The timestamps are monotonically increasing with time. Let us denote the timestamp of a process P by TS(P).\r\n\r\nWhen a process P requests for a resource the OS does the following:(i)If no other process is currently holding the resource, the OS awards the resource to P.(ii)If some process Q withTS(Q)<TS(P)is holding the resource, the OS makes P wait for \r\n     the resources.(iii)If some process Q withTS(Q)>TS(P)is holding the resource, the OS restarts Q \r\n      and awards the resources to P.(Restarting means taking back the resources held by a process, killing it and starting it \r\nagain with the same timestamp)When a process releases a resource, the process with the smallest timestamp (if any) amongst those waiting for the resource is awarded the resource.a). Can a deadlock ever arise? If yes, show how. If not, prove it.b). Can a process P ever starve? If yes, show how. If not, prove it.",
+        "options": [],
+        "image_link": null
+    },
+    {
+        "question": "Question26",
+        "question_paragraph": "A critical section is a program segment",
+        "options": [
+            "which should run in a certain specified amount of time",
+            "which avoids deadlocks",
+            "where shared resources are accessed",
+            "which must be enclosed by a pair of semaphore operations, P and V"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question27",
+        "question_paragraph": "Consider the following solution to the producer-consumer synchronization problem. The shared buffer size is N. Three semaphores empty, full and mutex are defined with respective initial values of 0, N and 1. Semaphore empty denotes the number of available slots in the buffer, for the consumer to read from. Semaphore full denotes the number of available slots in the buffer, for the producer to write to. The placeholder variables, denoted by P, Q, R and S, in the code below can be assigned either empty or full. The valid semaphore operations are: wait() and signal().",
+        "options": [
+            "P:full, Q:full, R:empty, S:empty",
+            "P:empty, Q:empty, R:full, S:full",
+            "P:full, Q:empty, R:empty, S:full",
+            "P:empty, Q:full, R:full, S:empty"
+        ],
+        "image_link": "https://media.geeksforgeeks.org/wp-content/uploads/20240320115309/8.jpg"
+    },
+    {
+        "question": "Question28",
+        "question_paragraph": "Which of the following is not true with respect to deadlock prevention and deadlock avoidance schemes?",
+        "options": [
+            "In deadlock prevention, the request for resources is always granted if resulting state is safe",
+            "In deadlock avoidance, the request for resources is always granted, if the resulting state is safe",
+            "Deadlock avoidance requires knowledge of resource requirements a priori",
+            "Deadlock prevention is more restrictive than deadlock avoidance"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question29",
+        "question_paragraph": "What is the minimum number of resources required to ensure that deadlock will never occur, if there are currently three processes P1, P2 and P3 running in a system whose maximum demand for the resources of same type are 3, 4, and 5 respectively.",
+        "options": [
+            "3",
+            "7",
+            "9",
+            "10"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question30",
+        "question_paragraph": "Consider a system having \u2018m\u2019 resources of the same type. The resources are shared by 3 processes A, B, C, which have peak time demands of 3, 4, 6 respectively. The minimum value of \u2018m\u2019 that ensures that deadlock will never occur is",
+        "options": [
+            "11",
+            "12",
+            "13",
+            "14"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question31",
+        "question_paragraph": "Which of the following is not true with respect to deadlock prevention and deadlock avoidance schemes ?",
+        "options": [
+            "In deadlock prevention, the request for resources is always granted if resulting state is safe",
+            "In deadlock avoidance, the request for resources is always granted, if the resulting state is safe",
+            "Deadlock avoidance requires knowledge of resource requirements a priori",
+            "Deadlock prevention is more restrictive than deadlock avoidance"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question32",
+        "question_paragraph": "Three concurrent processes X, Y, and Z execute three different code segments that access and update certain shared variables. Process X executes the P operation (i.e., wait) on semaphores a, b and c; process Y executes the P operation on semaphores b, c and d; process Z executes the P operation on semaphores c, d, and a before entering the respective code segments. After completing the execution of its code segment, each process invokes the V operation (i.e., signal) on its three semaphores. All semaphores are binary semaphores initialized to one. Which one of the following represents a deadlockfree order of invoking the P operations by the processes? (GATE CS 2013)",
+        "options": [
+            "X: P(a)P(b)P(c) Y:P(b)P(c)P(d) Z:P(c)P(d)P(a)",
+            "X: P(b)P(a)P(c) Y:P(b)P(c)P(d) Z:P(a)P(c)P(d)",
+            "X: P(b)P(a)P(c) Y:P(c)P(b)P(d) Z:P(a)P(c)P(d)",
+            "X: P(a)P(b)P(c) Y:P(c)P(b)P(d) Z:P(c)P(d)P(a)"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question33",
+        "question_paragraph": "Which of the following is NOT true of deadlock prevention and deadlock avoidance schemes?",
+        "options": [
+            "In deadlock prevention, the request for resources is always granted if the resulting state is safe",
+            "In deadlock avoidance, the request for resources is always granted if the result state is safe",
+            "Deadlock avoidance is less restrictive than deadlock prevention",
+            "Deadlock avoidance requires knowledge of resource requirements a priori"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question34",
+        "question_paragraph": "Consider a system with 4 types of resources R1 (3 units), R2 (2 units), R3 (3 units), R4 (2 units). A non-preemptive resource allocation policy is used. At any given instance, a request is not entertained if it cannot be completely satisfied. Three processes P1, P2, P3 request the sources as follows if executed independently.Process P1:t=0: requests 2 units of R2 \r\nt=1: requests 1 unit of R3 \r\nt=3: requests 2 units of R1 \r\nt=5: releases 1 unit of R2    \r\n        and 1 unit of R1. \r\nt=7: releases 1 unit of R3 \r\nt=8: requests 2 units of R4 \r\nt=10: FinishesProcess P2:t=0: requests 2 units of R3 \r\nt=2: requests 1 unit of R4 \r\nt=4: requests 1 unit of R1 \r\nt=6: releases 1 unit of R3 \r\nt=8: FinishesProcess P3:t=0: requests 1 unit of R4 \r\nt=2: requests 2 units of R1 \r\nt=5: releases 2 units of R1 \r\nt=7: requests 1 unit of R2 \r\nt=8: requests 1 unit of R3 \r\nt=9: FinishesWhich one of the following statements is TRUE if all three processes run concurrently starting at time t=0?",
+        "options": [
+            "All processes will finish without any deadlock",
+            "Only P1 and P2 will be in deadlock.",
+            "Only P1 and P3 will be in a deadlock.",
+            "All three processes will be in deadlock"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question35",
+        "question_paragraph": "A system has n resources R0,...,Rn-1,and k processes P0,....Pk-1.The implementation of the resource request logic of each process Piis as follows:if (i % 2 == 0) {\r\n      if (i < n) request Riif (i+2 < n) request Ri+2}\r\nelse {\r\n      if (i < n) request Rn-iif (i+2 < n) request Rn-i-2}In which one of the following situations is a deadlock possible?",
+        "options": [
+            "n=40, k=26",
+            "n=21, k=12",
+            "n=20, k=10",
+            "n=41, k=19"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question36",
+        "question_paragraph": "An operating system uses the Banker\u2019s algorithm for deadlock avoidance when managing the allocation of three resource types X, Y, and Z to three processes P0, P1, and P2. The table given below presents the current system state. Here, the Allocation matrix shows the current number of resources of each type allocated to each process and the Max matrix shows the maximum number of resources of each type required by each process during its execution.There are 3 units of type X, 2 units of type Y and 2 units of type Z still available. The system is\r\ncurrently in a safe state. Consider the following independent requests for additional resources in the\r\ncurrent state:REQ1: P0 requests 0 units of X,  \r\n      0 units of Y and 2 units of Z\r\nREQ2: P1 requests 2 units of X, \r\n      0 units of Y and 0 units of ZWhich one of the following is TRUE?",
+        "options": [
+            "Only REQ1 can be permitted.",
+            "Only REQ2 can be permitted.",
+            "Both REQ1 and REQ2 can be permitted.",
+            "Neither REQ1 nor REQ2 can be permitted"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2014/04/GATECS2014Q42.png"
+    },
+    {
+        "question": "Question37",
+        "question_paragraph": "Consider the following snapshot of a system running n processes. Process i is holding  Xi instances of a resource R, 1 <= i <= n. currently, all instances of R are occupied. Further, for all i, process i has placed a request for an additional Yi instances while holding the Xi instances it already has. There are exactly two processes p and q such that Yp = Yq = 0. Which one of the following can serve as a necessary condition to guarantee that the system is not approaching a deadlock?",
+        "options": [
+            "min (Xp, Xq) < max (Yk) where k != p and k != q",
+            "Xp + Xq >= min (Yk) where k != p and k != q",
+            "max (Xp, Xq) > 1",
+            "min (Xp, Xq) > 1"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question38",
+        "question_paragraph": "Suppose n processes, P1, \u2026. Pn share m identical resource units, which can be reserved and released one at a time. The maximum resource requirement of process Pi is Si, where Si > 0. Which one of the following is a sufficient condition for ensuring that deadlock does not occur?",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gate2009OS.png"
+    },
+    {
+        "question": "Question39",
+        "question_paragraph": "Which of the following is NOT a valid deadlock prevention scheme? (GATE CS 2000)",
+        "options": [
+            "Release all resources before requesting a new resource",
+            "Number the resources uniquely and never request a lower numbered resource than the last one requested.",
+            "Never request a resource after releasing any resource",
+            "Request and all required resources be allocated before execution."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question40",
+        "question_paragraph": "Consider the following proposed solution for the critical section problem. There are n processes: P0 ...Pn\u22121. In the code, function pmax returns an integer not smaller than any of its arguments. For all i, t[i] is initialized to zero.Which one of the following is TRUE about the above solution?",
+        "options": [
+            "At most one process can be in the critical section at any time",
+            "The bounded wait condition is satisfied",
+            "The progress condition is satisfied",
+            "It cannot cause a deadlock"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2016/02/deadlock1.png"
+    }
+]
