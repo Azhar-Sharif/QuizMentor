@@ -1,7 +1,3 @@
-Here’s the updated **README.md** file tailored to your project, **QuizMentor**:  
-
----
-
 # QuizMentor  
 
 ## Overview  
@@ -25,11 +21,20 @@ The interface for QuizMentor was carefully crafted using Figma to ensure usabili
 ### Design Highlights  
 - Clean, professional layout for seamless interaction.  
 - Responsive design compatible with desktop and mobile devices.  
-- Modern aesthetics with an emphasis on clarity and usability.
-- 
+- Modern aesthetics with an emphasis on clarity and usability.  
+
+## Machine Learning Model and Dataset  
+The ML model and dataset are currently under development.  
+### Progress Includes:  
+- **Dataset Creation**: Collecting and curating data relevant to quiz generation and adaptive learning.  
+- **ML Model Development**: Designing and training a model to generate personalized quizzes and deliver feedback based on performance data.  
+- **Future Enhancements**: Fine-tuning the model for higher accuracy and optimizing quiz generation times.  
+
+Stay tuned for updates as we progress further with the implementation of these components.  
+
 ## License  
 This project is licensed under the [MIT License](LICENSE).  
 
 ## Acknowledgments  
 - Thanks to our team for creating detailed user stories and contributing to the Figma design process.  
-- Special thanks to all testers and users for their feedback in refining **QuizMentor**.  
+- Special thanks to all testers and users for their feedback in refining **QuizMentor**.
