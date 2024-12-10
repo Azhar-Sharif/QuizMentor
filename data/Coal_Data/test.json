@@ -1,0 +1,122 @@
+[
+    {
+        "question": "Question 1",
+        "question_paragraph": "Where does the swap space reside?",
+        "options": [
+            "RAM",
+            "Disk",
+            "ROM",
+            "On-chip cache"
+        ],
+        "correct_answer": null,
+        "image_link": null
+    },
+    {
+        "question": "Question 2",
+        "question_paragraph": "The Boolean function with the Karnaugh map is:",
+        "options": [
+            "(A+C).D+B",
+            "(A+B).C+D",
+            "(A+D).C+B",
+            "(A+C).B+D"
+        ],
+        "correct_answer": null,
+        "image_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/q6.png"
+    },
+    {
+        "question": "Question 3",
+        "question_paragraph": "The amount of ROM needed to implement a 4 bit multiplier is",
+        "options": [
+            "64 bits",
+            "128 bits",
+            "1 Kbits",
+            "2 Kbits"
+        ],
+        "correct_answer": null,
+        "image_link": null
+    },
+    {
+        "question": "Question 4",
+        "question_paragraph": "In a k-way set associative cache, the cache is divided into v sets, each of which consists of k lines. The lines of a set are placed in sequence one after another. The lines in set s are sequenced before the lines in set (s+1). The main memory blocks are numbered 0 onwards. The main memory block numbered j must be mapped to any one of the cache lines from.",
+        "options": [
+            "(j mod v) * k to (j mod v) * k + (k-1)",
+            "(j mod v) to (j mod v) + (k-1)",
+            "(j mod k) to (j mod k) + (v-1)",
+            "(j mod k) * v to (j mod k) * v + (v-1)"
+        ],
+        "correct_answer": null,
+        "image_link": null
+    },
+    {
+        "question": "Question 5",
+        "question_paragraph": "Consider the following sequence of micro-operations.\n     MBR \u2190 PC \n     MAR \u2190 X  \n     PC \u2190 Y  \n     Memory \u2190 MBR\nWhich one of the following is a possible operation performed by this sequence?",
+        "options": [
+            "Instruction fetch",
+            "Operand fetch",
+            "Conditional branch",
+            "Initiation of interrupt service"
+        ],
+        "correct_answer": null,
+        "image_link": null
+    },
+    {
+        "question": "Question 6",
+        "question_paragraph": "Consider an instruction pipeline with five stages without any branch prediction: Fetch Instruction (FI), Decode Instruction (DI), Fetch Operand (FO), Execute Instruction (EI) and Write Operand (WO). The stage delays for FI, DI, FO, EI and WO are 5 ns, 7 ns, 10 ns, 8 ns and 6 ns, respectively. There are intermediate storage buffers after each stage and the delay of each buffer is 1 ns. A program consisting of 12 instructions I1, I2, I3, \u2026, I12 is executed in this pipelined processor. Instruction I4 is the only branch instruction and its branch target is I9. If the branch is taken during the execution of this program, the time (in ns) needed to complete the program is",
+        "options": [
+            "132",
+            "165",
+            "176",
+            "328"
+        ],
+        "correct_answer": null,
+        "image_link": null
+    },
+    {
+        "question": "Question 7",
+        "question_paragraph": "A RAM chip has a capacity of 1024 words of 8 bits each (1K \u00d7 8). The number of 2 \u00d7 4 decoders with enable line needed to construct a 16K \u00d7 16 RAM from 1K \u00d7 8 RAM is",
+        "options": [
+            "4",
+            "5",
+            "6",
+            "7"
+        ],
+        "correct_answer": null,
+        "image_link": null
+    },
+    {
+        "question": "Question 8",
+        "question_paragraph": "The following code segment is executed on a processor which allows only register operands in its instructions. Each instruction can have atmost two source operands and one destination operand. Assume that all variables are dead after this code segment.\n   c = a + b;\n   d = c * a;\n   e = c + a;\n   x = c * c;\n   if (x > a) {\n      y = a * a;\n   }\n   else {\n     d = d * d;\n     e = e * e;\n  }\nSuppose the instruction set architecture of the processor has only two registers. The only allowed compiler optimization is code motion, which moves statements from one place to another while preserving correctness. What is the minimum number of spills to memory in the compiled code?",
+        "options": [
+            "0",
+            "1",
+            "2",
+            "3"
+        ],
+        "correct_answer": null,
+        "image_link": null
+    },
+    {
+        "question": "Question 9",
+        "question_paragraph": "Consider the same data as above question. What is the minimum number of registers needed in the instruction set architecture of the processor to compile this code segment without any spill to memory? Do not apply any optimization other than optimizing register allocation.",
+        "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "correct_answer": null,
+        "image_link": null
+    },
+    {
+        "question": "Question 10",
+        "question_paragraph": "A computer has a 256 KByte, 4-way set associative, write back data cache with block size of 32 Bytes. The processor sends 32 bit addresses to the cache controller. Each cache tag directory entry contains, in addition to address tag, 2 valid bits, 1 modified bit and 1 replacement bit. The number of bits in the tag field of an address is",
+        "options": [
+            "11",
+            "14",
+            "16",
+            "27"
+        ],
+        "correct_answer": null,
+        "image_link": null
+    }
+]

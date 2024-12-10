@@ -1,0 +1,950 @@
+[
+    {
+        "question_number": 1,
+        "correct_answer": "Disk"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "(A+C).D+B"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "2 Kbits"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "(j mod v) * k to (j mod v) * k + (k-1)"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "Initiation of interrupt service"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "165"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "5"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "1"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "4"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "16"
+    },
+    {
+        "question_number": 11,
+        "correct_answer": "to handle certain kinds of hazards"
+    },
+    {
+        "question_number": 12,
+        "correct_answer": "160 Kbits"
+    },
+    {
+        "question_number": 13,
+        "correct_answer": "Base Indexed Addressing"
+    },
+    {
+        "question_number": 14,
+        "correct_answer": "3.4"
+    },
+    {
+        "question_number": 15,
+        "correct_answer": "3"
+    },
+    {
+        "question_number": 16,
+        "correct_answer": "2.5"
+    },
+    {
+        "question_number": 17,
+        "correct_answer": "5376 bits"
+    },
+    {
+        "question_number": 18,
+        "correct_answer": "B"
+    },
+    {
+        "question_number": 19,
+        "correct_answer": "15"
+    },
+    {
+        "question_number": 20,
+        "correct_answer": "3"
+    },
+    {
+        "question_number": 21,
+        "correct_answer": "22 nanoseconds"
+    },
+    {
+        "question_number": 22,
+        "correct_answer": "902 nanoseconds"
+    },
+    {
+        "question_number": 23,
+        "correct_answer": "64"
+    },
+    {
+        "question_number": 24,
+        "correct_answer": "23"
+    },
+    {
+        "question_number": 25,
+        "correct_answer": "216"
+    },
+    {
+        "question_number": 26,
+        "correct_answer": "III Only"
+    },
+    {
+        "question_number": 27,
+        "correct_answer": "I, II and III only"
+    },
+    {
+        "question_number": 28,
+        "correct_answer": "IV only"
+    },
+    {
+        "question_number": 29,
+        "correct_answer": "I and III only"
+    },
+    {
+        "question_number": 30,
+        "correct_answer": "I only"
+    },
+    {
+        "question_number": 31,
+        "correct_answer": "after effective address calculation has completed"
+    },
+    {
+        "question_number": 32,
+        "correct_answer": "68 Kbits"
+    },
+    {
+        "question_number": 33,
+        "correct_answer": "50%"
+    },
+    {
+        "question_number": 34,
+        "correct_answer": "9, 5, 6"
+    },
+    {
+        "question_number": 35,
+        "correct_answer": "8"
+    },
+    {
+        "question_number": 36,
+        "correct_answer": "21"
+    },
+    {
+        "question_number": 37,
+        "correct_answer": "100"
+    },
+    {
+        "question_number": 38,
+        "correct_answer": "1024"
+    },
+    {
+        "question_number": 39,
+        "correct_answer": "56"
+    },
+    {
+        "question_number": 40,
+        "correct_answer": "line 4 to line 11"
+    },
+    {
+        "question_number": 41,
+        "correct_answer": "600"
+    },
+    {
+        "question_number": 42,
+        "correct_answer": "16383"
+    },
+    {
+        "question_number": 43,
+        "correct_answer": "4"
+    },
+    {
+        "question_number": 44,
+        "correct_answer": "20"
+    },
+    {
+        "question_number": 45,
+        "correct_answer": "A smaller block size incurs a lower cache miss penalty"
+    },
+    {
+        "question_number": 46,
+        "correct_answer": "Width of processor to main memory data bus"
+    },
+    {
+        "question_number": 47,
+        "correct_answer": "10000"
+    },
+    {
+        "question_number": 48,
+        "correct_answer": "P3"
+    },
+    {
+        "question_number": 49,
+        "correct_answer": "1.5"
+    },
+    {
+        "question_number": 50,
+        "correct_answer": "184 ns"
+    },
+    {
+        "question_number": 51,
+        "correct_answer": "1.4 seconds"
+    },
+    {
+        "question_number": 52,
+        "correct_answer": "2.4 ns"
+    },
+    {
+        "question_number": 53,
+        "correct_answer": "2.4 ns"
+    },
+    {
+        "question_number": 54,
+        "correct_answer": "16384"
+    },
+    {
+        "question_number": 55,
+        "correct_answer": "1/16"
+    },
+    {
+        "question_number": 56,
+        "correct_answer": "Vectored interrupts and multiple interrupting devices are both possible."
+    },
+    {
+        "question_number": 57,
+        "correct_answer": "4"
+    },
+    {
+        "question_number": 58,
+        "correct_answer": "(1, b), (2, c), (3, a)"
+    },
+    {
+        "question_number": 59,
+        "correct_answer": "10, 17"
+    },
+    {
+        "question_number": 60,
+        "correct_answer": "8"
+    },
+    {
+        "question_number": 61,
+        "correct_answer": "3"
+    },
+    {
+        "question_number": 62,
+        "correct_answer": "19"
+    },
+    {
+        "question_number": 63,
+        "correct_answer": "165.5 microseconds"
+    },
+    {
+        "question_number": 64,
+        "correct_answer": "All of above"
+    },
+    {
+        "question_number": 65,
+        "correct_answer": "all of the above"
+    },
+    {
+        "question_number": 66,
+        "correct_answer": "exploit the spatial locality of reference in a program"
+    },
+    {
+        "question_number": 67,
+        "correct_answer": "5"
+    },
+    {
+        "question_number": 68,
+        "correct_answer": "T1 >= T2"
+    },
+    {
+        "question_number": 69,
+        "correct_answer": "X-2, Y-3, Z-1"
+    },
+    {
+        "question_number": 70,
+        "correct_answer": "Either S1 or S2"
+    },
+    {
+        "question_number": 71,
+        "correct_answer": "3.2"
+    },
+    {
+        "question_number": 72,
+        "correct_answer": "8"
+    },
+    {
+        "question_number": 73,
+        "correct_answer": "14"
+    },
+    {
+        "question_number": 74,
+        "correct_answer": "D"
+    },
+    {
+        "question_number": 75,
+        "correct_answer": "13"
+    },
+    {
+        "question_number": 76,
+        "correct_answer": "E, 201"
+    },
+    {
+        "question_number": 77,
+        "correct_answer": "Only S2 is true"
+    },
+    {
+        "question_number": 78,
+        "correct_answer": "3"
+    },
+    {
+        "question_number": 79,
+        "correct_answer": "64 K x 16 bits"
+    },
+    {
+        "question_number": 80,
+        "correct_answer": "12.6 ns"
+    },
+    {
+        "question_number": 81,
+        "correct_answer": "13 ns"
+    },
+    {
+        "question_number": 82,
+        "correct_answer": "T1.I1 + T2.I3 + T4.I3 + T3"
+    },
+    {
+        "question_number": 83,
+        "correct_answer": "1.155"
+    },
+    {
+        "question_number": 84,
+        "correct_answer": "0 -1 0 0 1 0 0 -1"
+    },
+    {
+        "question_number": 85,
+        "correct_answer": "1"
+    },
+    {
+        "question_number": 86,
+        "correct_answer": "202 nsec"
+    },
+    {
+        "question_number": 87,
+        "correct_answer": "S5=T1+(I2+I4)\u22c5T3 and S10=(I2+I3)\u22c5T2+I4\u22c5T3+(I1+I3)\u22c5T4+(I2+I4)\u22c5T5"
+    },
+    {
+        "question_number": 88,
+        "correct_answer": "103"
+    },
+    {
+        "question_number": 89,
+        "correct_answer": "35600 and 35400 bytes"
+    },
+    {
+        "question_number": 90,
+        "correct_answer": "31"
+    },
+    {
+        "question_number": 91,
+        "correct_answer": "456"
+    },
+    {
+        "question_number": 92,
+        "correct_answer": "33 or 34"
+    },
+    {
+        "question_number": 93,
+        "correct_answer": "16"
+    },
+    {
+        "question_number": 94,
+        "correct_answer": "28"
+    },
+    {
+        "question_number": 95,
+        "correct_answer": "500"
+    },
+    {
+        "question_number": 96,
+        "correct_answer": "24"
+    },
+    {
+        "question_number": 97,
+        "correct_answer": "4"
+    },
+    {
+        "question_number": 98,
+        "correct_answer": "30"
+    },
+    {
+        "question_number": 99,
+        "correct_answer": "Block transfer and Vectored interrupts"
+    },
+    {
+        "question_number": 100,
+        "correct_answer": "-2Y and 0"
+    },
+    {
+        "question_number": 101,
+        "correct_answer": "It enables faster address calculations than absolute addressing"
+    },
+    {
+        "question_number": 102,
+        "correct_answer": "96 ns"
+    },
+    {
+        "question_number": 103,
+        "correct_answer": "1 K x 18-bit, 1 K x 19-bit, 4 K x 16-bit"
+    },
+    {
+        "question_number": 104,
+        "correct_answer": "Signal processing"
+    },
+    {
+        "question_number": 105,
+        "correct_answer": "2"
+    },
+    {
+        "question_number": 106,
+        "correct_answer": "1, 0, 0"
+    },
+    {
+        "question_number": 107,
+        "correct_answer": "29"
+    },
+    {
+        "question_number": 108,
+        "correct_answer": "ADD (X)\u2212, (X)"
+    },
+    {
+        "question_number": 109,
+        "correct_answer": "135, 10"
+    },
+    {
+        "question_number": 110,
+        "correct_answer": "3.33"
+    },
+    {
+        "question_number": 111,
+        "correct_answer": "9, 4, 7"
+    },
+    {
+        "question_number": 112,
+        "correct_answer": "000011000"
+    },
+    {
+        "question_number": 113,
+        "correct_answer": "Synchronous interrupt"
+    },
+    {
+        "question_number": 114,
+        "correct_answer": "(k mod c) of the cache"
+    },
+    {
+        "question_number": 115,
+        "correct_answer": "Hardwired control, Horizontal microprogramming, Vertical microprogramming."
+    },
+    {
+        "question_number": 116,
+        "correct_answer": "a, b, c and d"
+    },
+    {
+        "question_number": 117,
+        "correct_answer": "a, b, c and d"
+    },
+    {
+        "question_number": 118,
+        "correct_answer": "PC relative addressing"
+    },
+    {
+        "question_number": 119,
+        "correct_answer": "Unless enabled, a CPU will not be able to process interrupts."
+    },
+    {
+        "question_number": 120,
+        "correct_answer": "One Megabyte"
+    },
+    {
+        "question_number": 121,
+        "correct_answer": "i + j/k"
+    },
+    {
+        "question_number": 122,
+        "correct_answer": "003CH"
+    },
+    {
+        "question_number": 123,
+        "correct_answer": "b"
+    },
+    {
+        "question_number": 124,
+        "correct_answer": "80H"
+    },
+    {
+        "question_number": 125,
+        "correct_answer": "8"
+    },
+    {
+        "question_number": 126,
+        "correct_answer": "position-independent code"
+    },
+    {
+        "question_number": 127,
+        "correct_answer": "3"
+    },
+    {
+        "question_number": 128,
+        "correct_answer": "It gives non-uniform priority to various devices"
+    },
+    {
+        "question_number": 129,
+        "correct_answer": "10"
+    },
+    {
+        "question_number": 130,
+        "correct_answer": "1.5%"
+    },
+    {
+        "question_number": 131,
+        "correct_answer": "P1 uses immediate Addressing, and P2 uses Indirect Memory Addressing mode."
+    },
+    {
+        "question_number": 132,
+        "correct_answer": "R2 <- \u03a0commname(\u03c3profname = Smith(committee)) \nR3 <- \u03a0commname(committee) - R2 \n(committee / R2) - \u03a0profname(committee \u22c8 R3)"
+    },
+    {
+        "question_number": 133,
+        "correct_answer": "-16"
+    },
+    {
+        "question_number": 134,
+        "correct_answer": "0.125"
+    },
+    {
+        "question_number": 135,
+        "correct_answer": "6"
+    },
+    {
+        "question_number": 136,
+        "correct_answer": "612"
+    },
+    {
+        "question_number": 137,
+        "correct_answer": "19.98"
+    },
+    {
+        "question_number": 138,
+        "correct_answer": "1"
+    },
+    {
+        "question_number": 139,
+        "correct_answer": "59"
+    },
+    {
+        "question_number": 140,
+        "correct_answer": "I, II and III"
+    },
+    {
+        "question_number": 141,
+        "correct_answer": "32"
+    },
+    {
+        "question_number": 142,
+        "correct_answer": "P \u2212 N + log2K"
+    },
+    {
+        "question_number": 143,
+        "correct_answer": "219"
+    },
+    {
+        "question_number": 144,
+        "correct_answer": "ax=FFF6 h and cx=0 h"
+    },
+    {
+        "question_number": 145,
+        "correct_answer": "ax=003CH; CF=0"
+    },
+    {
+        "question_number": 146,
+        "correct_answer": "Scalability"
+    },
+    {
+        "question_number": 147,
+        "correct_answer": "Sun-way TaihuLight"
+    },
+    {
+        "question_number": 148,
+        "correct_answer": "20"
+    },
+    {
+        "question_number": 149,
+        "correct_answer": "19, 8"
+    },
+    {
+        "question_number": 150,
+        "correct_answer": "16384"
+    },
+    {
+        "question_number": 151,
+        "correct_answer": "A , B and C"
+    },
+    {
+        "question_number": 152,
+        "correct_answer": "Indexed addressing"
+    },
+    {
+        "question_number": 153,
+        "correct_answer": "Indexed addressing mode"
+    },
+    {
+        "question_number": 154,
+        "correct_answer": "The isolated I/O method isolates memory and I/O addresses so that memory address range is not affected by interface address assignment."
+    },
+    {
+        "question_number": 155,
+        "correct_answer": ""
+    },
+    {
+        "question_number": 156,
+        "correct_answer": "Liquid Crystal"
+    },
+    {
+        "question_number": 157,
+        "correct_answer": "Projectors are always perpendicular to the plane of projection."
+    },
+    {
+        "question_number": 158,
+        "correct_answer": "1024"
+    },
+    {
+        "question_number": 159,
+        "correct_answer": "X \u2212 2, Y \u2212 3, Z \u22121"
+    },
+    {
+        "question_number": 160,
+        "correct_answer": "TRAP"
+    },
+    {
+        "question_number": 161,
+        "correct_answer": "60"
+    },
+    {
+        "question_number": 162,
+        "correct_answer": "3.2"
+    },
+    {
+        "question_number": 163,
+        "correct_answer": "Position \u2013 independent code"
+    },
+    {
+        "question_number": 164,
+        "correct_answer": "(1)"
+    },
+    {
+        "question_number": 165,
+        "correct_answer": "64"
+    },
+    {
+        "question_number": 166,
+        "correct_answer": "(54)H"
+    },
+    {
+        "question_number": 167,
+        "correct_answer": "Cycle time"
+    },
+    {
+        "question_number": 168,
+        "correct_answer": "8"
+    },
+    {
+        "question_number": 169,
+        "correct_answer": "3"
+    },
+    {
+        "question_number": 170,
+        "correct_answer": "16"
+    },
+    {
+        "question_number": 171,
+        "correct_answer": "17"
+    },
+    {
+        "question_number": 172,
+        "correct_answer": "5 to 32"
+    },
+    {
+        "question_number": 173,
+        "correct_answer": "Interrupt mask register"
+    },
+    {
+        "question_number": 174,
+        "correct_answer": "Register indirect"
+    },
+    {
+        "question_number": 175,
+        "correct_answer": "1.2 ms"
+    },
+    {
+        "question_number": 176,
+        "correct_answer": "9"
+    },
+    {
+        "question_number": 177,
+        "correct_answer": "4.16"
+    },
+    {
+        "question_number": 178,
+        "correct_answer": "0, 1, 0"
+    },
+    {
+        "question_number": 179,
+        "correct_answer": "Displacement"
+    },
+    {
+        "question_number": 180,
+        "correct_answer": "Write through"
+    },
+    {
+        "question_number": 181,
+        "correct_answer": "60 and 40 seconds"
+    },
+    {
+        "question_number": 182,
+        "correct_answer": "0.12%"
+    },
+    {
+        "question_number": 183,
+        "correct_answer": "by checking interrupt register after execution of each instruction"
+    },
+    {
+        "question_number": 184,
+        "correct_answer": "11"
+    },
+    {
+        "question_number": 185,
+        "correct_answer": ""
+    },
+    {
+        "question_number": 186,
+        "correct_answer": "register indirect"
+    },
+    {
+        "question_number": 187,
+        "correct_answer": "480 Mbps"
+    },
+    {
+        "question_number": 188,
+        "correct_answer": "2"
+    },
+    {
+        "question_number": 189,
+        "correct_answer": "4"
+    },
+    {
+        "question_number": 190,
+        "correct_answer": "Parallel search"
+    },
+    {
+        "question_number": 191,
+        "correct_answer": "16"
+    },
+    {
+        "question_number": 192,
+        "correct_answer": "cycle stealing technique"
+    },
+    {
+        "question_number": 193,
+        "correct_answer": "In both synchronous and asynchronous I/O, an ISR (Interrupt Service Routine) is invoked after completion of the I/O"
+    },
+    {
+        "question_number": 194,
+        "correct_answer": "Index mode"
+    },
+    {
+        "question_number": 195,
+        "correct_answer": "Two-way memory interleaving"
+    },
+    {
+        "question_number": 196,
+        "correct_answer": "10, 3, 1024"
+    },
+    {
+        "question_number": 197,
+        "correct_answer": "600"
+    },
+    {
+        "question_number": 198,
+        "correct_answer": "8"
+    },
+    {
+        "question_number": 199,
+        "correct_answer": "8"
+    },
+    {
+        "question_number": 200,
+        "correct_answer": "It enables faster address calculation than absolute addressing"
+    },
+    {
+        "question_number": 201,
+        "correct_answer": "Branches off to the interrupt service routine after completion of the current instruction"
+    },
+    {
+        "question_number": 202,
+        "correct_answer": "III only"
+    },
+    {
+        "question_number": 203,
+        "correct_answer": "All of the above"
+    },
+    {
+        "question_number": 204,
+        "correct_answer": "vectored interrupt"
+    },
+    {
+        "question_number": 205,
+        "correct_answer": "00 H"
+    },
+    {
+        "question_number": 206,
+        "correct_answer": "Von Neumann"
+    },
+    {
+        "question_number": 207,
+        "correct_answer": "interface"
+    },
+    {
+        "question_number": 208,
+        "correct_answer": "contains the address of the memory location that is to be read from or stored into"
+    },
+    {
+        "question_number": 209,
+        "correct_answer": "exploit the spatial locality of reference in a program"
+    },
+    {
+        "question_number": 210,
+        "correct_answer": "250 Kbytes/sec"
+    },
+    {
+        "question_number": 211,
+        "correct_answer": "higher bit density and higher power consumption"
+    },
+    {
+        "question_number": 212,
+        "correct_answer": "MSB of data in the lowest memory address of data unit"
+    },
+    {
+        "question_number": 213,
+        "correct_answer": "5 PUSH and 4 POP instructions"
+    },
+    {
+        "question_number": 214,
+        "correct_answer": "157.5 n.sec."
+    },
+    {
+        "question_number": 215,
+        "correct_answer": "Cohesion with respect to time"
+    },
+    {
+        "question_number": 216,
+        "correct_answer": "Magnetic tapes \u2192 optical disks \u2192 magnetic disks \u2192 electronic disks \u2192 main memory \u2192 cache \u2192 registers"
+    },
+    {
+        "question_number": 217,
+        "correct_answer": "ALL are correct."
+    },
+    {
+        "question_number": 218,
+        "correct_answer": "n(log32 ) ternary digits"
+    },
+    {
+        "question_number": 219,
+        "correct_answer": "set of micro instructions that defines the individual operations in response to a machine-language instruction"
+    },
+    {
+        "question_number": 220,
+        "correct_answer": "I/O ports are placed at addresses on the bus and are accessed just like other memory locations"
+    },
+    {
+        "question_number": 221,
+        "correct_answer": "none of the above"
+    },
+    {
+        "question_number": 222,
+        "correct_answer": "70 sec and 55 sec"
+    },
+    {
+        "question_number": 223,
+        "correct_answer": "Directory based protocol"
+    },
+    {
+        "question_number": 224,
+        "correct_answer": "I/O protection is ensured by operating system routines."
+    },
+    {
+        "question_number": 225,
+        "correct_answer": "RAM"
+    },
+    {
+        "question_number": 226,
+        "correct_answer": "(4)"
+    },
+    {
+        "question_number": 227,
+        "correct_answer": "Segmented - page mapping"
+    },
+    {
+        "question_number": 228,
+        "correct_answer": "Read a number from memory at location 8000H and store it in memory location 8001H"
+    },
+    {
+        "question_number": 229,
+        "correct_answer": "13.5"
+    },
+    {
+        "question_number": 230,
+        "correct_answer": "A2 and A3 are mapped to the same cache set."
+    },
+    {
+        "question_number": 231,
+        "correct_answer": "2.16"
+    },
+    {
+        "question_number": 232,
+        "correct_answer": "14"
+    },
+    {
+        "question_number": 233,
+        "correct_answer": "50"
+    },
+    {
+        "question_number": 234,
+        "correct_answer": "null"
+    },
+    {
+        "question_number": 235,
+        "correct_answer": "DMA based I/O transfer"
+    },
+    {
+        "question_number": 236,
+        "correct_answer": "1.43"
+    },
+    {
+        "question_number": 237,
+        "correct_answer": "Each cache block in WB and WT has a dirty bit"
+    }
+]
