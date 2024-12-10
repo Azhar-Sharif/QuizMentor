@@ -3,13 +3,13 @@ from bs4 import BeautifulSoup
 import json
 
 # URL for the Digital Logic & Number Representation topic
-topic_url = "https://www.geeksforgeeks.org/quizzes/digital-logic-number-representation-gq/"
+topic_url = "https://www.geeksforgeeks.org/quizzes/computer-organization-and-architecture-gq/"
 
 # List to hold questions for the current topic
 topic_questions_data = []
 
-# Loop through the first 26 pages for the topic
-for i in range(1, 3):  # Pages 1 through 26
+# Loop through the first 10 pages for the topic
+for i in range(1, 9):  # Pages 1 through 8
     # Construct the page URL
     url = f"{topic_url}?page={i}"
 
@@ -28,8 +28,8 @@ for i in range(1, 3):  # Pages 1 through 26
             # Initialize variables for question text, paragraph text, and optional image link
             question_text = "No question text found"
             question_paragraph_text = "No question paragraph found"
-            image_link = None
             correct_answer = None
+            image_link = None
             
             # Locate the inner div that contains the main question text
             main_question_div = container.find('div')
@@ -56,28 +56,29 @@ for i in range(1, 3):  # Pages 1 through 26
             # Extract options and identify the correct answer
             options_container = container.find_all('li')
             options = []
-            for opt in (options_container):
+            for opt in options_container:
                 option_text = opt.get_text(strip=True)
                 options.append(option_text)
 
                 # Check if this option contains the specific class for the correct answer
-                if "QuizQuestionCard_quizCard__optionsList__optionItem__marker__markerRight__e2DzH" in opt.get('class', []):
-                    correct_answer = option_text  # Save the position of the correct answer
+                option_label = opt.find(class_="QuizQuestionCard_quizCard__optionsList__optionItem__optionLabel__ZJEuI")
+                if option_label:
+                    correct_answer = option_text
 
             # Append the question data to the list
             topic_questions_data.append({
                 "question": question_text,
                 "question_paragraph": question_paragraph_text,
                 "options": options,
-                "correct_answer": correct_answer,  # Save correct answer's position
+                "correct_answer": correct_answer,
                 "image_link": image_link  # Add image link if present
             })
 
     else:
-        print(f"Failed to retrieve page {i} for Digital Logic & Number Representation. Status code:", response.status_code)
+        print(f"Failed to retrieve page {i} for Computer Organization and Architecture. Status code:", response.status_code)
 
-# Save the questions data for the Digital Logic & Number Representation topic to a JSON file
-file_name = 'geeksforgeeks_mcqs_Digital_Logic_Number_Representation.json'
+# Save the questions data for the topic to a JSON file
+file_name = 'Computer_Organization_Architecture.json'
 with open(file_name, 'w') as json_file:
     json.dump(topic_questions_data, json_file, indent=4)
 
