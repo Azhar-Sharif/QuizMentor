@@ -8,8 +8,8 @@ topic_url = "https://www.geeksforgeeks.org/quizzes/digital-logic-number-represen
 # List to hold questions for the current topic
 topic_questions_data = []
 
-# Loop through the first 10 pages for the topic
-for i in range(1, 27):  # Pages 1 through 10
+# Loop through the first 26 pages for the topic
+for i in range(1, 27):  # Pages 1 through 26
     # Construct the page URL
     url = f"{topic_url}?page={i}"
 
@@ -29,6 +29,7 @@ for i in range(1, 27):  # Pages 1 through 10
             question_text = "No question text found"
             question_paragraph_text = "No question paragraph found"
             image_link = None
+            correct_answers = None  # List to hold all correct answers
             
             # Locate the inner div that contains the main question text
             main_question_div = container.find('div')
@@ -52,15 +53,24 @@ for i in range(1, 27):  # Pages 1 through 10
                     if image and 'src' in image.attrs:
                         image_link = image['src']
             
-            # Extract options (assuming each option is in an <li> tag within an options list in the container)
+            # Extract options and collect all correct answers
             options_container = container.find_all('li')
-            options = [opt.get_text(strip=True) for opt in options_container]
+            options = []
+            for opt in options_container:
+                option_text = opt.get_text(strip=True)
+                options.append(option_text)
 
-            # Append the question data to the list with paragraph and optional image link
+                # Check if this option contains the specific class for the correct answer
+                option_label = opt.find(class_="QuizQuestionCard_quizCard__optionsList__optionItem__optionLabel__ZJEuI")
+                if option_label:
+                    correct_answer = option_text
+
+            # Append the question data to the list
             topic_questions_data.append({
                 "question": question_text,
                 "question_paragraph": question_paragraph_text,
                 "options": options,
+                "correct_answer": correct_answer,
                 "image_link": image_link  # Add image link if present
             })
 

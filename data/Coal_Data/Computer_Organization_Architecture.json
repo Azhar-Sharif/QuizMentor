@@ -8,6 +8,7 @@
             "ROM",
             "On-chip cache"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -19,6 +20,7 @@
             "(A+D).C+B",
             "(A+C).B+D"
         ],
+        "correct_answer": null,
         "image_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/q6.png"
     },
     {
@@ -30,6 +32,7 @@
             "1 Kbits",
             "2 Kbits"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -41,6 +44,7 @@
             "(j mod k) to (j mod k) + (v-1)",
             "(j mod k) * v to (j mod k) * v + (v-1)"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -52,6 +56,7 @@
             "Conditional branch",
             "Initiation of interrupt service"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -63,6 +68,7 @@
             "176",
             "328"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -74,6 +80,7 @@
             "6",
             "7"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -85,6 +92,7 @@
             "2",
             "3"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -96,6 +104,7 @@
             "5",
             "6"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -107,6 +116,7 @@
             "16",
             "27"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -118,6 +128,7 @@
             "to handle certain kinds of hazards",
             "as part of address translation"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -129,6 +140,7 @@
             "40 Kbits",
             "32 bits"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -140,6 +152,7 @@
             "Register Indirect Scaled Addressing",
             "Base Indexed Addressing"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -151,6 +164,7 @@
             "5.1",
             "6.7"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -162,6 +176,7 @@
             "5",
             "3"
         ],
+        "correct_answer": null,
         "image_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/Tree_gate_cs_2011.jpg"
     },
     {
@@ -173,6 +188,7 @@
             "1.1",
             "3.0"
         ],
+        "correct_answer": null,
         "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2013/12/GATECS2011Q41.png"
     },
     {
@@ -184,6 +200,7 @@
             "6656 bits",
             "5376 bits"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -195,6 +212,7 @@
             "C",
             "D"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -206,6 +224,7 @@
             "17",
             "19"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -217,6 +236,7 @@
             "4",
             "6"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -228,6 +248,7 @@
             "22 nanoseconds",
             "88 nanoseconds"
         ],
+        "correct_answer": null,
         "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2013/12/CSE_201048.gif"
     },
     {
@@ -239,6 +260,7 @@
             "902 nanoseconds",
             "968 nanoseconds"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -250,6 +272,7 @@
             "64",
             "128"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -261,6 +284,7 @@
             "28",
             "30"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -272,6 +296,7 @@
             "129",
             "216"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -283,6 +308,7 @@
             "III Only",
             "II and III only"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -294,6 +320,7 @@
             "I and II only",
             "I, II and III only"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -305,6 +332,7 @@
             "I, III and IV only",
             "I, II, III and IV"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -316,6 +344,7 @@
             "II and III only",
             "I, II and III"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -327,6 +356,7 @@
             "III only",
             "I, II and III"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -338,6 +368,7 @@
             "after effective address calculation has completed",
             "after data cache lookup has completed"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -349,6 +380,7 @@
             "64 Kbits",
             "68 Kbits"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -360,6 +392,7 @@
             "50%",
             "75%"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -371,6 +404,7 @@
             "7, 5, 8",
             "9, 5, 6"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -382,6 +416,7 @@
             "10",
             "14"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -393,6 +428,7 @@
             "20",
             "21"
         ],
+        "correct_answer": null,
         "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2014/02/GATECS200771.png"
     },
     {
@@ -404,6 +440,7 @@
             "102",
             "110"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -415,6 +452,7 @@
             "1024",
             "1040"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -426,6 +464,7 @@
             "56",
             "59"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -437,6 +476,7 @@
             "line 0 to line 7",
             "line 0 to line 8"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -448,6 +488,7 @@
             "600",
             "700"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -459,6 +500,7 @@
             "16388",
             "16484"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -470,6 +512,7 @@
             "6",
             "7"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -481,6 +524,7 @@
             "20",
             "25"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -492,6 +536,7 @@
             "A smaller block size implies a larger cache tag and hence lower cache hit time",
             "A smaller block size incurs a lower cache miss penalty"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -503,6 +548,7 @@
             "Width of way selection multiplexer",
             "Width of processor to main memory data bus"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -514,6 +560,7 @@
             "100000",
             "100"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -525,6 +572,7 @@
             "P3",
             "P4"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -536,6 +584,7 @@
             "1.8",
             "2.5"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -547,6 +596,7 @@
             "172 ns",
             "184 ns"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -558,6 +608,7 @@
             "1.4 seconds",
             "1.6 seconds"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -569,6 +620,7 @@
             "1.8 ns",
             "1.7 ns"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -580,6 +632,7 @@
             "1.8",
             "1.7"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -591,6 +644,7 @@
             "16384",
             "262144"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -602,6 +656,7 @@
             "1/8",
             "16"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -613,6 +668,7 @@
             "Vectored interrupts and multiple interrupting devices are both possible.",
             "Vectored interrupt is possible but multiple in\u00adterrupting devices are not possible."
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -624,6 +680,7 @@
             "5",
             "6"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -635,6 +692,7 @@
             "(1, b), (2, c), (3, a)",
             "(1, a), (2, b), (3, c)"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -646,6 +704,7 @@
             "15, 17",
             "5, 17"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -657,6 +716,7 @@
             "12",
             "15"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -668,6 +728,7 @@
             "4",
             "5"
         ],
+        "correct_answer": null,
         "image_link": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2014/09/GATECS2005Q78.png"
     },
     {
@@ -679,6 +740,7 @@
             "19",
             "21"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -690,6 +752,7 @@
             "165.5 microseconds",
             "590.0 microseconds"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -701,6 +764,7 @@
             "3 only",
             "All of above"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -712,6 +776,7 @@
             "the pipeline stages share hardware resources",
             "all of the above"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -723,6 +788,7 @@
             "reduce the miss penalty",
             "none of the above"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -734,6 +800,7 @@
             "4",
             "5"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -745,6 +812,7 @@
             "T1 < T2",
             "T1 is T2 plus the time taken for one instruction fetch cycle"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -756,6 +824,7 @@
             "X-2, Y-3, Z-1",
             "X-3, Y-l, Z-2"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -767,6 +836,7 @@
             "Only S2 and S3",
             "All of S1, S2 and S3"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -778,6 +848,7 @@
             "2.2",
             "2.0"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -789,6 +860,7 @@
             "7",
             "9"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -800,6 +872,7 @@
             "13",
             "14"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -811,6 +884,7 @@
             "C",
             "D"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -822,6 +896,7 @@
             "13",
             "14"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -833,6 +908,7 @@
             "E, E20",
             "2, 01F"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -844,6 +920,7 @@
             "Only S1 and S2 are true",
             "Only S2 and S3 are true"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -855,6 +932,7 @@
             "1",
             "4"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -866,6 +944,7 @@
             "16 K x 32 bits",
             "64 K x 32 bits"
         ],
+        "correct_answer": null,
         "image_link": null
     },
     {
@@ -877,6 +956,7 @@
             "12.6 ns",
             "12.4 ns"
         ],
+        "correct_answer": null,
         "image_link": null
     }
 ]
