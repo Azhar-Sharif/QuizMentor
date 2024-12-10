@@ -29,7 +29,6 @@ for i in range(1, 27):  # Pages 1 through 26
             question_text = "No question text found"
             question_paragraph_text = "No question paragraph found"
             image_link = None
-            correct_answers = None  # List to hold all correct answers
             
             # Locate the inner div that contains the main question text
             main_question_div = container.find('div')
@@ -60,17 +59,11 @@ for i in range(1, 27):  # Pages 1 through 26
                 option_text = opt.get_text(strip=True)
                 options.append(option_text)
 
-                # Check if this option contains the specific class for the correct answer
-                option_label = opt.find(class_="QuizQuestionCard_quizCard__optionsList__optionItem__optionLabel__ZJEuI")
-                if option_label:
-                    correct_answer = option_text
-
             # Append the question data to the list
             topic_questions_data.append({
                 "question": question_text,
                 "question_paragraph": question_paragraph_text,
                 "options": options,
-                "correct_answer": correct_answer,
                 "image_link": image_link  # Add image link if present
             })
 

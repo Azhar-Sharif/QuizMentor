@@ -2,14 +2,14 @@ import requests
 from bs4 import BeautifulSoup
 import json
 
-# URL for the Digital Logic & Number Representation topic
+# URL for the Computer Organization and Architecture topic
 topic_url = "https://www.geeksforgeeks.org/quizzes/computer-organization-and-architecture-gq/"
 
 # List to hold questions for the current topic
 topic_questions_data = []
 
-# Loop through the first 10 pages for the topic
-for i in range(1, 9):  # Pages 1 through 8
+# Loop through the first 2 pages for the topic
+for i in range(1, 26): 
     # Construct the page URL
     url = f"{topic_url}?page={i}"
 
@@ -56,24 +56,17 @@ for i in range(1, 9):  # Pages 1 through 8
             # Extract options and identify the correct answer
             options_container = container.find_all('li')
             options = []
-            for opt in options_container:
+            for opt in (options_container):
                 option_text = opt.get_text(strip=True)
                 options.append(option_text)
-
-                # Check if this option contains the specific class for the correct answer
-                option_label = opt.find(class_="QuizQuestionCard_quizCard__optionsList__optionItem__optionLabel__ZJEuI")
-                if option_label:
-                    correct_answer = option_text
 
             # Append the question data to the list
             topic_questions_data.append({
                 "question": question_text,
                 "question_paragraph": question_paragraph_text,
                 "options": options,
-                "correct_answer": correct_answer,
                 "image_link": image_link  # Add image link if present
             })
-
     else:
         print(f"Failed to retrieve page {i} for Computer Organization and Architecture. Status code:", response.status_code)
 
