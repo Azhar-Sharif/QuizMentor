@@ -13,7 +13,8 @@ The development of **QuizMentor** was guided by comprehensive user stories to ad
 - **As a student, I want to receive quizzes tailored to my weaknesses so I can improve effectively.**  
 - **As an educator, I can upload course materials to generate quizzes for my class effortlessly.**  
 - **As an admin, I want to monitor quiz usage and feedback to optimize user engagement.**  
-
+## vector Db
+For QuizMentor we are tring to use a vector database to efficiently store and retrieve high-dimensional embeddings of quiz questions and student responses. This will allow ua for fast, similarity-based search and personalized quiz generation. By leveraging vector search, the system provides adaptive learning experiences tailored to each student's progress.
 ## Figma Design  
 The interface for QuizMentor was carefully crafted using Figma to ensure usability and accessibility. You can explore the designs here:  
 [Figma Design Link](#)  
