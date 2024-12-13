@@ -1,14 +1,15 @@
 [
     {
         "question": "Question1",
-        "question_paragraph": "Which of the following page replacement algorithms suffers from Belady\u2019s anomaly?",
+        "question_paragraph": "Which of the following page replacement algorithms suffers from Belady’s anomaly?",
         "options": [
             "FIFO",
             "LRU",
             "Optimal Page Replacement",
             "Both LRU and FIFO"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "FIFO"
     },
     {
         "question": "Question2",
@@ -19,7 +20,8 @@
             "Storing the super-block",
             "Storing device drivers"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "Saving process data"
     },
     {
         "question": "Question3",
@@ -30,7 +32,8 @@
             "Fewer page faults occur",
             "Fewer segmentation faults occur"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "Fewer page faults occur"
     },
     {
         "question": "Question4",
@@ -41,7 +44,8 @@
             "Hardware support for memory management is no longer needed",
             "CPU scheduling can be made more efficient now"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "Hardware support for memory management is no longer needed"
     },
     {
         "question": "Question5",
@@ -52,7 +56,8 @@
             "15 bits",
             "20 bits"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "15 bits"
     },
     {
         "question": "Question6",
@@ -63,7 +68,8 @@
             "Illusion of large main memory",
             "None of the above"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "Illusion of large main memory"
     },
     {
         "question": "Question7",
@@ -74,7 +80,8 @@
             "When a page is corrupted",
             "When an exception is thrown"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "When a requested page is not in memory"
     },
     {
         "question": "Question8",
@@ -85,18 +92,20 @@
             "Processes on system are in running state",
             "Processes on system are in waiting state"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "Processes on system frequently access pages not memory"
     },
     {
         "question": "Question9",
-        "question_paragraph": "A computer uses 46\u2013bit virtual address, 32\u2013bit physical address, and a three\u2013level paged page table organization. The page table base register stores the base address of the first\u2013level table (T1), which occupies exactly one page. Each entry of T1 stores the base address of a page of the second\u2013level table (T2). Each entry of T2 stores the base address of a page of the third\u2013level table (T3). Each entry of T3 stores a page table entry (PTE). The PTE is 32 bits in size. The processor used in the computer has a 1 MB 16 way set associative virtually indexed physically tagged cache. The cache block size is 64 bytes. What is the size of a page in KB in this computer?",
+        "question_paragraph": "A computer uses 46–bit virtual address, 32–bit physical address, and a three–level paged page table organization. The page table base register stores the base address of the first–level table (T1), which occupies exactly one page. Each entry of T1 stores the base address of a page of the second–level table (T2). Each entry of T2 stores the base address of a page of the third–level table (T3). Each entry of T3 stores a page table entry (PTE). The PTE is 32 bits in size. The processor used in the computer has a 1 MB 16 way set associative virtually indexed physically tagged cache. The cache block size is 64 bytes. What is the size of a page in KB in this computer?",
         "options": [
             "2",
             "4",
             "8",
             "16"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "8"
     },
     {
         "question": "Question10",
@@ -107,7 +116,8 @@
             "8",
             "16"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "8"
     },
     {
         "question": "Question11",
@@ -118,7 +128,8 @@
             "11",
             "22"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "22"
     },
     {
         "question": "Question12",
@@ -129,7 +140,8 @@
             "OPTIMAL = LRU",
             "OPTIMAL = FIFO"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "OPTIMAL < FIFO < LRU"
     },
     {
         "question": "Question13",
@@ -140,7 +152,8 @@
             "23ns",
             "35ns"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "30ns"
     },
     {
         "question": "Question14",
@@ -151,18 +164,20 @@
             "197",
             "195"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "196"
     },
     {
         "question": "Question15",
-        "question_paragraph": "In which one of the following page replacement policies, Belady\u2019s anomaly may occur?",
+        "question_paragraph": "In which one of the following page replacement policies, Belady’s anomaly may occur?",
         "options": [
             "FIFO",
             "Optimal",
             "LRU",
             "MRU"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "FIFO"
     },
     {
         "question": "Question16",
@@ -173,7 +188,8 @@
             "Both virtual page number and page frame number",
             "Access right information"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "Page frame number"
     },
     {
         "question": "Question17",
@@ -184,18 +200,20 @@
             "It is required by the translation lookaside buffer.",
             "It helps to reduce the number of page faults in page replacement algorithms."
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "It helps to reduce the size of page table needed to implement the virtual address space of a process."
     },
     {
         "question": "Question18",
-        "question_paragraph": "A processor uses 36 bit physical addresses and 32 bit virtual addresses, with a page frame size of 4 Kbytes. Each page table entry is of size 4 bytes. A three level page table is used for virtual to physical address translation, where the virtual address is used as follows\u2022 Bits 30-31 are used to index into the first level page table\u2022 Bits 21-29 are used to index into the second level page table\u2022 Bits 12-20 are used to index into the third level page table, and\u2022 Bits 0-11 are used as offset within the pageThe number of bits required for addressing the next level page table (or page frame) in the page table entry of the first, second and third level page tables are respectively.",
+        "question_paragraph": "A processor uses 36 bit physical addresses and 32 bit virtual addresses, with a page frame size of 4 Kbytes. Each page table entry is of size 4 bytes. A three level page table is used for virtual to physical address translation, where the virtual address is used as follows• Bits 30-31 are used to index into the first level page table• Bits 21-29 are used to index into the second level page table• Bits 12-20 are used to index into the third level page table, and• Bits 0-11 are used as offset within the pageThe number of bits required for addressing the next level page table (or page frame) in the page table entry of the first, second and third level page tables are respectively.",
         "options": [
             "20, 20 and 20",
             "24, 24 and 24",
             "24, 24 and 20",
             "25, 25 and 24"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "25, 25 and 24"
     },
     {
         "question": "Question19",
@@ -206,7 +224,8 @@
             "Both P and Q are true, and Q is the reason for P",
             "Both P and Q are false"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "Both P and Q are true, but Q is not the reason for P."
     },
     {
         "question": "Question20",
@@ -217,7 +236,8 @@
             "9",
             "10"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "7"
     },
     {
         "question": "Question21",
@@ -228,7 +248,8 @@
             "2",
             "3"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "2"
     },
     {
         "question": "Question22",
@@ -239,18 +260,20 @@
             "7",
             "8"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "7"
     },
     {
         "question": "Question23",
-        "question_paragraph": "A computer has twenty physical page frames which contain pages numbered 101 through 120. Now a program accesses the pages numbered 1, 2, \u2026, 100 in that order, and repeats the access sequence THRICE. Which one of the following page replacement policies experiences the same number of page faults as the optimal page replacement policy for this program?",
+        "question_paragraph": "A computer has twenty physical page frames which contain pages numbered 101 through 120. Now a program accesses the pages numbered 1, 2, …, 100 in that order, and repeats the access sequence THRICE. Which one of the following page replacement policies experiences the same number of page faults as the optimal page replacement policy for this program?",
         "options": [
             "Least-recently-used",
             "First-in-first-out",
             "Last-in-first-out",
             "Most-recently-used"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "Most-recently-used"
     },
     {
         "question": "Question24",
@@ -261,7 +284,8 @@
             "6",
             "7"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "6"
     },
     {
         "question": "Question25",
@@ -272,7 +296,8 @@
             "124",
             "118"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "122"
     },
     {
         "question": "Question26",
@@ -283,7 +308,8 @@
             "2.46",
             "4.52"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "1.68"
     },
     {
         "question": "Question27",
@@ -294,7 +320,8 @@
             "15 bits",
             "20 bits"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "15 bits"
     },
     {
         "question": "Question28",
@@ -305,7 +332,8 @@
             "Hardware support for memory management is no longer needed",
             "CPU scheduling can be made more efficient now"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "Hardware support for memory management is no longer needed"
     },
     {
         "question": "Question29",
@@ -316,7 +344,8 @@
             "physical memory size",
             "number of processes in memory"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "the instruction set architecture"
     },
     {
         "question": "Question30",
@@ -327,7 +356,8 @@
             "1215 nanoseconds",
             "1230 nanoseconds"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "1230 nanoseconds"
     },
     {
         "question": "Question31",
@@ -338,7 +368,8 @@
             "the large memory overhead in maintaining page tables",
             "the large computation overhead in the translation process"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "the large memory overhead in maintaining page tables"
     },
     {
         "question": "Question32",
@@ -349,7 +380,8 @@
             "Faster program startup",
             "Existing programs need not be re-linked to take advantage of newer versions of libraries"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "Faster program startup"
     },
     {
         "question": "Question33",
@@ -360,18 +392,20 @@
             "3 ns",
             "4 ns"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "4 ns"
     },
     {
         "question": "Question34",
-        "question_paragraph": "A processor uses 2-level page tables for virtual to physical address translation. Page tables for both levels are stored in the main memory. Virtual and physical addresses are both 32 bits wide. The memory is byte addressable. For virtual to physical address translation, the 10 most significant bits of the virtual address are used as index into the first level page table while the next 10 bits are used as index into the second level page table. The 12 least significant bits of the virtual address are used as offset within the page. Assume that the page table entries in both levels of page tables are 4 bytes wide. Further, the processor has a translation look-aside buffer (TLB), with a hit rate of 96%. The TLB caches recently used virtual page numbers and the corresponding physical page numbers. The processor also has a physically addressed cache with a hit rate of 90%. Main memory access time is 10 ns, cache access time is 1 ns, and TLB access time is also 1 ns.\r\n\t\r\nSuppose a process has only the following pages in its virtual address space: two contiguous code pages starting at virtual address 0x00000000, two contiguous data pages starting at virtual address 0\u00d700400000, and a stack page starting at virtual address 0\u00d7FFFFF000. The amount of memory required for storing the page tables of this process is:",
+        "question_paragraph": "A processor uses 2-level page tables for virtual to physical address translation. Page tables for both levels are stored in the main memory. Virtual and physical addresses are both 32 bits wide. The memory is byte addressable. For virtual to physical address translation, the 10 most significant bits of the virtual address are used as index into the first level page table while the next 10 bits are used as index into the second level page table. The 12 least significant bits of the virtual address are used as offset within the page. Assume that the page table entries in both levels of page tables are 4 bytes wide. Further, the processor has a translation look-aside buffer (TLB), with a hit rate of 96%. The TLB caches recently used virtual page numbers and the corresponding physical page numbers. The processor also has a physically addressed cache with a hit rate of 90%. Main memory access time is 10 ns, cache access time is 1 ns, and TLB access time is also 1 ns.\r\n\t\r\nSuppose a process has only the following pages in its virtual address space: two contiguous code pages starting at virtual address 0x00000000, two contiguous data pages starting at virtual address 0×00400000, and a stack page starting at virtual address 0×FFFFF000. The amount of memory required for storing the page tables of this process is:",
         "options": [
             "8 KB",
             "12 KB",
             "16 KB",
             "20 KB"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "16 KB"
     },
     {
         "question": "Question35",
@@ -382,7 +416,8 @@
             "instruction opcode",
             "translation lookaside buffer"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "instruction opcode"
     },
     {
         "question": "Question36",
@@ -393,7 +428,8 @@
             "Has not been used for the longest time in the past.",
             "Has been used most number of times."
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "Will not be used for the longest time in the future."
     },
     {
         "question": "Question37",
@@ -404,18 +440,20 @@
             "Linking is insecure",
             "Cryptographic procedures are not available for dynamic linking"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "The path for searching dynamic libraries is not known till runtime"
     },
     {
         "question": "Question38",
         "question_paragraph": "Which of the following statements is false?",
         "options": [
-            "Virtual memory implements the translation of a program\u2018s address space into physical memory address space",
+            "Virtual memory implements the translation of a program‘s address space into physical memory address space",
             "Virtual memory allows each program to exceed the size of the primary memory",
             "Virtual memory increases the degree of multiprogramming",
             "Virtual memory reduces the context switching overhead"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "Virtual memory reduces the context switching overhead"
     },
     {
         "question": "Question39",
@@ -426,7 +464,8 @@
             "Relocation",
             "Symbol resolution"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "Relocation"
     },
     {
         "question": "Question40",
@@ -437,7 +476,8 @@
             "ROM",
             "On-chip cache"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "Disk"
     },
     {
         "question": "Question41",
@@ -448,7 +488,8 @@
             "sometimes increase the number of page faults",
             "never affect the number of page faults"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "sometimes increase the number of page faults"
     },
     {
         "question": "Question42",
@@ -459,7 +500,8 @@
             "2 MB",
             "24 MB"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "2 MB"
     },
     {
         "question": "Question43",
@@ -470,7 +512,8 @@
             "9.999 microseconds",
             "1.9999 microseconds"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "1.9999 microseconds"
     },
     {
         "question": "Question44",
@@ -481,7 +524,8 @@
             "8",
             "16"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "4"
     },
     {
         "question": "Question45",
@@ -492,7 +536,8 @@
             "250 KB and 300 KB",
             "300 KB and 400 KB"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "200 KB and 300 KB"
     },
     {
         "question": "Question46",
@@ -503,7 +548,8 @@
             "28",
             "40"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "36"
     },
     {
         "question": "Question47",
@@ -514,7 +560,8 @@
             "File Descriptor Table",
             "Message Queue"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "Stack"
     },
     {
         "question": "Question48",
@@ -525,18 +572,20 @@
             "6",
             "7"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "5"
     },
     {
         "question": "Question49",
-        "question_paragraph": "The storage area of a disk has innermost diameter of 10 cm and outermost diameter of 20 cm. The maximum storage density of the disk is 1400bits/cm. The disk rotates at a speed of 4200 RPM. The main memory of a computer has 64-bit word length and 1\u00b5s cycle time. If cycle stealing is used for data transfer from the disk, the percentage of memory cycles stolen for transferring one word is",
+        "question_paragraph": "The storage area of a disk has innermost diameter of 10 cm and outermost diameter of 20 cm. The maximum storage density of the disk is 1400bits/cm. The disk rotates at a speed of 4200 RPM. The main memory of a computer has 64-bit word length and 1µs cycle time. If cycle stealing is used for data transfer from the disk, the percentage of memory cycles stolen for transferring one word is",
         "options": [
             "0.5%",
             "1%",
             "5%",
             "10%"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "5%"
     },
     {
         "question": "Question50",
@@ -547,18 +596,20 @@
             "8GB",
             "16GB"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "2GB"
     },
     {
         "question": "Question51",
-        "question_paragraph": "A disk has 200 tracks (numbered 0 through 199). At a given time, it was servicing the request of reading data from track 120, and at the previous\u00a0request, service was for track 90. The pending requests (in order of their arrival) are for track numbers.\r\n\r\n30 70 115 130 110 80 20 25.\r\n\r\nHow many times will the head change its direction for the disk scheduling policies SSTF(Shortest Seek Time First) and FCFS (First Come Fist Serve)",
+        "question_paragraph": "A disk has 200 tracks (numbered 0 through 199). At a given time, it was servicing the request of reading data from track 120, and at the previous request, service was for track 90. The pending requests (in order of their arrival) are for track numbers.\r\n\r\n30 70 115 130 110 80 20 25.\r\n\r\nHow many times will the head change its direction for the disk scheduling policies SSTF(Shortest Seek Time First) and FCFS (First Come Fist Serve)",
         "options": [
             "2 and 3",
             "3 and 3",
             "3 and 4",
             "4 and 4"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "3 and 4"
     },
     {
         "question": "Question52",
@@ -569,7 +620,8 @@
             "12",
             "14"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "14"
     },
     {
         "question": "Question53",
@@ -577,10 +629,11 @@
         "options": [
             "S1.S2'",
             "S1+S2",
-            "(S1\u2295S2)'",
-            "S1\u2295S2"
+            "(S1⊕S2)'",
+            "S1⊕S2"
         ],
-        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2015/12/p1.png"
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2015/12/p1.png",
+        "correct_answer": "(S1⊕S2)'"
     },
     {
         "question": "Question54",
@@ -591,7 +644,8 @@
             "0 5 7 9 16 55",
             "3 5 7 9 16 55"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "0 5 7 9 16 55"
     },
     {
         "question": "Question55",
@@ -602,18 +656,20 @@
             "(i) 80 MB (ii) 360 MB",
             "(i) 360 MB (ii) 80 MB"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "(i) 360 MB (ii) 80 MB"
     },
     {
         "question": "Question56",
-        "question_paragraph": "Consider  a  computer  system  with  40-bit  virtual  addressing  and  page  size  of  sixteen kilobytes.  If the computer system has a one-level page table per process and each page table entry requires 48 bits, then the size of the per-process page table is _________megabytes.\r\n\u00a0\r\nNote : This question was asked as Numerical Answer Type.",
+        "question_paragraph": "Consider  a  computer  system  with  40-bit  virtual  addressing  and  page  size  of  sixteen kilobytes.  If the computer system has a one-level page table per process and each page table entry requires 48 bits, then the size of the per-process page table is _________megabytes.\r\n \r\nNote : This question was asked as Numerical Answer Type.",
         "options": [
             "384",
             "48",
             "192",
             "96"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "384"
     },
     {
         "question": "Question57",
@@ -624,7 +680,8 @@
             "2",
             "3"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "1"
     },
     {
         "question": "Question58",
@@ -635,18 +692,20 @@
             "MRU (Most Recently Used)",
             "FIFO (First In First Out)"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "FIFO (First In First Out)"
     },
     {
         "question": "Question59",
-        "question_paragraph": "Listed below are some operating system abstractions (in the left column) and the hardware components or mechanism (in the right column) that they are abstractions of. Which of the following matching of pairs is correct?A. Thread \u00a0\u00a0\u00a0\u00a0          \u00a0      1. Interrupt\r\nB. Virtual address space \u00a0\u00a0 \u00a0\u00a0 2. Memory\r\nC. File system \u00a0\u00a0           \u00a0\u00a0 3. CPU\r\nD. Signal \u00a0                \u00a0\u00a0\u00a0 4. Disk",
+        "question_paragraph": "Listed below are some operating system abstractions (in the left column) and the hardware components or mechanism (in the right column) that they are abstractions of. Which of the following matching of pairs is correct?A. Thread                      1. Interrupt\r\nB. Virtual address space       2. Memory\r\nC. File system                 3. CPU\r\nD. Signal                      4. Disk",
         "options": [
             "A-2, B-4, C-3, D-1",
             "A-1, B-2, C-3, D-4",
             "A-3, B-2, C-4, D-1",
             "A-4, B-1, C-2, D-3"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "A-3, B-2, C-4, D-1"
     },
     {
         "question": "Question60",
@@ -657,7 +716,8 @@
             "7",
             "8"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "7"
     },
     {
         "question": "Question61",
@@ -668,7 +728,8 @@
             "65",
             "75"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "65"
     },
     {
         "question": "Question62",
@@ -679,7 +740,8 @@
             "8 and 1, 2, 4, 5",
             "9 and 1, 2, 3, 5"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "7 and 1, 2, 4, 5"
     },
     {
         "question": "Question63",
@@ -690,11 +752,12 @@
             "I-c, II-d, III-a, IV-b",
             "I-b, II-c, III-d, IV-a"
         ],
-        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2016/05/2008_56-300x133.jpg"
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2016/05/2008_56-300x133.jpg",
+        "correct_answer": "I-b, II-c, III-d, IV-a"
     },
     {
         "question": "Question64",
-        "question_paragraph": "Linked Questions 58-59Assume GeeksforGeeks implemented the new page replacement algorithm in virtual memory and given its name as \u2018Geek\u2019. Consider the working strategy of Geek as following-Each page in memory maintains a count which is incremented if the page is referred and no page fault occurs.If a page fault occurs, the physical page with zero count or smallest count is replaced by new page and if more than one page with zero count or smallest count then it uses FIFO strategy to replace the page.Find the number of page faults using Geeks algorithm for the following reference string (assume three physical frames are available which are initially free)Reference String : \u201cA B C D A B E A B C D E B A D\u201d",
+        "question_paragraph": "Linked Questions 58-59Assume GeeksforGeeks implemented the new page replacement algorithm in virtual memory and given its name as ‘Geek’. Consider the working strategy of Geek as following-Each page in memory maintains a count which is incremented if the page is referred and no page fault occurs.If a page fault occurs, the physical page with zero count or smallest count is replaced by new page and if more than one page with zero count or smallest count then it uses FIFO strategy to replace the page.Find the number of page faults using Geeks algorithm for the following reference string (assume three physical frames are available which are initially free)Reference String : “A B C D A B E A B C D E B A D”",
         "options": [
             "Each page in memory maintains a count which is incremented if the page is referred and no page fault occurs.",
             "If a page fault occurs, the physical page with zero count or smallest count is replaced by new page and if more than one page with zero count or smallest count then it uses FIFO strategy to replace the page.",
@@ -703,7 +766,8 @@
             "11",
             "13"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "null"
     },
     {
         "question": "Question65",
@@ -714,18 +778,20 @@
             "Geek is better than LRU",
             "None"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "Geek is better than LRU"
     },
     {
         "question": "Question66",
-        "question_paragraph": "A multi-user, multi-processing operating system cannot be implemented on hardware that does not support:\r\n\r\na)\u00a0Address translation\r\n\r\nb)\u00a0DMA for disk transfer\r\n\r\nc)\u00a0At least two modes of CPU execution (privileged and non-privileged).\r\n\r\nd)\u00a0Demand Paging",
+        "question_paragraph": "A multi-user, multi-processing operating system cannot be implemented on hardware that does not support:\r\n\r\na) Address translation\r\n\r\nb) DMA for disk transfer\r\n\r\nc) At least two modes of CPU execution (privileged and non-privileged).\r\n\r\nd) Demand Paging",
         "options": [
             "Only A",
             "Both A, B",
             "A, B and C",
             "A, B and D"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "A, B and C"
     },
     {
         "question": "Question67",
@@ -736,24 +802,27 @@
             "b and d",
             "All of the above"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "b and d"
     },
     {
         "question": "Question68",
-        "question_paragraph": "The overlay tree for a program is as shown below:What will be the size of the partition (in physical memory) required to load (and run)\u00a0 this program?",
+        "question_paragraph": "The overlay tree for a program is as shown below:What will be the size of the partition (in physical memory) required to load (and run)  this program?",
         "options": [
             "12 KB",
             "14 KB",
             "10 KB",
             "8 KB"
         ],
-        "image_link": "http://www.cdn.geeksforgeeks.org/wp-content/uploads/hier.png"
+        "image_link": "http://www.cdn.geeksforgeeks.org/wp-content/uploads/hier.png",
+        "correct_answer": "14 KB"
     },
     {
         "question": "Question69",
         "question_paragraph": "Free disk space can be kept track of using a free list or a bit map. Disk addresses require d bits. For a disk with 13 blocks, F of which is free, state the condition under which the free list uses less space than the bit map.",
         "options": [],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "null"
     },
     {
         "question": "Question70",
@@ -764,7 +833,8 @@
             "will always be to one of the pages existing in memory",
             "will always lead to a page fault"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "is likely to be to one of the pages used in the last few page references"
     },
     {
         "question": "Question71",
@@ -775,7 +845,8 @@
             "implies excessive page I/O",
             "improves the system performance"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "implies excessive page I/O"
     },
     {
         "question": "Question72",
@@ -786,7 +857,8 @@
             "allows only read on a page",
             "none of the above"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "helps avoid unnecessary writes on a paging device"
     },
     {
         "question": "Question73",
@@ -797,13 +869,15 @@
             "231",
             "541"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "181"
     },
     {
         "question": "Question74",
         "question_paragraph": "A demand paged virtual memory system uses 16 bit virtual address, page size of 256 bytes, and has 1 Kbyte of main memory. LRU page replacement is implemented using a list whose current status (page number in decimal) is.\r\n\r\nFor each hexadecimal address in the address sequence given below00FF, 010D, 10FF, 11B0indicate\r\ni) the new status of the list\r\nii) page faults, if any, and\r\niii) page replacements, if any",
         "options": [],
-        "image_link": "http://www.cdn.geeksforgeeks.org/wp-content/uploads/pagetab.png"
+        "image_link": "http://www.cdn.geeksforgeeks.org/wp-content/uploads/pagetab.png",
+        "correct_answer": "null"
     },
     {
         "question": "Question75",
@@ -819,18 +893,20 @@
             "16",
             "None of the above"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "null"
     },
     {
         "question": "Question76",
-        "question_paragraph": "Recall that Belady\u2019s anomaly is that the pages-fault rate may increase as the number of allocated frames increases and also recall convey effect where first process can increase waiting time for all processes. Now consider the following statements:S1 : Random page replacement algorithm (where\r\n    a page chosen at random is replaced) \r\n    suffers from Belady\u2019s anomaly.\r\n\r\nS2 : Random CPU scheduling algorithm \r\n    suffers from convoy effect.Which of the following is CORRECT?",
+        "question_paragraph": "Recall that Belady’s anomaly is that the pages-fault rate may increase as the number of allocated frames increases and also recall convey effect where first process can increase waiting time for all processes. Now consider the following statements:S1 : Random page replacement algorithm (where\r\n    a page chosen at random is replaced) \r\n    suffers from Belady’s anomaly.\r\n\r\nS2 : Random CPU scheduling algorithm \r\n    suffers from convoy effect.Which of the following is CORRECT?",
         "options": [
             "S1 is true, S2 is true",
             "S1 is true, S2 is false",
             "S1 is false , S2 is true",
             "S1 is false, S2 is false"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "S1 is true, S2 is true"
     },
     {
         "question": "Question77",
@@ -841,7 +917,8 @@
             "Both (A) and (B)",
             "Neither (A) nor (B)"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "Internal fragmentation occurs when total memory space exists to satisfy the a request, but it is not contiguous. External fragmentation occurs when allocated memory may be slightly larger the requested memory, this size difference is memory internal to a partition,but not being used."
     },
     {
         "question": "Question78",
@@ -852,18 +929,20 @@
             "(D - X) / (D - M)",
             "(X - M) / (D - X)"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "(X - M) / (D - M)"
     },
     {
         "question": "Question79",
-        "question_paragraph": "In designing a computer\u2019s cache system, the cache block (or cache line) size is an important parameter. Which one of the following statements is correct in this context?",
+        "question_paragraph": "In designing a computer’s cache system, the cache block (or cache line) size is an important parameter. Which one of the following statements is correct in this context?",
         "options": [
             "Smaller block size incurs lower cache miss penalty",
             "Smaller block size implies better spatial locality",
             "Smaller block size implies smaller cache tag",
             "Smaller block size implies lower cache hit time"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "Smaller block size incurs lower cache miss penalty"
     },
     {
         "question": "Question80",
@@ -874,7 +953,8 @@
             "18",
             "5"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "18"
     },
     {
         "question": "Question81",
@@ -885,7 +965,8 @@
             "LRU",
             "Optimal"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "Optimal"
     },
     {
         "question": "Question82",
@@ -896,7 +977,8 @@
             "(3) and  (4)",
             "Only option (4)"
         ],
-        "image_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/522.png"
+        "image_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/522.png",
+        "correct_answer": "Only option (4)"
     },
     {
         "question": "Question83",
@@ -907,7 +989,8 @@
             "236",
             "240"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "236"
     },
     {
         "question": "Question84",
@@ -918,7 +1001,8 @@
             "120ns",
             "84ns"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "147ns"
     },
     {
         "question": "Question85",
@@ -929,7 +1013,8 @@
             "More addressable memory available",
             "Faster and easy swapping of process"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "More I/O is required"
     },
     {
         "question": "Question86",
@@ -940,7 +1025,8 @@
             "15 bits",
             "20 bits"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "15 bits"
     },
     {
         "question": "Question87",
@@ -951,7 +1037,8 @@
             "LRU",
             "MRU"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "FIFO"
     },
     {
         "question": "Question88",
@@ -962,7 +1049,8 @@
             "15 and 14",
             "16 and 32"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "15 and 14"
     },
     {
         "question": "Question89",
@@ -973,7 +1061,8 @@
             "227",
             "228"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "null"
     },
     {
         "question": "Question90",
@@ -984,7 +1073,8 @@
             "All of the above",
             "None of the above"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "II and III"
     },
     {
         "question": "Question91",
@@ -995,7 +1085,8 @@
             "15 bits",
             "16 bits"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "15 bits"
     },
     {
         "question": "Question92",
@@ -1006,7 +1097,8 @@
             "7",
             "12"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "2"
     },
     {
         "question": "Question93",
@@ -1017,7 +1109,8 @@
             "Fewer page faults occur",
             "Fewer segmentation faults occur"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "Fewer page faults occur"
     },
     {
         "question": "Question94",
@@ -1028,7 +1121,8 @@
             "allows only read on a page",
             "None of the above"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "helps avoid unnecessary writes on a paging device"
     },
     {
         "question": "Question95",
@@ -1039,7 +1133,8 @@
             "11",
             "10"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "13"
     },
     {
         "question": "Question96",
@@ -1050,7 +1145,8 @@
             "Deadlock",
             "Fetches the entry at offset 27 in Segment Id 3"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "A trap is generated"
     },
     {
         "question": "Question97",
@@ -1061,7 +1157,8 @@
             "2073",
             "4121"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "4121"
     },
     {
         "question": "Question98",
@@ -1072,7 +1169,8 @@
             "7",
             "8"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "7"
     },
     {
         "question": "Question99",
@@ -1083,7 +1181,8 @@
             "60 microseconds",
             "68 microseconds"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "34 microseconds"
     },
     {
         "question": "Question100",
@@ -1094,7 +1193,8 @@
             "7, 10, 8",
             "7, 10, 7"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "8, 10, 7"
     },
     {
         "question": "Question101",
@@ -1105,7 +1205,8 @@
             "A page has been modified after being loaded into cache",
             "An illegal access of page"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "A page has been modified after being loaded into cache"
     },
     {
         "question": "Question102",
@@ -1116,7 +1217,8 @@
             "219",
             "220"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "219"
     },
     {
         "question": "Question103",
@@ -1127,7 +1229,8 @@
             "321",
             "319"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "321"
     },
     {
         "question": "Question104",
@@ -1138,7 +1241,8 @@
             "48 msec",
             "100 msec"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "80 msec"
     },
     {
         "question": "Question105",
@@ -1149,7 +1253,8 @@
             "Least recently used policy is used for page replacement",
             "First in First out policy is used for page replacement"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "There are too many programs running in the system"
     },
     {
         "question": "Question106",
@@ -1160,7 +1265,8 @@
             "15, 13",
             "15, 15"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "15, 13"
     },
     {
         "question": "Question107",
@@ -1171,18 +1277,20 @@
             "233",
             "251"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "218"
     },
     {
         "question": "Question108",
-        "question_paragraph": "Consider the list of page references in the time line as below:\r\n 9 6 2 3 4 4 4 4 3 4 4 2 5 8 6 8 5 5 3 2 3 3 9 6 2 7\r\nWhat is the working set at the penultimate page reference if \u2206 is 5?",
+        "question_paragraph": "Consider the list of page references in the time line as below:\r\n 9 6 2 3 4 4 4 4 3 4 4 2 5 8 6 8 5 5 3 2 3 3 9 6 2 7\r\nWhat is the working set at the penultimate page reference if ∆ is 5?",
         "options": [
             "{8,5,3,2,9,6}",
             "{4,3,6,2,5}",
             "{3,9,6,2,7}",
             "{3,9,6,2,7}"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "{3,9,6,2,7}"
     },
     {
         "question": "Question109",
@@ -1193,7 +1301,8 @@
             "45 sec",
             "10 sec"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "45 sec"
     },
     {
         "question": "Question110",
@@ -1204,40 +1313,44 @@
             "48 sec",
             "17 sec"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "49 sec"
     },
     {
         "question": "Question111",
-        "question_paragraph": "A dynamic RAM has refresh cycle of 32 times per msec. Each refresh operation requires 100 nsec and a memory cycle requires 250 nsec. What percentage of memory\u2019s total operating time is required for refreshes?",
+        "question_paragraph": "A dynamic RAM has refresh cycle of 32 times per msec. Each refresh operation requires 100 nsec and a memory cycle requires 250 nsec. What percentage of memory’s total operating time is required for refreshes?",
         "options": [
             "0.64",
             "0.96",
             "2.00",
             "0.32"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "0.32"
     },
     {
         "question": "Question112",
-        "question_paragraph": "The solution of the recurrence relation\r\nT(n) \u2264 { \u03b8(1) if n \u2264 80\r\nT(n) \u2264 { T(n / s) + T((7n / 10) + 6) + O(n) if n \u2265 80\r\nis :",
+        "question_paragraph": "The solution of the recurrence relation\r\nT(n) ≤ { θ(1) if n ≤ 80\r\nT(n) ≤ { T(n / s) + T((7n / 10) + 6) + O(n) if n ≥ 80\r\nis :",
         "options": [
             "O(lg n)",
             "O(n)",
             "O(n lg n)",
             "None of the above"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "None of the above"
     },
     {
         "question": "Question113",
         "question_paragraph": "Let Piand Pjbe two processes, R be the set of variables read from memory, and W be the set of variables written to memory. For the concurrent execution of two processes Piand Pjwhich of the following conditions is not true?",
         "options": [
-            "R(Pi)  \u2229 W(Pj) = \u0424",
-            "W(Pi)  \u2229  R(Pj) = \u0424",
-            "R(Pi)  \u2229  R(Pj) = \u0424",
-            "W(Pi)  \u2229  W(Pj) = \u0424"
+            "R(Pi)  ∩ W(Pj) = Ф",
+            "W(Pi)  ∩  R(Pj) = Ф",
+            "R(Pi)  ∩  R(Pj) = Ф",
+            "W(Pi)  ∩  W(Pj) = Ф"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "R(Pi) ∩ R(Pj) = Ф"
     },
     {
         "question": "Question114",
@@ -1248,7 +1361,8 @@
             "8",
             "5"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "7"
     },
     {
         "question": "Question115",
@@ -1259,7 +1373,8 @@
             "4 M bytes",
             "4 K bytes"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "4 M bytes"
     },
     {
         "question": "Question116",
@@ -1270,7 +1385,8 @@
             "(3)",
             "(4)"
         ],
-        "image_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/37-3.png"
+        "image_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/37-3.png",
+        "correct_answer": "(4)"
     },
     {
         "question": "Question117",
@@ -1281,7 +1397,8 @@
             "122",
             "120"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "128"
     },
     {
         "question": "Question118",
@@ -1292,7 +1409,8 @@
             "16 bit UNICODE",
             "12 bit UNICODE"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "16 bit UNICODE"
     },
     {
         "question": "Question119",
@@ -1303,7 +1421,8 @@
             "Page fault rate may increase on decreasing the number of allocated frames",
             "Page fault rate may decrease on increasing the number of allocated frames"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "Page fault rate may increase on increasing the number of allocated frames"
     },
     {
         "question": "Question120",
@@ -1314,7 +1433,8 @@
             "is a reference to a page belonging to another program",
             "occurs when a program accesses a page not currently in memory"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "occurs when a program accesses a page not currently in memory"
     },
     {
         "question": "Question121",
@@ -1325,7 +1445,8 @@
             "is the hardware necessary to implement paging",
             "storage pages at a specific location on disk"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "is the hardware necessary to implement paging"
     },
     {
         "question": "Question122",
@@ -1336,7 +1457,8 @@
             "can always be avoided by swapping",
             "can be caused by poor paging algorithms"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "can be caused by poor paging algorithms"
     },
     {
         "question": "Question123",
@@ -1347,7 +1469,8 @@
             "allows only read on a page",
             "None of the above"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "helps avoid unnecessary writes on a paging device"
     },
     {
         "question": "Question124",
@@ -1358,7 +1481,8 @@
             "prepares it for finishing",
             "occurs only when there is an error in it"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "allows it to continue executing later"
     },
     {
         "question": "Question125",
@@ -1369,7 +1493,8 @@
             "is most used on large computers",
             "is transparent to the user"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "is transparent to the user"
     },
     {
         "question": "Question126",
@@ -1380,7 +1505,8 @@
             "where shared resources are accessed",
             "which must be enclosed by a pair of semaphore operations P and V"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "where shared resources are accessed"
     },
     {
         "question": "Question127",
@@ -1391,7 +1517,8 @@
             "14 bits",
             "12 bits"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "13 bits"
     },
     {
         "question": "Question128",
@@ -1402,7 +1529,8 @@
             "Optimal page replacement",
             "Second chance algorithm"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "Optimal page replacement"
     },
     {
         "question": "Question129",
@@ -1413,18 +1541,20 @@
             "It is a chip to map virtual address to physical address",
             "It is an algorithm to allocate and deallocate main memory to a process"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "It is a chip to map virtual address to physical address"
     },
     {
         "question": "Question130",
-        "question_paragraph": "The term \u2018aging\u2019 refers to",
+        "question_paragraph": "The term ‘aging’ refers to",
         "options": [
             "booting up the priority of the process in multi-level of queue without feedback.",
             "keeping track of the following a page has been in memory for the purpose of LRU replacement",
             "letting job reside in memory for a certain amount of time so that the number of pages required can be estimated accurately.",
             "gradually increasing the priority of jobs that wait in the system for a long time to remedy infinite blocking"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "gradually increasing the priority of jobs that wait in the system for a long time to remedy infinite blocking"
     },
     {
         "question": "Question131",
@@ -1435,7 +1565,8 @@
             "main memory",
             "cache memory"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "cache memory"
     },
     {
         "question": "Question132",
@@ -1446,7 +1577,8 @@
             "Part of secondary storage used in program execution",
             "None of these"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "A technique to allow a program, of size more than the size of main memory, to run"
     },
     {
         "question": "Question133",
@@ -1457,7 +1589,8 @@
             "are used to do I/O",
             "are used for memory management"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "synchronize critical resources to prevent contention"
     },
     {
         "question": "Question134",
@@ -1468,7 +1601,8 @@
             "number of processes in memory",
             "physical memory size"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "the instruction set architecture"
     },
     {
         "question": "Question135",
@@ -1479,18 +1613,20 @@
             "4",
             "5"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "4"
     },
     {
         "question": "Question136",
-        "question_paragraph": "The size of the ROM required to build an 8-bit adder / subtractor with mode control, carry input, carry output and two\u2019s complement overflow output is given as",
+        "question_paragraph": "The size of the ROM required to build an 8-bit adder / subtractor with mode control, carry input, carry output and two’s complement overflow output is given as",
         "options": [
-            "216\u00d7 8",
-            "218\u00d7 10",
-            "216\u00d7 10",
-            "218\u00d7 8"
+            "216× 8",
+            "218× 10",
+            "216× 10",
+            "218× 8"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "2 18 × 10"
     },
     {
         "question": "Question137",
@@ -1501,7 +1637,8 @@
             "1065 K",
             "320 K"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "335 K"
     },
     {
         "question": "Question138",
@@ -1509,10 +1646,11 @@
         "options": [
             "x / 2",
             "xz / 2",
-            "\u221a(2xz)",
-            "\u221a(xz) / 2"
+            "√(2xz)",
+            "√(xz) / 2"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "√(2xz)"
     },
     {
         "question": "Question139",
@@ -1523,7 +1661,8 @@
             "28 m.sec.",
             "14 m.sec."
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "16.4 m.sec."
     },
     {
         "question": "Question140",
@@ -1534,6 +1673,127 @@
             "Serialized methods",
             "None of the above"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "Synchronized methods"
+    },
+    {
+        "question": "Question141",
+        "question_paragraph": "Consider an imaginary disk with 40 cylinders. A request come to read a block on cylinder 11. While the seek to cylinder 11 is in progress, new requests come in for cylinders 1, 36, 16, 34, 9 and 12 in that order. The number of arm motions using shortest seek first algorithm is",
+        "options": [
+            "111",
+            "112",
+            "60",
+            "61"
+        ],
+        "image_link": null,
+        "correct_answer": "61"
+    },
+    {
+        "question": "Question142",
+        "question_paragraph": "An operating system has 13 tape drives. There are three processes P1, P2 & P3. Maximum requirement of P1 is 11 tape drives, P2 is 5 tape drives and P3 is 8 tape drives. Currently, P1 is allocated 6 tape drives, P2 is allocated 3 tape drives and P3 is allocated 2 tape drives. Which of the following sequences represent a safe state ?",
+        "options": [
+            "P2 P1 P3",
+            "P2 P3 P1",
+            "P1 P2 P3",
+            "P1 P3 P2"
+        ],
+        "image_link": null,
+        "correct_answer": "P2 P1 P3"
+    },
+    {
+        "question": "Question143",
+        "question_paragraph": "Which of the following versions of Windows O.S. contain built-in partition manager which allows us to shrink and expand pre-defined drives ?",
+        "options": [
+            "Windows Vista",
+            "Windows 2000",
+            "Windows NT",
+            "Windows 98"
+        ],
+        "image_link": null,
+        "correct_answer": "Windows Vista"
+    },
+    {
+        "question": "Question144",
+        "question_paragraph": "Processes P1 and P2 have a producer-consumer relationship, communicating by the use of a set of shared buffers.P1: repeat\r\n    Obtain an empty buffer\r\n    Fill it\r\n    Return a full buffer\r\n    forever\r\nP2: repeat\r\n    Obtain a full buffer\r\n    Empty it\r\n    Return an empty buffer\r\n    foreverIncreasing the number of buffers is likely to do which of the following?\r\n\r\nI. Increase the rate at which requests are satisfied (throughput) \r\nII. Decrease the likelihood of deadlock \r\nIII. Increase the ease of achieving a correct implementation",
+        "options": [
+            "Ill only",
+            "II only",
+            "I only",
+            "II and III only"
+        ],
+        "image_link": null,
+        "correct_answer": "I only"
+    },
+    {
+        "question": "Question145",
+        "question_paragraph": "Determine the number of page faults when references to pages occur in order - 1, 2, 4, 5, 2, 1, 2, 4. Assume that the main memory can accommodate 3 pages and the main memory already has the pages 1 and 2, with page 1 having brought earlier than page 2.(assume LRU algorithm is used)",
+        "options": [
+            "3",
+            "4",
+            "5",
+            "None of these"
+        ],
+        "image_link": null,
+        "correct_answer": "4"
+    },
+    {
+        "question": "Question146",
+        "question_paragraph": "In a paged memory, the page hit ratio is 0.40. The time required to access a page in secondary memory is equal to 120 ns. The time required to access a page in primary memory is 15 ns. The average time required to access a page is ________.",
+        "options": [
+            "105",
+            "68",
+            "75",
+            "78"
+        ],
+        "image_link": null,
+        "correct_answer": "78"
+    },
+    {
+        "question": "Question147",
+        "question_paragraph": "Which of the following statements are true ?\r\n(a) External Fragmentation exists when there is enough total memory space to satisfy a request but the available space is contiguous.\r\n(b) Memory Fragmentation can be internal as well as external.\r\n(c) One solution to external Fragmentation is compaction.\r\nCode:",
+        "options": [
+            "(a) and (b) only",
+            "(a) and (c) only",
+            "(b) and (c) only",
+            "(a), (b) and (c)"
+        ],
+        "image_link": null,
+        "correct_answer": "(b) and (c) only"
+    },
+    {
+        "question": "Question148",
+        "question_paragraph": "Page information in memory is also called as Page Table. The essential contents in each entry of a page table is/are _________.",
+        "options": [
+            "Page Access information",
+            "Virtual Page number",
+            "Page Frame number",
+            "Both virtual page number and Page Frame Number"
+        ],
+        "image_link": null,
+        "correct_answer": "Page Frame number"
+    },
+    {
+        "question": "Question149",
+        "question_paragraph": "Consider a virtual page reference string 1, 2, 3, 2, 4, 2, 5, 2, 3, 4. Suppose LRU page replacement algorithm is implemented with 3 page frames in main memory. Then the number of page faults are_________.",
+        "options": [
+            "5",
+            "7",
+            "9",
+            "10"
+        ],
+        "image_link": null,
+        "correct_answer": "7"
+    },
+    {
+        "question": "Question150",
+        "question_paragraph": "Consider allocation of memory to a new process. Assume that none of the existing holes in the memory will exactly fit the process’s memory requirement. Hence, a new hole of smaller size will be created if allocation is made in any of the existing holes. Which one of the following statement is TRUE ?",
+        "options": [
+            "The hole created by first fit is always larger than the hole created by next fit.",
+            "The hole created by worst fit is always larger than the hole created by first fit.",
+            "The hole created by best fit is never larger than the hole created by first fit.",
+            "The hole created by next fit is never larger than the hole created by best fit."
+        ],
+        "image_link": null,
+        "correct_answer": "The hole created by best fit is never larger than the hole created by first fit."
     }
 ]

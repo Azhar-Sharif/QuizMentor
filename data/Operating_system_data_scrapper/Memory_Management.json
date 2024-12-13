@@ -1,0 +1,1649 @@
+[
+    {
+        "question": "Question1",
+        "question_paragraph": "Which of the following page replacement algorithms suffers from Belady\u2019s anomaly?",
+        "options": [
+            "FIFO",
+            "LRU",
+            "Optimal Page Replacement",
+            "Both LRU and FIFO"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "What is the swap space in the disk used for?",
+        "options": [
+            "Saving temporary html pages",
+            "Saving process data",
+            "Storing the super-block",
+            "Storing device drivers"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "Increasing the RAM of a computer typically improves performance because:",
+        "options": [
+            "Virtual memory increases",
+            "Larger RAMs are faster",
+            "Fewer page faults occur",
+            "Fewer segmentation faults occur"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "A computer system supports 32-bit virtual addresses as well as 32-bit physical addresses. Since the virtual address space is of the same size as the physical address space, the operating system designers decide to get rid of the virtual memory entirely. Which one of the following is true?",
+        "options": [
+            "Efficient implementation of multi-user support is no longer possible",
+            "The processor cache organization can be made more efficient now",
+            "Hardware support for memory management is no longer needed",
+            "CPU scheduling can be made more efficient now"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "A CPU generates 32-bit virtual addresses. The page size is 4 KB. The processor has a translation look-aside buffer (TLB) which can hold a total of 128 page table entries and is 4-way set associative. The minimum size of the TLB tag is:",
+        "options": [
+            "11 bits",
+            "13 bits",
+            "15 bits",
+            "20 bits"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Virtual memory is",
+        "options": [
+            "Large secondary memory",
+            "Large main memory",
+            "Illusion of large main memory",
+            "None of the above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "Page fault occurs when",
+        "options": [
+            "When a requested page is in memory",
+            "When a requested page is not in memory",
+            "When a page is corrupted",
+            "When an exception is thrown"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "Thrashing occurs when",
+        "options": [
+            "When a page fault occurs",
+            "Processes on system frequently access pages not memory",
+            "Processes on system are in running state",
+            "Processes on system are in waiting state"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "A computer uses 46\u2013bit virtual address, 32\u2013bit physical address, and a three\u2013level paged page table organization. The page table base register stores the base address of the first\u2013level table (T1), which occupies exactly one page. Each entry of T1 stores the base address of a page of the second\u2013level table (T2). Each entry of T2 stores the base address of a page of the third\u2013level table (T3). Each entry of T3 stores a page table entry (PTE). The PTE is 32 bits in size. The processor used in the computer has a 1 MB 16 way set associative virtually indexed physically tagged cache. The cache block size is 64 bytes. What is the size of a page in KB in this computer?",
+        "options": [
+            "2",
+            "4",
+            "8",
+            "16"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "Consider data given in theabove question.  What is the minimum number of page colours needed to guarantee that no two synonyms map to different sets in the processor cache of this computer? (GATE CS 2013)",
+        "options": [
+            "2",
+            "4",
+            "8",
+            "16"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question11",
+        "question_paragraph": "A computer system implements a 40 bit virtual address, page size of 8 kilobytes, and a 128-entry translation look-aside buffer (TLB) organized into 32 sets each having four ways. Assume that the TLB tag does not store any process id. The\r\nminimum length of the TLB tag in bits is _________",
+        "options": [
+            "20",
+            "10",
+            "11",
+            "22"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question12",
+        "question_paragraph": "Consider the virtual page reference string\r\n1, 2, 3, 2, 4, 1, 3, 2, 4, 1\r\nOn a demand paged virtual memory system running on a computer system that main memory size of 3 pages frames which are initially empty. Let LRU, FIFO and OPTIMAL denote the number of page faults under the corresponding page replacements policy. Then",
+        "options": [
+            "OPTIMAL < LRU < FIFO",
+            "OPTIMAL < FIFO < LRU",
+            "OPTIMAL = LRU",
+            "OPTIMAL = FIFO"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question13",
+        "question_paragraph": "Let the page fault service time be 10ms in a computer with average memory access time being 20ns. If one page fault is generated for every 10^6 memory accesses, what is the effective access time for the memory?",
+        "options": [
+            "21ns",
+            "30ns",
+            "23ns",
+            "35ns"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question14",
+        "question_paragraph": "A system uses FIFO policy for page replacement. It has 4 page frames with no pages loaded to begin with. The system first accesses 100 distinct pages in some order and then accesses the same 100 pages but now in the reverse order. How many page faults will occur?",
+        "options": [
+            "196",
+            "192",
+            "197",
+            "195"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question15",
+        "question_paragraph": "In which one of the following page replacement policies, Belady\u2019s anomaly may occur?",
+        "options": [
+            "FIFO",
+            "Optimal",
+            "LRU",
+            "MRU"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question16",
+        "question_paragraph": "The essential content(s) in each entry of a page table is / are",
+        "options": [
+            "Virtual page number",
+            "Page frame number",
+            "Both virtual page number and page frame number",
+            "Access right information"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question17",
+        "question_paragraph": "A multilevel page table is preferred in comparison to a single level page table for translating virtual address to physical address because",
+        "options": [
+            "It reduces the memory access time to read or write a memory location.",
+            "It helps to reduce the size of page table needed to implement the virtual address space of a process.",
+            "It is required by the translation lookaside buffer.",
+            "It helps to reduce the number of page faults in page replacement algorithms."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question18",
+        "question_paragraph": "A processor uses 36 bit physical addresses and 32 bit virtual addresses, with a page frame size of 4 Kbytes. Each page table entry is of size 4 bytes. A three level page table is used for virtual to physical address translation, where the virtual address is used as follows\u2022 Bits 30-31 are used to index into the first level page table\u2022 Bits 21-29 are used to index into the second level page table\u2022 Bits 12-20 are used to index into the third level page table, and\u2022 Bits 0-11 are used as offset within the pageThe number of bits required for addressing the next level page table (or page frame) in the page table entry of the first, second and third level page tables are respectively.",
+        "options": [
+            "20, 20 and 20",
+            "24, 24 and 24",
+            "24, 24 and 20",
+            "25, 25 and 24"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question19",
+        "question_paragraph": "A virtual memory system uses First In First Out (FIFO) page replacement policy and allocates a fixed number of frames to a process. Consider the following statements:",
+        "options": [
+            "P is false, but Q is true",
+            "Both P and Q are true, but Q is not the reason for P.",
+            "Both P and Q are true, and Q is the reason for P",
+            "Both P and Q are false"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question20",
+        "question_paragraph": "A process has been allocated 3 page frames. Assume that none of the pages of the process are available in the memory initially. The process makes the following sequence of page references (reference string): 1, 2, 1, 3, 7, 4, 5, 6, 3, 1\r\nIf optimal page replacement policy is used, how many page faults occur for the above reference string?",
+        "options": [
+            "7",
+            "8",
+            "9",
+            "10"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question21",
+        "question_paragraph": "Consider the data given in above question.\r\n\r\nLeast Recently Used (LRU) page replacement policy is a practical approximation to optimal page replacement. For the above reference string, how many more page faults occur with LRU than with the optimal page replacement policy?",
+        "options": [
+            "0",
+            "1",
+            "2",
+            "3"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question22",
+        "question_paragraph": "Assume that there are 3 page frames which are initially empty. If the page reference string is 1, 2, 3, 4, 2, 1, 5, 3, 2, 4, 6, the number of page faults using the optimal replacement policy is__________.",
+        "options": [
+            "5",
+            "6",
+            "7",
+            "8"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question23",
+        "question_paragraph": "A computer has twenty physical page frames which contain pages numbered 101 through 120. Now a program accesses the pages numbered 1, 2, \u2026, 100 in that order, and repeats the access sequence THRICE. Which one of the following page replacement policies experiences the same number of page faults as the optimal page replacement policy for this program?",
+        "options": [
+            "Least-recently-used",
+            "First-in-first-out",
+            "Last-in-first-out",
+            "Most-recently-used"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question24",
+        "question_paragraph": "A system uses 3 page frames for storing process pages in main memory. It uses the Least Recently Used (LRU) page replacement policy. Assume that all the page frames are initially empty. What is the total number of page faults that will occur while processing the page reference string given below?\r\n4, 7, 6, 1, 7, 6, 1, 2, 7, 2",
+        "options": [
+            "4",
+            "5",
+            "6",
+            "7"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question25",
+        "question_paragraph": "Consider a paging hardware with a TLB. Assume that the entire page table and all the pages are in the physical memory. It takes 10 milliseconds to search the TLB and 80 milliseconds to access the physical memory. If the TLB hit ratio is 0.6, the effective memory access time (in milliseconds) is _________.",
+        "options": [
+            "120",
+            "122",
+            "124",
+            "118"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question26",
+        "question_paragraph": "The memory access time is 1 nanosecond for a read operation with a hit in cache, 5 nanoseconds for a read operation with a miss in cache, 2 nanoseconds for a write operation with a hit in cache and 10 nanoseconds for a write operation with a miss in cache. Execution of a sequence of instructions involves 100 instruction fetch operations, 60 memory operand read operations and 40 memory operand write operations. The cache hit-ratio is 0.9. The average memory access time (in nanoseconds) in executing the sequence of instructions is __________.",
+        "options": [
+            "1.26",
+            "1.68",
+            "2.46",
+            "4.52"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question27",
+        "question_paragraph": "A CPU generates 32-bit virtual addresses. The page size is 4 KB. The processor has a translation look-aside buffer (TLB) which can hold a total of 128 page table entries and is 4-way set associative. The minimum size of the TLB tag is:",
+        "options": [
+            "11 bits",
+            "13 bits",
+            "15 bits",
+            "20 bits"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question28",
+        "question_paragraph": "A computer system supports 32-bit virtual addresses as well as 32-bit physical addresses. Since the virtual address space is of the same size as the physical address space, the operating system designers decide to get rid of the virtual memory entirely. Which one of the following is true?",
+        "options": [
+            "Efficient implementation of multi-user support is no longer possible",
+            "The processor cache organization can be made more efficient now",
+            "Hardware support for memory management is no longer needed",
+            "CPU scheduling can be made more efficient now"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question29",
+        "question_paragraph": "The minimum number of page frames that must be allocated to a running process in a virtual memory environment is determined by",
+        "options": [
+            "the instruction set architecture",
+            "page size",
+            "physical memory size",
+            "number of processes in memory"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question30",
+        "question_paragraph": "Consider a system with a two-level paging scheme in which a regular memory access takes 150 nanoseconds, and servicing a page fault takes 8 milliseconds. An average instruction takes 100 nanoseconds of CPU time, and two memory accesses. The TLB hit ratio is 90%, and the page fault rate is one in every 10,000 instructions. What is the effective average instruction execution time?",
+        "options": [
+            "645 nanoseconds",
+            "1050 nanoseconds",
+            "1215 nanoseconds",
+            "1230 nanoseconds"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question31",
+        "question_paragraph": "In a system with 32 bit virtual addresses and 1 KB page size, use of one-level page tables for virtual to physical address translation is not practical because of",
+        "options": [
+            "the large amount of internal fragmentation",
+            "the large amount of external fragmentation",
+            "the large memory overhead in maintaining page tables",
+            "the large computation overhead in the translation process"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question32",
+        "question_paragraph": "Which of the following is NOT an advantage of using shared, dynamically linked libraries as opposed to using statically linked libraries ?",
+        "options": [
+            "Smaller sizes of executable files",
+            "Lesser overall page fault rate in the system",
+            "Faster program startup",
+            "Existing programs need not be re-linked to take advantage of newer versions of libraries"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question33",
+        "question_paragraph": "A processor uses 2-level page tables for virtual to physical address translation. Page tables for both levels are stored in the main memory. Virtual and physical addresses are both 32 bits wide. The memory is byte addressable. For virtual to physical address translation, the 10 most significant bits of the virtual address are used as index into the first level page table while the next 10 bits are used as index into the second level page table. The 12 least significant bits of the virtual address are used as offset within the page. Assume that the page table entries in both levels of page tables are 4 bytes wide. Further, the processor has a translation look-aside buffer (TLB), with a hit rate of 96%. The TLB caches recently used virtual page numbers and the corresponding physical page numbers. The processor also has a physically addressed cache with a hit rate of 90%. Main memory access time is 10 ns, cache access time is 1 ns, and TLB access time is also 1 ns.\r\n\r\n\t\r\nAssuming that no page faults occur, the average time taken to access a virtual address is approximately (to the nearest 0.5 ns)",
+        "options": [
+            "1.5 ns",
+            "2 ns",
+            "3 ns",
+            "4 ns"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question34",
+        "question_paragraph": "A processor uses 2-level page tables for virtual to physical address translation. Page tables for both levels are stored in the main memory. Virtual and physical addresses are both 32 bits wide. The memory is byte addressable. For virtual to physical address translation, the 10 most significant bits of the virtual address are used as index into the first level page table while the next 10 bits are used as index into the second level page table. The 12 least significant bits of the virtual address are used as offset within the page. Assume that the page table entries in both levels of page tables are 4 bytes wide. Further, the processor has a translation look-aside buffer (TLB), with a hit rate of 96%. The TLB caches recently used virtual page numbers and the corresponding physical page numbers. The processor also has a physically addressed cache with a hit rate of 90%. Main memory access time is 10 ns, cache access time is 1 ns, and TLB access time is also 1 ns.\r\n\t\r\nSuppose a process has only the following pages in its virtual address space: two contiguous code pages starting at virtual address 0x00000000, two contiguous data pages starting at virtual address 0\u00d700400000, and a stack page starting at virtual address 0\u00d7FFFFF000. The amount of memory required for storing the page tables of this process is:",
+        "options": [
+            "8 KB",
+            "12 KB",
+            "16 KB",
+            "20 KB"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question35",
+        "question_paragraph": "Which of the following is not a form of memory?",
+        "options": [
+            "instruction cache",
+            "instruction register",
+            "instruction opcode",
+            "translation lookaside buffer"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question36",
+        "question_paragraph": "The optimal page replacement algorithm will select the page that",
+        "options": [
+            "Has been used least number of times.",
+            "Will not be used for the longest time in the future.",
+            "Has not been used for the longest time in the past.",
+            "Has been used most number of times."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question37",
+        "question_paragraph": "Dynamic linking can cause security concerns because:",
+        "options": [
+            "Security is dynamic",
+            "The path for searching dynamic libraries is not known till runtime",
+            "Linking is insecure",
+            "Cryptographic procedures are not available for dynamic linking"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question38",
+        "question_paragraph": "Which of the following statements is false?",
+        "options": [
+            "Virtual memory implements the translation of a program\u2018s address space into physical memory address space",
+            "Virtual memory allows each program to exceed the size of the primary memory",
+            "Virtual memory increases the degree of multiprogramming",
+            "Virtual memory reduces the context switching overhead"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question39",
+        "question_paragraph": "The process of assigning load addresses to the various parts of the program and adjusting the code and date in the program to reflect the assigned addresses is called",
+        "options": [
+            "Assembly",
+            "Parsing",
+            "Relocation",
+            "Symbol resolution"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question40",
+        "question_paragraph": "Where does the swap space reside?",
+        "options": [
+            "RAM",
+            "Disk",
+            "ROM",
+            "On-chip cache"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question41",
+        "question_paragraph": "Consider a virtual memory system with FIFO page replacement policy. For an arbitrary page access pattern, increasing the number of page frames in main memory will",
+        "options": [
+            "always decrease the number of page faults",
+            "always increase the number of page faults",
+            "sometimes increase the number of page faults",
+            "never affect the number of page faults"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question42",
+        "question_paragraph": "Consider a machine with 64 MB physical memory and a 32-bit virtual address space. If the page size is 4KB, what is the approximate size of the page table?",
+        "options": [
+            "16 MB",
+            "8 MB",
+            "2 MB",
+            "24 MB"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question43",
+        "question_paragraph": "Suppose the time to service a page fault is on the average 10 milliseconds, while a memory access takes 1 microsecond. Then a 99.99% hit ratio results in average memory access time of (GATE CS 2000)",
+        "options": [
+            "1.9999 milliseconds",
+            "1 millisecond",
+            "9.999 microseconds",
+            "1.9999 microseconds"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question44",
+        "question_paragraph": "Consider a system with byte-addressable memory, 32 bit logical addresses, 4 kilobyte page size and page table entries of 4 bytes each. The size of the page table in the system in megabytes is ___________",
+        "options": [
+            "2",
+            "4",
+            "8",
+            "16"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question45",
+        "question_paragraph": "Consider six memory partitions of size 200 KB, 400 KB, 600 KB, 500 KB, 300 KB, and 250 KB, where KB refers to kilobyte. These partitions need to be allotted to four processes of sizes 357 KB, 210 KB, 468 KB and 491 KB in that order. If the best fit algorithm is used, which partitions are NOT allotted to any process?",
+        "options": [
+            "200 KB and 300 KB",
+            "200 KB and 250 KB",
+            "250 KB and 300 KB",
+            "300 KB and 400 KB"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question46",
+        "question_paragraph": "A Computer system implements 8 kilobyte pages and a 32-bit physical address space. Each page table entry contains a valid bit, a dirty bit three permission bits, and the translation. If the maximum size of the page table of a process is 24 megabytes, the length of the virtual address supported by the system is _______________ bits",
+        "options": [
+            "36",
+            "32",
+            "28",
+            "40"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question47",
+        "question_paragraph": "Which one of the following is NOT shared by the threads of the same process?",
+        "options": [
+            "Stack",
+            "Address Space",
+            "File Descriptor Table",
+            "Message Queue"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question48",
+        "question_paragraph": "Consider a fully associative cache with 8 cache blocks (numbered 0-7) and the following sequence of memory block requests:\r\n\r\n4, 3, 25, 8, 19, 6, 25, 8, 16, 35, 45, 22, 8, 3, 16, 25, 7\r\n\r\nIf LRU replacement policy is used, which cache block will have memory block 7?",
+        "options": [
+            "4",
+            "5",
+            "6",
+            "7"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question49",
+        "question_paragraph": "The storage area of a disk has innermost diameter of 10 cm and outermost diameter of 20 cm. The maximum storage density of the disk is 1400bits/cm. The disk rotates at a speed of 4200 RPM. The main memory of a computer has 64-bit word length and 1\u00b5s cycle time. If cycle stealing is used for data transfer from the disk, the percentage of memory cycles stolen for transferring one word is",
+        "options": [
+            "0.5%",
+            "1%",
+            "5%",
+            "10%"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question50",
+        "question_paragraph": "In a particular Unix OS, each data block is of size 1024 bytes, each node has 10 direct data block addresses and three additional addresses: one for single indirect block, one for double indirect block and one for triple indirect block. Also, each block can contain addresses for 128 blocks. Which one of the following is approximately the maximum size of a file in the file system?",
+        "options": [
+            "512 MB",
+            "2GB",
+            "8GB",
+            "16GB"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question51",
+        "question_paragraph": "A disk has 200 tracks (numbered 0 through 199). At a given time, it was servicing the request of reading data from track 120, and at the previous\u00a0request, service was for track 90. The pending requests (in order of their arrival) are for track numbers.\r\n\r\n30 70 115 130 110 80 20 25.\r\n\r\nHow many times will the head change its direction for the disk scheduling policies SSTF(Shortest Seek Time First) and FCFS (First Come Fist Serve)",
+        "options": [
+            "2 and 3",
+            "3 and 3",
+            "3 and 4",
+            "4 and 4"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question52",
+        "question_paragraph": "In a virtual memory system, size of virtual address is 32-bit, size of physical address is 30-bit, page size is 4 Kbyte and size of each page table entry is 32-bit. The main memory is byte addressable. Which one of the following is the maximum number of bits that can be used for storing protection and other information in each page table entry?",
+        "options": [
+            "2",
+            "10",
+            "12",
+            "14"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question53",
+        "question_paragraph": "A two-way switch has three terminals a, b and c. In ON position (logic value 1), a is connected to b, and in OFF position, a is connected to c. Two of these two-way switches S1 and S2 are connected to a bulb as shown below.Which of the following expressions, if true, will always result in the lighting of the bulb ?",
+        "options": [
+            "S1.S2'",
+            "S1+S2",
+            "(S1\u2295S2)'",
+            "S1\u2295S2"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2015/12/p1.png"
+    },
+    {
+        "question": "Question54",
+        "question_paragraph": "Consider a 2-way set associative cache memory with 4 sets and total 8 cache blocks (0-7) and a main memory with 128 blocks (0-127). What memory blocks will be present in the cache after the following sequence of memory block references if LRU policy is used for cache block replacement. Assuming that initially the cache did not have any memory block from the current job? 0 5 3 9 7 0 16 55",
+        "options": [
+            "0 3 5 7 16 55",
+            "0 3 5 7 9 16 55",
+            "0 5 7 9 16 55",
+            "3 5 7 9 16 55"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question55",
+        "question_paragraph": "Q81 Part_AA disk has 8 equidistant tracks. The diameters of the innermost and outermost tracks are 1 cm and 8 cm respectively. The innermost track has a storage capacity of 10 MB.\r\n\r\nWhat is the total amount of data that can be stored on the disk if it is used with a drive that rotates it with (i) Constant Linear Velocity (ii) Constant Angular Velocity?",
+        "options": [
+            "(i) 80 MB (ii) 2040 MB",
+            "(i) 2040 MB (ii) 80 MB",
+            "(i) 80 MB (ii) 360 MB",
+            "(i) 360 MB (ii) 80 MB"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question56",
+        "question_paragraph": "Consider  a  computer  system  with  40-bit  virtual  addressing  and  page  size  of  sixteen kilobytes.  If the computer system has a one-level page table per process and each page table entry requires 48 bits, then the size of the per-process page table is _________megabytes.\r\n\u00a0\r\nNote : This question was asked as Numerical Answer Type.",
+        "options": [
+            "384",
+            "48",
+            "192",
+            "96"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question57",
+        "question_paragraph": "Consider a computer system with ten physical page frames. The system is provided with an access sequence a1, a2, ..., a20, a1, a2, ..., a20), where each ai number. The difference in the number of page faults between the last-in-first-out page replacement policy and the optimal page replacement policy is __________\r\n\r\n[Note that this question was originally Fill-in-the-Blanks question]",
+        "options": [
+            "0",
+            "1",
+            "2",
+            "3"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question58",
+        "question_paragraph": "In which one of the following page replacement algorithms it is possible for the page fault rate to increase even when the  number of allocated frames increases?",
+        "options": [
+            "LRU (Least Recently Used)",
+            "OPT (Optimal Page Replacement)",
+            "MRU (Most Recently Used)",
+            "FIFO (First In First Out)"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question59",
+        "question_paragraph": "Listed below are some operating system abstractions (in the left column) and the hardware components or mechanism (in the right column) that they are abstractions of. Which of the following matching of pairs is correct?A. Thread \u00a0\u00a0\u00a0\u00a0          \u00a0      1. Interrupt\r\nB. Virtual address space \u00a0\u00a0 \u00a0\u00a0 2. Memory\r\nC. File system \u00a0\u00a0           \u00a0\u00a0 3. CPU\r\nD. Signal \u00a0                \u00a0\u00a0\u00a0 4. Disk",
+        "options": [
+            "A-2, B-4, C-3, D-1",
+            "A-1, B-2, C-3, D-4",
+            "A-3, B-2, C-4, D-1",
+            "A-4, B-1, C-2, D-3"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question60",
+        "question_paragraph": "The address sequence generated by tracing a particular program executing in a pure demand paging system with 100 bytes per page is0100, 0200, 0430, 0499, 0510, 0530, 0560, 0120, 0220, 0240, 0260, 0320, 0410.Suppose that the memory can store only one page and if x is the address which causes a page fault then the bytes from addresses x to x + 99 are loaded on to the memory.How many page faults will occur ?",
+        "options": [
+            "0",
+            "4",
+            "7",
+            "8"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question61",
+        "question_paragraph": "A paging scheme uses a Translation Look-aside Buffer (TLB). A TLB-access takes 10 ns and a main memory access takes 50 ns. What is the effective access time(in ns) if the TLB hit ratio is 90% and there is no page-fault?",
+        "options": [
+            "54",
+            "60",
+            "65",
+            "75"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question62",
+        "question_paragraph": "Assume that a main memory with only 4 pages, each of 16 bytes, is initially empty. The CPU generates the following sequence of virtual addresses and uses the Least Recently Used (LRU) page replacement policy.0, 4, 8, 20, 24, 36, 44, 12, 68, 72, 80, 84, 28, 32, 88, 92How many page faults does this sequence cause? What are the page numbers of the pages present in the main memory at the end of the sequence?",
+        "options": [
+            "6 and 1, 2, 3, 4",
+            "7 and 1, 2, 4, 5",
+            "8 and 1, 2, 4, 5",
+            "9 and 1, 2, 3, 5"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question63",
+        "question_paragraph": "Match the following flag bits used in the context of virtual memory management on the left side with the different purposes on the right side of the table below.",
+        "options": [
+            "I-d, II-a, III-b, IV-c",
+            "I-b, II-c, III-a, IV-d",
+            "I-c, II-d, III-a, IV-b",
+            "I-b, II-c, III-d, IV-a"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2016/05/2008_56-300x133.jpg"
+    },
+    {
+        "question": "Question64",
+        "question_paragraph": "Linked Questions 58-59Assume GeeksforGeeks implemented the new page replacement algorithm in virtual memory and given its name as \u2018Geek\u2019. Consider the working strategy of Geek as following-Each page in memory maintains a count which is incremented if the page is referred and no page fault occurs.If a page fault occurs, the physical page with zero count or smallest count is replaced by new page and if more than one page with zero count or smallest count then it uses FIFO strategy to replace the page.Find the number of page faults using Geeks algorithm for the following reference string (assume three physical frames are available which are initially free)Reference String : \u201cA B C D A B E A B C D E B A D\u201d",
+        "options": [
+            "Each page in memory maintains a count which is incremented if the page is referred and no page fault occurs.",
+            "If a page fault occurs, the physical page with zero count or smallest count is replaced by new page and if more than one page with zero count or smallest count then it uses FIFO strategy to replace the page.",
+            "7",
+            "9",
+            "11",
+            "13"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question65",
+        "question_paragraph": "If LRU and Geek page replacement are compared (in terms of page faults) only for above reference string then find the correct statement from the following:",
+        "options": [
+            "LRU and Geek are same",
+            "LRU is better than Geek",
+            "Geek is better than LRU",
+            "None"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question66",
+        "question_paragraph": "A multi-user, multi-processing operating system cannot be implemented on hardware that does not support:\r\n\r\na)\u00a0Address translation\r\n\r\nb)\u00a0DMA for disk transfer\r\n\r\nc)\u00a0At least two modes of CPU execution (privileged and non-privileged).\r\n\r\nd)\u00a0Demand Paging",
+        "options": [
+            "Only A",
+            "Both A, B",
+            "A, B and C",
+            "A, B and D"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question67",
+        "question_paragraph": "Which of the following is/are advantages of virtual memory?\r\n\r\na) Faster access to memory on an average.\r\n\r\nb) Processes can be given protected address spaces.\r\n\r\nc) Linker can assign addresses independent of where the program will be loaded in physical memory.\r\n\r\nd) Programs larger than the physical memory size can be run.",
+        "options": [
+            "a and b",
+            "b and c",
+            "b and d",
+            "All of the above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question68",
+        "question_paragraph": "The overlay tree for a program is as shown below:What will be the size of the partition (in physical memory) required to load (and run)\u00a0 this program?",
+        "options": [
+            "12 KB",
+            "14 KB",
+            "10 KB",
+            "8 KB"
+        ],
+        "image_link": "http://www.cdn.geeksforgeeks.org/wp-content/uploads/hier.png"
+    },
+    {
+        "question": "Question69",
+        "question_paragraph": "Free disk space can be kept track of using a free list or a bit map. Disk addresses require d bits. For a disk with 13 blocks, F of which is free, state the condition under which the free list uses less space than the bit map.",
+        "options": [],
+        "image_link": null
+    },
+    {
+        "question": "Question70",
+        "question_paragraph": "Locality of reference implies that the page reference being made by a process",
+        "options": [
+            "will always be to the page used in the previous page reference",
+            "is likely to be to one of the pages used in the last few page references",
+            "will always be to one of the pages existing in memory",
+            "will always lead to a page fault"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question71",
+        "question_paragraph": "Thrashing",
+        "options": [
+            "reduces page I/O",
+            "decreases the degree of multiprogramming",
+            "implies excessive page I/O",
+            "improves the system performance"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question72",
+        "question_paragraph": "Dirty bit for a page in a page table",
+        "options": [
+            "helps avoid unnecessary writes on a paging device",
+            "helps maintain LRU information",
+            "allows only read on a page",
+            "none of the above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question73",
+        "question_paragraph": "A 1000 Kbyte memory is managed using variable partitions but no compaction. It currently has two partitions of sizes 200 Kbytes and 260 Kbytes respectively. The smallest allocation request in Kbytes that could be denied is for",
+        "options": [
+            "151",
+            "181",
+            "231",
+            "541"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question74",
+        "question_paragraph": "A demand paged virtual memory system uses 16 bit virtual address, page size of 256 bytes, and has 1 Kbyte of main memory. LRU page replacement is implemented using a list whose current status (page number in decimal) is.\r\n\r\nFor each hexadecimal address in the address sequence given below00FF, 010D, 10FF, 11B0indicate\r\ni) the new status of the list\r\nii) page faults, if any, and\r\niii) page replacements, if any",
+        "options": [],
+        "image_link": "http://www.cdn.geeksforgeeks.org/wp-content/uploads/pagetab.png"
+    },
+    {
+        "question": "Question75",
+        "question_paragraph": "Consider 4-way set-associative cache memory has the following properties:Data words are 32 bits eachA cache block will contain 2048 bits of dataThe address supplied from the CPU is 32 bits longThere are 2048 blocks in the cacheAddresses are to the wordNumber of bits in tag?",
+        "options": [
+            "Data words are 32 bits each",
+            "A cache block will contain 2048 bits of data",
+            "The address supplied from the CPU is 32 bits long",
+            "There are 2048 blocks in the cache",
+            "Addresses are to the word",
+            "17",
+            "15",
+            "16",
+            "None of the above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question76",
+        "question_paragraph": "Recall that Belady\u2019s anomaly is that the pages-fault rate may increase as the number of allocated frames increases and also recall convey effect where first process can increase waiting time for all processes. Now consider the following statements:S1 : Random page replacement algorithm (where\r\n    a page chosen at random is replaced) \r\n    suffers from Belady\u2019s anomaly.\r\n\r\nS2 : Random CPU scheduling algorithm \r\n    suffers from convoy effect.Which of the following is CORRECT?",
+        "options": [
+            "S1 is true, S2 is true",
+            "S1 is true, S2 is false",
+            "S1 is false , S2 is true",
+            "S1 is false, S2 is false"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question77",
+        "question_paragraph": "Which of the following option is false?",
+        "options": [
+            "Internal fragmentation occurs when total memory space exists to satisfy the a request, but it is not contiguous. External fragmentation occurs when allocated memory may be slightly larger the requested memory, this size difference is memory internal to a partition,but not being used.",
+            "Pure paging does not have external fragmentation, but may have internal fragmentation and Pure segmentation may have external fragmentation.",
+            "Both (A) and (B)",
+            "Neither (A) nor (B)"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question78",
+        "question_paragraph": "Consider a process executing on an operating system that uses demand paging. The average time for a memory access in the system is M units if the corresponding memory page is available in memory, and D units if the memory access causes a page fault. It has been experimental measured that the average time taken for a memory access in the process is X units.\r\n\r\nWhich one of the following is the correct expression for the page fault rate experienced by the process?",
+        "options": [
+            "(D - M) / (X - M)",
+            "(X - M) / (D - M)",
+            "(D - X) / (D - M)",
+            "(X - M) / (D - X)"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question79",
+        "question_paragraph": "In designing a computer\u2019s cache system, the cache block (or cache line) size is an important parameter. Which one of the following statements is correct in this context?",
+        "options": [
+            "Smaller block size incurs lower cache miss penalty",
+            "Smaller block size implies better spatial locality",
+            "Smaller block size implies smaller cache tag",
+            "Smaller block size implies lower cache hit time"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question80",
+        "question_paragraph": "A counting semaphore was initialized to 7. Then 20 P (wait) operations and x V (signal) operations were completed on this semaphore. If the final value of semaphore is 5, then the value x will be",
+        "options": [
+            "0",
+            "13",
+            "18",
+            "5"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question81",
+        "question_paragraph": "Consider a virtual page reference string 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 0, 1, 7, 0, 1 Suppose a demand paged virtual memory system running on a computer system such that the main memory has 3 page frames. Then __________ page replacement algorithm has minimum number of page faults.",
+        "options": [
+            "FIFO",
+            "LIFO",
+            "LRU",
+            "Optimal"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question82",
+        "question_paragraph": "Consider a system with five processes P0through P4and three resource types A, B and C. Resource type A has seven instances, resource type B has two instances and resource type C has six instances suppose at time T0we have the following allocation.If we implement Deadlock detection algorithm we claim that system is __________.\r\n(1) Semaphore\r\n(2) Deadlock state\r\n(3) Circular wait\r\n(4) Not in deadlock state",
+        "options": [
+            "(1), (2) and (3)",
+            "(1) and  (3)",
+            "(3) and  (4)",
+            "Only option (4)"
+        ],
+        "image_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/522.png"
+    },
+    {
+        "question": "Question83",
+        "question_paragraph": "Consider a disk queue with requests for I/O to blocks on cylinders 98, 183, 37, 122, 14, 124, 65, 67. Suppose SSTF disk scheduling algorithm implemented to meet the requests then the total number of head movements are __________ if the disk head is initially at 53.",
+        "options": [
+            "224",
+            "248",
+            "236",
+            "240"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question84",
+        "question_paragraph": "In a paging system, it takes 30 ns to search translation Look-a-side Buffer (TLB) and 90 ns to access the main memory. If the TLB hit ratio is 70%, the effective memory access time is :",
+        "options": [
+            "48ns",
+            "147ns",
+            "120ns",
+            "84ns"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question85",
+        "question_paragraph": "Which of the following is incorrect for virtual memory?",
+        "options": [
+            "Large programs can be written",
+            "More I/O is required",
+            "More addressable memory available",
+            "Faster and easy swapping of process"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question86",
+        "question_paragraph": "A CPU generates 32-bit virtual addresses. The page size is 4 KB. The processor has a translation look-aside buffer (TLB) which can hold a total of 128 page table entries and is 4-way set associative. The minimum size of the TLB tag is:",
+        "options": [
+            "11 bits",
+            "13 bits",
+            "15 bits",
+            "20 bits"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question87",
+        "question_paragraph": "In which one of the following page replacement policies, Belady's anomaly\r\nmay occur?",
+        "options": [
+            "FIFO",
+            "Optimal",
+            "LRU",
+            "MRU"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question88",
+        "question_paragraph": "A memory management system has 64 pages with 512 bytes page size. Physical memory consists of 32 page frames. Number of bits required in logical and physical address are respectively:",
+        "options": [
+            "14 and 15",
+            "14 and 29",
+            "15 and 14",
+            "16 and 32"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question89",
+        "question_paragraph": "Consider a disk queue with I/O requests on the following cylinders in their arriving order:6, 10, 12, 54, 97, 73, 128, 15, 44, 110, 34, 45The disk head is assumed to be at cylinder 23 and moving in the direction of decreasing number of cylinders. Total number of cylinders in the disk is 150. The disk head movement using SCAN-scheduling algorithm is:",
+        "options": [
+            "172",
+            "173",
+            "227",
+            "228"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question90",
+        "question_paragraph": "Semaphores are used to solve the problem of\r\n\r\nI. Race Condition\r\nII. Process Synchronization\r\nIII. Mutual Exclusion\r\nIV. None of the above",
+        "options": [
+            "I and II",
+            "II and III",
+            "All of the above",
+            "None of the above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question91",
+        "question_paragraph": "If there are 32 segments, each size 1 k bytes, then the logical address should have",
+        "options": [
+            "13 bits",
+            "14 bits",
+            "15 bits",
+            "16 bits"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question92",
+        "question_paragraph": "At a particular time of computation the value of a counting semaphore is 7. Then 20 P operations and 15 V operations were completed on this semaphore. The resulting value of the semaphore is :",
+        "options": [
+            "42",
+            "2",
+            "7",
+            "12"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question93",
+        "question_paragraph": "Increasing the RAM of a computer typically improves performance because:",
+        "options": [
+            "Virtual Memory increases",
+            "Larger RAMs are faster",
+            "Fewer page faults occur",
+            "Fewer segmentation faults occur"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question94",
+        "question_paragraph": "Dirty bit for a page in a page table",
+        "options": [
+            "helps avoid unnecessary writes on a paging device",
+            "helps maintain LRU information",
+            "allows only read on a page",
+            "None of the above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question95",
+        "question_paragraph": "Suppose that the virtual Address space has eight pages and physical memory with four page frames. If LRU page replacement algorithm is used, _____ number of page faults occur with the reference string.\r\n0 2 1 3 5 4 6 3 7 4 7 3 3 5 5 3 1 1 1 7 2 3 4 1",
+        "options": [
+            "13",
+            "12",
+            "11",
+            "10"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question96",
+        "question_paragraph": "Consider the following segment table in segmentation scheme:SegmentID    Base     Limit0          200      200\r\n   1          500      12510 \r\n   2          1527     498 \r\n   3          2500     50What happens if the logical address requested is -Segment Id 2 and offset 1000?",
+        "options": [
+            "Fetches the entry at the physical address 2527 for segment Id2",
+            "A trap is generated",
+            "Deadlock",
+            "Fetches the entry at offset 27 in Segment Id 3"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question97",
+        "question_paragraph": "Using the page table shown below, translate the physical address 25 to virtual address. The address length is 16 bits and page size is 2048 words while the size of the physical memory is four frames.Page   Present(1-In 0-out)   Frame0      1                     3\r\n1      1                     2\r\n2      1                     0\r\n3      0                     -",
+        "options": [
+            "25",
+            "6169",
+            "2073",
+            "4121"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question98",
+        "question_paragraph": "A computer has 16 pages of virtual address space but the size of main memory is only four frames. Initially the memory is empty. A program references the virtual pages in the order 0, 2, 4, 5, 2, 4, 3, 11, 2, 10. How many page faults occur if LRU page replacement algorithm is used?",
+        "options": [
+            "3",
+            "5",
+            "7",
+            "8"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question99",
+        "question_paragraph": "An operating system supports a paged virtual memory, using a central processor with a cycle time of one microsecond. It costs an additional one microsecond to access a page other than the current one. Pages have 1000 words, and the paging device is a drum that rotates at 3000 revolutions per minute and transfers one million words per second. Further, one percent of all instructions executed accessed a page other than the current page. The instruction that accessed another page, 80% accessed a page already in memory and when a new page was required, the replaced page was modified 50% of the time. What is the effective access time on this system, assuming that the system is running only one process and the processor is idle during drum transfers?",
+        "options": [
+            "30 microseconds",
+            "34 microseconds",
+            "60 microseconds",
+            "68 microseconds"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question100",
+        "question_paragraph": "Consider the following page reference string :\r\n1, 2, 3, 4, 2, 1, 5, 6, 2, 1, 2, 3, 7, 6, 3, 2, 1, 2, 3, 6\r\nWhich of the following options, gives the correct number of page faults related to LRU, FIFO, and optimal page replacement algorithms respectively, assuming 05 page frames and all frames are initially empty ?",
+        "options": [
+            "10, 14, 8",
+            "8, 10, 7",
+            "7, 10, 8",
+            "7, 10, 7"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question101",
+        "question_paragraph": "Dirty bit is used to indicate which of the following?",
+        "options": [
+            "A page fault has occurred",
+            "A page has corrupted data",
+            "A page has been modified after being loaded into cache",
+            "An illegal access of page"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question102",
+        "question_paragraph": "What is the size of the physical address space in a paging system which has a page table containing 64 entries of 11 bit each (including valid and invalid bit) and a page size of 512 bytes?",
+        "options": [
+            "211",
+            "215",
+            "219",
+            "220"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question103",
+        "question_paragraph": "If the Disk head is located initially at track 32, find the number of disk moves required with FCFS scheduling criteria if the disk queue of I/O blocks requests are:\r\n98, 37, 14, 124, 65, 67",
+        "options": [
+            "320",
+            "322",
+            "321",
+            "319"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question104",
+        "question_paragraph": "Suppose that the time to do a null remote procedure call (RPC) (i.e. 0 data bytes) is 1.0 msec, with an additional 1.5 msec for every 1K of data. How long does it take to read 32 K from the file server as 32 1K RPCs ?",
+        "options": [
+            "49 msec",
+            "80 msec",
+            "48 msec",
+            "100 msec"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question105",
+        "question_paragraph": "Which of the following is/are likely the causes of thrashing?",
+        "options": [
+            "Page size was very small",
+            "There are too many programs running in the system",
+            "Least recently used policy is used for page replacement",
+            "First in First out policy is used for page replacement"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question106",
+        "question_paragraph": "Consider a logical address space of 8 pages of 1024 words each, mapped onto a physical memory of 32 frames. How many bits are there in the physical address and logical address respectively?",
+        "options": [
+            "5, 3",
+            "10, 10",
+            "15, 13",
+            "15, 15"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question107",
+        "question_paragraph": "In a 64-bit machine, with 2 GB RAM, and 8 KB page size, how many entries will be there in the page table if it is inverted?",
+        "options": [
+            "218",
+            "220",
+            "233",
+            "251"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question108",
+        "question_paragraph": "Consider the list of page references in the time line as below:\r\n 9 6 2 3 4 4 4 4 3 4 4 2 5 8 6 8 5 5 3 2 3 3 9 6 2 7\r\nWhat is the working set at the penultimate page reference if \u2206 is 5?",
+        "options": [
+            "{8,5,3,2,9,6}",
+            "{4,3,6,2,5}",
+            "{3,9,6,2,7}",
+            "{3,9,6,2,7}"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question109",
+        "question_paragraph": "Suppose that the number of instructions executed between page fault is directly proportional to the number of page frames allocated to a program. If the available memory is doubled, the mean interval between page faults is also doubled. Further, consider that a normal instruction takes one microsecond, but if a page fault occurs, it takes 2001 microseconds. If a program takes 60 sec to run, during which time it gets 15,000 page faults, how long would it take to run if twice as much memory were available?",
+        "options": [
+            "60 sec",
+            "30 sec",
+            "45 sec",
+            "10 sec"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question110",
+        "question_paragraph": "Consider a disk with 16384 bytes per track having a rotation time of 16 msec and average seek time of 40 msec. What is the time in msec to read a block of 1024 bytes from this disk?",
+        "options": [
+            "57 sec",
+            "49 sec",
+            "48 sec",
+            "17 sec"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question111",
+        "question_paragraph": "A dynamic RAM has refresh cycle of 32 times per msec. Each refresh operation requires 100 nsec and a memory cycle requires 250 nsec. What percentage of memory\u2019s total operating time is required for refreshes?",
+        "options": [
+            "0.64",
+            "0.96",
+            "2.00",
+            "0.32"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question112",
+        "question_paragraph": "The solution of the recurrence relation\r\nT(n) \u2264 { \u03b8(1) if n \u2264 80\r\nT(n) \u2264 { T(n / s) + T((7n / 10) + 6) + O(n) if n \u2265 80\r\nis :",
+        "options": [
+            "O(lg n)",
+            "O(n)",
+            "O(n lg n)",
+            "None of the above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question113",
+        "question_paragraph": "Let Piand Pjbe two processes, R be the set of variables read from memory, and W be the set of variables written to memory. For the concurrent execution of two processes Piand Pjwhich of the following conditions is not true?",
+        "options": [
+            "R(Pi)  \u2229 W(Pj) = \u0424",
+            "W(Pi)  \u2229  R(Pj) = \u0424",
+            "R(Pi)  \u2229  R(Pj) = \u0424",
+            "W(Pi)  \u2229  W(Pj) = \u0424"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question114",
+        "question_paragraph": "A LRU page replacement is used with four page frames and eight pages. How many page faults will occur with the reference string 0172327103 if the four frames are initially empty?",
+        "options": [
+            "6",
+            "7",
+            "8",
+            "5"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question115",
+        "question_paragraph": "If the page size in a 32-bit machine is 4K bytes then the size of page table is",
+        "options": [
+            "1 M bytes",
+            "2 M bytes",
+            "4 M bytes",
+            "4 K bytes"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question116",
+        "question_paragraph": "Match the following with respect to various memory management algorithms:",
+        "options": [
+            "(1)",
+            "(2)",
+            "(3)",
+            "(4)"
+        ],
+        "image_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/37-3.png"
+    },
+    {
+        "question": "Question117",
+        "question_paragraph": "Consider a 32-bit machine where four-level paging scheme is used. If the hit ratio to TLB is 98%, and it takes 20 nanosecond to search the TLB and 100 nanoseconds to access the main memory what is effective memory access time in nanoseconds?",
+        "options": [
+            "126",
+            "128",
+            "122",
+            "120"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question118",
+        "question_paragraph": "The character set used in Windows 2000 operating system is __________",
+        "options": [
+            "8 bit ASCII",
+            "Extended ASCII",
+            "16 bit UNICODE",
+            "12 bit UNICODE"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question119",
+        "question_paragraph": "Belady's anomaly means",
+        "options": [
+            "Page fault rate is constant even on increasing the number of allocated frames",
+            "Page fault rate may increase on increasing the number of allocated frames",
+            "Page fault rate may increase on decreasing the number of allocated frames",
+            "Page fault rate may decrease on increasing the number of allocated frames"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question120",
+        "question_paragraph": "A page fault",
+        "options": [
+            "Occurs when a program accesses an available page on memory",
+            "is an error in a specific page",
+            "is a reference to a page belonging to another program",
+            "occurs when a program accesses a page not currently in memory"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question121",
+        "question_paragraph": "Dynamic address translation",
+        "options": [
+            "is part of the operating system paging algorithm",
+            "is useless when swapping is used",
+            "is the hardware necessary to implement paging",
+            "storage pages at a specific location on disk"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question122",
+        "question_paragraph": "Thrashing",
+        "options": [
+            "always occurs on large computers",
+            "is a natural consequence of virtual memory systems",
+            "can always be avoided by swapping",
+            "can be caused by poor paging algorithms"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question123",
+        "question_paragraph": "Dirty bit for a page in a page table",
+        "options": [
+            "helps avoid unnecessary writes on a paging device",
+            "helps maintain LRU information",
+            "allows only read on a page",
+            "None of the above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question124",
+        "question_paragraph": "Checkpointing a job",
+        "options": [
+            "allows it to be completed successfully",
+            "allows it to continue executing later",
+            "prepares it for finishing",
+            "occurs only when there is an error in it"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question125",
+        "question_paragraph": "Overlaying",
+        "options": [
+            "requires use of a loader",
+            "allows larger programs, but requires more effort",
+            "is most used on large computers",
+            "is transparent to the user"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question126",
+        "question_paragraph": "A critical section is a program segment",
+        "options": [
+            "which should run in a certain amount of time",
+            "which avoids deadlocks",
+            "where shared resources are accessed",
+            "which must be enclosed by a pair of semaphore operations P and V"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question127",
+        "question_paragraph": "Consider a logical address space of 8 pages of 1024 words mapped into memory of 32 frames. How many bits are there in the logical address?",
+        "options": [
+            "13 bits",
+            "15 bits",
+            "14 bits",
+            "12 bits"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question128",
+        "question_paragraph": "The page replacement algorithm which gives the lowest page fault rate is",
+        "options": [
+            "LRU",
+            "FIFO",
+            "Optimal page replacement",
+            "Second chance algorithm"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question129",
+        "question_paragraph": "What is the most appropriate function of Memory Management Unit (MMU)?",
+        "options": [
+            "It is an associative memory to store TLB",
+            "It is a technique of supporting multiprogramming by creating dynamic partitions",
+            "It is a chip to map virtual address to physical address",
+            "It is an algorithm to allocate and deallocate main memory to a process"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question130",
+        "question_paragraph": "The term \u2018aging\u2019 refers to",
+        "options": [
+            "booting up the priority of the process in multi-level of queue without feedback.",
+            "keeping track of the following a page has been in memory for the purpose of LRU replacement",
+            "letting job reside in memory for a certain amount of time so that the number of pages required can be estimated accurately.",
+            "gradually increasing the priority of jobs that wait in the system for a long time to remedy infinite blocking"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question131",
+        "question_paragraph": "The principal of the locality of reference justifies the use of",
+        "options": [
+            "virtual memory",
+            "interrupts",
+            "main memory",
+            "cache memory"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question132",
+        "question_paragraph": "Virtual memory is",
+        "options": [
+            "Part of Main Memory only used for swapping",
+            "A technique to allow a program, of size more than the size of main memory, to run",
+            "Part of secondary storage used in program execution",
+            "None of these"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question133",
+        "question_paragraph": "Semaphores",
+        "options": [
+            "synchronize critical resources to prevent deadlock",
+            "synchronize critical resources to prevent contention",
+            "are used to do I/O",
+            "are used for memory management"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question134",
+        "question_paragraph": "The number of page frames that must be allocated to a running process in a virtual memory environment is determined by",
+        "options": [
+            "the instruction set architecture",
+            "page size",
+            "number of processes in memory",
+            "physical memory size"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question135",
+        "question_paragraph": "Consider a small 2-way set-associative cache memory, consisting of four blocks. For choosing the block to be replaced, use the least recently (LRU) scheme. The number of cache misses for the\r\nfollowing sequence of block addresses is 8, 12, 0, 12, 8",
+        "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question136",
+        "question_paragraph": "The size of the ROM required to build an 8-bit adder / subtractor with mode control, carry input, carry output and two\u2019s complement overflow output is given as",
+        "options": [
+            "216\u00d7 8",
+            "218\u00d7 10",
+            "216\u00d7 10",
+            "218\u00d7 8"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question137",
+        "question_paragraph": "A specific editor has 200 K of program text, 15 K of initial stack, 50 K of initialized data, and 70 K of bootstrap code. If five editors are started simultaneously, how much physical memory is needed if shared text is used?",
+        "options": [
+            "1135 K",
+            "335 K",
+            "1065 K",
+            "320 K"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question138",
+        "question_paragraph": "For the implementation of a paging scheme, suppose the average process size be x bytes, the page size be y bytes, and each page entry requires z bytes. The optimum page size that minimizes the total overhead due to the page table and the internal fragmentation loss is given by",
+        "options": [
+            "x / 2",
+            "xz / 2",
+            "\u221a(2xz)",
+            "\u221a(xz) / 2"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question139",
+        "question_paragraph": "In a demand paging memory system, page table is held in registers. The time taken to service a page fault is 8 m.sec. if an empty frame is available or if the replaced page is not modified, and it takes 20 m.secs., if the replaced page is modified. What is the average access time to service a page fault assuming that the page to be replaced is modified 70 of the time?",
+        "options": [
+            "11.6 m.sec.",
+            "16.4 m.sec.",
+            "28 m.sec.",
+            "14 m.sec."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question140",
+        "question_paragraph": "Which methods are utilized to control the access to an object in multi-threaded programming?",
+        "options": [
+            "Asynchronized methods",
+            "Synchronized methods",
+            "Serialized methods",
+            "None of the above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question141",
+        "question_paragraph": "Consider an imaginary disk with 40 cylinders. A request come to read a block on cylinder 11. While the seek to cylinder 11 is in progress, new requests come in for cylinders 1, 36, 16, 34, 9 and 12 in that order. The number of arm motions using shortest seek first algorithm is",
+        "options": [
+            "111",
+            "112",
+            "60",
+            "61"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question142",
+        "question_paragraph": "An operating system has 13 tape drives. There are three processes P1, P2 & P3. Maximum requirement of P1 is 11 tape drives, P2 is 5 tape drives and P3 is 8 tape drives. Currently, P1 is allocated 6 tape drives, P2 is allocated 3 tape drives and P3 is allocated 2 tape drives. Which of the following sequences represent a safe state ?",
+        "options": [
+            "P2 P1 P3",
+            "P2 P3 P1",
+            "P1 P2 P3",
+            "P1 P3 P2"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question143",
+        "question_paragraph": "Which of the following versions of Windows O.S. contain built-in partition manager which allows us to shrink and expand pre-defined drives ?",
+        "options": [
+            "Windows Vista",
+            "Windows 2000",
+            "Windows NT",
+            "Windows 98"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question144",
+        "question_paragraph": "Processes P1 and P2 have a producer-consumer relationship, communicating by the use of a set of shared buffers.P1: repeat\r\n    Obtain an empty buffer\r\n    Fill it\r\n    Return a full buffer\r\n    forever\r\nP2: repeat\r\n    Obtain a full buffer\r\n    Empty it\r\n    Return an empty buffer\r\n    foreverIncreasing the number of buffers is likely to do which of the following?\r\n\r\nI. Increase the rate at which requests are satisfied (throughput) \r\nII. Decrease the likelihood of deadlock \r\nIII. Increase the ease of achieving a correct implementation",
+        "options": [
+            "Ill only",
+            "II only",
+            "I only",
+            "II and III only"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question145",
+        "question_paragraph": "Determine the number of page faults when references to pages occur in order - 1, 2, 4, 5, 2, 1, 2, 4. Assume that the main memory can accommodate 3 pages and the main memory already has the pages 1 and 2, with page 1 having brought earlier than page 2.(assume LRU algorithm is used)",
+        "options": [
+            "3",
+            "4",
+            "5",
+            "None of these"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question146",
+        "question_paragraph": "In a paged memory, the page hit ratio is 0.40. The time required to access a page in secondary memory is equal to 120 ns. The time required to access a page in primary memory is 15 ns. The average time required to access a page is ________.",
+        "options": [
+            "105",
+            "68",
+            "75",
+            "78"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question147",
+        "question_paragraph": "Which of the following statements are true ?\r\n(a) External Fragmentation exists when there is enough total memory space to satisfy a request but the available space is contiguous.\r\n(b) Memory Fragmentation can be internal as well as external.\r\n(c) One solution to external Fragmentation is compaction.\r\nCode:",
+        "options": [
+            "(a) and (b) only",
+            "(a) and (c) only",
+            "(b) and (c) only",
+            "(a), (b) and (c)"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question148",
+        "question_paragraph": "Page information in memory is also called as Page Table. The essential contents in each entry of a page table is/are _________.",
+        "options": [
+            "Page Access information",
+            "Virtual Page number",
+            "Page Frame number",
+            "Both virtual page number and Page Frame Number"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question149",
+        "question_paragraph": "Consider a virtual page reference string 1, 2, 3, 2, 4, 2, 5, 2, 3, 4. Suppose LRU page replacement algorithm is implemented with 3 page frames in main memory. Then the number of page faults are_________.",
+        "options": [
+            "5",
+            "7",
+            "9",
+            "10"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question150",
+        "question_paragraph": "Consider allocation of memory to a new process. Assume that none of the existing holes in the memory will exactly fit the process\u2019s memory requirement. Hence, a new hole of smaller size will be created if allocation is made in any of the existing holes. Which one of the following statement is TRUE ?",
+        "options": [
+            "The hole created by first fit is always larger than the hole created by next fit.",
+            "The hole created by worst fit is always larger than the hole created by first fit.",
+            "The hole created by best fit is never larger than the hole created by first fit.",
+            "The hole created by next fit is never larger than the hole created by best fit."
+        ],
+        "image_link": null
+    }
+]

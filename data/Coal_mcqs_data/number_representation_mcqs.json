@@ -1,0 +1,1041 @@
+[
+    {
+        "question": "Question1",
+        "question_paragraph": "Let m=(313)4and n=(322)4. Find the base 4 expansion of m+n.",
+        "options": [
+            "(635)4",
+            "(32312)4",
+            "(21323)4",
+            "(1301)4"
+        ],
+        "image_link": null,
+        "correct_answer": "(1301)4"
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "The decimal value 0.5 in IEEE single precision floating point representation has",
+        "options": [
+            "fraction bits of 000…000 and exponent value of 0",
+            "fraction bits of 000…000 and exponent value of −1",
+            "fraction bits of 100…000 and exponent value of 0",
+            "no exact representation"
+        ],
+        "image_link": null,
+        "correct_answer": "fraction bits of 000…000 and exponent value of −1"
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "The smallest integer that can be represented by an 8-bit number in 2’s complement form is",
+        "options": [
+            "-256",
+            "-128",
+            "-127",
+            "0"
+        ],
+        "image_link": null,
+        "correct_answer": "-128"
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "P is a 16-bit signed integer. The 2's complement representation of P is (F87B)16.The 2's complement representation of 8*P",
+        "options": [
+            "(C3D8)16",
+            "(187B)16",
+            "(F878)16",
+            "(987B)16"
+        ],
+        "image_link": null,
+        "correct_answer": "(C3D8)16"
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "(1217)8is equivalent to",
+        "options": [
+            "(1217)16",
+            "(028F)16",
+            "(2297)10",
+            "(0B17)16"
+        ],
+        "image_link": null,
+        "correct_answer": "(028F)16"
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "In the IEEE floating point representation, the hexadecimal value 0 × 00000000 corresponds to",
+        "options": [
+            "the normalized value 2-127",
+            "the normalized value 2-126",
+            "the normalized value +0",
+            "the special value +0"
+        ],
+        "image_link": null,
+        "correct_answer": "the special value +0"
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "The value of a float type variable is represented using the single-precision 32-bit floating point format IEEE-754 standard that uses 1 bit for sign, 8 bits for biased exponent and 23 bits for mantissa. A float type variable X is assigned the decimal value of −14.25. The representation of X in hexadecimal notation is",
+        "options": [
+            "C1640000H",
+            "416C0000H",
+            "41640000H",
+            "C16C0000H"
+        ],
+        "image_link": null,
+        "correct_answer": "C1640000H"
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "The range of integers that can be represented by an n bit 2's complement number system is",
+        "options": [
+            "- 2n - 1to (2n - 1- 1)",
+            "- (2n - 1- 1) to (2n - 1- 1)",
+            "- 2n - 1to 2n - 1",
+            "- (2n - 1+ 1) to (2n- 1+ 1)"
+        ],
+        "image_link": null,
+        "correct_answer": "- 2n - 1 to (2n - 1 - 1)"
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "If 73x(in base-x number system) is equal to 54y(in base-y number system), the possible values of x and y are",
+        "options": [
+            "8, 16",
+            "10, 12",
+            "9, 13",
+            "8, 11"
+        ],
+        "image_link": null,
+        "correct_answer": "8, 11"
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "What is the result of evaluating the following two expressions using three-digit floating point arithmetic with rounding?(113. + -111.) + 7.51\r\n113. + (-111. + 7.51)",
+        "options": [
+            "9.51 and 10.0 respectively",
+            "10.0 and 9.51 respectively",
+            "9.51 and 9.51 respectively",
+            "10.0 and 10.0 respectively"
+        ],
+        "image_link": null,
+        "correct_answer": "9.51 and 10.0 respectively"
+    },
+    {
+        "question": "Question11",
+        "question_paragraph": "Let A = 1111 1010 arid B = 0000 1010 be two 8-bit 2's complement numbers. Their product in 2's complement is",
+        "options": [
+            "1100 0100",
+            "1001 1100",
+            "1010 0101",
+            "1101 0101"
+        ],
+        "image_link": null,
+        "correct_answer": "1100 0100"
+    },
+    {
+        "question": "Question12",
+        "question_paragraph": "Assuming all numbers are in 2's complement representation, which of the following numbers is divisible by 11111011?",
+        "options": [
+            "11100111",
+            "11100100",
+            "11010111",
+            "11011011"
+        ],
+        "image_link": null,
+        "correct_answer": "11100111"
+    },
+    {
+        "question": "Question13",
+        "question_paragraph": "The following is a scheme for floating point number representation using 16 bits.Bit position 15           14 . . . 9            8 . . . . .0\r\n       s                      e                      m\r\n     Sign                  Exponent               MantissaLet s,e, and m be the numbers represented in binary in the sign, exponent, and mantissa fields respectively. Then the floating point number represented is:What is the maximum difference between two successive real numbers representable in this system?",
+        "options": [
+            "2-40",
+            "2-9",
+            "222",
+            "231"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2014/11/GATECS2009Q43.png",
+        "correct_answer": "222"
+    },
+    {
+        "question": "Question14",
+        "question_paragraph": "The decimal value 0.25",
+        "options": [
+            "is equivalent to the binary value 0.1",
+            "is equivalent to the binary value 0.01",
+            "is equivalent to the binary value 0.00111....",
+            "cannot be represented precisely in binary"
+        ],
+        "image_link": null,
+        "correct_answer": "is equivalent to the binary value 0.01"
+    },
+    {
+        "question": "Question15",
+        "question_paragraph": "The 2' s complement representation of the decimal value - 15 is",
+        "options": [
+            "1111",
+            "11111",
+            "111111",
+            "10001"
+        ],
+        "image_link": null,
+        "correct_answer": "10001"
+    },
+    {
+        "question": "Question16",
+        "question_paragraph": "Sign extension is a step in",
+        "options": [
+            "floating point multiplication",
+            "signed 16 bit integer addition",
+            "arithmetic left shift",
+            "converting a signed integer from one size to another"
+        ],
+        "image_link": null,
+        "correct_answer": "converting a signed integer from one size to another"
+    },
+    {
+        "question": "Question17",
+        "question_paragraph": "In 2' s complement addition, overflow",
+        "options": [
+            "is flagged whenever there is carry from sign bit addition",
+            "cannot occur when a positive value is added to a negative value",
+            "is flagged when the carries from sign bit and previous bit match",
+            "none of the above"
+        ],
+        "image_link": null,
+        "correct_answer": "cannot occur when a positive value is added to a negative value"
+    },
+    {
+        "question": "Question18",
+        "question_paragraph": "The 2’s complement representation of (−539)10in hexadecimal is",
+        "options": [
+            "ABE",
+            "DBC",
+            "DE5",
+            "9E7"
+        ],
+        "image_link": null,
+        "correct_answer": "DE5"
+    },
+    {
+        "question": "Question19",
+        "question_paragraph": "The number 43 in 2's complement representation is",
+        "options": [
+            "01010101",
+            "11010101",
+            "00101011",
+            "10101011"
+        ],
+        "image_link": null,
+        "correct_answer": "00101011"
+    },
+    {
+        "question": "Question20",
+        "question_paragraph": "Consider the values A = 2.0 x 1030, B =-2.0 x 1030, C= 1.0, and the sequenceX: = A + B    Y: = A + C\r\nX: = X + C    Y: = Y + Bexecuted on a computer where floating-point numbers are represented with 32 bits. The values for X and Y will be",
+        "options": [
+            "X = 1.0, Y = 1.0",
+            "X = 1.0, Y = 0.0",
+            "X = 0.0, Y = 1.0",
+            "X = 0.0, Y = 0.0"
+        ],
+        "image_link": null,
+        "correct_answer": "X = 1.0, Y = 0.0"
+    },
+    {
+        "question": "Question21",
+        "question_paragraph": "Consider the equation (43)x= (y3)8where x and y are unknown. The number of possible solutions is ________.",
+        "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "image_link": null,
+        "correct_answer": "5"
+    },
+    {
+        "question": "Question22",
+        "question_paragraph": "(34.4)8× (23.4)8evaluates to:",
+        "options": [
+            "(1053.6)8",
+            "(1053.2)8",
+            "(1024.2)8",
+            "None of these"
+        ],
+        "image_link": null,
+        "correct_answer": "(1053.6)8"
+    },
+    {
+        "question": "Question23",
+        "question_paragraph": "The 16-bit 2’s complement representation of an integer is 1111 1111 1111 0101; its decimal representation is\r\n \r\nNote : This question was asked as Numerical Answer Type.",
+        "options": [
+            "10",
+            "11",
+            "-10",
+            "-11"
+        ],
+        "image_link": null,
+        "correct_answer": "-11"
+    },
+    {
+        "question": "Question24",
+        "question_paragraph": "Which of the following option is correct regarding number conversion from a base to another base?",
+        "options": [
+            "If a number has k digits in hex, then k/4 digits (bits) can have in binary.",
+            "If a number has k digits in decimal, then roughly k/2 digits can have in binary.",
+            "If a number has k digits base a, then roughly k*loga(b) digits can have in base b?",
+            "None of the above"
+        ],
+        "image_link": null,
+        "correct_answer": "If a number has k digits in decimal, then roughly k/2 digits can have in binary."
+    },
+    {
+        "question": "Question25",
+        "question_paragraph": "The value of a float type variable is represented using the single-precision 32-bit floating point format IEEE-754 standard that uses 1 bit for sign, 8 bits for biased exponent and 23 bits for mantissa. A float type variable X is assigned the decimal value of −25.75. The representation of X in hexadecimal notation is",
+        "options": [
+            "61CD0000",
+            "C1640000",
+            "C1CD0000",
+            "C1CE0000"
+        ],
+        "image_link": null,
+        "correct_answer": "C1CE0000"
+    },
+    {
+        "question": "Question26",
+        "question_paragraph": "What is the radix of the number if the solution to quadratic equation x^2 − 10x + 31 = 0 is x = 5 and x = 8?",
+        "options": [
+            "10",
+            "8",
+            "5",
+            "13"
+        ],
+        "image_link": null,
+        "correct_answer": "13"
+    },
+    {
+        "question": "Question27",
+        "question_paragraph": "Consider the unsigned 8-bit fixed point binary number representation, below, b7b6b5b4b3⋅ b2b1b0where the position of the binary point is between b3and b2. Assume b7is the most significant bit. Some of the decimal numbers listed belowcannotbe representedexactlyin the above representation: (i) 31.500 (ii) 0.875 (iii) 12.100 (iv) 3.001 Which one of the following statements is true?",
+        "options": [
+            "None of (i), (ii), (iii), (iv) can be exactly represented",
+            "Only (ii) cannot be exactly represented",
+            "Only (iii) and (iv) cannot be exactly represented",
+            "Only (i) and (ii) cannot be exactly represented"
+        ],
+        "image_link": null,
+        "correct_answer": "Only (iii) and (iv) cannot be exactly represented"
+    },
+    {
+        "question": "Question28",
+        "question_paragraph": "The Octal equivalent of the binary number 1011101011 is :",
+        "options": [
+            "7353",
+            "1353",
+            "5651",
+            "5657"
+        ],
+        "image_link": null,
+        "correct_answer": "1353"
+    },
+    {
+        "question": "Question29",
+        "question_paragraph": "We consider the addition of two 2’s complement numbers bn-1bn-2...b0and an-1an-2...a0. A binary adder for adding unsigned binary numbers is used to add the two numbers. The sum is denoted by cn-1cn-2...c0and the carry-out by cout. Which one of the following options correctly identifies the overflow condition?",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2014/08/GATECS2006Q39.png",
+        "correct_answer": "B"
+    },
+    {
+        "question": "Question30",
+        "question_paragraph": "In IEEE floating point representation, the hexadecimal number 0xC0000000 corresponds to",
+        "options": [
+            "-3.0",
+            "-1.0",
+            "-4.0",
+            "-2.0"
+        ],
+        "image_link": null,
+        "correct_answer": "-2.0"
+    },
+    {
+        "question": "Question31",
+        "question_paragraph": "If X is a binary number which is power of 2, then the value of X & (X – 1) is :",
+        "options": [
+            "11….11",
+            "00…..00",
+            "100…..0",
+            "000……1"
+        ],
+        "image_link": null,
+        "correct_answer": "00…..00"
+    },
+    {
+        "question": "Question32",
+        "question_paragraph": "The code which uses 7 bits to represent a character is",
+        "options": [
+            "ASCII",
+            "BCD",
+            "EBCDIC",
+            "Gray"
+        ],
+        "image_link": null,
+        "correct_answer": "ASCII"
+    },
+    {
+        "question": "Question33",
+        "question_paragraph": "The decimal number has 64 digits.The number of bits needed for its equivalent binary representation is?",
+        "options": [
+            "200",
+            "213",
+            "246",
+            "277"
+        ],
+        "image_link": null,
+        "correct_answer": "213"
+    },
+    {
+        "question": "Question34",
+        "question_paragraph": "In the standard IEEE 754 single precision floating point representation, there is 1 bit for sign, 23 bits for fraction and 8 bits for exponent. What is the precision in terms of the number of decimal digits?",
+        "options": [
+            "5",
+            "6",
+            "7",
+            "8"
+        ],
+        "image_link": null,
+        "correct_answer": "7"
+    },
+    {
+        "question": "Question35",
+        "question_paragraph": "Consider three registers R1, R2, and R3 that store numbers in IEEE−754 single precision floating point format. Assume that R1 and R2 contain the values (in hexadecimal notation) 0x42200000 and 0xC1200000, respectively.\r\n\r\nIf R3 = R1 / R2, what is the value stored in R3 ?",
+        "options": [
+            "0x40800000",
+            "0xC0800000",
+            "0x83400000",
+            "0xC8500000"
+        ],
+        "image_link": null,
+        "correct_answer": "0xC0800000"
+    },
+    {
+        "question": "Question36",
+        "question_paragraph": "Consider the following representation of a number in IEEE 754 single-precision floating point format with a bias of 127.S : 1     E : 10000001      F : 11110000000000000000000Here, S,E and F denote the sign, exponent, and fraction components of the floating point representation.\r\n\r\nThe decimal value corresponding to the above representation (rounded to 2 decimal places) is ____________.",
+        "options": [
+            "-7.75",
+            "+7.75",
+            "-5.57",
+            "5.75"
+        ],
+        "image_link": null,
+        "correct_answer": "-7.75"
+    },
+    {
+        "question": "Question37",
+        "question_paragraph": "Let r denote number system radix. The only value(s) of r that satisfy the equation",
+        "options": [
+            "decimal 10",
+            "decimal 11",
+            "decimal 10 and 11",
+            "any value > 2"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2014/01/12.gif",
+        "correct_answer": "any value > 2"
+    },
+    {
+        "question": "Question38",
+        "question_paragraph": "Consider the equation (123)5 = (x8)y with x and y as unknown. The number of possible solutions is _____ .",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "image_link": null,
+        "correct_answer": "3"
+    },
+    {
+        "question": "Question39",
+        "question_paragraph": "The hexadecimal representation of 6578is",
+        "options": [
+            "1AF",
+            "D78",
+            "D71",
+            "32F"
+        ],
+        "image_link": null,
+        "correct_answer": "1AF"
+    },
+    {
+        "question": "Question40",
+        "question_paragraph": "Consider the following floating point format",
+        "options": [
+            "0D 24",
+            "0D 4D",
+            "4D 0D",
+            "4D 3D"
+        ],
+        "image_link": "https://media.geeksforgeeks.org/wp-content/uploads/mantissa.jpg",
+        "correct_answer": "4D 3D"
+    },
+    {
+        "question": "Question41",
+        "question_paragraph": "Consider the following floating point formatMantissa is a pure fraction in sign-magnitude form. The normalized representation for the above format is specified as follows. The mantissa has an implicit 1 preceding the binary (radix) point. Assume that only 0's are padded in while shifting a field. The normalized representation of the above number (0.239 × 213) is:",
+        "options": [
+            "0A 20",
+            "11 34",
+            "4D D0",
+            "4A E8"
+        ],
+        "image_link": "https://cdncontribute.geeksforgeeks.org/wp-content/uploads/mantissa-1.jpg",
+        "correct_answer": "4A E8"
+    },
+    {
+        "question": "Question42",
+        "question_paragraph": "Usinga4-bit 2’s complement arithmetic, which of the following additions will result in an overflow?\r\n\r\n(i) 1100 + 1100\r\n\r\n(ii) 0011 + 0111\r\n\r\n(iii) 1111 + 0111",
+        "options": [
+            "(i) only",
+            "(ii) only",
+            "(iii) only",
+            "(i) and (iii) only"
+        ],
+        "image_link": null,
+        "correct_answer": "(ii) only"
+    },
+    {
+        "question": "Question43",
+        "question_paragraph": "The number (123456)8is equivalent to",
+        "options": [
+            "(A72E)16 and (22130232)4",
+            "(A72E)16 and (22131122)4",
+            "(A73E)16 and (22130232)4",
+            "(A62E)16 and (22120232)4"
+        ],
+        "image_link": null,
+        "correct_answer": "(A72E)16 and (22130232)4"
+    },
+    {
+        "question": "Question44",
+        "question_paragraph": "Let X be the number of distinct 16-bit integers in 2’s complement representation. Let Y be the number of distinct 16-bit  integers in sign magnitude representation. Then X −Y is _________\r\n\r\n[This Question was originally a Fill-in-the-blanks Question]",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "0"
+        ],
+        "image_link": null,
+        "correct_answer": "1"
+    },
+    {
+        "question": "Question45",
+        "question_paragraph": "The addition of 4-bit, two's complement, binary numbers 1101 and 0100 results in",
+        "options": [
+            "0001 and an overflow",
+            "1001 and no overflow",
+            "0001 and no overflow",
+            "1001 and an overflow"
+        ],
+        "image_link": null,
+        "correct_answer": "0001 and no overflow"
+    },
+    {
+        "question": "Question46",
+        "question_paragraph": "The following bit pattern represents a floating point number in IEEE 754 single precision format\r\n\r\n1 10000011 101000000000000000000000\r\n\r\nThe value of the number in decimal form is",
+        "options": [
+            "-10",
+            "-13",
+            "-26",
+            "None of these"
+        ],
+        "image_link": null,
+        "correct_answer": "-26"
+    },
+    {
+        "question": "Question47",
+        "question_paragraph": "Consider the following state diagram and its realization by a JK flip flopThe combinational circuit generates J and K in terms of x, y and Q.The Boolean expressions for J and K are :",
+        "options": [
+            "(x⊕y)\\'and x\\'⊕y\\'",
+            "(x⊕y)\\'and x⊕y",
+            "x⊕y and (x⊕y)\\'",
+            "x⊕yand x⊕y"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2016/05/2008_37-218x300.jpg",
+        "correct_answer": "x⊕yand x⊕y"
+    },
+    {
+        "question": "Question48",
+        "question_paragraph": "Booth's coding in 8-bits for the decimal number -57 is:",
+        "options": [
+            "0-100+1000",
+            "0-100+100-1",
+            "0-1+100-10+1",
+            "00-10+100-1"
+        ],
+        "image_link": null,
+        "correct_answer": "0-100+100-1"
+    },
+    {
+        "question": "Question49",
+        "question_paragraph": "The maximum gate delay for any output to appear in an array multiplier for multiplying two n bit number is:",
+        "options": [
+            "O(n^2)",
+            "O(n)",
+            "O(log n)",
+            "O(1)"
+        ],
+        "image_link": null,
+        "correct_answer": "O(n)"
+    },
+    {
+        "question": "Question50",
+        "question_paragraph": "Zero has two representations in:\r\n\r\na) Sign magnitude\r\n\r\nb) 1's complement\r\n\r\nc) 2's complement\r\n\r\nd) None of the above",
+        "options": [
+            "Only a",
+            "a and b",
+            "a and c",
+            "a, b and c"
+        ],
+        "image_link": null,
+        "correct_answer": "a and b"
+    },
+    {
+        "question": "Question51",
+        "question_paragraph": "The octal representation of an integer is (342)8. If this were to be treated as an eight bit integer in an 8085 based computer, its decimal equivalent is",
+        "options": [
+            "226",
+            "-98",
+            "76",
+            "-30"
+        ],
+        "image_link": null,
+        "correct_answer": "-30"
+    },
+    {
+        "question": "Question52",
+        "question_paragraph": "Given √(224)r= (13)rThe value of the radixris:",
+        "options": [
+            "10",
+            "8",
+            "5",
+            "6"
+        ],
+        "image_link": null,
+        "correct_answer": "5"
+    },
+    {
+        "question": "Question53",
+        "question_paragraph": "Following floating point number format is givenfis a fraction represented by a 6-bit mantissa (includes sign bit) in sign magnitude formeis a 4-bit exponent (includes sign hit) in sign magnitude form n=(f, e)=f, 2eis a floating point number.\r\nLet A= 54.75 in decimal and B= 9.75 in decimal.\r\n\r\na). Represent A and B as floating point numbers in the above format.\r\nb). Show the steps involved in floating point addition of A and B.\r\nc). What is the percentage error (upto one position beyond decimal point) in the addition operation in (b)?",
+        "options": [],
+        "image_link": null,
+        "correct_answer": "null"
+    },
+    {
+        "question": "Question54",
+        "question_paragraph": "Booth's algorithm for integer multiplication gives worst performance when the multiplier pattern is",
+        "options": [
+            "101010 .........1010",
+            "100000 .........0001",
+            "111111 .........1111",
+            "011111 .........1110"
+        ],
+        "image_link": null,
+        "correct_answer": "101010 .........1010"
+    },
+    {
+        "question": "Question55",
+        "question_paragraph": "Consider the following floating point number representationThe exponent is in 2's complement representation and mantissa is in the sign magnitude representation. The range of the magnitude of the normalized numbers in this representation is a). 0 to 1 b). 0.5 to 1 c). 2-23to 0.5 d). 0.5 to (1-2-23)",
+        "options": [
+            "a",
+            "b",
+            "c",
+            "d"
+        ],
+        "image_link": "\\\"http://www.cdn.geeksforgeeks.org/wp-content/uploads/floating_p.png\\\"",
+        "correct_answer": "d"
+    },
+    {
+        "question": "Question56",
+        "question_paragraph": "IEEE Standard 754 floating point is the most common representation today for real numbers on computers. The diagram below shows these parts are stored in memory:The IEEE 754 standard includes special cases for numbers that are difficult to represent, such as 0 because it lacks an implicit leading 1. Consider the following situations for IEEE Standard 754 floating point:Which of the following option is not correct?",
+        "options": [
+            "Code-1 represented number Zero",
+            "Code-2 represented +/- Denormalized number",
+            "Code-3 represented +/- Infinity",
+            "Code-4 represented number Zero"
+        ],
+        "image_link": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210623231622/735.png",
+        "correct_answer": "Code-4 represented number Zero"
+    },
+    {
+        "question": "Question57",
+        "question_paragraph": "Let m=(313)4and n=(322)4. Find the base 4 expansion of m+n.",
+        "options": [
+            "(635)4",
+            "(32312)4",
+            "(21323)4",
+            "(1301)4"
+        ],
+        "image_link": null,
+        "correct_answer": "(1301)4"
+    },
+    {
+        "question": "Question58",
+        "question_paragraph": "A computer with 32 bit word size uses 2s complement to represent numbers. The range of integers that can be represented by this computer is",
+        "options": [
+            "–232to 232",
+            "–231to 232-1",
+            "–231to 231-1",
+            "–231-1 to 232-1"
+        ],
+        "image_link": null,
+        "correct_answer": "–231 to 231-1"
+    },
+    {
+        "question": "Question59",
+        "question_paragraph": "Let M = 11111010 and N = 00001010 be two 8 bit two’s complement number. Their product in two’s complement is",
+        "options": [
+            "11000100",
+            "10011100",
+            "10100101",
+            "11010101"
+        ],
+        "image_link": null,
+        "correct_answer": "11000100"
+    },
+    {
+        "question": "Question60",
+        "question_paragraph": "Convert the octal number 0.4051 into its equivalent decimal number.",
+        "options": [
+            "0.5100098",
+            "0.2096",
+            "0.52",
+            "0.4192"
+        ],
+        "image_link": null,
+        "correct_answer": "0.5100098"
+    },
+    {
+        "question": "Question61",
+        "question_paragraph": "The hexadecimal equivalent of the octal number 2357 is :",
+        "options": [
+            "2EE",
+            "2FF",
+            "4EF",
+            "4FE"
+        ],
+        "image_link": null,
+        "correct_answer": "4EF"
+    },
+    {
+        "question": "Question62",
+        "question_paragraph": "Which of the following binary number is the same as its 2's complement?",
+        "options": [
+            "1010",
+            "0101",
+            "1000",
+            "1001"
+        ],
+        "image_link": null,
+        "correct_answer": "1000"
+    },
+    {
+        "question": "Question63",
+        "question_paragraph": "Which of the given number has its IEEE-754 32 bit floating point representation as 0 10000000 110 0000 0000 0000 0000 0000",
+        "options": [
+            "2.5",
+            "3.0",
+            "3.5",
+            "4.5"
+        ],
+        "image_link": null,
+        "correct_answer": "3.5"
+    },
+    {
+        "question": "Question64",
+        "question_paragraph": "The range of integers that can be represented by an n bit 2’s complement number system is:",
+        "options": [
+            "- 2n - 1to 2n - 1- 1",
+            "- (2n - 1- 1) to (2n - 1- 1)",
+            "- 2n - 1to 2n - 1",
+            "- (2n - 1+ 1) to (2n - 1- 1)"
+        ],
+        "image_link": null,
+        "correct_answer": "- 2n - 1 to 2n - 1 - 1"
+    },
+    {
+        "question": "Question65",
+        "question_paragraph": "The number of 1's in the binary representation of (3*4096 + 15*256 + 5*16 + 3) are:",
+        "options": [
+            "8",
+            "9",
+            "10",
+            "12"
+        ],
+        "image_link": null,
+        "correct_answer": "10"
+    },
+    {
+        "question": "Question66",
+        "question_paragraph": "The octal number 326.4 is equivalent to",
+        "options": [
+            "(214.2)10and (D6.8))16",
+            "(212.5)10and (D6.8))16",
+            "(214.5)10and (D6.8))16",
+            "(214.5)10and (D6.4))16"
+        ],
+        "image_link": null,
+        "correct_answer": "(214.5)10 and (D6.8))16"
+    },
+    {
+        "question": "Question67",
+        "question_paragraph": "Which of the following is the most efficient to perform arithmetic operations on the numbers?",
+        "options": [
+            "Sign-magnitude",
+            "1’s complement",
+            "2’s complement",
+            "9’s complement"
+        ],
+        "image_link": null,
+        "correct_answer": "2’s complement"
+    },
+    {
+        "question": "Question68",
+        "question_paragraph": "How many different BCD numbers can be stored in 12 switches? (Assume two position or on-off switches)",
+        "options": [
+            "212",
+            "212-1",
+            "1012",
+            "103"
+        ],
+        "image_link": null,
+        "correct_answer": "103"
+    },
+    {
+        "question": "Question69",
+        "question_paragraph": "The IEEE-754 double-precision format to represent floating point numbers, has a length of _____ bits.",
+        "options": [
+            "16",
+            "32",
+            "48",
+            "64"
+        ],
+        "image_link": null,
+        "correct_answer": "64"
+    },
+    {
+        "question": "Question70",
+        "question_paragraph": "When two BCD numbers 0x14 and 0x08 are added what is the binary representation of the resultant number?",
+        "options": [
+            "0x22",
+            "0x1c",
+            "0x16",
+            "results in overflow"
+        ],
+        "image_link": null,
+        "correct_answer": "0x22"
+    },
+    {
+        "question": "Question71",
+        "question_paragraph": "The number 1102 in base 3 is equivalent to 123 in which base system?",
+        "options": [
+            "4",
+            "5",
+            "6",
+            "8"
+        ],
+        "image_link": null,
+        "correct_answer": "5"
+    },
+    {
+        "question": "Question72",
+        "question_paragraph": "The binary equivalent of the decimal number 42.75 is",
+        "options": [
+            "101010.110",
+            "100110.101",
+            "101010.101",
+            "100110.110"
+        ],
+        "image_link": null,
+        "correct_answer": "101010.110"
+    },
+    {
+        "question": "Question73",
+        "question_paragraph": "What is the decimal value of the floating-point number C1D00000 (hexadecimal notation)? (Assume 32-bit, single precision floating point IEEE representation)",
+        "options": [
+            "28",
+            "-15",
+            "-26",
+            "-28"
+        ],
+        "image_link": null,
+        "correct_answer": "-26"
+    },
+    {
+        "question": "Question74",
+        "question_paragraph": "The range of integers that can be represented by n bit 2’s complement number system is:",
+        "options": [
+            "-2n-1to (2n-1- 1)",
+            "-(2n-1- 1)to (2n-1- 1)",
+            "-2n-1to (2n-1)",
+            "-(2n-1+ 1)to (2n-1- 1)"
+        ],
+        "image_link": null,
+        "correct_answer": "-2n-1 to (2n-1 - 1)"
+    },
+    {
+        "question": "Question75",
+        "question_paragraph": "The addition of 4-bit, two's complement, binary numbers 1101 and 0100 results in",
+        "options": [
+            "0001 and an overflow",
+            "1001 and no overflow",
+            "0001 and no overflow",
+            "1001 and an overflow"
+        ],
+        "image_link": null,
+        "correct_answer": "0001 and no overflow"
+    },
+    {
+        "question": "Question76",
+        "question_paragraph": "If N2= (7601)8where N is a positive integer, then the value of N is",
+        "options": [
+            "(241)5",
+            "(143)6",
+            "(165)7",
+            "(39)16"
+        ],
+        "image_link": null,
+        "correct_answer": "(143)6"
+    },
+    {
+        "question": "Question77",
+        "question_paragraph": "If (12x)3= (123)x, then the value of x is",
+        "options": [
+            "3",
+            "3 or 4",
+            "2",
+            "None of these"
+        ],
+        "image_link": null,
+        "correct_answer": "None of these"
+    },
+    {
+        "question": "Question78",
+        "question_paragraph": "A computer uses 8 digit mantissa and 2 digit exponent. If a = 0.052 and b = 28E + 11 then b + a - b will",
+        "options": [
+            "result in an overflow error",
+            "result in an underflow error",
+            "be 0",
+            "be 5.28 E + 11"
+        ],
+        "image_link": null,
+        "correct_answer": "be 0"
+    },
+    {
+        "question": "Question79",
+        "question_paragraph": "The number of digit 1 present in the binary representation of",
+        "options": [
+            "8",
+            "9",
+            "10",
+            "12"
+        ],
+        "image_link": null,
+        "correct_answer": "9"
+    },
+    {
+        "question": "Question80",
+        "question_paragraph": "0.75 decimal system is equivalent to ____ in octal system",
+        "options": [
+            "0.60",
+            "0.52",
+            "0.54",
+            "0.50"
+        ],
+        "image_link": null,
+        "correct_answer": "0.60"
+    },
+    {
+        "question": "Question81",
+        "question_paragraph": "Consider a computer system that stores a floating-point numbers with 16-bit mantissa and an 8-bit exponent, each in two’s complement. The smallest and largest positive values which can be stored are",
+        "options": [
+            "1 × 10-128and 215× 1015",
+            "1 × 10-256and 215× 10255",
+            "1 × 10-128and 215× 10127",
+            "1 × 10-128and 215- 1 × 10127"
+        ],
+        "image_link": null,
+        "correct_answer": "1 × 10 -128and 215- 1 × 10127"
+    },
+    {
+        "question": "Question82",
+        "question_paragraph": "The Hexadecimal equivalent of 01111100110111100011 is",
+        "options": [
+            "CD73E",
+            "ABD3F",
+            "7CDE3",
+            "FA4CD"
+        ],
+        "image_link": null,
+        "correct_answer": "7CDE3"
+    },
+    {
+        "question": "Question83",
+        "question_paragraph": "The range of representable normalized numbers in the floating point binary fractional representation in a 32-bit word with 1-bit sign, 8-bit excess 128 biased exponent and 23-bit mantissa is",
+        "options": [
+            "2-128to (1 – 2-23) × 2127",
+            "(1 – 2–23) × 2–127to 2128",
+            "(1 – 2–23) × 2–127to 223",
+            "2–129to (1 – 2–23) × 2127"
+        ],
+        "image_link": null,
+        "correct_answer": "2 –129 to (1 – 2 –23 ) × 2 127"
+    },
+    {
+        "question": "Question84",
+        "question_paragraph": "Given √224r= 13rthe value of radix r is",
+        "options": [
+            "10",
+            "8",
+            "6",
+            "5"
+        ],
+        "image_link": null,
+        "correct_answer": "5"
+    },
+    {
+        "question": "Question85",
+        "question_paragraph": "The hexadecimal equivalent of the binary integer number 110101101 is:",
+        "options": [
+            "D24",
+            "1BD",
+            "1AE",
+            "1AD"
+        ],
+        "image_link": null,
+        "correct_answer": "1AD"
+    },
+    {
+        "question": "Question86",
+        "question_paragraph": "Perform the following operation for the binary equivalent of the decimal numbers (−14)10+(−15)10The solution in 8 bit representation is:",
+        "options": [
+            "11100011",
+            "00011101",
+            "10011101",
+            "11110011"
+        ],
+        "image_link": null,
+        "correct_answer": "11100011"
+    },
+    {
+        "question": "Question87",
+        "question_paragraph": "Let the representation of a number in base 3 be 210. What is the hexadecimal representation of the number?",
+        "options": [
+            "15",
+            "21",
+            "D2",
+            "528"
+        ],
+        "image_link": null,
+        "correct_answer": "15"
+    }
+]

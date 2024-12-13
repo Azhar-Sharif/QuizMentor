@@ -873,5 +873,82 @@
             "0.50"
         ],
         "image_link": null
+    },
+    {
+        "question": "Question81",
+        "question_paragraph": "Consider a computer system that stores a floating-point numbers with 16-bit mantissa and an 8-bit exponent, each in two\u2019s complement. The smallest and largest positive values which can be stored are",
+        "options": [
+            "1 \u00d7 10-128and 215\u00d7 1015",
+            "1 \u00d7 10-256and 215\u00d7 10255",
+            "1 \u00d7 10-128and 215\u00d7 10127",
+            "1 \u00d7 10-128and 215- 1 \u00d7 10127"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question82",
+        "question_paragraph": "The Hexadecimal equivalent of 01111100110111100011 is",
+        "options": [
+            "CD73E",
+            "ABD3F",
+            "7CDE3",
+            "FA4CD"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question83",
+        "question_paragraph": "The range of representable normalized numbers in the floating point binary fractional representation in a 32-bit word with 1-bit sign, 8-bit excess 128 biased exponent and 23-bit mantissa is",
+        "options": [
+            "2-128to (1 \u2013 2-23) \u00d7 2127",
+            "(1 \u2013 2\u201323) \u00d7 2\u2013127to 2128",
+            "(1 \u2013 2\u201323) \u00d7 2\u2013127to 223",
+            "2\u2013129to (1 \u2013 2\u201323) \u00d7 2127"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question84",
+        "question_paragraph": "Given \u221a224r= 13rthe value of radix r is",
+        "options": [
+            "10",
+            "8",
+            "6",
+            "5"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question85",
+        "question_paragraph": "The hexadecimal equivalent of the binary integer number 110101101 is:",
+        "options": [
+            "D24",
+            "1BD",
+            "1AE",
+            "1AD"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question86",
+        "question_paragraph": "Perform the following operation for the binary equivalent of the decimal numbers (\u221214)10+(\u221215)10The solution in 8 bit representation is:",
+        "options": [
+            "11100011",
+            "00011101",
+            "10011101",
+            "11110011"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question87",
+        "question_paragraph": "Let the representation of a number in base 3 be 210. What is the hexadecimal representation of the number?",
+        "options": [
+            "15",
+            "21",
+            "D2",
+            "528"
+        ],
+        "image_link": null
     }
 ]

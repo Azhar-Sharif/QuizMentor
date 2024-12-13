@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import json
 
 # URL for the Digital Logic & Number Representation topic
-topic_url = "https://www.geeksforgeeks.org/quizzes/computer-organization-and-architecture-gq/"
+topic_url = "https://www.geeksforgeeks.org/quizzes/iinput-output-systems-gq/"
 
 # List to hold questions for the current topic
 topic_questions_data = []
@@ -68,7 +68,7 @@ for i in range(1, 9):  # Pages 1 through 10
         print(f"Failed to retrieve page {i} for Computer Organization and Architecture. Status code:", response.status_code)
 
 # Save the questions data for the Digital Logic & Number Representation topic to a JSON file
-file_name = 'Computer_Organization_Architecture.json'
+file_name = 'input-output-systems.json'
 with open(file_name, 'w') as json_file:
     json.dump(topic_questions_data, json_file, indent=4)
 

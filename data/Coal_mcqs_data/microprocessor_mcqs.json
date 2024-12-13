@@ -8,18 +8,20 @@
             "(ii) and (iii)",
             "(i), (ii) and (iv)"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "(ii) and (iii)"
     },
     {
         "question": "Question2",
-        "question_paragraph": "Direction for questions 63 to 64:\r\nConsider the following program segment for a hypothetical CPU having three user registers R1, R2 and R3.Instruction \t Operation \t Instruction Size(in words)\r\n MOV R1,5000; \t R1 \u00ac Memory[5000] \t 2\r\n MOV R2, (R1); \t R2 \u00ac Memory[(R1)] \t 1\r\n ADD R2, R3; \t R2 \u00ac R2 + R3 \t         1\r\n MOV 6000, R2; \t Memory [6000] \u00ac R2 \t 2\r\n HALT \t         Machine halts \t         1Consider that the memory is byte addressable with size 32 bits, and the program has been loaded starting from memory location 1000 (decimal). If an interrupt occurs while the CPU has been halted after executing the HALT instruction, the return address (in decimal) saved in the stack will be",
+        "question_paragraph": "Direction for questions 63 to 64:\r\nConsider the following program segment for a hypothetical CPU having three user registers R1, R2 and R3.Instruction \t Operation \t Instruction Size(in words)\r\n MOV R1,5000; \t R1 ¬ Memory[5000] \t 2\r\n MOV R2, (R1); \t R2 ¬ Memory[(R1)] \t 1\r\n ADD R2, R3; \t R2 ¬ R2 + R3 \t         1\r\n MOV 6000, R2; \t Memory [6000] ¬ R2 \t 2\r\n HALT \t         Machine halts \t         1Consider that the memory is byte addressable with size 32 bits, and the program has been loaded starting from memory location 1000 (decimal). If an interrupt occurs while the CPU has been halted after executing the HALT instruction, the return address (in decimal) saved in the stack will be",
         "options": [
             "1007",
             "1020",
             "1024",
             "1028"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "1028"
     },
     {
         "question": "Question3",
@@ -30,7 +32,8 @@
             "23",
             "20"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "24"
     },
     {
         "question": "Question4",
@@ -41,29 +44,32 @@
             "5, 8, 2048",
             "10, 3, 512"
         ],
-        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2014/09/GATECS2004Q65.png"
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2014/09/GATECS2004Q65.png",
+        "correct_answer": "10, 3, 1024"
     },
     {
         "question": "Question5",
-        "question_paragraph": "Consider the following assembly language program for a hypothetical processor. A, B, and C are 8 bit registers. The meanings of various instructions are shown as comments.MOV B, # 0;B \u2190 0MOV C, # 8;C \u2190 8Z :CMP C, # 0;compare C with 0JZX;jump to X if zero flag is setSUB C, # 1;C \u2190 C - 1RRC A, # 1;right rotate A through carry by one bit. Thus:;if the initial values of A and the carry flag area7...a0and;c0respectively, their values after the execution of this;instruction will bec0a7...a1and a0respectively.JC Y;jump to Y if carry flag is setJMP Z;jump to ZY :ADD B, # 1;B \u2190 B + 1JMP Z;jump to ZX :",
+        "question_paragraph": "Consider the following assembly language program for a hypothetical processor. A, B, and C are 8 bit registers. The meanings of various instructions are shown as comments.MOV B, # 0;B ← 0MOV C, # 8;C ← 8Z :CMP C, # 0;compare C with 0JZX;jump to X if zero flag is setSUB C, # 1;C ← C - 1RRC A, # 1;right rotate A through carry by one bit. Thus:;if the initial values of A and the carry flag area7...a0and;c0respectively, their values after the execution of this;instruction will bec0a7...a1and a0respectively.JC Y;jump to Y if carry flag is setJMP Z;jump to ZY :ADD B, # 1;B ← B + 1JMP Z;jump to ZX :",
         "options": [
             "the number of 0 bits in A0",
             "the number of 1 bits in A0",
             "A0",
             "8"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "the number of 1 bits in A0"
     },
     {
         "question": "Question6",
-        "question_paragraph": "Consider the following assembly language program for a hypothetical processor. A, B, and C are 8 bit registers. The meanings of various instructions are shown as comments.MOV B, # 0;B \u2190 0MOV C, # 8;C \u2190 8Z :CMP C, # 0;compare C with 0JZX;jump to X if zero flag is setSUB C, # 1;C \u2190 C - 1RRC A, # 1;right rotate A through carry by one bit. Thus:;if the initial values of A and the carry flag area7...a0and;c0respectively, their values after the execution of this;instruction will bec0a7...a1and a0respectively.JC Y;jump to Y if carry flag is setJMP Z;jump to ZY :ADD B, # 1;B \u2190 B + 1JMP Z;jump to ZX :Which of the following instructions when inserted at location X will ensure that the value of register A after program execution is the same as its initial value ?",
+        "question_paragraph": "Consider the following assembly language program for a hypothetical processor. A, B, and C are 8 bit registers. The meanings of various instructions are shown as comments.MOV B, # 0;B ← 0MOV C, # 8;C ← 8Z :CMP C, # 0;compare C with 0JZX;jump to X if zero flag is setSUB C, # 1;C ← C - 1RRC A, # 1;right rotate A through carry by one bit. Thus:;if the initial values of A and the carry flag area7...a0and;c0respectively, their values after the execution of this;instruction will bec0a7...a1and a0respectively.JC Y;jump to Y if carry flag is setJMP Z;jump to ZY :ADD B, # 1;B ← B + 1JMP Z;jump to ZX :Which of the following instructions when inserted at location X will ensure that the value of register A after program execution is the same as its initial value ?",
         "options": [
             "RRC A, #",
             "NOP ; no operation",
             "LRC A, # 1 ; left rotate A through carry flag by one bit",
             "ADD A, # 1"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "RRC A, #"
     },
     {
         "question": "Question7",
@@ -74,7 +80,8 @@
             "C",
             "D"
         ],
-        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2014/11/gatecs2002Q8.png"
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2014/11/gatecs2002Q8.png",
+        "correct_answer": "A"
     },
     {
         "question": "Question8",
@@ -85,7 +92,8 @@
             "Only JMP and CALL instructions",
             "All instructions"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "All instructions"
     },
     {
         "question": "Question9",
@@ -96,7 +104,8 @@
             "the register containing address of the operand is specified inside the instruction",
             "the location of the operand is implicit"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "the address of the operand is inside the instruction"
     },
     {
         "question": "Question10",
@@ -107,7 +116,8 @@
             "AC = 1 and CY = 0",
             "AC = 0 and CY = 0"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "AC = 1 and CY = 0"
     },
     {
         "question": "Question11",
@@ -118,7 +128,8 @@
             "uses one bit for each control signal",
             "all of the above."
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "all of the above."
     },
     {
         "question": "Question12",
@@ -129,7 +140,8 @@
             "HOLD",
             "READY"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "READY"
     },
     {
         "question": "Question13",
@@ -140,7 +152,8 @@
             "Nested subroutine calls are possible, but interrupts are not",
             "All sequences of subroutine calls and also interrupts are possible"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "It cannot have subroutine call instruction"
     },
     {
         "question": "Question14",
@@ -151,7 +164,8 @@
             "obtain system services which need execution of privileged instructions",
             "return from subroutine"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "obtain system services which need execution of privileged instructions"
     },
     {
         "question": "Question15",
@@ -162,7 +176,8 @@
             "a privileged instruction (which does not generate an interrupt) is needed",
             "a non-privileged instruction (which does not generate an interrupt is needed"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "a non-privileged instruction (which does not generate an interrupt is needed"
     },
     {
         "question": "Question16",
@@ -173,7 +188,8 @@
             "(X, III) (Y, II) (Z, I)",
             "(X, I) (Y, III) (Z, II)"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "(X, III) (Y, I) (Z, II)"
     },
     {
         "question": "Question17",
@@ -184,7 +200,8 @@
             "raise the HOLD input",
             "raise the READY input"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "lower the READY input"
     },
     {
         "question": "Question18",
@@ -195,13 +212,15 @@
             "By checking the TRAP pin for \\'high\\' status at the end of the execution of each instruction",
             "By Checking the TRAP pin for \\'high\\' status at regular intervals"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "By checking the TRAP pin for \\'high\\' status at the end of the execution of each instruction"
     },
     {
         "question": "Question19",
-        "question_paragraph": "Answer the following:a. Draw the schematic of an 8085 based system that can be used to measure the width of a pulse. Assume that the pulse is given as a TTL compatible signal by the source which generates it.b.\u00a0 Write the 8085 Assembly Language program to measure the width of the pulse. State all your assumption clearly.",
+        "question_paragraph": "Answer the following:a. Draw the schematic of an 8085 based system that can be used to measure the width of a pulse. Assume that the pulse is given as a TTL compatible signal by the source which generates it.b.  Write the 8085 Assembly Language program to measure the width of the pulse. State all your assumption clearly.",
         "options": [],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "null"
     },
     {
         "question": "Question20",
@@ -212,7 +231,8 @@
             "Z flag Only",
             "AC, CY, Z flags"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "AC, CY, Z flags"
     },
     {
         "question": "Question21",
@@ -223,7 +243,8 @@
             "16",
             "32"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "16"
     },
     {
         "question": "Question22",
@@ -234,18 +255,20 @@
             "(3)",
             "(4)"
         ],
-        "image_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/1-14.jpg"
+        "image_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/1-14.jpg",
+        "correct_answer": "(2)"
     },
     {
         "question": "Question23",
-        "question_paragraph": "The contents of Register (BL) and Register (AL) of 8085 microprocessor are 49H and 3AH respectively. The contents of AL, the status of carry flag (CF) and sign flag (SF) after executing \u2018SUB AL, BL\u2019 assembly language instruction, are",
+        "question_paragraph": "The contents of Register (BL) and Register (AL) of 8085 microprocessor are 49H and 3AH respectively. The contents of AL, the status of carry flag (CF) and sign flag (SF) after executing ‘SUB AL, BL’ assembly language instruction, are",
         "options": [
             "AL = 0FH; CF = 1; SF = 1",
             "AL = F0H; CF = 0; SF = 0",
             "AL = F1H; CF = 1; SF = 1",
             "AL = 1FH; CF = 1; SF = 1"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "AL = F1H; CF = 1; SF = 1"
     },
     {
         "question": "Question24",
@@ -256,18 +279,20 @@
             "Branch register and cache memory",
             "Control address register and random access\rmemory"
         ],
-        "image_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/3-16.png"
+        "image_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/3-16.png",
+        "correct_answer": "Control address register and control memory"
     },
     {
         "question": "Question25",
         "question_paragraph": "In 8085 microprocessor, the digit 5 indicates that the microprocessor needs:",
         "options": [
-            "\u20135 volts, +5 volts supply",
+            "–5 volts, +5 volts supply",
             "+5 volts supply only",
-            "\u20135 volts supply only",
+            "–5 volts supply only",
             "5 MHz clock"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "+5 volts supply only"
     },
     {
         "question": "Question26",
@@ -278,7 +303,8 @@
             "LXI rp, data",
             "INX rp"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "LXI rp, data"
     },
     {
         "question": "Question27",
@@ -289,7 +315,8 @@
             "The electron gun creates a source of electrons which are focussed into a narrow beam directed at the face of CRT.",
             "All of the above"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "All of the above"
     },
     {
         "question": "Question28",
@@ -300,7 +327,8 @@
             "EFH",
             "2FH"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "2FH"
     },
     {
         "question": "Question29",
@@ -311,7 +339,8 @@
             "8",
             "4"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "8"
     },
     {
         "question": "Question30",
@@ -322,7 +351,8 @@
             "DAD B",
             "DAD SP"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "DAD H"
     },
     {
         "question": "Question31",
@@ -333,7 +363,8 @@
             "2N+W",
             "2N-1"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "2N"
     },
     {
         "question": "Question32",
@@ -344,7 +375,8 @@
             "76H",
             "47H"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "76H"
     },
     {
         "question": "Question33",
@@ -355,7 +387,8 @@
             "Firewire",
             "PCI"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "Firewire"
     },
     {
         "question": "Question34",
@@ -366,7 +399,8 @@
             "4",
             "5"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "5"
     },
     {
         "question": "Question35",
@@ -377,7 +411,8 @@
             "(A), (B) and (D) are false; (C) is true.",
             "(A), (B) and (D) are True; (C) is false."
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "(A), (B) and (D) are True; (C) is false."
     },
     {
         "question": "Question36",
@@ -388,7 +423,8 @@
             "CF = 0 and ZF = 0",
             "CF = 0"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "CF = 0 and ZF = 0"
     },
     {
         "question": "Question37",
@@ -399,7 +435,8 @@
             "256",
             "Will not come out of the loop"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "256"
     },
     {
         "question": "Question38",
@@ -410,7 +447,8 @@
             "74H",
             "24H"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "24H"
     },
     {
         "question": "Question39",
@@ -421,7 +459,8 @@
             "01E0 h",
             "FFFF h"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "01E0 h"
     },
     {
         "question": "Question40",
@@ -432,7 +471,8 @@
             "BD",
             "AC"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "A4"
     },
     {
         "question": "Question41",
@@ -443,7 +483,8 @@
             "B9H",
             "00H"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "82H"
     },
     {
         "question": "Question42",
@@ -454,7 +495,8 @@
             "TRAP",
             "INTR"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "INTR"
     },
     {
         "question": "Question43",
@@ -465,7 +507,8 @@
             "Write (when it is low)",
             "Read and Write (when it is high)"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "Read (when it is low)"
     },
     {
         "question": "Question44",
@@ -476,7 +519,8 @@
             "F000",
             "1000E"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "10E00"
     },
     {
         "question": "Question45",
@@ -487,7 +531,8 @@
             "S0 & S1",
             "HOLD & HLDA"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "HOLD & HLDA"
     },
     {
         "question": "Question46",
@@ -498,7 +543,8 @@
             "(d) only",
             "All the above"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "All the above"
     },
     {
         "question": "Question47",
@@ -509,7 +555,8 @@
             "(a), (b) and (e)",
             "None of the above"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "None of the above"
     },
     {
         "question": "Question48",
@@ -520,7 +567,8 @@
             "(a), (b), (c) and (d)",
             "(a), (c) and (d)"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "(a), (b), (c) and (d)"
     },
     {
         "question": "Question49",
@@ -531,7 +579,8 @@
             "4.5 microseconds to 24.5 microseconds",
             "29.5 microseconds 93.5 microseconds"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "24.5 microseconds to 93.5 microseconds"
     },
     {
         "question": "Question50",
@@ -542,6 +591,86 @@
             "1 K Megabytes",
             "64 Kilobytes"
         ],
-        "image_link": null
+        "image_link": null,
+        "correct_answer": "one Megabyte"
+    },
+    {
+        "question": "Question51",
+        "question_paragraph": "The TRAP is one of the interrupts available in INTEL 8085. Which one of the following statements is true of TRAP ?",
+        "options": [
+            "it is level triggered",
+            "it is negative edge triggered",
+            "it is +ve edge triggered",
+            "it is both +ve and -ve edges triggered"
+        ],
+        "image_link": null,
+        "correct_answer": "it is both +ve and -ve edges triggered"
+    },
+    {
+        "question": "Question52",
+        "question_paragraph": "For the 8 - bit word 00111001, the check bits stored with it would be 0111. Suppose when the word is read from memory, the check bits are calculated to be 1101. What is the data word that was read from memory?",
+        "options": [
+            "10011001",
+            "00011001",
+            "00111000",
+            "11000110"
+        ],
+        "image_link": null,
+        "correct_answer": "00011001"
+    },
+    {
+        "question": "Question53",
+        "question_paragraph": "Consider a 32 - bit microprocessor, with a 16 - bit external data bus, driven by an 8 MHz input clock. Assume that this microprocessor has a bus cycle whose minimum duration equals four input clock cycles. What is the maximum data transfer rate for this microprocessor?",
+        "options": [
+            "8 x 106bytes/sec",
+            "4 x 106bytes/sec",
+            "16 x 106bytes/sec",
+            "4 x 109bytes/sec"
+        ],
+        "image_link": null,
+        "correct_answer": "4 x 106 bytes/sec"
+    },
+    {
+        "question": "Question54",
+        "question_paragraph": "The RST 7 instruction in 8085 microprocessor is equivalent to:",
+        "options": [
+            "CALL 0010 H",
+            "CALL 0034 H",
+            "CALL 0038 H",
+            "CALL 003C H"
+        ],
+        "image_link": null,
+        "correct_answer": "CALL 0038 H"
+    },
+    {
+        "question": "Question55",
+        "question_paragraph": "Match the following:",
+        "options": [],
+        "image_link": null,
+        "correct_answer": "(D)"
+    },
+    {
+        "question": "Question56",
+        "question_paragraph": "How many times will the following loop be executed?\r\n LXI B, 0007 H\r\nLOP : DCX B\r\n      MOV A, B\r\n      ORA C\r\n      JNZ LOP",
+        "options": [
+            "05",
+            "07",
+            "09",
+            "00"
+        ],
+        "image_link": null,
+        "correct_answer": "07"
+    },
+    {
+        "question": "Question57",
+        "question_paragraph": "Specify the contents of the accumulator and the status of the S, Z and CY flags when 8085 microprocessor performs addition of 87 H and 79 H.",
+        "options": [
+            "11, 1, 1, 1",
+            "10, 0, 1, 0",
+            "1, 1, 0, 0",
+            "00, 0, 1, 1"
+        ],
+        "image_link": null,
+        "correct_answer": "00, 0, 1, 1"
     }
 ]

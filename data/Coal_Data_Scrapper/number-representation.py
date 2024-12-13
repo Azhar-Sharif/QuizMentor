@@ -3,13 +3,13 @@ from bs4 import BeautifulSoup
 import json
 
 # URL for the Digital Logic & Number Representation topic
-topic_url = "https://www.geeksforgeeks.org/quizzes/memory-management-gq/"
+topic_url = "https://www.geeksforgeeks.org/quizzes/number-representation-gq/"
 
 # List to hold questions for the current topic
 topic_questions_data = []
 
 # Loop through the first 10 pages for the topic
-for i in range(1, 15):  # Pages 1 through 10
+for i in range(1, 10):  # Pages 1 through 10
     # Construct the page URL
     url = f"{topic_url}?page={i}"
 
@@ -65,10 +65,10 @@ for i in range(1, 15):  # Pages 1 through 10
             })
 
     else:
-        print(f"Failed to retrieve page {i} for Computer Organization and Architecture. Status code:", response.status_code)
+        print(f"Failed to retrieve page {i} for number-representation. Status code:", response.status_code)
 
 # Save the questions data for the Digital Logic & Number Representation topic to a JSON file
-file_name = 'Memory_Management.json'
+file_name = 'number-representation.json'
 with open(file_name, 'w') as json_file:
     json.dump(topic_questions_data, json_file, indent=4)
 

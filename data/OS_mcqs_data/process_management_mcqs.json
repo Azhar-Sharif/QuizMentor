@@ -1,0 +1,1319 @@
+[
+    {
+        "question": "Question1",
+        "question_paragraph": "Consider the following code fragment:Cif(fork()==0){a=a+5;printf(\"%d,%d\\\\n\",a,&a);}else{a=a–5;printf(\"%d, %d\\\\n\",a,&a);}Let u, v be the values printed by the parent process, and x, y be the values printed by the child process. Which one of the following is TRUE?",
+        "options": [
+            "u = x + 10 and v = y",
+            "u = x + 10 and v != y",
+            "u + 10 = x and v = y",
+            "u + 10 = x and v != y"
+        ],
+        "image_link": null,
+        "correct_answer": "u + 10 = x and v = y"
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "The atomic fetch-and-set x, y instruction unconditionally sets the memory location x to 1 and fetches the old value of x in y without allowing any intervening access to the memory location x. consider the following implementation of P and V functions on a binary semaphore .void P (binary_semaphore *s) {\r\n  unsigned y;\r\n  unsigned *x = &(s->value);\r\n  do {\r\n     fetch-and-set x, y;\r\n  } while (y);\r\n}\r\n\r\nvoid V (binary_semaphore *s) {\r\n  S->value = 0;\r\n}Which one of the following is true?",
+        "options": [
+            "The implementation may not work if context switching is disabled in P.",
+            "Instead of using fetch-and-set, a pair of normal load/store can be used",
+            "The implementation of V is wrong",
+            "The code does not implement a binary semaphore"
+        ],
+        "image_link": null,
+        "correct_answer": "The implementation may not work if context switching is disabled in P."
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "A shared variable x, initialized to zero, is operated on by four concurrent processes W, X, Y, Z as follows. Each of the processes W and X reads x from memory, increments by one, stores it to memory, and then terminates. Each of the processes Y and Z reads x from memory, decrements by two, stores it to memory, and then terminates. Each process before reading x invokes the P operation (i.e., wait) on a counting semaphore S and invokes the V operation (i.e., signal) on the semaphore S after storing x to memory. Semaphore S is initialized to two. What is the maximum possible value of x after all processes complete execution? (GATE CS 2013)",
+        "options": [
+            "-2",
+            "-1",
+            "1",
+            "2"
+        ],
+        "image_link": null,
+        "correct_answer": "2"
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "A shared variable x, initialized to zero, is operated on by four concurrent processes W, X, Y, Z as follows. Each of the processes W and X reads x from memory, increments by one, stores it to memory, and then terminates. Each of the processes Y and Z reads x from memory, decrements by two, stores it to memory, and then terminates. Each process before reading x invokes the P operation (i.e., wait) on a counting semaphore S and invokes the V operation (i.e., signal) on the semaphore S after storing x to memory. Semaphore S is initialized to two. What is the maximum possible value of x after all processes complete execution? (GATE CS 2013)",
+        "options": [
+            "-2",
+            "-1",
+            "1",
+            "2"
+        ],
+        "image_link": null,
+        "correct_answer": "2"
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "A certain computation generates two arrays a and b such that a[i]=f(i) for 0 ≤ i < n and b[i]=g(a[i]) for 0 ≤ i < n. Suppose this computation is decomposed into two concurrent processes X and Y such that X computes the array a and Y computes the array b. The processes employ two binary semaphores R and S, both initialized to zero. The array a is shared by the two processes. The structures of the processes are shown below.Process X:Process Y:private i;                         private i;\r\nfor (i=0; i < n; i++) {            for (i=0; i < n; i++) {\r\n   a[i] = f(i);                       EntryY(R, S);\r\n   ExitX(R, S);                       b[i]=g(a[i]);\r\n}                                 }Which one of the following represents the CORRECT implementations of ExitX and EntryY?(A)ExitX(R, S) {\r\n  P(R);\r\n  V(S);\r\n}\r\n\r\nEntryY (R, S) {\r\n  P(S);\r\n  V(R);\r\n}(B)ExitX(R, S) {\r\n  V(R);\r\n  V(S);\r\n}\r\n\r\nEntryY(R, S) {\r\n  P(R);\r\n  P(S);\r\n}(C)ExitX(R, S) {\r\n  P(S);\r\n  V(R);\r\n}\r\nEntryY(R, S) {\r\n  V(S);\r\n  P(R);\r\n}(D)ExitX(R, S) {\r\n  V(R);\r\n  P(S);\r\n}\r\nEntryY(R, S) {\r\n  V(S);\r\n  P(R);\r\n}",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "image_link": null,
+        "correct_answer": "C"
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Three concurrent processes X, Y, and Z execute three different code segments that access and update certain shared variables. Process X executes the P operation (i.e., wait) on semaphores a, b and c; process Y executes the P operation on semaphores b, c and d; process Z executes the P operation on semaphores c, d, and a before entering the respective code segments. After completing the execution of its code segment, each process invokes the V operation (i.e., signal) on its three semaphores. All semaphores are binary semaphores initialized to one. Which one of the following represents a deadlock-free order of invoking the P operations by the processes?",
+        "options": [
+            "X: P(a)P(b)P(c) Y: P(b)P(c)P(d) Z: P(c)P(d)P(a)",
+            "X: P(b)P(a)P(c) Y: P(b)P(c)P(d) Z: P(a)P(c)P(d)",
+            "X: P(b)P(a)P(c) Y: P(c)P(b)P(d) Z: P(a)P(c)P(d)",
+            "X: P(a)P(b)P(c) Y: P(c)P(b)P(d) Z: P(c)P(d)P(a)"
+        ],
+        "image_link": null,
+        "correct_answer": "X: P(b)P(a)P(c) Y: P(b)P(c)P(d) Z: P(a)P(c)P(d)"
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "A shared variable x, initialized to zero, is operated on by four concurrent processes W, X, Y, Z as follows. Each of the processes W and X reads x from memory, increments by one, stores it to memory, and then terminates. Each of the processes Y and Z reads x from memory, decrements by two, stores it to memory, and then terminates. Each process before reading x invokes the P operation (i.e., wait) on a counting semaphore S and invokes the V operation (i.e., signal) on the semaphore S after storing x to memory. Semaphore S is initialized to two. What is the maximum possible value of x after all processes complete execution?",
+        "options": [
+            "-2",
+            "-1",
+            "1",
+            "2"
+        ],
+        "image_link": null,
+        "correct_answer": "2"
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "A certain computation generates two arrays a and b such that a[i]=f(i) for 0 ≤ i < n and b[i]=g(a[i]) for 0 ≤ i < n. Suppose this computation is decomposed into two concurrent processes X and Y such that X computes the array a and Y computes the array b. The processes employ two binary semaphores R and S, both initialized to zero. The array a is shared by the two processes. The structures of the processes are shown below.Process X:Process Y:private i;                         private i;\r\nfor (i=0; i < n; i++) {            for (i=0; i < n; i++) {\r\n   a[i] = f(i);                       EntryY(R, S);\r\n   ExitX(R, S);                       b[i]=g(a[i]);\r\n}                                 }Which one of the following represents the CORRECT implementations of ExitX and EntryY?(A)ExitX(R, S) {\r\n  P(R);\r\n  V(S);\r\n}\r\n\r\nEntryY (R, S) {\r\n  P(S);\r\n  V(R);\r\n}(B)ExitX(R, S) {\r\n  V(R);\r\n  V(S);\r\n}\r\n\r\nEntryY(R, S) {\r\n  P(R);\r\n  P(S);\r\n}(C)ExitX(R, S) {\r\n  P(S);\r\n  V(R);\r\n}\r\nEntryY(R, S) {\r\n  V(S);\r\n  P(R);\r\n}(D)ExitX(R, S) {\r\n  V(R);\r\n  P(S);\r\n}\r\nEntryY(R, S) {\r\n  V(S);\r\n  P(R);\r\n}",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "image_link": null,
+        "correct_answer": "C"
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "A process executes the codefork();\r\nfork();\r\nfork();The total number of child processes created is",
+        "options": [
+            "3",
+            "4",
+            "7",
+            "8"
+        ],
+        "image_link": null,
+        "correct_answer": "7"
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "Fetch_And_Add(X,i) is an atomic Read-Modify-Write instruction that reads the value of memory location X, increments it by the value i, and returns the old value of X. It is used in the pseudocode shown below to implement a busy-wait lock. L is an unsigned integer shared variable initialized to 0. The value of 0 corresponds to lock being available, while any non-zero value corresponds to the lock being not available.AcquireLock(L){\r\n         while (Fetch_And_Add(L,1))\r\n               L = 1;\r\n   }\r\n  ReleaseLock(L){\r\n         L = 0;\r\n   }This implementation",
+        "options": [
+            "fails as L can overflow",
+            "fails as L can take on a non-zero value when the lock is actually available",
+            "works correctly but may starve some processes",
+            "works correctly without starvation"
+        ],
+        "image_link": null,
+        "correct_answer": "fails as L can take on a non-zero value when the lock is actually available"
+    },
+    {
+        "question": "Question11",
+        "question_paragraph": "The time taken to switch between user and kernel modes of execution be t1 while the time taken to switch between two processes be t2. \r\n\r\nWhich of the following is TRUE?",
+        "options": [
+            "t1 > t2",
+            "t1 = t2",
+            "t1 < t2",
+            "nothing can be said about the relation between t1 and t2"
+        ],
+        "image_link": null,
+        "correct_answer": "t1 < t2"
+    },
+    {
+        "question": "Question12",
+        "question_paragraph": "A thread is usually defined as a \"light weight process\" because an operating system (OS) maintains smaller data structures for a thread than for a process. In relation to this, which of the following is TRUE?",
+        "options": [
+            "On per-thread basis, the OS maintains only CPU register state",
+            "The OS does not maintain a separate stack for each thread",
+            "On per-thread basis, the OS does not maintain virtual memory state",
+            "On per-thread basis, the OS maintains only scheduling and accounting information"
+        ],
+        "image_link": null,
+        "correct_answer": "On per-thread basis, the OS does not maintain virtual memory state"
+    },
+    {
+        "question": "Question13",
+        "question_paragraph": "Consider the methods used by processes P1 and P2 for accessing their critical sections whenever needed, as given below. The initial values of shared boolean variables S1 and S2 are randomly assigned.Method Used by P1\r\nwhile (S1 == S2) ;\r\nCritica1 Section\r\nS1 = S2;\r\n\r\nMethod Used by P2\r\nwhile (S1 != S2) ;\r\nCritica1 Section\r\nS2 = not (S1);Which one of the following statements describes the properties achieved?",
+        "options": [
+            "Mutual exclusion but not progress",
+            "Progress but not mutual exclusion",
+            "Neither mutual exclusion nor progress",
+            "Both mutual exclusion and progress"
+        ],
+        "image_link": null,
+        "correct_answer": "Mutual exclusion but not progress"
+    },
+    {
+        "question": "Question14",
+        "question_paragraph": "The following program consists of 3 concurrent processes and 3 binary semaphores.The semaphores are initialized as S0 = 1, S1 = 0, S2 = 0.How many times will process P0 print '0'?",
+        "options": [
+            "At least twice",
+            "Exactly twice",
+            "Exactly thrice",
+            "Exactly once"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2013/12/gatecs201042.png",
+        "correct_answer": "At least twice"
+    },
+    {
+        "question": "Question15",
+        "question_paragraph": "The enter_CS() and leave_CS() functions to implement critical section of a process are realized using test-and-set instruction as follows:void enter_CS(X)\r\n{\r\n    while test-and-set(X) ;\r\n}\r\nvoid leave_CS(X)\r\n{\r\n   X = 0;\r\n}In the above solution, X is a memory location associated with the CS and is initialized to 0. Now consider the following statements:\r\nI. The above solution to CS problem is deadlock-free\r\nII. The solution is starvation free.\r\nIII. The processes enter CS in FIFO order.\r\nIV More than one process can enter CS at the same time.\r\n\r\nWhich of the above statements is TRUE?",
+        "options": [
+            "I only",
+            "I and II",
+            "II and III",
+            "IV only"
+        ],
+        "image_link": null,
+        "correct_answer": "I only"
+    },
+    {
+        "question": "Question16",
+        "question_paragraph": "The P and V operations on counting semaphores, where s is a counting semaphore, are defined as follows:P(s) : s =  s - 1;\r\n  if (s  < 0) then wait;\r\nV(s) : s = s + 1;\r\n  if (s <= 0) then wakeup a process waiting on s;Assume that Pb and Vb the wait and signal operations on binary semaphores are provided. Two binary semaphores Xb and Yb are used to implement the semaphore operations P(s) and V(s) as follows:P(s) : Pb(Xb);\r\n  s = s - 1;\r\n  if (s < 0) {\r\n   Vb(Xb) ;\r\n   Pb(Yb) ;\r\n  }\r\n  else Vb(Xb); \r\n\r\nV(s) : Pb(Xb) ;\r\n  s = s + 1;\r\n  if (s <= 0) Vb(Yb) ;\r\n  Vb(Xb) ;The initial values of Xb and Yb are respectively",
+        "options": [
+            "0 and 0",
+            "0 and 1",
+            "1 and 0",
+            "1 and 1"
+        ],
+        "image_link": null,
+        "correct_answer": "1 and 0"
+    },
+    {
+        "question": "Question17",
+        "question_paragraph": "A process executes the following codefor (i = 0; i < n; i++) fork();The total number of child processes created is",
+        "options": [
+            "n",
+            "2n- 1",
+            "2n",
+            "2(n+1)- 1"
+        ],
+        "image_link": null,
+        "correct_answer": "2n - 1"
+    },
+    {
+        "question": "Question18",
+        "question_paragraph": "Consider the following statements about user level threads and kernel level threads. Which one of the following statement is FALSE?",
+        "options": [
+            "Context switch time is longer for kernel level threads than for user level threads.",
+            "User level threads do not need any hardware support.",
+            "Related kernel level threads can be scheduled on different processors in a multi-processor system.",
+            "Blocking one kernel level thread blocks all related threads."
+        ],
+        "image_link": null,
+        "correct_answer": "Blocking one kernel level thread blocks all related threads."
+    },
+    {
+        "question": "Question19",
+        "question_paragraph": "Two processes, P1 and P2, need to access a critical section of code. Consider the following synchronization construct used by the processes:Here, wants1 and wants2 are shared variables, which are initialized to false. Which one of the following statements is TRUE about the above construct?v/* P1 */\r\nwhile (true) {\r\n  wants1 = true;\r\n  while (wants2 == true);\r\n  /* Critical\r\n    Section */\r\n  wants1=false;\r\n}\r\n/* Remainder section */       \r\n\r\n\r\n/* P2 */\r\nwhile (true) {\r\n  wants2 = true;\r\n  while (wants1==true);\r\n  /* Critical\r\n    Section */\r\n  wants2 = false;\r\n}\r\n/* Remainder section */",
+        "options": [
+            "It does not ensure mutual exclusion.",
+            "It does not ensure bounded waiting.",
+            "It requires that processes enter the critical section in strict alternation.",
+            "It does not prevent deadlocks, but ensures mutual exclusion."
+        ],
+        "image_link": null,
+        "correct_answer": "It does not prevent deadlocks, but ensures mutual exclusion."
+    },
+    {
+        "question": "Question20",
+        "question_paragraph": "Which one of the following is FALSE?",
+        "options": [
+            "User level threads are not scheduled by the kernel.",
+            "When a user level thread is blocked, all other threads of its process are blocked.",
+            "Context switching between user level threads is faster than context switching between kernel level threads.",
+            "Kernel level threads cannot share the code segment"
+        ],
+        "image_link": null,
+        "correct_answer": "Kernel level threads cannot share the code segment"
+    },
+    {
+        "question": "Question21",
+        "question_paragraph": "Consider two processors P1 and P2 executing the same instruction set. Assume that under identical conditions, for the same input, a program running on P2 takes 25% less time but incurs 20% more CPI (clock cycles per instruction) as compared to the program running on P1. If the clock frequency of P1 is 1GHz, then the clock frequency of P2 (in GHz) is _________.",
+        "options": [
+            "1.6",
+            "3.2",
+            "1.2",
+            "0.8"
+        ],
+        "image_link": null,
+        "correct_answer": "1.6"
+    },
+    {
+        "question": "Question22",
+        "question_paragraph": "Consider the procedure below for the Producer-Consumer problem which uses semaphores:Which one of the following is TRUE?",
+        "options": [
+            "The producer will be able to add an item to the buffer, but the consumer can never consume it.",
+            "The consumer will remove no more than one item from the buffer.",
+            "Deadlock occurs if the consumer succeeds in acquiring semaphore s when the buffer is empty.",
+            "The starting value for the semaphore n must be 1 and not 0 for deadlock-free operation."
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2014/04/GATECS2014Q30.png",
+        "correct_answer": "Deadlock occurs if the consumer succeeds in acquiring semaphore s when the buffer is empty."
+    },
+    {
+        "question": "Question23",
+        "question_paragraph": "The atomic fetch-and-set x, y instruction unconditionally sets the memory location x to 1 and fetches the old value of x n y without allowing any intervening access to the memory location x. consider the following implementation of P and V functions on a binary semaphore S.void P (binary_semaphore *s)\r\n{\r\n    unsigned y;\r\n    unsigned *x = &(s->value);\r\n    do\r\n    {\r\n        fetch-and-set x, y;\r\n    }\r\n    while (y);\r\n}\r\nvoid V (binary_semaphore *s)\r\n{\r\n    S->value = 0;\r\n}Which one of the following is true?",
+        "options": [
+            "The implementation may not work if context switching is disabled in P",
+            "Instead of using fetch-and –set, a pair of normal load/store can be used",
+            "The implementation of V is wrong",
+            "The code does not implement a binary semaphore"
+        ],
+        "image_link": null,
+        "correct_answer": "The implementation may not work if context switching is disabled in P"
+    },
+    {
+        "question": "Question24",
+        "question_paragraph": "Barrier is a synchronization construct where a set of processes synchronizes globally i.e. each process in the set arrives at the barrier and waits for all others to arrive and then all processes leave the barrier. Let the number of processes in the set be three and S be a binary semaphore with the usual P and V functions. Consider the following C implementation of a barrier with line numbers shown on left.Cvoidbarrier(void){1:P(S);2:process_arrived++;3.V(S);4:while(process_arrived!=3);5:P(S);6:process_left++;7:if(process_left==3){8:process_arrived=0;9:process_left=0;10:}11:V(S);}The variables process_arrived and process_left are shared among all processes and are initialized to zero. In a concurrent program all the three processes call the barrier function when they need to synchronize globally.\r\n\r\nThe above implementation of barrier is incorrect. Which one of the following is true?",
+        "options": [
+            "The barrier implementation is wrong due to the use of binary semaphore S",
+            "The barrier implementation may lead to a deadlock if two barrier in\rinvocations are used in immediate succession.",
+            "Lines 6 to 10 need not be inside a critical section",
+            "The barrier implementation is correct if there are only two processes instead of three."
+        ],
+        "image_link": null,
+        "correct_answer": "The barrier implementation may lead to a deadlock if two barrier in invocations are used in immediate succession."
+    },
+    {
+        "question": "Question25",
+        "question_paragraph": "Barrier is a synchronization construct where a set of processes synchronizes globally i.e. each process in the set arrives at the barrier and waits for all others to arrive and then all processes leave the barrier. Let the number of processes in the set be three and S be a binary semaphore with the usual P and V functions. Consider the following C implementation of a barrier with line numbers shown on left.Cvoidbarrier(void){1:P(S);2:process_arrived++;3.V(S);4:while(process_arrived!=3);5:P(S);6:process_left++;7:if(process_left==3){8:process_arrived=0;9:process_left=0;10:}11:V(S);}The variables process_arrived and process_left are shared among all processes and are initialized to zero. In a concurrent program all the three processes call the barrier function when they need to synchronize globally.\r\n\r\nWhich one of the following rectifies the problem in the implementation?",
+        "options": [
+            "Lines 6 to 10 are simply replaced by process_arrived--",
+            "At the beginning of the barrier the first process to enter the barrier waits\runtil process_arrived becomes zero before proceeding to execute P(S).",
+            "Context switch is disabled at the beginning of the barrier and re-enabled at the end.",
+            "The variable process_left is made private instead of shared"
+        ],
+        "image_link": null,
+        "correct_answer": "At the beginning of the barrier the first process to enter the barrier waits until process_arrived becomes zero before proceeding to execute P(S)."
+    },
+    {
+        "question": "Question26",
+        "question_paragraph": "Consider two processes P1 and P2 accessing the shared variables X and Y protected by two binary semaphores SX and SY respectively, both initialized to 1. P and V denote the usual semaphore operators, where P decrements the semaphore value, and V increments the semaphore value. The pseudo-code of P1 and P2 is as follows : P1 :",
+        "options": [
+            "P(SY), P(SX); P(SX), P(SY)",
+            "P(SX), P(SY); P(SY), P(SX)",
+            "P(SX), P(SX); P(SY), P(SY)",
+            "P(SX), P(SY); P(SX), P(SY)"
+        ],
+        "image_link": null,
+        "correct_answer": "P(SX), P(SY); P(SX), P(SY)"
+    },
+    {
+        "question": "Question27",
+        "question_paragraph": "Suppose we want to synchronize two concurrent processes P and Q using binary semaphores S and T. The code for the processes P and Q is shown below.Process P:while (1) {\r\nW:\r\n   print '0';\r\n   print '0';\r\nX:\r\n}Process Q:while (1) {\r\nY:\r\n   print '1';\r\n   print '1';\r\nZ:\r\n}Synchronization statements can be inserted only at points W, X, Y and Z.Which of the following will always lead to an output starting with '001100110011' ?",
+        "options": [
+            "P(S) at W, V(S) at X, P(T) at Y, V(T) at Z, S and T initially 1",
+            "P(S) at W, V(T) at X, P(T) at Y, V(S) at Z, S initially 1, and T initially 0",
+            "P(S) at W, V(T) at X, P(T) at Y, V(S) at Z, S and T initially 1",
+            "P(S) at W, V(S) at X, P(T) at Y, V(T) at Z, S initially 1, and T initially 0"
+        ],
+        "image_link": null,
+        "correct_answer": "P(S) at W, V(T) at X, P(T) at Y, V(S) at Z, S initially 1, and T initially 0"
+    },
+    {
+        "question": "Question28",
+        "question_paragraph": "Suppose we want to synchronize two concurrent processes P and Q using binary semaphores S and T. The code for the processes P and Q is shown below.Process P:while (1) {\r\nW:\r\n   print '0';\r\n   print '0';\r\nX:\r\n}Process Q:while (1) {\r\nY:\r\n   print '1';\r\n   print '1';\r\nZ:\r\n}Synchronization statements can be inserted only at points W, X, Y and Z\r\n\r\nWhich of the following will ensure that the output string never contains a substring of the form 01^n0 or 10^n1 where n is odd?",
+        "options": [
+            "P(S) at W, V(S) at X, P(T) at Y, V(T) at Z, S and T initially 1",
+            "P(S) at W, V(T) at X, P(T) at Y, V(S) at Z, S and T initially 1",
+            "P(S) at W, V(S) at X, P(S) at Y, V(S) at Z, S initially 1",
+            "V(S) at W, V(T) at X, P(S) at Y, P(T) at Z, S and T initially 1"
+        ],
+        "image_link": null,
+        "correct_answer": "P(S) at W, V(S) at X, P(S) at Y, V(S) at Z, S initially 1"
+    },
+    {
+        "question": "Question29",
+        "question_paragraph": "Which of the following does not interrupt a running process?",
+        "options": [
+            "A device",
+            "Timer",
+            "Scheduler process",
+            "Power failure"
+        ],
+        "image_link": null,
+        "correct_answer": "Scheduler process"
+    },
+    {
+        "question": "Question30",
+        "question_paragraph": "Which of the following need not necessarily be saved on a context switch between processes?",
+        "options": [
+            "General purpose registers",
+            "Translation look aside buffer",
+            "Program counter",
+            "All of the above"
+        ],
+        "image_link": null,
+        "correct_answer": "Translation look aside buffer"
+    },
+    {
+        "question": "Question31",
+        "question_paragraph": "The following two functions P1 and P2 that share a variable B with an initial value of 2 execute concurrently.P1() \r\n{ \r\n   C = B – 1; \r\n   B = 2*C;  \r\n}\r\n\r\nP2()\r\n{\r\n   D = 2 * B;\r\n   B = D - 1; \r\n}The number of distinct values that B can possibly take after the execution is",
+        "options": [
+            "3",
+            "2",
+            "5",
+            "4"
+        ],
+        "image_link": null,
+        "correct_answer": "3"
+    },
+    {
+        "question": "Question32",
+        "question_paragraph": "Two processes X and Y need to access a critical section. Consider the following synchronization construct used by both the processes.Here, varP and varQ are shared variables and both are initialized to false. Which one of the following statements is true?",
+        "options": [
+            "The proposed solution prevents deadlock but fails to guarantee mutual exclusion",
+            "The proposed solution guarantees mutual exclusion but fails to prevent deadlock",
+            "The proposed solution guarantees mutual exclusion and prevents deadlock",
+            "The proposed solution fails to prevent deadlock and fails to guarantee mutual exclusion"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2015/02/Q20.png",
+        "correct_answer": "The proposed solution prevents deadlock but fails to guarantee mutual exclusion"
+    },
+    {
+        "question": "Question33",
+        "question_paragraph": "In a certain operating system, deadlock prevention is attempted using the following scheme. Each process is assigned a unique timestamp, and is restarted with the same timestamp if killed. Let Ph be the process holding a resource R, Pr be a process requesting for the same resource R, and T(Ph) and T(Pr) be their timestamps respectively. The decision to wait or preempt one of the processes is based on the following algorithm.if T(Pr) < T(Ph)\r\n\r\n     then kill Pr\r\n\r\nelse waitWhich one of the following is TRUE?",
+        "options": [
+            "The scheme is deadlock-free, but not starvation-free",
+            "The scheme is not deadlock-free, but starvation-free",
+            "The scheme is neither deadlock-free nor starvation-free",
+            "The scheme is both deadlock-free and starvation-free"
+        ],
+        "image_link": null,
+        "correct_answer": "The scheme is deadlock-free, but not starvation-free"
+    },
+    {
+        "question": "Question34",
+        "question_paragraph": "A process executes the following segment of code :for(i = 1; i < = n; i++)\r\n\r\nfork ();The number of new processes created is",
+        "options": [
+            "n",
+            "((n(n + 1))/2)",
+            "2n- 1",
+            "3n- 1"
+        ],
+        "image_link": null,
+        "correct_answer": "2n - 1"
+    },
+    {
+        "question": "Question35",
+        "question_paragraph": "The semaphore variables full, empty and mutex are initialized to 0, n and 1, respectively. Process P1repeatedly adds one item at a time to a buffer of size n, and process P2repeatedly removes one item at a time from the same buffer using the programs given below. In the programs, K, L, M and N are unspecified statements.P1while (1) {K;P(mutex);\r\n\r\nAdd an item to the buffer;\r\n\r\nV(mutex);L;}P2while (1) {M;P(mutex);\r\n\r\nRemove an item from the buffer;\r\n\r\nV(mutex);N;}\r\n\r\nThe statements K, L, M and N are respectively",
+        "options": [
+            "P(full), V(empty), P(full), V(empty)",
+            "P(full), V(empty), P(empty), V(full)",
+            "P(empty), V(full), P(empty), V(full)",
+            "P(empty), V(full), P(full), V(empty)"
+        ],
+        "image_link": null,
+        "correct_answer": "P(empty), V(full), P(full), V(empty)"
+    },
+    {
+        "question": "Question36",
+        "question_paragraph": "Consider the following two-process synchronization solution.Process 0Process 1Entry: loop while (turn == 1);        Entry: loop while (turn == 0);\r\n       (critical section)                    (critical section)\r\n       Exit: turn = 1;                       Exit turn = 0;The shared variable turn is initialized to zero. Which one of the following is TRUE?",
+        "options": [
+            "This is a correct two-process synchronization solution.",
+            "This solution violates mutual exclusion requirement.",
+            "This solution violates progress requirement.",
+            "This solution violates bounded wait requirement."
+        ],
+        "image_link": null,
+        "correct_answer": "This solution violates progress requirement."
+    },
+    {
+        "question": "Question37",
+        "question_paragraph": "Consider a non-negative counting semaphore S. The operation P(S) decrements S, and V(S) increments S. During an execution, 20 P(S) operations and 12 V(S) operations are issued in some order. The largest initial value of S for which at least one P(S) operation will remain blocked is ________.",
+        "options": [
+            "7",
+            "8",
+            "9",
+            "10"
+        ],
+        "image_link": null,
+        "correct_answer": "7"
+    },
+    {
+        "question": "Question38",
+        "question_paragraph": "In the working-set strategy, which of the following is done by the operating system to prevent thrashing?It initiates another process if there are enough extra frames.It selects a process to suspend if the sum of the sizes of the working-sets exceeds the total number of available frames.",
+        "options": [
+            "It initiates another process if there are enough extra frames.",
+            "It selects a process to suspend if the sum of the sizes of the working-sets exceeds the total number of available frames.",
+            "I only",
+            "II only",
+            "Neither I nor II",
+            "Both I and II"
+        ],
+        "image_link": null,
+        "correct_answer": "null"
+    },
+    {
+        "question": "Question39",
+        "question_paragraph": "The following is a code with two threads, producer and consumer, that can run in parallel. Further, S and Q are binary semaphores equipped with the standard P and V operations.",
+        "options": [
+            "The process can deadlock",
+            "One of the threads can starve",
+            "Some of the items produced by the producer may be lost",
+            "Values generated and stored in 'x' by the producer will always be consumed before the producer can generate a new value"
+        ],
+        "image_link": null,
+        "correct_answer": "Values generated and stored in 'x' by the producer will always be consumed before the producer can generate a new value"
+    },
+    {
+        "question": "Question40",
+        "question_paragraph": "An operating system implements a policy that requires a process to release all resources before making a request for another resource. Select the TRUE statement from the following:",
+        "options": [
+            "Both starvation and deadlock can occur",
+            "Starvation can occur but deadlock cannot occur",
+            "Starvation cannot occur but deadlock can occur",
+            "Neither starvation nor deadlock can occur"
+        ],
+        "image_link": null,
+        "correct_answer": "Starvation can occur but deadlock cannot occur"
+    },
+    {
+        "question": "Question41",
+        "question_paragraph": "If the time-slice used in the round-robin scheduling policy is more than the maximum time required to execute any process, then the policy will",
+        "options": [
+            "degenerate to shortest job first",
+            "degenerate to priority scheduling",
+            "degenerate to first come first serve",
+            "none of the above"
+        ],
+        "image_link": null,
+        "correct_answer": "degenerate to first come first serve"
+    },
+    {
+        "question": "Question42",
+        "question_paragraph": "Consider the following C code for process P1 and P2. a=4, b=0, c=0 (initialization)P1                      P2\r\n  if (a < 0)                b = 10;    \r\n    c = b-a;                a = -3;\r\n  else\r\n    c = b+a;If the processes P1 and P2 executes concurrently (shared variables a, b and c), which of the following cannot be the value of ‘c’ after both processes complete?",
+        "options": [
+            "4",
+            "7",
+            "10",
+            "13"
+        ],
+        "image_link": null,
+        "correct_answer": "10"
+    },
+    {
+        "question": "Question43",
+        "question_paragraph": "Which of the following actions is/are typically not performed by the operating system when switching context from process A to process B?",
+        "options": [
+            "Saving current register values and restoring saved register values for process B.",
+            "Changing address translation tables.",
+            "Swapping out the memory image of process A to the disk.",
+            "Invalidating the translation look-aside buffer."
+        ],
+        "image_link": null,
+        "correct_answer": "Swapping out the memory image of process A to the disk."
+    },
+    {
+        "question": "Question44",
+        "question_paragraph": "In a computer system where the 'best-fit' algorithm is used for allocating 'jobs' to 'memory partitions', the following situation was encountered:When will the 20K job complete?Note -This question was subjective type.",
+        "options": [
+            "8",
+            "18",
+            "11",
+            "None of these"
+        ],
+        "image_link": "http://www.cdn.geeksforgeeks.org/wp-content/uploads/tabkle.png",
+        "correct_answer": "None of these"
+    },
+    {
+        "question": "Question45",
+        "question_paragraph": "A concurrent system consists of 3 processes using a shared resource R in a non-preemptible and mutually exclusive manner. The processes have unique priorities in the range 1.....3, 3 being the highest priority. It is required to synchronize the processes such that the resource is always allocated to the highest priority requester. The pseudo code for the system is as follows.Shared Datamutex:semaphore = 1:/* initialized to 1*/\r\nprocess[3]:semaphore = 0; /*all initialized to 0 */\r\nR_requested [3]:boolean = false; /*all initialized to false */\r\nbusy: boolean = false; /*initialized to false */Code for processesbegin process\r\nmy-priority:integer;\r\nmy-priority:=____; /*in the range 1...3*/\r\nrepeat\r\n    request_R(my-priority);\r\n    P (proceed [my-priority]);\r\n    {use shared resource R}\r\n    release_R (my-priority);\r\nforever\r\nend process;Proceduresprocedure request_R(priority);\r\nP(mutex);\r\nif busy = true then\r\n    R_requested [priority]:=true;\r\nelse\r\n begin\r\n    V(proceed [priority]);\r\n    busy:=true;\r\n end\r\nV(mutex);Give the pseudo code for the procedurerelease_R.",
+        "options": [],
+        "image_link": null,
+        "correct_answer": "null"
+    },
+    {
+        "question": "Question46",
+        "question_paragraph": "The process state transition diagram in below figure is representative of",
+        "options": [
+            "a batch operating system",
+            "an operating system with a preemptive schedular",
+            "an operating system with a non-preemptive schedular",
+            "a uni-programmed operating system"
+        ],
+        "image_link": "http://www.cdn.geeksforgeeks.org/wp-content/uploads/Untitled-Diagram.jpg",
+        "correct_answer": "an operating system with a preemptive schedular"
+    },
+    {
+        "question": "Question47",
+        "question_paragraph": "Which of the following option is False?",
+        "options": [
+            "An executing instance of a program is called a process while a thread is a subset of the process.",
+            "Threads have considerable overhead while processes have almost no overhead.",
+            "Execution of processes are independent while execution of threads are dependent.",
+            "New processes require duplication of the parent process while new threads are easily created."
+        ],
+        "image_link": null,
+        "correct_answer": "Threads have considerable overhead while processes have almost no overhead."
+    },
+    {
+        "question": "Question48",
+        "question_paragraph": "Which of the following is/are not shared by all the threads in a process?I. Program Counter\r\n\r\nII. Stack\r\n\r\nIII. Registers\r\n\r\nIV. Address space",
+        "options": [
+            "I and II only",
+            "II and III only",
+            "I, II and III only",
+            "IV only"
+        ],
+        "image_link": null,
+        "correct_answer": "I, II and III only"
+    },
+    {
+        "question": "Question49",
+        "question_paragraph": "Consider the set of processes with arrival time(in milliseconds), CPU burst time (in milliseconds), and priority(0 is the highest priority) shown below. None of the processes have I/O burst time.The waiting time (in milliseconds) of process P1 using preemptive priority scheduling algorithm is ____.",
+        "options": [
+            "26",
+            "49",
+            "38",
+            "29"
+        ],
+        "image_link": "https://cdncontribute.geeksforgeeks.org/wp-content/uploads/gate-46.png",
+        "correct_answer": "38"
+    },
+    {
+        "question": "Question50",
+        "question_paragraph": "The following are some events that occur after a device controller issues an interrupt while process L is under execution.\r\n\r\n(P) The processor pushes the process status of L onto the control stack.\r\n(Q) The processor finishes the execution of the current instruction.\r\n(R) The processor executes the interrupt service routine.\r\n(S) The processor pops the process status of L from the control stack.\r\n(T) The processor loads the new PC value based on the interrupt.\r\n\r\nWhich of the following is the correct order in the which the events above occur?",
+        "options": [
+            "QPTRS",
+            "PTRSQ",
+            "TRPQS",
+            "QTPRS"
+        ],
+        "image_link": null,
+        "correct_answer": "QPTRS"
+    },
+    {
+        "question": "Question51",
+        "question_paragraph": "Two atomic operations permissible on Semaphores are __________ and __________.",
+        "options": [
+            "wait, stop",
+            "wait, hold",
+            "hold, signal",
+            "wait, signal"
+        ],
+        "image_link": null,
+        "correct_answer": "wait, signal"
+    },
+    {
+        "question": "Question52",
+        "question_paragraph": "Consider three CPU intensive processes, which require 10, 20, 30 units and arrive at times 0, 2, 6 respectively. How many context switches are needed if shortest remaining time first is implemented? Context switch at 0 is included but context switch at end is ignored",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "image_link": null,
+        "correct_answer": "3"
+    },
+    {
+        "question": "Question53",
+        "question_paragraph": "A process executes the following codefor (i = 0; i < n; i++) fork( );The total number of child processes created are",
+        "options": [
+            "n2",
+            "2n+1-1",
+            "2n",
+            "2n-1"
+        ],
+        "image_link": null,
+        "correct_answer": "2n -1"
+    },
+    {
+        "question": "Question54",
+        "question_paragraph": "Which of the following is false?",
+        "options": [
+            "User level threads are not scheduled by the kernel",
+            "Context switching between user level threads is faster than context switching between kernel level threads",
+            "When a user thread is blocked all other threads of its processes are blocked",
+            "Kernel level threads cannot utilize multiprocessor systems by splitting threads on different processors or cores"
+        ],
+        "image_link": null,
+        "correct_answer": "Kernel level threads cannot utilize multiprocessor systems by splitting threads on different processors or cores"
+    },
+    {
+        "question": "Question55",
+        "question_paragraph": "User level threads are threads that are visible to the programmer and are unknown to the kernel. The operating system kernel supports and manages kernel level threads. Three different types of models relate user and kernel level threads. Which of the following statements is/are true ?(a)(i) The Many - to - one model maps many user threads to one kernel thread (ii) The one - to - one model maps one user thread to one kernel thread (iii) The many - to - many model maps many user threads to smaller or equal kernel threads(b)(i) Many - to - one model maps many kernel threads to one user thread (ii) One - to - one model maps one kernel thread to one user thread (iii) Many - to - many model maps many kernel threads to smaller or equal user threads",
+        "options": [
+            "(a) is true; (b) is false",
+            "(a) is false; (b) is true",
+            "Both (a) and (b) are true",
+            "Both (a) and (b) are false"
+        ],
+        "image_link": null,
+        "correct_answer": "(a) is true; (b) is false"
+    },
+    {
+        "question": "Question56",
+        "question_paragraph": "The Bounded buffer problem is also known as __________.",
+        "options": [
+            "Producer - consumer problem",
+            "Reader - writer problem",
+            "Dining Philosophers problem",
+            "Both (2) and (3)"
+        ],
+        "image_link": null,
+        "correct_answer": "Producer - consumer problem"
+    },
+    {
+        "question": "Question57",
+        "question_paragraph": "What is the output of the following program?main( )\r\n{\r\nint a = 10;\r\nif ((fork ( ) == 0))\r\na++;\r\nprintf (“%d\\\\n”, a );\r\n}",
+        "options": [
+            "10 and 11",
+            "10",
+            "11",
+            "11 and 11"
+        ],
+        "image_link": null,
+        "correct_answer": "10 and 11"
+    },
+    {
+        "question": "Question58",
+        "question_paragraph": "Mutual exclusion problem occurs",
+        "options": [
+            "Between two disjoint processes that do not interact",
+            "Among processes that share resources",
+            "Among processes that do not use the same resource",
+            "Between two processes that uses different resources of different machine"
+        ],
+        "image_link": null,
+        "correct_answer": "Among processes that share resources"
+    },
+    {
+        "question": "Question59",
+        "question_paragraph": "A critical region",
+        "options": [
+            "is a piece of code which only one process executes at a time",
+            "is a region prone to deadlock",
+            "is a piece of code which only a finite number of processes execute",
+            "is found only in windows NT operating system"
+        ],
+        "image_link": null,
+        "correct_answer": "is a piece of code which only one process executes at a time"
+    },
+    {
+        "question": "Question60",
+        "question_paragraph": "At particular time, the value of a counting semaphore is 10, it will become 7 after:\r\n(a) 3 V operations\r\n(b) 3 P operations\r\n(c) 5 V operations and 2 P operations \r\n(d) 2 V operations and 5 P operations\r\nWhich of the following option is correct?",
+        "options": [
+            "Only (b)",
+            "Only(d)",
+            "Both (b) and (d)",
+            "None of these"
+        ],
+        "image_link": null,
+        "correct_answer": "Both (b) and (d)"
+    },
+    {
+        "question": "Question61",
+        "question_paragraph": "There are three processes P1, P2and P3sharing a semaphore for synchronizing a variable. Initial value of semaphore is one. Assume that negative value of semaphore tells us how many processes are waiting in queue. Processes access the semaphore in following order :\r\n (a) P2needs to access\r\n (b) P1needs to access\r\n (c) P3needs to access\r\n (d) P2exits critical section\r\n (e) P1exits critical section\r\n The final value of semaphore will be :",
+        "options": [
+            "0",
+            "1",
+            "-1",
+            "-2"
+        ],
+        "image_link": null,
+        "correct_answer": "0"
+    },
+    {
+        "question": "Question62",
+        "question_paragraph": "At a particular time of computation the value of a counting semaphore is 7. Then 20 P operations and xV operations were completed on this semaphore. If the new value of semaphore is 5 ,x will be",
+        "options": [
+            "18",
+            "22",
+            "15",
+            "13"
+        ],
+        "image_link": null,
+        "correct_answer": "18"
+    },
+    {
+        "question": "Question63",
+        "question_paragraph": "One of the disadvantages of user level threads compared to Kernel level threads is",
+        "options": [
+            "If a user-level thread of a process executes a system call, all threads in that process are blocked.",
+            "Scheduling is application dependent.",
+            "Thread switching doesn’t require kernel mode privileges.",
+            "The library procedures invoked for thread management in user level threads are local procedures."
+        ],
+        "image_link": null,
+        "correct_answer": "If a user-level thread of a process executes a system call, all threads in that process are blocked."
+    },
+    {
+        "question": "Question64",
+        "question_paragraph": "Names of some of the Operating Systems are given below:\r\n(a) MS-DOS \r\n(b) XENIX\r\n(c) OS/2\r\nIn the above list, following operating systems didn’t provide multiuser facility.",
+        "options": [
+            "(a) only",
+            "(a) and (b) only",
+            "(b) and (c) only",
+            "(a), (b) and (c)"
+        ],
+        "image_link": null,
+        "correct_answer": "(a), (b) and (c)"
+    },
+    {
+        "question": "Question65",
+        "question_paragraph": "In a lottery scheduler with 40 tickets, how we will distribute the tickets among 4 processes and such that each process gets 10%, 5%, 60% and 25% respectively?P1   P2   P3   P4\r\na)   12   4    70   30\r\nb)   7    5    20   10\r\nc)   4    2    24   10\r\nd)   8    5    40   30",
+        "options": [
+            "a",
+            "b",
+            "c",
+            "d"
+        ],
+        "image_link": null,
+        "correct_answer": "c"
+    },
+    {
+        "question": "Question66",
+        "question_paragraph": "Suppose a system contains n processes and system uses the round-robin algorithm for CPU scheduling then which data structure is best suited for ready queue of the process",
+        "options": [
+            "stack",
+            "queue",
+            "circular queue",
+            "tree"
+        ],
+        "image_link": null,
+        "correct_answer": "circular queue"
+    },
+    {
+        "question": "Question67",
+        "question_paragraph": "Consider a system with seven processes A through G and six resources R through W.\r\nResource ownership is as follows :\r\nprocess A holds R and wants T\r\nprocess B holds nothing but wants T\r\nprocess C holds nothing but wants S\r\nprocess D holds U and wants S & T\r\nprocess E holds T and wants V\r\nprocess F holds W and wants S\r\nprocess G holds V and wants U\r\nIs the system deadlocked ? If yes, ______ processes are deadlocked.",
+        "options": [
+            "No",
+            "Yes, A, B, C",
+            "Yes, D, E, G",
+            "Yes, A, B, F"
+        ],
+        "image_link": null,
+        "correct_answer": "Yes, D, E, G"
+    },
+    {
+        "question": "Question68",
+        "question_paragraph": "Consider a system having ‘m’ resources of the same type. These resources are shared by three processes P1, P2and P3which have peak demands of 2, 5 and 7 resources respectively. For what value of ‘m’ deadlock will not occur ?",
+        "options": [
+            "70",
+            "14",
+            "13",
+            "7"
+        ],
+        "image_link": null,
+        "correct_answer": "14"
+    },
+    {
+        "question": "Question69",
+        "question_paragraph": "An Operating System (OS) crashes on the average once in 30 days, that is, the Mean Time Between Failures (MTBF) = 30 days. When this happens, it takes 10 minutes to recover the OS, that is, the Mean Time To Repair (MTTR) = 10 minutes. The availability of the OS with these reliability figures is approximately :",
+        "options": [
+            "96.97%",
+            "97.97%",
+            "99.009%",
+            "99.97%"
+        ],
+        "image_link": null,
+        "correct_answer": "99.97%"
+    },
+    {
+        "question": "Question70",
+        "question_paragraph": "Suppose there are four processes in execution with 12 instances of a Resource R in a system.\r\nThe maximum need of each process and current allocation are given below:With reference to current allocation, is system safe ? If so, what is the safe sequence ?",
+        "options": [
+            "No",
+            "Yes, P1P2P3P4",
+            "Yes, P4P3P1P2",
+            "Yes, P2P1P3P4"
+        ],
+        "image_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/37-2-1.png",
+        "correct_answer": "Yes, P4P3P1P2"
+    },
+    {
+        "question": "Question71",
+        "question_paragraph": "Consider the following set of processes, with arrival times and the required CPU-burst times given in milliseconds.Process  Arrival Time  Burst TimeP1        0             4\r\n   P2        2             2\r\n   P3        3             1What is the sequence in which the processes are completed? Assume round robin scheduling with a time quantum of 2 milliseconds",
+        "options": [
+            "P1, P2, P3",
+            "P2, P1, P3",
+            "P3, P2, P1",
+            "P2, P3, P1"
+        ],
+        "image_link": null,
+        "correct_answer": "P2, P1, P3"
+    },
+    {
+        "question": "Question72",
+        "question_paragraph": "A CPU scheduling algorithm determines an order for the execution of its scheduled processes. Given 'n' processes to be scheduled on one processor, how many possible different schedules are there?",
+        "options": [
+            "n",
+            "n2",
+            "n!",
+            "2n"
+        ],
+        "image_link": null,
+        "correct_answer": "n!"
+    },
+    {
+        "question": "Question73",
+        "question_paragraph": "A starvation free job scheduling policy guarantees that no job indefinitely waits for a service. Which of the following job scheduling policies is starvation free?",
+        "options": [
+            "Priority queuing",
+            "Shortest Job First",
+            "Youngest Job First",
+            "Round robin"
+        ],
+        "image_link": null,
+        "correct_answer": "Round robin"
+    },
+    {
+        "question": "Question74",
+        "question_paragraph": "The state of a process after it encounters an I/O instruction is",
+        "options": [
+            "ready",
+            "blocked",
+            "idle",
+            "running"
+        ],
+        "image_link": null,
+        "correct_answer": "blocked"
+    },
+    {
+        "question": "Question75",
+        "question_paragraph": "Which of the following strategy is employed for overcoming the priority inversion problem?",
+        "options": [
+            "Temporarily raise the priority of lower priority level process",
+            "Have a fixed priority level scheme",
+            "Implement kernel pre-emption scheme",
+            "Allow lower priority process to complete its job"
+        ],
+        "image_link": null,
+        "correct_answer": "Temporarily raise the priority of lower priority level process"
+    },
+    {
+        "question": "Question76",
+        "question_paragraph": "System calls are usually invoked by using :",
+        "options": [
+            "A privileged instruction",
+            "An indirect jump",
+            "A software interrupt",
+            "Polling"
+        ],
+        "image_link": null,
+        "correct_answer": "A software interrupt"
+    },
+    {
+        "question": "Question77",
+        "question_paragraph": "A disk drive has 100 cylinders, numbered 0 to 99. Disk requests come to the disk driver for cylinders 12, 26, 24, 4, 42, 8 and 50 in that order. The driver is currently serving a request at cylinder 24. A seek takes 6 msec per cylinder moved. How much seek time is needed for shortest seek time first (SSTF) algorithm?",
+        "options": [
+            "0.984 sec",
+            "0.396 sec",
+            "0.738 sec",
+            "0.42 sec"
+        ],
+        "image_link": null,
+        "correct_answer": "0.42 sec"
+    },
+    {
+        "question": "Question78",
+        "question_paragraph": "The following table shows the processes in the ready queue and time required for each process for completing its job.Process    TimeP1          10\r\nP2          5\r\nP3          20\r\nP4          8\r\nP5          15If round-robin scheduling with 5 ms is used what is the average waiting time of the processes in the queue?",
+        "options": [
+            "27 ms",
+            "26.2 ms",
+            "27.5 ms",
+            "27.2 ms"
+        ],
+        "image_link": null,
+        "correct_answer": "26.2 ms"
+    },
+    {
+        "question": "Question79",
+        "question_paragraph": "Consider a system with twelve magnetic tape drives and three processes P1, P2and P3. Process P1requires maximum ten tape drives, process P2may need as many as four tape drives and P3may need upto nine tape drives. Suppose that at time t1, process P1is holding five tape drives, process P2is holding two tape drives and process P3is holding three tape drives. At time t1, system is in:",
+        "options": [
+            "safe state",
+            "unsafe state",
+            "deadlocked state",
+            "starvation state"
+        ],
+        "image_link": null,
+        "correct_answer": "unsafe state"
+    },
+    {
+        "question": "Question80",
+        "question_paragraph": "In an operating system, indivisibility of operation means:",
+        "options": [
+            "Operation is interruptible",
+            "Race - condition may occur",
+            "Processor can not be pre-empted",
+            "All of the above"
+        ],
+        "image_link": null,
+        "correct_answer": "Processor can not be pre-empted"
+    },
+    {
+        "question": "Question81",
+        "question_paragraph": "There are three processes in the ready queue. When the currently running process requests for I/O how many process switches take place?",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "image_link": null,
+        "correct_answer": "1"
+    },
+    {
+        "question": "Question82",
+        "question_paragraph": "Which is the correct definition of a valid process transition in an operating system?",
+        "options": [
+            "Wake up: ready → running",
+            "Dispatch: ready → running",
+            "Block: ready → running",
+            "Timer runout: ready → running"
+        ],
+        "image_link": null,
+        "correct_answer": "Dispatch: ready → running"
+    },
+    {
+        "question": "Question83",
+        "question_paragraph": "The correct matching of the following pairs is(A) Disk check              (1) Roundrobin\r\n(B) Batch processing        (2) Scan\r\n(C) Time sharing            (3) LIFO\r\n(D) Stack operation         (4) FIFO",
+        "options": [
+            "A B C D\r\n 3 4 2 1",
+            "A B C D\r\n4 3 2 1",
+            "A B C D\r\n3 4 1 2",
+            "A B C D\r\n2 4 1 3"
+        ],
+        "image_link": null,
+        "correct_answer": "A B C D\n2 4 1 3"
+    },
+    {
+        "question": "Question84",
+        "question_paragraph": "Consider three CPU-intensive processes, which require 10, 20 and 30 time units and arrive at times 0, 2 and 6, respectively. How many context switches are needed if the operating system implements a shortest remaining time first scheduling algorithm?\r\nDo not count the context switches at time zero and at the end.",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "image_link": null,
+        "correct_answer": "2"
+    },
+    {
+        "question": "Question85",
+        "question_paragraph": "The performance of Round Robin algorithm depends heavily on",
+        "options": [
+            "size of the process",
+            "the I/O bursts of the process",
+            "the CPU bursts of the process",
+            "the size of the time quantum"
+        ],
+        "image_link": null,
+        "correct_answer": "the size of the time quantum"
+    },
+    {
+        "question": "Question86",
+        "question_paragraph": "Consider a set of 5 processes whose arrival time, CPU time needed and the priority are given below:Process       Arrival Time   CPU Time Needed     Priority(in ms)\r\n\r\nP1              0             10                 5\r\nP2              0             5                  2\r\nP3              2             3                  1\r\nP4              5             20                 4\r\nP5              10            2                  3(smaller the number, higher the priority)\r\nIf the CPU scheduling policy is priority scheduling without preemption, the average waiting time will be",
+        "options": [
+            "12.8 ms",
+            "11.8 ms",
+            "10.8 ms",
+            "9.8 ms"
+        ],
+        "image_link": null,
+        "correct_answer": "10.8 ms"
+    },
+    {
+        "question": "Question87",
+        "question_paragraph": "Process is:",
+        "options": [
+            "A program in high level language kept on disk",
+            "Contents of main memory",
+            "A program in execution",
+            "A job in secondary memory"
+        ],
+        "image_link": null,
+        "correct_answer": "A program in execution"
+    },
+    {
+        "question": "Question88",
+        "question_paragraph": "Four jobs to be executed on a single processor system arrive at time 0 in the order A, B, C, D . Their burst CPU time requirements are 4, 1, 8, 1 time units respectively. The completion time of A under round robin scheduling with time slice of one time unit is",
+        "options": [
+            "10",
+            "4",
+            "8",
+            "9"
+        ],
+        "image_link": null,
+        "correct_answer": "9"
+    },
+    {
+        "question": "Question89",
+        "question_paragraph": "Which of the following need not necessarily be saved on a context switch between processes?",
+        "options": [
+            "General purpose registers",
+            "Translation look-aside buffer",
+            "Program counter",
+            "All of the above"
+        ],
+        "image_link": null,
+        "correct_answer": "Translation look-aside buffer"
+    },
+    {
+        "question": "Question90",
+        "question_paragraph": "With Round-Robin CPU scheduling in a time shared system",
+        "options": [
+            "using very large time slices (quantas) degenerates into FirstCome First served (FCFS) algorithm.",
+            "using extremely small time slices improves performance",
+            "using very small time slices degenerates into Last-In First-Out (LIFO) algorithm.",
+            "using medium sized times slices leads to shortest Request time First (SRTF) algorithm"
+        ],
+        "image_link": null,
+        "correct_answer": "using very large time slices (quantas) degenerates into FirstCome First served (FCFS) algorithm."
+    },
+    {
+        "question": "Question91",
+        "question_paragraph": "What is the name of the operating system that reads and reacts in terms of operating system?",
+        "options": [
+            "Batch system",
+            "Quick response time",
+            "real time system",
+            "Time sharing system"
+        ],
+        "image_link": null,
+        "correct_answer": "real time system"
+    },
+    {
+        "question": "Question92",
+        "question_paragraph": "Fork is",
+        "options": [
+            "the creation of a new job",
+            "the dispatching of a task",
+            "increasing the priority of a task",
+            "the creation of a new process"
+        ],
+        "image_link": null,
+        "correct_answer": "the creation of a new process"
+    },
+    {
+        "question": "Question93",
+        "question_paragraph": "Which of the following need not necessarily be saved on a Context Switch between processes?",
+        "options": [
+            "General purpose registers",
+            "Translation look-aside buffer",
+            "Program counter",
+            "Stack pointer"
+        ],
+        "image_link": null,
+        "correct_answer": "Translation look-aside buffer"
+    },
+    {
+        "question": "Question94",
+        "question_paragraph": "The performance of Round Robin algorithm depends heavily on",
+        "options": [
+            "size of the process",
+            "the I/O bursts of the process",
+            "the CPU bursts of the process",
+            "the size of the time quantum"
+        ],
+        "image_link": null,
+        "correct_answer": "the size of the time quantum"
+    },
+    {
+        "question": "Question95",
+        "question_paragraph": "Match the following:",
+        "options": [],
+        "image_link": null,
+        "correct_answer": "(2)"
+    },
+    {
+        "question": "Question96",
+        "question_paragraph": "Dining Philosopher's problem is a:",
+        "options": [
+            "Producer - consumer problem",
+            "Classical IPC problem",
+            "Starvation problem",
+            "Synchronization primitive"
+        ],
+        "image_link": null,
+        "correct_answer": "Classical IPC problem"
+    },
+    {
+        "question": "Question97",
+        "question_paragraph": "Consider a set of n tasks with known runtimes r1, r2....rnto be run on a uniprocessor machine. Which of the following processor scheduling algorithms will result in the maximum throughput?",
+        "options": [
+            "Round Robin",
+            "Shortest job first",
+            "Highest response ratio next",
+            "first come first served"
+        ],
+        "image_link": null,
+        "correct_answer": "Shortest job first"
+    },
+    {
+        "question": "Question98",
+        "question_paragraph": "Round Robin schedule is essentially the pre-emptive version of",
+        "options": [
+            "FIFO",
+            "Shortest job first",
+            "Shortest remaining time",
+            "Longest remaining time"
+        ],
+        "image_link": null,
+        "correct_answer": "FIFO"
+    },
+    {
+        "question": "Question99",
+        "question_paragraph": "What is the name of the technique in which the operating system of a computer executes several programs concurrently by switching back and forth between them?",
+        "options": [
+            "Partitioning",
+            "Multi-tasking",
+            "Windowing",
+            "Paging"
+        ],
+        "image_link": null,
+        "correct_answer": "Multi-tasking"
+    },
+    {
+        "question": "Question100",
+        "question_paragraph": "A task in a blocked state",
+        "options": [
+            "is executable",
+            "is running",
+            "must still be placed in the run queues",
+            "is waiting for some temporarily unavailable resources"
+        ],
+        "image_link": null,
+        "correct_answer": "is waiting for some temporarily unavailable resources"
+    },
+    {
+        "question": "Question101",
+        "question_paragraph": "On a system using non-preemptive scheduling, processes with expected run times of 5, 18, 9 and 12 are in the ready queue. In what order should they be run to minimize wait time?",
+        "options": [
+            "5, 12, 9, 18",
+            "5, 9, 12, 18",
+            "12, 18, 9, 5",
+            "9, 12, 18, 5"
+        ],
+        "image_link": null,
+        "correct_answer": "5, 9, 12, 18"
+    },
+    {
+        "question": "Question102",
+        "question_paragraph": "Feedback queues",
+        "options": [
+            "are very simple to implement",
+            "dispatch tasks according to execution characteristics",
+            "are used to favour real time tasks",
+            "require manual intervention to implement properly"
+        ],
+        "image_link": null,
+        "correct_answer": "dispatch tasks according to execution characteristics"
+    },
+    {
+        "question": "Question103",
+        "question_paragraph": "Which of the following conditions does not hold good for a solution to a critical section problem ?",
+        "options": [
+            "No assumptions may be made about speeds or the number of CPUs.",
+            "No two processes may be simultaneously inside their critical sections.",
+            "Processes running outside its critical section may block other processes.",
+            "Processes do not wait forever to enter its critical section."
+        ],
+        "image_link": null,
+        "correct_answer": "Processes running outside its critical section may block other processes."
+    },
+    {
+        "question": "Question104",
+        "question_paragraph": "For switching from a CPU user mode to the supervisor mode following type of interrupt is most appropriate",
+        "options": [
+            "Internal interrupts",
+            "External interrupts",
+            "Software interrupts",
+            "None of the above"
+        ],
+        "image_link": null,
+        "correct_answer": "Software interrupts"
+    },
+    {
+        "question": "Question105",
+        "question_paragraph": "In a dot matrix printer the time to print a character is 6 m.sec., time to space in between characters is 2 m.sec., and the number of characters in a line are 200. The printing speed\r\nof the dot matrix printer in characters per second and the time to print a character line are given by which of the following options?",
+        "options": [
+            "125 chars/second and 0.8 seconds",
+            "250 chars/second and 0.6 seconds",
+            "166 chars/second and 0.8 seconds",
+            "250 chars/second and 0.4 seconds",
+            "125 chars/second and 1.6 seconds"
+        ],
+        "image_link": null,
+        "correct_answer": "125 chars/second and 1.6 seconds"
+    },
+    {
+        "question": "Question106",
+        "question_paragraph": "Monitor is an Interprocess Communication (IPC) technique which can be described as",
+        "options": [
+            "It is higher level synchronization primitive and is a collection of procedures, variables, and data structures grouped together in a special package.",
+            "It is a non-negative integer which apart from initialization can be acted upon by wait and signal operations.",
+            "It uses two primitives, send and receive which are system calls rather than language constructs.",
+            "It consists of the IPC primitives implemented as system calls to block the process when they are not allowed to enter critical region to save CPU time."
+        ],
+        "image_link": null,
+        "correct_answer": "It is higher level synchronization primitive and is a collection of procedures, variables, and data structures grouped together in a special package."
+    },
+    {
+        "question": "Question107",
+        "question_paragraph": "The following C programmain()\r\n{\r\n    fork() ; fork() ; printf (\"yes\");\r\n}If we execute this core segment, how many times the string yes will be printed ?",
+        "options": [
+            "Only once",
+            "2 times",
+            "4 times",
+            "8 times"
+        ],
+        "image_link": null,
+        "correct_answer": "4 times"
+    },
+    {
+        "question": "Question108",
+        "question_paragraph": "Here are the two concurrent process P1, P2with respective codes:\r\nP1code:while (true) // infinite condition\r\n{\r\nA :____;\r\nprintf(\"%d\", 1);\r\nprintf(\"%d\", 1);\r\nB:____;\r\n}P2code:while (true) // infinite condition\r\n{\r\nC:____;\r\nprintf(\"%d\", 0);\r\nprintf(\"%d\", 0);\r\nD:____;\r\n}What should be the binary semaphore operation on A,B,C,D respectively and what must be the intial values of semaphore M,N inorder to get the output 110011001100....?\r\nWhere P is down and V is up operation respectively.",
+        "options": [
+            "A = P(N), B = V(M), C = P(M), D = V(N); M = 0, N = 1;",
+            "A = P(N), B = V(M), C = P(M), D = P(N); M =  N = 1;",
+            "A = P(N), B = V(N), C = P(M), D = V(M); M = 1, N = 0;",
+            "A = P(N), B = V(N), C = P(M), D = V(M); M =  N = 1;"
+        ],
+        "image_link": null,
+        "correct_answer": "A = P(N), B = V(M), C = P(M), D = V(N); M = 0, N = 1;"
+    },
+    {
+        "question": "Question109",
+        "question_paragraph": "At a particular time of computation, the value of a counting semaphore is 10. Then 12 P operations and “x” V operations were performed on this semaphore. If the final value of semaphore is 7, x will be:",
+        "options": [
+            "8",
+            "9",
+            "10",
+            "11"
+        ],
+        "image_link": null,
+        "correct_answer": "9"
+    },
+    {
+        "question": "Question110",
+        "question_paragraph": "Consider the following statements about process state transitions for a system using preemptive scheduling.I.A running process can move to ready state.II.A ready process can move to running state.III.A blocked process can move to running state.IV.A blocked process can move to ready state.Which of the above statements are TRUE ?",
+        "options": [
+            "I.A running process can move to ready state.",
+            "II.A ready process can move to running state.",
+            "III.A blocked process can move to running state.",
+            "IV.A blocked process can move to ready state.",
+            "I, II, and III only",
+            "II and III only",
+            "I, II, and IV only",
+            "I, II, III and IV only"
+        ],
+        "image_link": null,
+        "correct_answer": "null"
+    }
+]
