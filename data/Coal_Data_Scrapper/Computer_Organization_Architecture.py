@@ -28,7 +28,6 @@ for i in range(1, 26):
             # Initialize variables for question text, paragraph text, and optional image link
             question_text = "No question text found"
             question_paragraph_text = "No question paragraph found"
-            correct_answer = None
             image_link = None
             
             # Locate the inner div that contains the main question text

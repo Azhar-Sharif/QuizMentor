@@ -16,9 +16,11 @@ topic_url = "https://www.geeksforgeeks.org/quizzes/digital-logic-number-represen
 
 # List to hold the questions and correct answers
 questions_data = []
+# Initialize a global question number counter
+question_number = 1
 
 # Loop through the first few pages for the topic
-for page in range(1, 27):  
+for page in range(1, 28):  
     # Construct the page URL
     url = f"{topic_url}?page={page}"
     
@@ -33,14 +35,20 @@ for page in range(1, 27):
     # Find all the question containers
     question_containers = driver.find_elements(By.CLASS_NAME, "QuizQuestionCard_quizCard__9T_0J")
         
-    for idx, container in enumerate(question_containers, start=1):  # Track question number
+    for container in question_containers:  # Process each question
         try:
             # Extract options and click the first one to trigger the correct answer class
             options_elements = container.find_elements(By.TAG_NAME, "li")
             correct_answer = None  # Initialize correct answer as None
             
             if not options_elements:
-                continue  # Skip if no options are found
+                # Skip the question if no options are found
+                questions_data.append({
+                    "question_number": question_number,
+                    "correct_answer": "null"
+                })
+                question_number += 1
+                continue
             
             # Click the first option to potentially load the correct answer
             options_elements[0].click()
@@ -62,17 +70,20 @@ for page in range(1, 27):
             
             # Append the question number and correct answer to the list
             questions_data.append({
-                "question_number": idx,
+                "question_number": question_number,
                 "correct_answer": correct_answer
             })
+            
+            
         
         except Exception as e:
-            print(f"Error processing question {idx}: {e}")
+            print(f"Error processing question {question_number}: {e}")
             # If an error occurs, append null as the answer for that question
             questions_data.append({
-                "question_number": idx,
+                "question_number": question_number,
                 "correct_answer": "null"
             })
+        question_number += 1
 
 # Quit the WebDriver
 driver.quit()

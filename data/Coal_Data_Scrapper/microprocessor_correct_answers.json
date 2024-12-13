@@ -40,159 +40,191 @@
         "correct_answer": "AC = 1 and CY = 0"
     },
     {
-        "question_number": 1,
+        "question_number": 11,
         "correct_answer": "all of the above."
     },
     {
-        "question_number": 2,
+        "question_number": 12,
         "correct_answer": "READY"
     },
     {
-        "question_number": 3,
+        "question_number": 13,
         "correct_answer": "It cannot have subroutine call instruction"
     },
     {
-        "question_number": 4,
+        "question_number": 14,
         "correct_answer": "obtain system services which need execution of privileged instructions"
     },
     {
-        "question_number": 5,
+        "question_number": 15,
         "correct_answer": "a non-privileged instruction (which does not generate an interrupt is needed"
     },
     {
-        "question_number": 6,
+        "question_number": 16,
         "correct_answer": "(X, III) (Y, I) (Z, II)"
     },
     {
-        "question_number": 7,
+        "question_number": 17,
         "correct_answer": "lower the READY input"
     },
     {
-        "question_number": 8,
+        "question_number": 18,
         "correct_answer": "By checking the TRAP pin for \\'high\\' status at the end of the execution of each instruction"
     },
     {
-        "question_number": 10,
+        "question_number": 19,
+        "correct_answer": "null"
+    },
+    {
+        "question_number": 20,
         "correct_answer": "AC, CY, Z flags"
     },
     {
-        "question_number": 1,
+        "question_number": 21,
         "correct_answer": "16"
     },
     {
-        "question_number": 2,
+        "question_number": 22,
         "correct_answer": "(2)"
     },
     {
-        "question_number": 3,
+        "question_number": 23,
         "correct_answer": "AL = F1H; CF = 1; SF = 1"
     },
     {
-        "question_number": 4,
+        "question_number": 24,
         "correct_answer": "Control address register and control memory"
     },
     {
-        "question_number": 5,
+        "question_number": 25,
         "correct_answer": "+5 volts supply only"
     },
     {
-        "question_number": 6,
+        "question_number": 26,
         "correct_answer": "LXI rp, data"
     },
     {
-        "question_number": 7,
+        "question_number": 27,
         "correct_answer": "All of the above"
     },
     {
-        "question_number": 8,
+        "question_number": 28,
         "correct_answer": "2FH"
     },
     {
-        "question_number": 9,
+        "question_number": 29,
         "correct_answer": "8"
     },
     {
-        "question_number": 10,
+        "question_number": 30,
         "correct_answer": "DAD H"
     },
     {
-        "question_number": 1,
+        "question_number": 31,
         "correct_answer": "2N"
     },
     {
-        "question_number": 2,
+        "question_number": 32,
         "correct_answer": "76H"
     },
     {
-        "question_number": 3,
+        "question_number": 33,
         "correct_answer": "Firewire"
     },
     {
-        "question_number": 4,
+        "question_number": 34,
         "correct_answer": "5"
     },
     {
-        "question_number": 5,
+        "question_number": 35,
         "correct_answer": "(A), (B) and (D) are True; (C) is false."
     },
     {
-        "question_number": 6,
+        "question_number": 36,
         "correct_answer": "CF = 0 and ZF = 0"
     },
     {
-        "question_number": 7,
+        "question_number": 37,
         "correct_answer": "256"
     },
     {
-        "question_number": 8,
+        "question_number": 38,
         "correct_answer": "24H"
     },
     {
-        "question_number": 9,
+        "question_number": 39,
         "correct_answer": "01E0 h"
     },
     {
-        "question_number": 10,
+        "question_number": 40,
         "correct_answer": "A4"
     },
     {
-        "question_number": 1,
+        "question_number": 41,
         "correct_answer": "82H"
     },
     {
-        "question_number": 2,
+        "question_number": 42,
         "correct_answer": "INTR"
     },
     {
-        "question_number": 3,
+        "question_number": 43,
         "correct_answer": "Read (when it is low)"
     },
     {
-        "question_number": 4,
+        "question_number": 44,
         "correct_answer": "10E00"
     },
     {
-        "question_number": 5,
+        "question_number": 45,
         "correct_answer": "HOLD & HLDA"
     },
     {
-        "question_number": 6,
+        "question_number": 46,
         "correct_answer": "All the above"
     },
     {
-        "question_number": 7,
+        "question_number": 47,
         "correct_answer": "None of the above"
     },
     {
-        "question_number": 8,
+        "question_number": 48,
         "correct_answer": "(a), (b), (c) and (d)"
     },
     {
-        "question_number": 9,
+        "question_number": 49,
         "correct_answer": "24.5 microseconds to 93.5 microseconds"
     },
     {
-        "question_number": 10,
+        "question_number": 50,
         "correct_answer": "one Megabyte"
+    },
+    {
+        "question_number": 51,
+        "correct_answer": "it is both +ve and -ve edges triggered"
+    },
+    {
+        "question_number": 52,
+        "correct_answer": "00011001"
+    },
+    {
+        "question_number": 53,
+        "correct_answer": "4 x 106 bytes/sec"
+    },
+    {
+        "question_number": 54,
+        "correct_answer": "CALL 0038 H"
+    },
+    {
+        "question_number": 55,
+        "correct_answer": "(D)"
+    },
+    {
+        "question_number": 56,
+        "correct_answer": "07"
+    },
+    {
+        "question_number": 57,
+        "correct_answer": "00, 0, 1, 1"
     }
 ]

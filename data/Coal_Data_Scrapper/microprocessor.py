@@ -3,13 +3,13 @@ from bs4 import BeautifulSoup
 import json
 
 # URL for the Digital Logic & Number Representation topic
-topic_url = "https://www.geeksforgeeks.org/quizzes/digital-logic-number-representation-gq/"
+topic_url = "https://www.geeksforgeeks.org/quizzes/microprocessor-gq/"
 
 # List to hold questions for the current topic
 topic_questions_data = []
 
-# Loop through the first 26 pages for the topic
-for i in range(1, 27):  # Pages 1 through 26
+# Loop through the first 10 pages for the topic
+for i in range(1, 7):  # Pages 1 through 10
     # Construct the page URL
     url = f"{topic_url}?page={i}"
 
@@ -52,14 +52,11 @@ for i in range(1, 27):  # Pages 1 through 26
                     if image and 'src' in image.attrs:
                         image_link = image['src']
             
-            # Extract options and collect all correct answers
+            # Extract options (assuming each option is in an <li> tag within an options list in the container)
             options_container = container.find_all('li')
-            options = []
-            for opt in options_container:
-                option_text = opt.get_text(strip=True)
-                options.append(option_text)
+            options = [opt.get_text(strip=True) for opt in options_container]
 
-            # Append the question data to the list
+            # Append the question data to the list with paragraph and optional image link
             topic_questions_data.append({
                 "question": question_text,
                 "question_paragraph": question_paragraph_text,
@@ -68,10 +65,10 @@ for i in range(1, 27):  # Pages 1 through 26
             })
 
     else:
-        print(f"Failed to retrieve page {i} for Digital Logic & Number Representation. Status code:", response.status_code)
+        print(f"Failed to retrieve page {i} for Microprocessor. Status code:", response.status_code)
 
 # Save the questions data for the Digital Logic & Number Representation topic to a JSON file
-file_name = 'Digital_Logic_Number_Representation.json'
+file_name = 'Microprocessor.json'
 with open(file_name, 'w') as json_file:
     json.dump(topic_questions_data, json_file, indent=4)
 
