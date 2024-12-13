@@ -1,1 +1,2 @@
 lama-key="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"
+pinecone="pcsk_3CYnJi_TZbGr8CeCcVxAsz4Li7J5n5hNBRqM7PA7k6xGKx7ftNXUYMYUJLJcb3PZrTneH4"

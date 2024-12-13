@@ -1,1 +1,7 @@
 #here are all requirements required to run the project
+pip install langchain
+pip install langchain-groq
+pip install -U langchain-community
+pip install chromadb
+pip install chroma-migrate
+
