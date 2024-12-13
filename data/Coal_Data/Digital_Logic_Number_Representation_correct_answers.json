@@ -1,0 +1,1018 @@
+[
+    {
+        "question_number": 1,
+        "correct_answer": "b'd' + b'c'"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "P1+P\\'2P\\'3"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "II, IV, VI"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "X"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "Priority encoder"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "x'\u2295y'"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "D"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "(P + Q'.R')"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "011"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "4"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "m2 + m4 + m6 + m7"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "P(XOR)Q(XOR)R"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "(Q+R)'"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "11, 10, 01, 00"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "3"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "any value > 2"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "A"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "C"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "PQ'"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "9"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "independent of two variables."
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "x'y'z' + wx'y' + w'y"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "All P, Q, R are valid."
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "2n-1 line to 1 line"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "10, 4"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "0, 1, 2, 3, 4"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "C"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "PQ + QR + QS"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "P\\'Q + QR\\' + PQ\\'R"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "k-bit ring counter."
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "3"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "Q'S' + QS"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "Multiplexer"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "100, 110, 111"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "(P X Q)'"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "xz\\' + xy + y\\'z"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "A"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "010"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "w'xz, wxy', xy'z, xyz,wyz"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "B"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "C"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "None of X, Y, Z is redundant"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "1AF"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "BC'D' + A'C'D + AB'D"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "A0 Al A1' A3 A4"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "D"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "4D 3D"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "4A E8"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "x' + y"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "Q = 1, Q' = 1"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "D1 = Q0 + Q1 D2 = Q'0 + Q1"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "f = y'z'+x'z"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "3"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "a'c and ac'"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "R to X, 1 to Y, T to Z"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "Q1 \u2295 Q2"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "4 time units"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "\u0398(n)"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "5"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "(9, 10)"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "A + B, and A - B, but not A + 1"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "4"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "xz' + zx'"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "\u2211(1, 4, 5)"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "xyz'"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "xy' + z"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "xy + y'z"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "a"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "1,2,5,3,7,6,4"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "1 0 1 1"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "d"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "1, 0"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "0, 8, 12, 14, 15, 7, 3, 1, 0"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "0110110..."
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "Only {f} is functionally complete"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "3"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "1"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "19.2 microseconds"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "3"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "S1-False, S2-True, S3-True, S4-False"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "4"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "(ii) only"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "(A72E)16 and (22130232)4"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "AB\u2019+AC\u2019+A\u2019C"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "ABC+A\u00af(B\u2295C)+B\u00af(A\u2295C)"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "123"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "0 0 1 1 1 0 1 1 1"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "0, 1, A"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "4"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "D"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "\u0398(Log (n))"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "-1"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "x\u20321\u2295x\u20323=x\u20322\u2295x\u20324"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "1"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "x NOR 1"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "b"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "0001 and no overflow"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "00, 11"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "X1=b, X2=0, X3=a"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "-26"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "xz'+x'z"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "x\u2295yand x\u2295y"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "ABC + AB\u2019C\u2019"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "A\u2019B + CD\u2019 + BC\u2019"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "Digital certificate ensures integrity of the message."
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "null"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "0-100+100-1"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "O(n)"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "a, c and d"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "b and c"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "1 half-adder, 15 full-adders"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "a and b"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "remains unchanged when n is even"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "16:1 multiplexor"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "any voltage below Vcc but above 2.8 V"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "-30"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "(B\u2295C)'"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "NAND"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "60%"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "x"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "proportional to logN"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "xz is an implicant of f"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "5"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "b"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "64K x 16"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "101010 .........1010"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "d"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "Binary to radix-12 conversion"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "A \u2295 B \u2295 C"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "(B+D)(B'+D')"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "C + A'BD + B'D'"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "Code-4 represented number Zero"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "Counter-1 is a three-bit \"counter\" which counts 0, 3, 6, 1, 4, 7, 2, 5, 0, 3, ... . and Counter-2 is a three-bit \"counter\" which counts 0, 1, 2, 4, 5, 7, 0, ... ."
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "Only S1, S2 are false and S3 is true"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "(wx'(y + z'))' + w'x = w' + x + y'z"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "D"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "2"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "3"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "(1301)4"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "(A+C).D+B"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "P1+P'2P'3"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "\u2013231 to 231-1"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "11000100"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "18"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "b and c"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "Amplitude and phase of the carrier."
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "Three"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "(n + 1) bits"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "different"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "0.5100098"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "4EF"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "Both (a) and (b)"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "An oscillating circuit and its output is square wave"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "Self-Complementing Code"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "(P + QR')"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "1000"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "JK flip-flop accepts both inputs 1"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "3.5"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "- 2n - 1 to 2n - 1 - 1"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "12 flip-flops"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "( A' + B' ) + ( B + C' )( A' + C' )"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "1, 16"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "2"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "10"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "B"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "(214.5)10 and (D6.8))16"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "2\u2019s complement"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "AB + AC + AD + BCD"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "EXCLUSIVE-OR"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "(4)"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "AB + BC' + BD'"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "00"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "Disconnected state"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "103"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "Asynchronous counter"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "(X \u2295 Y)`"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "(2\nR-1\n).V(2\nR\n-1)"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "5"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "X \u0304 + XY = Y"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "1 \u2295 1 \u2295 0 = 1"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "64"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "Toggle"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "400 Kbps"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "XOR gate"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "0x22"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "5"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "{AND, OR}"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "Counter"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "A + BCD"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "1284"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "2"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "Low is 3.0V to 15.0V, High is -3.0V to -15.0V"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "101010.110"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "X"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "-26"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "X+YZ"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "9"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "X. Y + X' Y'"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "number of holes increases while that of electrons decreases"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "Set to 1"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "CMOS"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "-2n-1 to (2n-1 - 1)"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "BC'D' + A'C'D + AB'D"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "Independent of two variables"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "1, 0, 0"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "0001 and no overflow"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "3.96 MHz"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "(A + B) \u2219 (A' + C) \u2219 (B + C) = (A + B) \u2219 (A' + C)"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "X\n0\nX\n1\nX\n2\n\u2026 X\nn\n+ X\n1\nX\n2\n\u2026 X\nn\n+ X\n2\nX\n3\n\u2026 X\nn\n+ \u22ef + X\nn"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "(143)6"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "None of these"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "all of these"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "1023"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "be 0"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "C' + AB'"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "A'"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "entirely different"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "0"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "1 XOR 1 = 1"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "Gray code"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "9"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "Quantization"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "C'"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "(( A + B )' +C ) ( D'E' )"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "full subtracter"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "subtract 0011 from the sum"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "Qn+1 = S + R'Qn"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "9"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "57 kHz"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "0.60"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "Q = 1, Q\\' = 1"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "Stepping Switch"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "0.6 and 3.5 V"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "1 \u00d7 10 -128and 215- 1 \u00d7 10127"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "7CDE3"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "4 full adders and 3 half adders"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "(1) and (3)"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "2 \u2013129 to (1 \u2013 2 \u201323 ) \u00d7 2 127"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "100"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "Count of the number of components that can call, or pass control, to a component A"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "7 ns"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "{ AND, OR }"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "[log(n)] + 1 bits"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "5"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "S=R=0"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "(2)"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "Ripple Counter"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "1AD"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "11100011"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "A + B` D` + B` C`"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "15"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "011,101,000"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "exponent =00000001 and mantissa =0000000000000000000000000"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "A"
+    }
+]

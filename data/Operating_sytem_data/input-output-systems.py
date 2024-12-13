@@ -3,13 +3,13 @@ from bs4 import BeautifulSoup
 import json
 
 # URL for the Digital Logic & Number Representation topic
-topic_url = "https://www.geeksforgeeks.org/quizzes/iinput-output-systems-gq/?ref=previous_article"
+topic_url = "https://www.geeksforgeeks.org/quizzes/iinput-output-systems-gq/"
 
 # List to hold questions for the current topic
 topic_questions_data = []
 
 # Loop through the first 10 pages for the topic
-for i in range(1, 8):  # Pages 1 through 10
+for i in range(1, 9):  # Pages 1 through 10
     # Construct the page URL
     url = f"{topic_url}?page={i}"
 

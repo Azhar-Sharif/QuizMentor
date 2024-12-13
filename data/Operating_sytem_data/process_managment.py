@@ -68,7 +68,7 @@ for i in range(1, 12):  # Pages 1 through 10
         print(f"Failed to retrieve page {i} for Computer Organization and Architecture. Status code:", response.status_code)
 
 # Save the questions data for the Digital Logic & Number Representation topic to a JSON file
-file_name = 'process_synchronization.json'
+file_name = 'process_management.json'
 with open(file_name, 'w') as json_file:
     json.dump(topic_questions_data, json_file, indent=4)
 

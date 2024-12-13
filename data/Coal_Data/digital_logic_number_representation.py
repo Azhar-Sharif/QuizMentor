@@ -71,7 +71,7 @@ for i in range(1, 27):  # Pages 1 through 26
         print(f"Failed to retrieve page {i} for Digital Logic & Number Representation. Status code:", response.status_code)
 
 # Save the questions data for the Digital Logic & Number Representation topic to a JSON file
-file_name = 'geeksforgeeks_mcqs_Digital_Logic_Number_Representation.json'
+file_name = 'Digital_Logic_Number_Representation.json'
 with open(file_name, 'w') as json_file:
     json.dump(topic_questions_data, json_file, indent=4)
 

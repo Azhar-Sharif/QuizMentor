@@ -1,0 +1,162 @@
+[
+    {
+        "question_number": 1,
+        "correct_answer": "5"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "None of above"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "ensure that one particular philosopher picks up the left fork before the right fork, and that all other philosophers pick up the right fork before the left fork"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "The current state of the system is possible because this can be part of one of the safe sequence. For example, following this state the system can follow P1->P2->P0 this sequence and will not lead to Deadlock, So, yes the system can be in this state"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "Not Safe, Deadlocked"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "2"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "The system is in safe state"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "Deadlock avoidance"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "none of these"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "Reentrancy"
+    },
+    {
+        "question_number": 11,
+        "correct_answer": "(P3, P1, P2, P4)"
+    },
+    {
+        "question_number": 12,
+        "correct_answer": "Starvation"
+    },
+    {
+        "question_number": 13,
+        "correct_answer": "11"
+    },
+    {
+        "question_number": 14,
+        "correct_answer": "mutual exclusion"
+    },
+    {
+        "question_number": 15,
+        "correct_answer": "11"
+    },
+    {
+        "question_number": 16,
+        "correct_answer": "Unsafe state"
+    },
+    {
+        "question_number": 17,
+        "correct_answer": "C"
+    },
+    {
+        "question_number": 18,
+        "correct_answer": "Xp + Xq >= min (Yk) where k != p and k != q"
+    },
+    {
+        "question_number": 19,
+        "correct_answer": "(i) is true and (ii) is false"
+    },
+    {
+        "question_number": 20,
+        "correct_answer": "7"
+    },
+    {
+        "question_number": 21,
+        "correct_answer": "Deadlock"
+    },
+    {
+        "question_number": 22,
+        "correct_answer": "4"
+    },
+    {
+        "question_number": 23,
+        "correct_answer": "Any one of I, II, III and IV"
+    },
+    {
+        "question_number": 24,
+        "correct_answer": "8"
+    },
+    {
+        "question_number": 25,
+        "correct_answer": "null"
+    },
+    {
+        "question_number": 26,
+        "correct_answer": "where shared resources are accessed"
+    },
+    {
+        "question_number": 27,
+        "correct_answer": "P: full, Q: empty, R: empty, S: full"
+    },
+    {
+        "question_number": 28,
+        "correct_answer": "In deadlock prevention, the request for resources is always granted if resulting state is safe"
+    },
+    {
+        "question_number": 29,
+        "correct_answer": "10"
+    },
+    {
+        "question_number": 30,
+        "correct_answer": "11"
+    },
+    {
+        "question_number": 31,
+        "correct_answer": "In deadlock prevention, the request for resources is always granted if resulting state is safe"
+    },
+    {
+        "question_number": 32,
+        "correct_answer": "X: P(b)P(a)P(c) Y:P(b)P(c)P(d) Z:P(a)P(c)P(d)"
+    },
+    {
+        "question_number": 33,
+        "correct_answer": "In deadlock prevention, the request for resources is always granted if the resulting state is safe"
+    },
+    {
+        "question_number": 34,
+        "correct_answer": "All processes will finish without any deadlock"
+    },
+    {
+        "question_number": 35,
+        "correct_answer": "n=21, k=12"
+    },
+    {
+        "question_number": 36,
+        "correct_answer": "Only REQ2 can be permitted."
+    },
+    {
+        "question_number": 37,
+        "correct_answer": "Xp + Xq >= min (Yk) where k != p and k != q"
+    },
+    {
+        "question_number": 38,
+        "correct_answer": "C"
+    },
+    {
+        "question_number": 39,
+        "correct_answer": "Never request a resource after releasing any resource"
+    },
+    {
+        "question_number": 40,
+        "correct_answer": "At most one process can be in the critical section at any time"
+    }
+]

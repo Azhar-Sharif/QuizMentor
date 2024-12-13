@@ -1,0 +1,198 @@
+[
+    {
+        "question_number": 1,
+        "correct_answer": "(ii) and (iii)"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "1028"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "24"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "10, 3, 1024"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "the number of 1 bits in A0"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "RRC A, #"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "A"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "All instructions"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "the address of the operand is inside the instruction"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "AC = 1 and CY = 0"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "all of the above."
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "READY"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "It cannot have subroutine call instruction"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "obtain system services which need execution of privileged instructions"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "a non-privileged instruction (which does not generate an interrupt is needed"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "(X, III) (Y, I) (Z, II)"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "lower the READY input"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "By checking the TRAP pin for \\'high\\' status at the end of the execution of each instruction"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "AC, CY, Z flags"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "16"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "(2)"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "AL = F1H; CF = 1; SF = 1"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "Control address register and control memory"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "+5 volts supply only"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "LXI rp, data"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "All of the above"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "2FH"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "8"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "DAD H"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "2N"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "76H"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "Firewire"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "5"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "(A), (B) and (D) are True; (C) is false."
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "CF = 0 and ZF = 0"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "256"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "24H"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "01E0 h"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "A4"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "82H"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "INTR"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "Read (when it is low)"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "10E00"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "HOLD & HLDA"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "All the above"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "None of the above"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "(a), (b), (c) and (d)"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "24.5 microseconds to 93.5 microseconds"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "one Megabyte"
+    }
+]
