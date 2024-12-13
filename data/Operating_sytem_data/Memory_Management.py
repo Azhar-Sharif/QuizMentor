@@ -9,7 +9,7 @@ topic_url = "https://www.geeksforgeeks.org/quizzes/memory-management-gq/"
 topic_questions_data = []
 
 # Loop through the first 10 pages for the topic
-for i in range(1, 15):  # Pages 1 through 10
+for i in range(1, 16):  # Pages 1 through 16
     # Construct the page URL
     url = f"{topic_url}?page={i}"
 

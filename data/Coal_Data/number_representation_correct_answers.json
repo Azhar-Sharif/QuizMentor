@@ -1,0 +1,346 @@
+[
+    {
+        "question_number": 1,
+        "correct_answer": "(1301)4"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "fraction bits of 000\u2026000 and exponent value of \u22121"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "-128"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "(C3D8)16"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "(028F)16"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "the special value +0"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "C1640000H"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "- 2n - 1 to (2n - 1 - 1)"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "8, 11"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "9.51 and 10.0 respectively"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "1100 0100"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "11100111"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "222"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "is equivalent to the binary value 0.01"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "10001"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "converting a signed integer from one size to another"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "cannot occur when a positive value is added to a negative value"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "DE5"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "00101011"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "X = 1.0, Y = 0.0"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "5"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "(1053.6)8"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "-11"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "If a number has k digits in decimal, then roughly k/2 digits can have in binary."
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "C1CE0000"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "13"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "Only (iii) and (iv) cannot be exactly represented"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "1353"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "B"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "-2.0"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "00\u2026..00"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "ASCII"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "213"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "7"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "0xC0800000"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "-7.75"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "any value > 2"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "3"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "1AF"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "4D 3D"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "4A E8"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "(ii) only"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "(A72E)16 and (22130232)4"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "1"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "0001 and no overflow"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "-26"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "x\u2295yand x\u2295y"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "0-100+100-1"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "O(n)"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "a and b"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "-30"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "5"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "101010 .........1010"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "d"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "Code-4 represented number Zero"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "(1301)4"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "\u2013231 to 231-1"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "11000100"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "0.5100098"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "4EF"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "1000"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "3.5"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "- 2n - 1 to 2n - 1 - 1"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "10"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "(214.5)10 and (D6.8))16"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "2\u2019s complement"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "103"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "64"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "0x22"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "5"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "101010.110"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "-26"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "-2n-1 to (2n-1 - 1)"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "0001 and no overflow"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "(143)6"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "None of these"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "be 0"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "9"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "0.60"
+    },
+    {
+        "question_number": 1,
+        "correct_answer": "1 \u00d7 10 -128and 215- 1 \u00d7 10127"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "7CDE3"
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "2 \u2013129 to (1 \u2013 2 \u201323 ) \u00d7 2 127"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "5"
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "1AD"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "11100011"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "15"
+    }
+]

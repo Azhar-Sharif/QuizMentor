@@ -1535,5 +1535,115 @@
             "None of the above"
         ],
         "image_link": null
+    },
+    {
+        "question": "Question141",
+        "question_paragraph": "Consider an imaginary disk with 40 cylinders. A request come to read a block on cylinder 11. While the seek to cylinder 11 is in progress, new requests come in for cylinders 1, 36, 16, 34, 9 and 12 in that order. The number of arm motions using shortest seek first algorithm is",
+        "options": [
+            "111",
+            "112",
+            "60",
+            "61"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question142",
+        "question_paragraph": "An operating system has 13 tape drives. There are three processes P1, P2 & P3. Maximum requirement of P1 is 11 tape drives, P2 is 5 tape drives and P3 is 8 tape drives. Currently, P1 is allocated 6 tape drives, P2 is allocated 3 tape drives and P3 is allocated 2 tape drives. Which of the following sequences represent a safe state ?",
+        "options": [
+            "P2 P1 P3",
+            "P2 P3 P1",
+            "P1 P2 P3",
+            "P1 P3 P2"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question143",
+        "question_paragraph": "Which of the following versions of Windows O.S. contain built-in partition manager which allows us to shrink and expand pre-defined drives ?",
+        "options": [
+            "Windows Vista",
+            "Windows 2000",
+            "Windows NT",
+            "Windows 98"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question144",
+        "question_paragraph": "Processes P1 and P2 have a producer-consumer relationship, communicating by the use of a set of shared buffers.P1: repeat\r\n    Obtain an empty buffer\r\n    Fill it\r\n    Return a full buffer\r\n    forever\r\nP2: repeat\r\n    Obtain a full buffer\r\n    Empty it\r\n    Return an empty buffer\r\n    foreverIncreasing the number of buffers is likely to do which of the following?\r\n\r\nI. Increase the rate at which requests are satisfied (throughput) \r\nII. Decrease the likelihood of deadlock \r\nIII. Increase the ease of achieving a correct implementation",
+        "options": [
+            "Ill only",
+            "II only",
+            "I only",
+            "II and III only"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question145",
+        "question_paragraph": "Determine the number of page faults when references to pages occur in order - 1, 2, 4, 5, 2, 1, 2, 4. Assume that the main memory can accommodate 3 pages and the main memory already has the pages 1 and 2, with page 1 having brought earlier than page 2.(assume LRU algorithm is used)",
+        "options": [
+            "3",
+            "4",
+            "5",
+            "None of these"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question146",
+        "question_paragraph": "In a paged memory, the page hit ratio is 0.40. The time required to access a page in secondary memory is equal to 120 ns. The time required to access a page in primary memory is 15 ns. The average time required to access a page is ________.",
+        "options": [
+            "105",
+            "68",
+            "75",
+            "78"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question147",
+        "question_paragraph": "Which of the following statements are true ?\r\n(a) External Fragmentation exists when there is enough total memory space to satisfy a request but the available space is contiguous.\r\n(b) Memory Fragmentation can be internal as well as external.\r\n(c) One solution to external Fragmentation is compaction.\r\nCode:",
+        "options": [
+            "(a) and (b) only",
+            "(a) and (c) only",
+            "(b) and (c) only",
+            "(a), (b) and (c)"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question148",
+        "question_paragraph": "Page information in memory is also called as Page Table. The essential contents in each entry of a page table is/are _________.",
+        "options": [
+            "Page Access information",
+            "Virtual Page number",
+            "Page Frame number",
+            "Both virtual page number and Page Frame Number"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question149",
+        "question_paragraph": "Consider a virtual page reference string 1, 2, 3, 2, 4, 2, 5, 2, 3, 4. Suppose LRU page replacement algorithm is implemented with 3 page frames in main memory. Then the number of page faults are_________.",
+        "options": [
+            "5",
+            "7",
+            "9",
+            "10"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question150",
+        "question_paragraph": "Consider allocation of memory to a new process. Assume that none of the existing holes in the memory will exactly fit the process\u2019s memory requirement. Hence, a new hole of smaller size will be created if allocation is made in any of the existing holes. Which one of the following statement is TRUE ?",
+        "options": [
+            "The hole created by first fit is always larger than the hole created by next fit.",
+            "The hole created by worst fit is always larger than the hole created by first fit.",
+            "The hole created by best fit is never larger than the hole created by first fit.",
+            "The hole created by next fit is never larger than the hole created by best fit."
+        ],
+        "image_link": null
     }
 ]

@@ -1,0 +1,130 @@
+[
+    {
+        "question_number": 1,
+        "correct_answer": "(1)"
+    },
+    {
+        "question_number": 2,
+        "correct_answer": "Both (I) and (II) are correct."
+    },
+    {
+        "question_number": 3,
+        "correct_answer": "Zombie processes"
+    },
+    {
+        "question_number": 4,
+        "correct_answer": "It runs the word count program to count the number of lines in its input, a, writing the result to b, but does it in the background."
+    },
+    {
+        "question_number": 5,
+        "correct_answer": "gettydefs"
+    },
+    {
+        "question_number": 6,
+        "correct_answer": "(1)"
+    },
+    {
+        "question_number": 7,
+        "correct_answer": "Remove file chap0[1 - 3]"
+    },
+    {
+        "question_number": 8,
+        "correct_answer": "(1)"
+    },
+    {
+        "question_number": 9,
+        "correct_answer": "Both files i.e. file1 and file2 can be edited using 'ex' command to travel between the files"
+    },
+    {
+        "question_number": 10,
+        "correct_answer": "Pipes forbid random accessing, while regular files do allow this."
+    },
+    {
+        "question_number": 11,
+        "correct_answer": "chmod\u2212 R a+x progs"
+    },
+    {
+        "question_number": 12,
+        "correct_answer": "It is the first process in the system."
+    },
+    {
+        "question_number": 13,
+        "correct_answer": "It will print all of the lines in file x that do not match the search string \u201cabc\u201d."
+    },
+    {
+        "question_number": 14,
+        "correct_answer": "Scheduling parameters"
+    },
+    {
+        "question_number": 15,
+        "correct_answer": "Any one of the above"
+    },
+    {
+        "question_number": 16,
+        "correct_answer": "cron"
+    },
+    {
+        "question_number": 17,
+        "correct_answer": "II and IV"
+    },
+    {
+        "question_number": 18,
+        "correct_answer": "grep name passwd"
+    },
+    {
+        "question_number": 19,
+        "correct_answer": "Both (a) and (b)"
+    },
+    {
+        "question_number": 20,
+        "correct_answer": "Will create a block device if the user is root"
+    },
+    {
+        "question_number": 21,
+        "correct_answer": "$ head-3 shortlist \u00a6 tr \u2018[a \u2013 z]\u2019 \u2018[A \u2013 Z]\u2019"
+    },
+    {
+        "question_number": 22,
+        "correct_answer": "Each i-node is 256-bytes long."
+    },
+    {
+        "question_number": 23,
+        "correct_answer": "Both I and II are correct."
+    },
+    {
+        "question_number": 24,
+        "correct_answer": "Crontab for individual users are not stored."
+    },
+    {
+        "question_number": 25,
+        "correct_answer": "All of the above"
+    },
+    {
+        "question_number": 26,
+        "correct_answer": "(II) and (III) only"
+    },
+    {
+        "question_number": 27,
+        "correct_answer": "kernel mode"
+    },
+    {
+        "question_number": 28,
+        "correct_answer": "(4)"
+    },
+    {
+        "question_number": 29,
+        "correct_answer": "I, II, III"
+    },
+    {
+        "question_number": 30,
+        "correct_answer": "mkdir PIS PIS/progs PIS/data"
+    },
+    {
+        "question_number": 31,
+        "correct_answer": "Shared memory segments"
+    },
+    {
+        "question_number": 32,
+        "correct_answer": "provide a mechanism to map physical device to file names"
+    }
+]
