@@ -1,0 +1,392 @@
+[
+    {
+        "topic": "Unix",
+        "question_no": "Question1",
+        "question_text": "Match the following WINDOWS system calls and UNIX system calls with reference to process control and File manipulation.",
+        "question_img_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/4-6.jpg",
+        "options": [
+            "(1)",
+            "(2)",
+            "(3)",
+            "(4)"
+        ],
+        "correct_option": "(1)"
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question2",
+        "question_text": "The Unix Operating System Kernel maintains two key data structures related to processes, the process table and the user structure. Now, consider the following two statements :\r\nI. The process table is resident all the time and contain information needed for all processes, even those that are not currently in memory.\r\nII. The user structure is swapped or paged out when its associated process is not in memory, in order not to waste memory on information that is not needed.\r\nWhich of the following options is correct with reference to above statements ?",
+        "question_img_link": null,
+        "options": [
+            "Only (I) is correct.",
+            "Only (II) is correct.",
+            "Both (I) and (II) are correct.",
+            "Both (I) and (II) are wrong."
+        ],
+        "correct_option": "Both (I) and (II) are correct."
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question3",
+        "question_text": "In UNIX, processes that have finished execution but have not yet had their status collected are known as _________.",
+        "question_img_link": null,
+        "options": [
+            "Sleeping processes",
+            "Stopped processes",
+            "Zombie processes",
+            "Orphan processes"
+        ],
+        "correct_option": "Zombie processes"
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question4",
+        "question_text": "What is the function of following UNIX command ?WC – l &lta  &gtb&",
+        "question_img_link": null,
+        "options": [
+            "It runs the word count program to count the number of lines in its input, a, writing the result to b, as a foreground process.",
+            "It runs the word count program to count the number of lines in its input, a, writing the result to b, but does it in the background.",
+            "It counts the errors during the execution of a process, a, and puts the result in process b.",
+            "It copies the ‘l’ numbers of lines of program from file, a, and stores in file b."
+        ],
+        "correct_option": "It runs the word count program to count the number of lines in its input, a, writing the result to b, but does it in the background."
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question5",
+        "question_text": "In Unix, the login prompt can be changed by changing the contents of the file __________.",
+        "question_img_link": null,
+        "options": [
+            "crontab",
+            "init",
+            "gettydefs",
+            "inittab"
+        ],
+        "correct_option": "gettydefs"
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question6",
+        "question_text": "Match the following in Unix file system:",
+        "question_img_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/41-2.png",
+        "options": [
+            "(1)",
+            "(2)",
+            "(3)",
+            "(4)"
+        ],
+        "correct_option": "(1)"
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question7",
+        "question_text": "What will be the output of the following Unix command ?\r\n\t$rm chap0\\\\[1 - 3\\\\]",
+        "question_img_link": null,
+        "options": [
+            "Remove file chap0[1 - 3]",
+            "Remove file chap01, chap02, chap03",
+            "Remove file chap\\\\[1 - 3\\\\]",
+            "None of the above"
+        ],
+        "correct_option": "Remove file chap0[1 - 3]"
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question8",
+        "question_text": "Match the following for unix system calls :\r\nList - I       List - II\r\n(a) exec                   (i) Creates a new process\r\n(b) brk                    (ii) Invokes another program overlaying memory space with a copy of an executable file\r\n(c) wait                   (iii) To increase or decrease the size of data region\r\n(d) fork                   (iv) A process synchronizes with termination of child process\r\nCodes :\r\n     (a) (b) (c) (d)\r\n(1) (ii) (iii) (iv) (i)\r\n(2) (iii) (ii) (iv) (i)\r\n(3) (iv) (iii) (ii) (i)\r\n(4) (iv) (iii) (i) (ii)",
+        "question_img_link": null,
+        "options": [
+            "(1)",
+            "(2)",
+            "(3)",
+            "(4)"
+        ],
+        "correct_option": "(1)"
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question9",
+        "question_text": "The unix command: $ vi file1 file2",
+        "question_img_link": null,
+        "options": [
+            "Edits file1 and stores the contents of file1 in file2",
+            "Both files i.e. file1 and file2 can be edited using 'ex' command to travel between the files",
+            "Both files can be edited using 'mv' command to move between the files",
+            "Edits file1 first, saves it and then edits file2"
+        ],
+        "correct_option": "Both files i.e. file1 and file2 can be edited using 'ex' command to travel between the files"
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question10",
+        "question_text": "The difference between a named pipe and a regular file in Unix is that",
+        "question_img_link": null,
+        "options": [
+            "Unlike a regular file, named pipe is a special file",
+            "The data in a pipe is transient, unlike the content of a regular file",
+            "Pipes forbid random accessing, while regular files do allow this.",
+            "All of the above"
+        ],
+        "correct_option": "Pipes forbid random accessing, while regular files do allow this."
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question11",
+        "question_text": "Which UNIX/Linux command is used to make all files and sub-directories in the directory “progs” executable by all users ?",
+        "question_img_link": null,
+        "options": [
+            "chmod− R a+x progs",
+            "chmod −R 222 progs",
+            "chmod−X a+x progs",
+            "chmod −X 222 progs"
+        ],
+        "correct_option": "chmod− R a+x progs"
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question12",
+        "question_text": "Which statement is not correct about “init” process in Unix?",
+        "question_img_link": null,
+        "options": [
+            "It is generally the parent of the login shell.",
+            "It has PID 1.",
+            "It is the first process in the system.",
+            "Init forks and execs a ‘getty’ process at every port connected to a terminal."
+        ],
+        "correct_option": "It is the first process in the system."
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question13",
+        "question_text": "What does the following command do? \r\ngrep -vn “abc” x",
+        "question_img_link": null,
+        "options": [
+            "It will print all of the lines in the file x that match the search string “abc”.",
+            "It will print all of the lines in file x that do not match the search string “abc”.",
+            "It will print the total number of lines in the file x that match the string “abc”.",
+            "It will print the specific line numbers of the file x in which there is a match for string “abc”."
+        ],
+        "correct_option": "It will print all of the lines in file x that do not match the search string “abc”."
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question14",
+        "question_text": "The Unix Kernel maintains two key data structures related to processes, the process table and the user structure. Which of the following information is not the part of user structure ?",
+        "question_img_link": null,
+        "options": [
+            "File descriptor table",
+            "System call state",
+            "Scheduling parameters",
+            "Kernel stack"
+        ],
+        "correct_option": "Scheduling parameters"
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question15",
+        "question_text": "A unix file may be of the type:",
+        "question_img_link": null,
+        "options": [
+            "Regular file",
+            "Directory file",
+            "Device file",
+            "Any one of the above"
+        ],
+        "correct_option": "Any one of the above"
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question16",
+        "question_text": "Which of the following UNIX command allows scheduling a program to be executed at the specifies time?",
+        "question_img_link": null,
+        "options": [
+            "cron",
+            "nice",
+            "date and time",
+            "schedule"
+        ],
+        "correct_option": "cron"
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question17",
+        "question_text": "Which of the following commands or sequences of commands will rename a file x to file y in a Unix system?\r\n\r\nI. mv y, x\r\n\r\nII. mv x, y\r\n\r\nIII. cp y, x (rm x)\r\n\r\nIV. cp x, y (rm x)",
+        "question_img_link": null,
+        "options": [
+            "II and III",
+            "II and IV",
+            "l and III",
+            "II only"
+        ],
+        "correct_option": "II and IV"
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question18",
+        "question_text": "The shell commandfind-name passwd-printis executed in /etc directory of a computer system running Unix. Which of the following shell commands will give the same information as the above command when executed in the same directory?",
+        "question_img_link": null,
+        "options": [
+            "ls passwd",
+            "cat passwd",
+            "grep name passwd",
+            "grep print passwd"
+        ],
+        "correct_option": "grep name passwd"
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question19",
+        "question_text": "Consider the following statements :",
+        "question_img_link": null,
+        "options": [
+            "only (a)",
+            "only (b)",
+            "Both (a) and (b)",
+            "Neither (a) nor (b)"
+        ],
+        "correct_option": "Both (a) and (b)"
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question20",
+        "question_text": "The linux command “mknod myfifo b 4 16”",
+        "question_img_link": null,
+        "options": [
+            "Will create a character device if the user is root",
+            "Will create a named pipe FIFO if the user is root",
+            "Will create a block device if the user is root",
+            "None of the above"
+        ],
+        "correct_option": "Will create a block device if the user is root"
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question21",
+        "question_text": "Unix command to change the case of first three lines of file “shortlist” from lower to upper",
+        "question_img_link": null,
+        "options": [
+            "$ tr ‘[a – z]’ ‘[A – Z]’ shortlist ¦ head-3",
+            "$ head-3 shortlist ¦ tr ‘[a – z]’ ‘[A – Z]’",
+            "$ tr head -3 shortlist ‘[A – Z]’ ‘[a – z]’",
+            "$ tr shortlist head -3 ‘[a – z]’ ‘[A – Z]’"
+        ],
+        "correct_option": "$ head-3 shortlist ¦ tr ‘[a – z]’ ‘[A – Z]’"
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question22",
+        "question_text": "Which of the following information about the UNIX file system is not correct?",
+        "question_img_link": null,
+        "options": [
+            "Super block contains the number of i-nodes, the number of disk blocks, and the start of the list of free disk blocks.",
+            "An i-node contains accounting information as well as enough information to locate all the disk blocks that holds the file’s data.",
+            "Each i-node is 256-bytes long.",
+            "All the files and directories are stored in data blocks."
+        ],
+        "correct_option": "Each i-node is 256-bytes long."
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question23",
+        "question_text": "In Unix, files can be protected by assigning each one a 9-bit mode called rights bits. Now, consider the following two statements:\r\nI. A mode of 641 (octal) means that the owner can read and write the file, other members of the owner’s group can read it, and users can execute only.\r\nII. A mode of 100 (octal) allows the owner to execute the file, but prohibits all other access.\r\nWhich of the following options is correct with reference to above statements ?",
+        "question_img_link": null,
+        "options": [
+            "Only I is correct.",
+            "Only II is correct.",
+            "Both I and II are correct.",
+            "Both I and II are incorrect."
+        ],
+        "correct_option": "Both I and II are correct."
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question24",
+        "question_text": "Which of the following statement is not correct with reference to cron daemon in UNIX O.S. ?",
+        "question_img_link": null,
+        "options": [
+            "The cron daemon is the standard tool for running commands on a pre-determined schedule.",
+            "It starts when the system boots and runs as long as the system is up.",
+            "Cron reads configuration files that contain list of command lines and the times at which they invoked.",
+            "Crontab for individual users are not stored."
+        ],
+        "correct_option": "Crontab for individual users are not stored."
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question25",
+        "question_text": "In Unix, the command to enable execution permission for file “mylife” by all is ____________.",
+        "question_img_link": null,
+        "options": [
+            "Chmod ugo + X myfile",
+            "Chmod a + X myfile",
+            "Chmod  + X myfile",
+            "All of the above"
+        ],
+        "correct_option": "All of the above"
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question26",
+        "question_text": "A student wishes to create symbolic links in a computer system running Unix. Three text files named \"file 1\", \"file 2\" and \"file 3\" exist in her current working directory, and the student has read and write permissions for all three files. Assume that file 1 contains information about her hobbies, file 2 contains information about her friends and file 3 contains information about her courses. The student executes the following sequence of commands from her current working directoryln-s file1file2ln-s file2file3Which of the following types of information would be lost from her file system?\r\n(I) Hobbies (II) Friends (III) Courses",
+        "question_img_link": null,
+        "options": [
+            "(I) and (II) only",
+            "(II) and (III) only",
+            "(II) only",
+            "(I) and (III) only"
+        ],
+        "correct_option": "(II) and (III) only"
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question27",
+        "question_text": "A user level process in Unix traps the signal sent on a Ctrl-C input, and has a signal handling routine that saves appropriate files before terminating the process. When a Ctrl-C input is given to this process, what is the mode in which the signal handling routine executes?",
+        "question_img_link": null,
+        "options": [
+            "kernel mode",
+            "superuser mode",
+            "privileged mode",
+            "user mode"
+        ],
+        "correct_option": "kernel mode"
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question28",
+        "question_text": "Match the following vi commands in Unix:",
+        "question_img_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/75-2.png",
+        "options": [
+            "(1)",
+            "(2)",
+            "(3)",
+            "(4)"
+        ],
+        "correct_option": "(4)"
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question29",
+        "question_text": "Which of the following statement(s) is/are True regarding ‘nice’ command of UNIX ? I. It is used to set or change the priority of a process. II. A process’s nice value can be set at the time of creation. III. ‘nice’ takes a command line as an argument.",
+        "question_img_link": null,
+        "options": [
+            "I, II only",
+            "II, III only",
+            "I, II, III",
+            "I, III only"
+        ],
+        "correct_option": "I, II, III"
+    },
+    {
+        "topic": "Unix",
+        "question_no": "Question30",
+        "question_text": "In UNIX, _________ creates three subdirectories : ‘PIS’ and two subdirectories ‘progs’ and ‘data’ from just created subdirectory ‘PIS’.",
+        "question_img_link": null,
+        "options": [
+            "mkdir PIS/progs PIS/data PIS",
+            "mkdir PIS progs data",
+            "mkdir PIS PIS/progs PIS/data",
+            "mkdir PIS/progs data"
+        ],
+        "correct_option": "mkdir PIS PIS/progs PIS/data"
+    }
+]

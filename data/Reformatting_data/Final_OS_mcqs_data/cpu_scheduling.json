@@ -1,0 +1,653 @@
+[
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question1",
+        "question_text": "Consider three processes (process id 0, 1, 2 respectively) with compute time bursts 2, 4 and 8 time units. All processes arrive at time zero. Consider the longest remaining time first (LRTF) scheduling algorithm. In LRTF ties are broken by giving priority to the process with the lowest process id. The average turn around time is:",
+        "question_img_link": null,
+        "options": [
+            "13 units",
+            "14 units",
+            "15 units",
+            "16 units"
+        ],
+        "correct_option": "13 units"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question2",
+        "question_text": "Consider three processes, all arriving at time zero, with total execution time of 10, 20 and 30 units, respectively. Each process spends the first 20% of execution time doing I/O, the next 70% of time doing computation, and the last 10% of time doing I/O again. The operating system uses a shortest remaining compute time first scheduling algorithm and schedules a new process either when the running process gets blocked on I/O or when the running process finishes its compute burst. Assume that all I/O operations can be overlapped as much as possible. For what percentage of time does the CPU remain idle?",
+        "question_img_link": null,
+        "options": [
+            "0%",
+            "10.6%",
+            "30.0%",
+            "89.4%"
+        ],
+        "correct_option": "10.6%"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question3",
+        "question_text": "Consider three CPU-intensive processes, which require 10, 20 and 30 time units and arrive at times 0, 2 and 6, respectively. How many context switches are needed if the operating system implements a shortest remaining time first scheduling algorithm? Do not count the context switches at time zero and at the end.",
+        "question_img_link": null,
+        "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "correct_option": "2"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question4",
+        "question_text": "Which of the following process scheduling algorithm may lead to starvation",
+        "question_img_link": null,
+        "options": [
+            "FIFO",
+            "Round Robin",
+            "Shortest Job Next",
+            "None of the above"
+        ],
+        "correct_option": "Shortest Job Next"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question5",
+        "question_text": "If the quantum time of round robin algorithm is very large, then it is equivalent to:",
+        "question_img_link": null,
+        "options": [
+            "First in first out",
+            "Shortest Job Next",
+            "Lottery scheduling",
+            "None of the above"
+        ],
+        "correct_option": "First in first out"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question6",
+        "question_text": "Which of the following is FALSE about SJF (Shortest Job First Scheduling)?S1: It causes minimum average waiting time\r\nS2: It can cause starvation",
+        "question_img_link": null,
+        "options": [
+            "Only S1",
+            "Only S2",
+            "Both S1 and S2",
+            "Neither S1 nor S2"
+        ],
+        "correct_option": "Neither S1 nor S2"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question7",
+        "question_text": "The most optimal scheduling algorithm is :",
+        "question_img_link": null,
+        "options": [
+            "First come first serve (FCFS)",
+            "Shortest Job First (SJF)",
+            "Round Robin (RR)",
+            "None of the above"
+        ],
+        "correct_option": "None of the above"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question8",
+        "question_text": "A scheduling algorithm assigns priority proportional to the waiting time of a process. Every process starts with priority zero (the lowest priority). The scheduler re-evaluates the process priorities every T time units and decides the next process to schedule. Which one of the following is TRUE if the processes have no I/O operations and all arrive at time zero?",
+        "question_img_link": null,
+        "options": [
+            "This algorithm is equivalent to the first-come-first-serve algorithm",
+            "This algorithm is equivalent to the round-robin algorithm.",
+            "This algorithm is equivalent to the shortest-job-first algorithm..",
+            "This algorithm is equivalent to the shortest-remaining-time-first algorithm"
+        ],
+        "correct_option": "This algorithm is equivalent to the round-robin algorithm."
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question9",
+        "question_text": "Consider the 3 processes, P1, P2 and P3 shown in the table.Process           Arrival time         Time Units Required\r\n   P1                0                         5\r\n   P2                1                         7\r\n   P3                3                         4The completion order of the 3 processes under the policies FCFS and RR2 (round robin scheduling with CPU quantum of 2 time units) are",
+        "question_img_link": null,
+        "options": [
+            "FCFS: P1, P2, P3\r\n RR2: P1, P2, P3",
+            "FCFS: P1, P3, P2\r\n RR2: P1, P3, P2",
+            "FCFS: P1, P2, P3\r\n RR2: P1, P3, P2",
+            "FCFS: P1, P3, P2 \r\nRR2: P1, P2, P3"
+        ],
+        "correct_option": "FCFS: P1, P2, P3\n RR2: P1, P3, P2"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question10",
+        "question_text": "Consider the following table of arrival time and burst time for three processes P0, P1 and P2.Process   Arrival time   Burst Time\r\nP0            0 ms          9 ms\r\nP1            1 ms          4 ms\r\nP2            2 ms          9 msThe pre-emptive shortest job first scheduling algorithm is used. Scheduling is carried out only at arrival or completion of processes. What is the average waiting time for the three processes?",
+        "question_img_link": null,
+        "options": [
+            "5.0 ms",
+            "4.33 ms",
+            "6.33",
+            "7.33"
+        ],
+        "correct_option": "5.0 ms"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question11",
+        "question_text": "Which of the following statements are true?I. Shortest remaining time first scheduling may cause starvation\r\nII. Preemptive scheduling may cause starvation\r\nIII. Round robin is better than FCFS in terms of response time",
+        "question_img_link": null,
+        "options": [
+            "I only",
+            "I and III only",
+            "II and III only",
+            "I, II and III"
+        ],
+        "correct_option": "I, II and III"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question12",
+        "question_text": "In the following process state transition diagram for a uniprocessor system, assume that there are always some processes in the ready state: Now consider the following statements:I. If a process makes a transition D, it would result in \r\n   another process making transition A immediately.\r\nII. A process P2 in blocked state can make transition E \r\n    while another process P1 is in running state.\r\nIII. The OS uses preemptive scheduling.\r\nIV. The OS uses non-preemptive scheduling.Which of the above statements are TRUE?",
+        "question_img_link": "https://www.geeksforgeeks.org/wp-content/uploads/gq/2014/01/gate2009.png",
+        "options": [
+            "I and II",
+            "I and III",
+            "II and III",
+            "II and IV"
+        ],
+        "correct_option": "II and III"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question13",
+        "question_text": "Group 1 contains some CPU scheduling algorithms and Group 2 contains some applications. Match entries in Group 1 to entries in Group 2.",
+        "question_img_link": null,
+        "options": [
+            "P – 3 Q – 2 R – 1",
+            "P – 1 Q – 2 R – 3",
+            "P – 2 Q – 3 R – 1",
+            "P – 1 Q – 3 R – 2"
+        ],
+        "correct_option": "P – 3 Q – 2 R – 1"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question14",
+        "question_text": "An operating system uses Shortest Remaining Time first (SRT) process scheduling algorithm. Consider the arrival times and execution times for the following processes:",
+        "question_img_link": null,
+        "options": [
+            "5",
+            "15",
+            "40",
+            "55"
+        ],
+        "correct_option": "15"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question15",
+        "question_text": "Consider three CPU-intensive processes, which require 10, 20 and 30 time units and arrive at times 0, 2 and 6, respectively. How many context switches are needed if the operating system implements a shortest remaining time first scheduling algorithm? Do not count the context switches at time zero and at the end.",
+        "question_img_link": null,
+        "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "correct_option": "2"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question16",
+        "question_text": "Three processes A, B and C each execute a loop of 100 iterations. In each iteration of the loop, a process performs a single computation that requires tc CPU milliseconds and then initiates a single I/O operation that lasts for tio milliseconds. It is assumed that the computer where the processes execute has sufficient number of I/O devices and the OS of the computer assigns different I/O devices to each process. Also, the scheduling overhead of the OS is negligible. The processes have the following characteristics:",
+        "question_img_link": null,
+        "options": [
+            "500",
+            "1000",
+            "2000",
+            "10000"
+        ],
+        "correct_option": "1000"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question17",
+        "question_text": "An operating system uses shortest remaining time first scheduling algorithm for pre-emptive scheduling of processes. Consider the following set of processes with their arrival times and CPU burst times (in milliseconds):Process      Arrival Time    Burst Time\r\n  P1           0               12\r\n  P2           2               4\r\n  P3           3               6\r\n  P4           8               5The average waiting time (in milliseconds) of the processes is _________.",
+        "question_img_link": null,
+        "options": [
+            "4.5",
+            "5.0",
+            "5.5",
+            "6.5"
+        ],
+        "correct_option": "5.5"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question18",
+        "question_text": "Consider the following set of processes, with the arrival times and the CPU-burst times given in millisecondsProcess   Arrival Time    Burst Time\r\n    P1          0              5\r\n    P2          1              3\r\n    P3          2              3\r\n    P4          4              1What is the average turnaround time for these processes with the preemptive shortest remaining processing time first (SRPT) algorithm ?",
+        "question_img_link": null,
+        "options": [
+            "5.50",
+            "5.75",
+            "6.00",
+            "6.25"
+        ],
+        "correct_option": "5.50"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question19",
+        "question_text": "A uni-processor computer system only has two processes, both of which alternate 10ms CPU bursts with 90ms I/O bursts. Both the processes were created at nearly the same time. The I/O of both processes can proceed in parallel. Which of the following scheduling strategies will result in the least CPU utilization (over a long period of time) for this system ?",
+        "question_img_link": null,
+        "options": [
+            "First come first served scheduling",
+            "Shortest remaining time first scheduling",
+            "Static priority scheduling with different priorities for the two processes",
+            "Round robin scheduling with a time quantum of 5 ms"
+        ],
+        "correct_option": "Round robin scheduling with a time quantum of 5 ms"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question20",
+        "question_text": "Which of the following scheduling algorithms is non-preemptive?",
+        "question_img_link": null,
+        "options": [
+            "Round Robin",
+            "First-In First-Out",
+            "Multilevel Queue Scheduling",
+            "Multilevel Queue Scheduling with Feedback"
+        ],
+        "correct_option": "First-In First-Out"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question21",
+        "question_text": "Consider a set of n tasks with known runtimes r1, r2, .... rnto be run on a uniprocessor machine. Which of the following processor scheduling algorithms will result in the maximum throughput?",
+        "question_img_link": null,
+        "options": [
+            "Round-Robin",
+            "Shortest-Job-First",
+            "Highest-Response-Ratio-Next",
+            "First-Come-First-Served"
+        ],
+        "correct_option": "Shortest-Job-First"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question22",
+        "question_text": "Consider a uniprocessor system executing three tasks T1, T2 and T3, each of which is composed of an infinite sequence of jobs (or instances) which arrive periodically at intervals of 3, 7 and 20 milliseconds, respectively. The priority of each task is the inverse of its period and the available tasks are scheduled in order of priority, with the highest priority task scheduled first. Each instance of T1, T2 and T3 requires an execution time of 1, 2 and 4 milliseconds, respectively. Given that all tasks initially arrive at the beginning of the 1st milliseconds and task preemptions are allowed, the first instance of T3 completes its execution at the end of ______________ milliseconds.",
+        "question_img_link": null,
+        "options": [
+            "5",
+            "10",
+            "12",
+            "15"
+        ],
+        "correct_option": "12"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question23",
+        "question_text": "The maximum number of processes that can be in Ready state for a computer system with n CPUs is",
+        "question_img_link": null,
+        "options": [
+            "n",
+            "n2",
+            "2n",
+            "Independent of n"
+        ],
+        "correct_option": "Independent of n"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question24",
+        "question_text": "For the processes listed in the following table, which of the following scheduling schemes will give the lowest average turnaround time?Process    Arrival Time    Processing Time\r\n  A              0              3\r\n  B              1              6\r\n  C              4              4\r\n  D              6              2",
+        "question_img_link": null,
+        "options": [
+            "First Come First Serve",
+            "Non-preemptive Shortest Job First",
+            "Shortest Remaining Time",
+            "Round Robin with Quantum value two"
+        ],
+        "correct_option": "Shortest Remaining Time"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question25",
+        "question_text": "Two concurrent processes P1 and P2 use four shared resources R1, R2, R3 and R4, as shown below.P1P2Compute:\r\nUse R1;\r\nUse R2;\r\nUse R3;\r\nUse R4;Compute;\r\nUse R1;\r\nUse R2;\r\nUse R3;.\r\nUse R4;Both processes are started at the same time, and each resource can be accessed by only one process at a time The following scheduling constraints exist between the access of resources by the processes:P2 must complete use of R1 before P1 gets access to R1P1 must complete use of R2 before P2 gets access to R2.P2 must complete use of R3 before P1 gets access to R3.P1 must complete use of R4 before P2 gets access to R4.There are no other scheduling constraints between the processes. If only binary semaphores are used to enforce the above scheduling constraints, what is the minimum number of binary semaphores needed?",
+        "question_img_link": null,
+        "options": [
+            "P2 must complete use of R1 before P1 gets access to R1",
+            "P1 must complete use of R2 before P2 gets access to R2.",
+            "P2 must complete use of R3 before P1 gets access to R3.",
+            "P1 must complete use of R4 before P2 gets access to R4.",
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "correct_option": "null"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question26",
+        "question_text": "We have a choice of preemptive or non-preemptive scheduling. In preemptive scheduling, a late-arriving higher priority process can preempt a currently running process with lower priority. In non-preemptive scheduling, a late-arriving higher priority process must wait for the currently executing process to complete before it can be scheduled on the processor.",
+        "question_img_link": null,
+        "options": [
+            "30 sec, 30 sec",
+            "30 sec, 10 sec",
+            "42 sec, 42 sec",
+            "30 sec, 42 sec"
+        ],
+        "correct_option": "30 sec, 42 sec"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question27",
+        "question_text": "Consider an arbitrary set of CPU-bound processes with unequal CPU burst lengths submitted at the same time to a computer system. Which one of the following process scheduling algorithms would minimize the average waiting time in the ready queue?",
+        "question_img_link": null,
+        "options": [
+            "Shortest remaining time first",
+            "Round-robin with time quantum less than the shortest CPU burst",
+            "Uniform random",
+            "Highest priority first with priority proportional to CPU burst length"
+        ],
+        "correct_option": "Shortest remaining time first"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question28",
+        "question_text": "Which of the following disk strategies is likely to give the best throughput?",
+        "question_img_link": null,
+        "options": [
+            "Farthest cylinder next",
+            "Nearest cylinder next",
+            "First come first served",
+            "Elevator algorithm"
+        ],
+        "correct_option": "Nearest cylinder next"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question29",
+        "question_text": "Consider the following processes, with the arrival time and the length of the CPU burst given in milliseconds. The scheduling algorithm used is preemptive shortest remaining-time first.",
+        "question_img_link": "https://media.geeksforgeeks.org/wp-content/uploads/20230221084340/z5.png",
+        "options": [
+            "8.25",
+            "10.25",
+            "6.35",
+            "4.25"
+        ],
+        "correct_option": "8.25"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question30",
+        "question_text": "Consider n jobs J1, J2,......Jnsuch that job Jihas execution time tiand a non-negative integer weight wi. The weighted mean completion time of the jobs is defined to be [Tex] \\\\frac{\\\\sum_{i=1}^{n} w_i T_i}{\\\\sum_{i=1}^{n} w_i}[/Tex], where Tiis the completion time of job Ji. Assuming that there is only one processor available, in what order must the jobs be executed in order to minimize the weighted mean completion time of the jobs?",
+        "question_img_link": null,
+        "options": [
+            "Non-decreasing order of ti",
+            "Non-increasing order of wi",
+            "Non-increasing order of witi",
+            "None-increasing order of wi/ti"
+        ],
+        "correct_option": "None-increasing order of wi/ti"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question31",
+        "question_text": "Assume every process requires 3 seconds of service time in a system with single processor. If new processes are arriving at the rate of 10 processes per minute, then estimate the fraction of time CPU is busy in system?",
+        "question_img_link": null,
+        "options": [
+            "20%",
+            "30%",
+            "50%",
+            "60%"
+        ],
+        "correct_option": "50%"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question32",
+        "question_text": "Considernprocesses sharing the CPU in a round-robin fashion. Assuming that each process switch takessseconds, what must be the quantum sizeqsuch that the overhead resulting from process switching is minimized but, at the same time, each process is guaranteed to get its turn at the CPU at least everytseconds ?",
+        "question_img_link": "http://www.cdn.geeksforgeeks.org/wp-content/uploads/aq.png",
+        "options": [
+            "a",
+            "b",
+            "c",
+            "d"
+        ],
+        "correct_option": "a"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question33",
+        "question_text": "Answer the following: a. Four jobs are waiting to be run. Their expected run times are 6, 3, 5 and x. In what order should they be run to minimize the average response time? b. Write a concurrent program usingpar begin - par endto represent the precedence graph shown below.",
+        "question_img_link": "https://media.geeksforgeeks.org/wp-content/uploads/20230203112806/Diagram.png",
+        "options": [
+            "No Option provided (Subjective Question)Please click here for answer."
+        ],
+        "correct_option": "No Option provided (Subjective Question)\nPlease click here for answer."
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question34",
+        "question_text": "The correct matching for the following pairs is(A) Disk Scheduling        (1) Round robin\r\n(B) Batch Processing       (2) SCAN\r\n(C) Time sharing           (3) LIFO\r\n(D) Interrupt processing   (4) FIFOCodes:A   B   C   Da3   4   2   1b4   3   2   1c2   4   1   3d3   4   3   2",
+        "question_img_link": null,
+        "options": [
+            "a",
+            "b",
+            "c",
+            "d"
+        ],
+        "correct_option": "c"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question35",
+        "question_text": "When an interrupt occurs, an operating system",
+        "question_img_link": null,
+        "options": [
+            "ignores the interrupt",
+            "always changes state of interrupted process to \\'blocked\\' and schedules another process",
+            "always resumes execution of interrupted process after processing the interrupt",
+            "may change the state of  interrupted process to \\'blocked\\'and schedule another process"
+        ],
+        "correct_option": "may change the state of interrupted process to \\'blocked\\'and schedule another process"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question36",
+        "question_text": "Four jobs to be executed on a single processor system arrive at time 0 in the order A, B, C, D. Their burst CPU time requirements are 4, 1, 8, 1 time units respectively. The completion time of A under round robin scheduling with time slice of one time unit is",
+        "question_img_link": null,
+        "options": [
+            "10",
+            "4",
+            "8",
+            "9"
+        ],
+        "correct_option": "9"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question37",
+        "question_text": "Consider the following CPU processes with arrival times (in milliseconds) and length of CPU bursts (in milliseconds) except for process P4 as given below:Process\tArrival Time\tBurst Time\r\nP1\t   0\t          5\r\nP2\t   1\t          1\r\nP3\t   3\t          3\r\nP4\t   4\t          xIf the average waiting time across all processes is 2 milliseconds and pre-emptive shortest remaining time first scheduling algorithm is used to schedule the processes, then find the value of x ?",
+        "question_img_link": null,
+        "options": [
+            "1",
+            "2",
+            "4",
+            "None of these"
+        ],
+        "correct_option": "2"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question38",
+        "question_text": "Which module gives control of the CPU to the process selected by the short - term schedular ?",
+        "question_img_link": null,
+        "options": [
+            "Dispatcher",
+            "Interrupt",
+            "Schedular",
+            "Threading"
+        ],
+        "correct_option": "Dispatcher"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question39",
+        "question_text": "Consider the following schedulingA. Gang schedulings. Guaranteed schedulingB. Rate Monotonic schedulingt. Thread schedulingC. Fair share schedulingu. Real time schedulingMatching the table in the order A, B, C gives",
+        "question_img_link": null,
+        "options": [
+            "t, u, s",
+            "s, t, u",
+            "u, s, t",
+            "u, t, s"
+        ],
+        "correct_option": "t, u, s"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question40",
+        "question_text": "Consider the following four processes with the arrival time and length of CPU burst given in milliseconds :The average waiting time for preemptive SJF scheduling algorithm is __________.",
+        "question_img_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/49.png",
+        "options": [
+            "6.5",
+            "7.5",
+            "6.75",
+            "7.75"
+        ],
+        "correct_option": "6.5"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question41",
+        "question_text": "Which of the following statement is true?",
+        "question_img_link": null,
+        "options": [
+            "Hard real time OS has less jitter than soft real time OS",
+            "Hard real time OS has more jitter than soft real time OS",
+            "Hard real time OS has equal jitter as soft real time OS",
+            "None of the above"
+        ],
+        "correct_option": "Hard real time OS has less jitter than soft real time OS"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question42",
+        "question_text": "Which of the following scheduling algorithms may cause starvation ?\r\n a. First-come-first-served\r\n b. Round Robin\r\n c. Priority\r\n d. Shortest process next\r\n e. Shortest remaining time first",
+        "question_img_link": null,
+        "options": [
+            "a, c and e",
+            "c, d and e",
+            "b, d and e",
+            "b, c and d"
+        ],
+        "correct_option": "c, d and e"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question43",
+        "question_text": "Five jobs A, B, C, D and E are waiting in Ready Queue. Their expected runtimes are 9, 6, 3, 5 and x respectively. All jobs entered in Ready queue at time zero. They must run in _____ order to minimize average response time if 3 < x < 5.",
+        "question_img_link": null,
+        "options": [
+            "B, A, D, E, C",
+            "C, E, D, B, A",
+            "E, D, C, B, A",
+            "C, B, A, E, D"
+        ],
+        "correct_option": "C, E, D, B, A"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question44",
+        "question_text": "Consider three CPU intensive processes P1, P2, P3which require 20, 10 and 30 units of time, arrive at times 1, 3 and 7 respectively. Suppose operating system is implementing Shortest Remaining Time first (preemptive scheduling) algorithm, then _____ context switches are required (suppose context switch at the beginning of Ready queue and at the end of Ready queue are not counted).",
+        "question_img_link": null,
+        "options": [
+            "3",
+            "2",
+            "4",
+            "5"
+        ],
+        "correct_option": "3"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question45",
+        "question_text": "Consider a system which have ‘n’ number of processes and ‘m’ number of resource types. The time complexity of the safety algorithm, which checks whether a system is in safe state or not, is of the order of:",
+        "question_img_link": null,
+        "options": [
+            "O(mn)",
+            "O(m2n2)",
+            "O(m2n)",
+            "O(mn2)"
+        ],
+        "correct_option": "O(mn2)"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question46",
+        "question_text": "Which of the following is not an optimization criterion in the design of a CPU scheduling algorithm?",
+        "question_img_link": null,
+        "options": [
+            "Minimum CPU utilization",
+            "Maximum throughput",
+            "Minimum turnaround time",
+            "Minimum waiting time"
+        ],
+        "correct_option": "Minimum CPU utilization"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question47",
+        "question_text": "A scheduling Algorithm assigns priority proportional to the waiting time of a process. Every process starts with priority zero (lowest priority). The scheduler reevaluates the process priority for every ‘T’ time units and decides next process to be scheduled. If the process have no I/O operations and all arrive at time zero, then the scheduler implements _________ criteria.",
+        "question_img_link": null,
+        "options": [
+            "Priority scheduling",
+            "Round Robin Scheduling",
+            "Shortest Job First",
+            "FCFS"
+        ],
+        "correct_option": "Round Robin Scheduling"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question48",
+        "question_text": "A system has four processes and five allocatable resources. The current allocation and maximum needs are as follows:Allocated\tMaximum\t       Available\r\nProcess A\t1 0 2 1 1\t1 1 2 1 3\t0 0 x 1 1\r\nProcess B\t2 0 1 1 0\t2 2 2 1 0\t\r\nProcess C\t1 1 0 1 0\t2 1 3 1 0\t\r\nProcess D\t1 1 1 1 0\t1 1 2 2 1\t\r\nThe smallest value of x for which the above system in safe state is __________.",
+        "question_img_link": null,
+        "options": [
+            "1",
+            "3",
+            "2",
+            "Not safe for any value of x."
+        ],
+        "correct_option": "Not safe for any value of x."
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question49",
+        "question_text": "Below is the precedence graph for a set of tasks to be executed on a parallel processing system S.What is the efficiency of this precedence graph on S if each of the tasks T1, T2, T3,....T8 takes the same time and the system S has five processors?",
+        "question_img_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/ISRO10.png",
+        "options": [
+            "25%",
+            "40%",
+            "50%",
+            "90%"
+        ],
+        "correct_option": "40%"
+    },
+    {
+        "topic": "Cpu Scheduling",
+        "question_no": "Question50",
+        "question_text": "In a system using single processor, a new process arrives at the rate of six processes per minute and each such process requires seven seconds of service time. What is the CPU utilization?",
+        "question_img_link": null,
+        "options": [
+            "70%",
+            "30%",
+            "60%",
+            "64%"
+        ],
+        "correct_option": "70%"
+    }
+]

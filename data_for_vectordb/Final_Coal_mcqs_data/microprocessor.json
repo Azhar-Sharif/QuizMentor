@@ -1,0 +1,733 @@
+[
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question1",
+        "question_text": "Which of the following addressing modes are suitable for program relocation at run time ?(i)   Absolute addressing\r\n(ii)  Based addressing\r\n(iii) Relative addressing\r\n(iv)  Indirect addressing",
+        "question_img_link": null,
+        "options": [
+            "(i) and (iv)",
+            "(i) and (ii)",
+            "(ii) and (iii)",
+            "(i), (ii) and (iv)"
+        ],
+        "correct_option": "(ii) and (iii)"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question2",
+        "question_text": "Direction for questions 63 to 64:\r\nConsider the following program segment for a hypothetical CPU having three user registers R1, R2 and R3.Instruction \t Operation \t Instruction Size(in words)\r\n MOV R1,5000; \t R1 ¬ Memory[5000] \t 2\r\n MOV R2, (R1); \t R2 ¬ Memory[(R1)] \t 1\r\n ADD R2, R3; \t R2 ¬ R2 + R3 \t         1\r\n MOV 6000, R2; \t Memory [6000] ¬ R2 \t 2\r\n HALT \t         Machine halts \t         1Consider that the memory is byte addressable with size 32 bits, and the program has been loaded starting from memory location 1000 (decimal). If an interrupt occurs while the CPU has been halted after executing the HALT instruction, the return address (in decimal) saved in the stack will be",
+        "question_img_link": null,
+        "options": [
+            "1007",
+            "1020",
+            "1024",
+            "1028"
+        ],
+        "correct_option": "1028"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question3",
+        "question_text": "Directions for question 63 to 64: Consider the following program segment for a hypothetical CPU having three user registers R1, R2 and R3.",
+        "question_img_link": null,
+        "options": [
+            "29",
+            "24",
+            "23",
+            "20"
+        ],
+        "correct_option": "24"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question4",
+        "question_text": "The microinstructions stored in the control memory of a processor have a width of 26 bits. Each microinstruction is divided into three fields: a micro-operation field of 13 bits, a next address field (X), and a MUX select field (Y). There are 8 status bits in the inputs of the MUX.How many bits are there in the X and Y fields, and what is the size of the control memory in number of words?",
+        "question_img_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2014/09/GATECS2004Q65.png",
+        "options": [
+            "10, 3, 1024",
+            "8, 5, 256",
+            "5, 8, 2048",
+            "10, 3, 512"
+        ],
+        "correct_option": "10, 3, 1024"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question5",
+        "question_text": "Consider the following assembly language program for a hypothetical processor. A, B, and C are 8 bit registers. The meanings of various instructions are shown as comments.MOV B, # 0;B ← 0MOV C, # 8;C ← 8Z :CMP C, # 0;compare C with 0JZX;jump to X if zero flag is setSUB C, # 1;C ← C - 1RRC A, # 1;right rotate A through carry by one bit. Thus:;if the initial values of A and the carry flag area7...a0and;c0respectively, their values after the execution of this;instruction will bec0a7...a1and a0respectively.JC Y;jump to Y if carry flag is setJMP Z;jump to ZY :ADD B, # 1;B ← B + 1JMP Z;jump to ZX :",
+        "question_img_link": null,
+        "options": [
+            "the number of 0 bits in A0",
+            "the number of 1 bits in A0",
+            "A0",
+            "8"
+        ],
+        "correct_option": "the number of 1 bits in A0"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question6",
+        "question_text": "Consider the following assembly language program for a hypothetical processor. A, B, and C are 8 bit registers. The meanings of various instructions are shown as comments.MOV B, # 0;B ← 0MOV C, # 8;C ← 8Z :CMP C, # 0;compare C with 0JZX;jump to X if zero flag is setSUB C, # 1;C ← C - 1RRC A, # 1;right rotate A through carry by one bit. Thus:;if the initial values of A and the carry flag area7...a0and;c0respectively, their values after the execution of this;instruction will bec0a7...a1and a0respectively.JC Y;jump to Y if carry flag is setJMP Z;jump to ZY :ADD B, # 1;B ← B + 1JMP Z;jump to ZX :Which of the following instructions when inserted at location X will ensure that the value of register A after program execution is the same as its initial value ?",
+        "question_img_link": null,
+        "options": [
+            "RRC A, #",
+            "NOP ; no operation",
+            "LRC A, # 1 ; left rotate A through carry flag by one bit",
+            "ADD A, # 1"
+        ],
+        "correct_option": "RRC A, #"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question7",
+        "question_text": "A device employing INTR line for device interrupt puts the CALL instruction on the data bus whileA)is active\r\nB)\tHOLD is active\r\nC)\tREADY is active\r\nD)\tNone of these",
+        "question_img_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2014/11/gatecs2002Q8.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "correct_option": "A"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question8",
+        "question_text": "In 8085, which of the following modifies the program counter ?",
+        "question_img_link": null,
+        "options": [
+            "Only PCHL instruction",
+            "Only ADD instructions",
+            "Only JMP and CALL instructions",
+            "All instructions"
+        ],
+        "correct_option": "All instructions"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question9",
+        "question_text": "In the absolute addressing mode",
+        "question_img_link": null,
+        "options": [
+            "the operand is inside the instruction",
+            "the address of the operand is inside the instruction",
+            "the register containing address of the operand is specified inside the instruction",
+            "the location of the operand is implicit"
+        ],
+        "correct_option": "the address of the operand is inside the instruction"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question10",
+        "question_text": "What are the states of the Auxiliary Carry (AC) and Carry Flag (dCY) after executing the following 8085 program?MVI L, 5DH\r\n   MVI L, 6BH\r\n   MOV A, H\r\n   ADD L",
+        "question_img_link": null,
+        "options": [
+            "AC = 0 and CY = 0",
+            "AC = 1 and CY = 1",
+            "AC = 1 and CY = 0",
+            "AC = 0 and CY = 0"
+        ],
+        "correct_option": "AC = 1 and CY = 0"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question11",
+        "question_text": "Horizontal microprogramming :",
+        "question_img_link": null,
+        "options": [
+            "does not require use of signal decoders",
+            "results in larger sized microinstructions than vertical microprogramming",
+            "uses one bit for each control signal",
+            "all of the above."
+        ],
+        "correct_option": "all of the above."
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question12",
+        "question_text": "A low memory can be connected to 8085 by using",
+        "question_img_link": null,
+        "options": [
+            "INTER",
+            "RESET IN",
+            "HOLD",
+            "READY"
+        ],
+        "correct_option": "READY"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question13",
+        "question_text": "Suppose a processor does not have any stack pointer register. Which of the following statements is true?",
+        "question_img_link": null,
+        "options": [
+            "It cannot have subroutine call instruction",
+            "It can have subroutine call instruction, but no nested subroutine calls",
+            "Nested subroutine calls are possible, but interrupts are not",
+            "All sequences of subroutine calls and also interrupts are possible"
+        ],
+        "correct_option": "It cannot have subroutine call instruction"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question14",
+        "question_text": "A processor needs software interrupt to",
+        "question_img_link": null,
+        "options": [
+            "test the interrupt system of the processor",
+            "implement co-routines",
+            "obtain system services which need execution of privileged instructions",
+            "return from subroutine"
+        ],
+        "correct_option": "obtain system services which need execution of privileged instructions"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question15",
+        "question_text": "A CPU has two modes-privileged and non-privileged. In order to change the mode from privileged to non-privileged",
+        "question_img_link": null,
+        "options": [
+            "a hardware interrupt is needed",
+            "a software interrupt is needed",
+            "a privileged instruction (which does not generate an interrupt) is needed",
+            "a non-privileged instruction (which does not generate an interrupt is needed"
+        ],
+        "correct_option": "a non-privileged instruction (which does not generate an interrupt is needed"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question16",
+        "question_text": "Which is the most appropriate match for the items in the first column with the items in the second columnX. Indirect Addressing        I. Array implementation\r\nY. Indexed Addressing         II. Writing re-locatable code\r\nZ. Base Register Addressing   III. Passing array as parameter",
+        "question_img_link": null,
+        "options": [
+            "(X, III) (Y, I) (Z, II)",
+            "(X, II) (Y, III) (Z, I)",
+            "(X, III) (Y, II) (Z, I)",
+            "(X, I) (Y, III) (Z, II)"
+        ],
+        "correct_option": "(X, III) (Y, I) (Z, II)"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question17",
+        "question_text": "To put the 8085 microprocessor in the wait state",
+        "question_img_link": null,
+        "options": [
+            "lower the-HOLD input",
+            "lower the READY input",
+            "raise the HOLD input",
+            "raise the READY input"
+        ],
+        "correct_option": "lower the READY input"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question18",
+        "question_text": "The 8085 microprocessor responds to the presence of an interrupt",
+        "question_img_link": null,
+        "options": [
+            "As soon as the TRAP pin becomes \\'high\\'",
+            "By checking the TRAP pin for \\'high\\' status at the end of each instruction fetch",
+            "By checking the TRAP pin for \\'high\\' status at the end of the execution of each instruction",
+            "By Checking the TRAP pin for \\'high\\' status at regular intervals"
+        ],
+        "correct_option": "By checking the TRAP pin for \\'high\\' status at the end of the execution of each instruction"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question19",
+        "question_text": "Answer the following:a. Draw the schematic of an 8085 based system that can be used to measure the width of a pulse. Assume that the pulse is given as a TTL compatible signal by the source which generates it.b.  Write the 8085 Assembly Language program to measure the width of the pulse. State all your assumption clearly.",
+        "question_img_link": null,
+        "options": [],
+        "correct_option": "null"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question20",
+        "question_text": "In 8085 microprocessor which of the following flag(s) is (are) affected by an arithmetic operation ?",
+        "question_img_link": null,
+        "options": [
+            "AC flag Only",
+            "CY flag Only",
+            "Z flag Only",
+            "AC, CY, Z flags"
+        ],
+        "correct_option": "AC, CY, Z flags"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question21",
+        "question_text": "In 8085 microprocessor the address bus is of __________ bits.",
+        "question_img_link": null,
+        "options": [
+            "4",
+            "8",
+            "16",
+            "32"
+        ],
+        "correct_option": "16"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question22",
+        "question_text": "In the architecture of 8085 microprocessor match the following:",
+        "question_img_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/1-14.jpg",
+        "options": [
+            "(1)",
+            "(2)",
+            "(3)",
+            "(4)"
+        ],
+        "correct_option": "(2)"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question23",
+        "question_text": "The contents of Register (BL) and Register (AL) of 8085 microprocessor are 49H and 3AH respectively. The contents of AL, the status of carry flag (CF) and sign flag (SF) after executing ‘SUB AL, BL’ assembly language instruction, are",
+        "question_img_link": null,
+        "options": [
+            "AL = 0FH; CF = 1; SF = 1",
+            "AL = F0H; CF = 0; SF = 0",
+            "AL = F1H; CF = 1; SF = 1",
+            "AL = 1FH; CF = 1; SF = 1"
+        ],
+        "correct_option": "AL = F1H; CF = 1; SF = 1"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question24",
+        "question_text": "The general configuration of the micro-programmed control unit is given below:What are blocks B and C in the diagram respectively?",
+        "question_img_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/3-16.png",
+        "options": [
+            "Block address register and cache memory",
+            "Control address register and control memory",
+            "Branch register and cache memory",
+            "Control address register and random access\rmemory"
+        ],
+        "correct_option": "Control address register and control memory"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question25",
+        "question_text": "In 8085 microprocessor, the digit 5 indicates that the microprocessor needs:",
+        "question_img_link": null,
+        "options": [
+            "–5 volts, +5 volts supply",
+            "+5 volts supply only",
+            "–5 volts supply only",
+            "5 MHz clock"
+        ],
+        "correct_option": "+5 volts supply only"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question26",
+        "question_text": "In 8085, which of the following performs : load register pair immediate operation?",
+        "question_img_link": null,
+        "options": [
+            "LDAX rp",
+            "LHLD addr",
+            "LXI rp, data",
+            "INX rp"
+        ],
+        "correct_option": "LXI rp, data"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question27",
+        "question_text": "Which of the following statement(s) is/are correct ?",
+        "question_img_link": null,
+        "options": [
+            "Persistence is the term used to describe the duration of phosphorescence.",
+            "The control electrode is used to turn the electron beam on and off.",
+            "The electron gun creates a source of electrons which are focussed into a narrow beam directed at the face of CRT.",
+            "All of the above"
+        ],
+        "correct_option": "All of the above"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question28",
+        "question_text": "The content of the accumulator after the execution of the following 8085 assembly\r\nlanguage program, is\r\nMVI A, 35H\r\nMOV B, A\r\nSTC\r\nCMC\r\nRAR\r\nXRA B",
+        "question_img_link": null,
+        "options": [
+            "00H",
+            "35H",
+            "EFH",
+            "2FH"
+        ],
+        "correct_option": "2FH"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question29",
+        "question_text": "8085 microprocessor has ____ bit ALU.",
+        "question_img_link": null,
+        "options": [
+            "32",
+            "16",
+            "8",
+            "4"
+        ],
+        "correct_option": "8"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question30",
+        "question_text": "Which of the following in 8085 microprocessor performs HL = HL + HL?",
+        "question_img_link": null,
+        "options": [
+            "DAD D",
+            "DAD H",
+            "DAD B",
+            "DAD SP"
+        ],
+        "correct_option": "DAD H"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question31",
+        "question_text": "Consider a N-bit plane frame buffer with W-bit wide lookup table with W > N. How many intensity levels are available at a time ?",
+        "question_img_link": null,
+        "options": [
+            "2N",
+            "2W",
+            "2N+W",
+            "2N-1"
+        ],
+        "correct_option": "2N"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question32",
+        "question_text": "The content of the accumulator after the execution of the following 8085 assembly language program, is:\r\nMVI A, 42H\r\nMVI B, 05H\r\nUGC: ADD B\r\nDCR B\r\nJNZ UGC\r\nADI 25H\r\nHLT",
+        "question_img_link": null,
+        "options": [
+            "82H",
+            "78H",
+            "76H",
+            "47H"
+        ],
+        "correct_option": "76H"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question33",
+        "question_text": "IEEE 1394 is related to",
+        "question_img_link": null,
+        "options": [
+            "RS-232",
+            "USB",
+            "Firewire",
+            "PCI"
+        ],
+        "correct_option": "Firewire"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question34",
+        "question_text": "8085 microprocessor has _____ hardware interrupts.",
+        "question_img_link": null,
+        "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "correct_option": "5"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question35",
+        "question_text": "Given the following statements:\r\n(A) Frequency Division Multiplexing is a technique that can be applied when the bandwidth of a link is greater than combined bandwidth of signals to be transmitted.\r\n(B) Wavelength Division Multiplexing (WDM) is an analog multiplexing Technique to combine optical signals.\r\n(C) WDM is a Digital Multiplexing Technique.\r\n(D) TDM is a Digital Multiplexing Technique.\r\nWhich of the following is correct?",
+        "question_img_link": null,
+        "options": [
+            "(A), (B), (C) and (D) are true.",
+            "(A), (B), (C) and (D) are false.",
+            "(A), (B) and (D) are false; (C) is true.",
+            "(A), (B) and (D) are True; (C) is false."
+        ],
+        "correct_option": "(A), (B) and (D) are True; (C) is false."
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question36",
+        "question_text": "In 8086, the jump condition for the instruction JNBE is?",
+        "question_img_link": null,
+        "options": [
+            "CF = 0 or ZF = 0",
+            "ZF = 0 and SF = 1",
+            "CF = 0 and ZF = 0",
+            "CF = 0"
+        ],
+        "correct_option": "CF = 0 and ZF = 0"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question37",
+        "question_text": "How many number of times the instruction sequence below will loop before coming out of the loop?A1:  MOV AL, 00H\r\n     INC AL\r\n     JNZ A1",
+        "question_img_link": null,
+        "options": [
+            "1",
+            "255",
+            "256",
+            "Will not come out of the loop"
+        ],
+        "correct_option": "256"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question38",
+        "question_text": "In 8085 microprocessor, the ISR for handling trap interrupt is at which location?",
+        "question_img_link": null,
+        "options": [
+            "3CH",
+            "34H",
+            "74H",
+            "24H"
+        ],
+        "correct_option": "24H"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question39",
+        "question_text": "What will be the hexadecimal value in the register ax (32-bit) after executing the following instructions?\r\nmov al, 15\r\nmov ah, 15\r\nxor al, al\r\nmov cl, 3\r\nshr ax, cl\r\nCodes :",
+        "question_img_link": null,
+        "options": [
+            "0F00 h",
+            "0F0F h",
+            "01E0 h",
+            "FFFF h"
+        ],
+        "correct_option": "01E0 h"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question40",
+        "question_text": "The three outputs x1x2x3from the 8 X 3 priority encoder are used to provide a vector address of the form 101x1x2x300. What is the second highest priority vector address in hexadecimal if the vector addresses are starting from the one with the highest priority ?",
+        "question_img_link": null,
+        "options": [
+            "BC",
+            "A4",
+            "BD",
+            "AC"
+        ],
+        "correct_option": "A4"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question41",
+        "question_text": "What will be the output at PORT1 if the following program is executed ? \r\nMVI B, 82H \r\nMOV A, B \r\nMOV C, A \r\nMVI D, 37H \r\nOUT PORT1 \r\nHLT",
+        "question_img_link": null,
+        "options": [
+            "37H",
+            "82H",
+            "B9H",
+            "00H"
+        ],
+        "correct_option": "82H"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question42",
+        "question_text": "Which of the following 8085 microprocessor hardware interrupt has the lowest priority?",
+        "question_img_link": null,
+        "options": [
+            "RST 6.5",
+            "RST 7.5",
+            "TRAP",
+            "INTR"
+        ],
+        "correct_option": "INTR"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question43",
+        "question_text": "What is the meaning of RD'signal in Intel 8151 A?",
+        "question_img_link": null,
+        "options": [
+            "Read (when it is low)",
+            "Read (when it is high)",
+            "Write (when it is low)",
+            "Read and Write (when it is high)"
+        ],
+        "correct_option": "Read (when it is low)"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question44",
+        "question_text": "Find the memory address of the next instruction executed by the microprocessor (8086), when operated in real mode for CS=1000 and IP=E000",
+        "question_img_link": null,
+        "options": [
+            "10E00",
+            "1E000",
+            "F000",
+            "1000E"
+        ],
+        "correct_option": "10E00"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question45",
+        "question_text": "Two control signals in microprocessor which are related to Direct Memory Access (DMA) are",
+        "question_img_link": null,
+        "options": [
+            "INTR & INTA",
+            "RD & WR",
+            "S0 & S1",
+            "HOLD & HLDA"
+        ],
+        "correct_option": "HOLD & HLDA"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question46",
+        "question_text": "Which of the following is/are the principle components of a memory-tube display ? \r\n(a)Flooding gun\t\t\r\n(b)Collector\t\r\n(c)Phosphorus grains\t\r\n(d)Ground\t\r\nCodes:",
+        "question_img_link": null,
+        "options": [
+            "(a) and (b)",
+            "(c) only",
+            "(d) only",
+            "All the above"
+        ],
+        "correct_option": "All the above"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question47",
+        "question_text": "Which of the following steps is/are not required for analog to digital conversion? \r\n(a)Sensing\t\r\n(b)Conversion\t\t\r\n(c)Amplification\r\n(d)Conditioning\t\r\n(e)Quantization\t\t\r\nCodes:",
+        "question_img_link": null,
+        "options": [
+            "(a) and (b)",
+            "(c) and (d)",
+            "(a), (b) and (e)",
+            "None of the above"
+        ],
+        "correct_option": "None of the above"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question48",
+        "question_text": "Which of the following is/are the components of a CRT? \r\n(a)Electron Gun \r\n(b)Control Electrode \r\n(c)Focusing Electrode\r\n(d)Phosphor Coated Screen \r\nCodes:",
+        "question_img_link": null,
+        "options": [
+            "(a) and (d)",
+            "(a), (b) and (d)",
+            "(a), (b), (c) and (d)",
+            "(a), (c) and (d)"
+        ],
+        "correct_option": "(a), (b), (c) and (d)"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question49",
+        "question_text": "A certain microprocessor requires 4.5 microseconds to respond to an interrupt. Assuming that the three interrupts I1, I2 and I3 require the following execution time after the interrupt is recognized:\r\ni. I1 requires 25 microseconds\r\nii. I2 requires 35 microseconds\r\niii. I3 requires 20 microseconds\r\n\r\nI1 has the highest priority and I3 has the lowest. What is the possible range of time for I3 to be executed assuming that it may or may not occur simultaneously with other interrupts?",
+        "question_img_link": null,
+        "options": [
+            "24.5 microseconds to 39.5 microseconds",
+            "24.5 microseconds to 93.5 microseconds",
+            "4.5 microseconds to 24.5 microseconds",
+            "29.5 microseconds 93.5 microseconds"
+        ],
+        "correct_option": "24.5 microseconds to 93.5 microseconds"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question50",
+        "question_text": "The address space of 8086 CPU is",
+        "question_img_link": null,
+        "options": [
+            "one Megabyte",
+            "256 Kilobytes",
+            "1 K Megabytes",
+            "64 Kilobytes"
+        ],
+        "correct_option": "one Megabyte"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question51",
+        "question_text": "The TRAP is one of the interrupts available in INTEL 8085. Which one of the following statements is true of TRAP ?",
+        "question_img_link": null,
+        "options": [
+            "it is level triggered",
+            "it is negative edge triggered",
+            "it is +ve edge triggered",
+            "it is both +ve and -ve edges triggered"
+        ],
+        "correct_option": "it is both +ve and -ve edges triggered"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question52",
+        "question_text": "For the 8 - bit word 00111001, the check bits stored with it would be 0111. Suppose when the word is read from memory, the check bits are calculated to be 1101. What is the data word that was read from memory?",
+        "question_img_link": null,
+        "options": [
+            "10011001",
+            "00011001",
+            "00111000",
+            "11000110"
+        ],
+        "correct_option": "00011001"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question53",
+        "question_text": "Consider a 32 - bit microprocessor, with a 16 - bit external data bus, driven by an 8 MHz input clock. Assume that this microprocessor has a bus cycle whose minimum duration equals four input clock cycles. What is the maximum data transfer rate for this microprocessor?",
+        "question_img_link": null,
+        "options": [
+            "8 x 106bytes/sec",
+            "4 x 106bytes/sec",
+            "16 x 106bytes/sec",
+            "4 x 109bytes/sec"
+        ],
+        "correct_option": "4 x 106 bytes/sec"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question54",
+        "question_text": "The RST 7 instruction in 8085 microprocessor is equivalent to:",
+        "question_img_link": null,
+        "options": [
+            "CALL 0010 H",
+            "CALL 0034 H",
+            "CALL 0038 H",
+            "CALL 003C H"
+        ],
+        "correct_option": "CALL 0038 H"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question55",
+        "question_text": "Match the following:",
+        "question_img_link": null,
+        "options": [],
+        "correct_option": "(D)"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question56",
+        "question_text": "How many times will the following loop be executed?\r\n LXI B, 0007 H\r\nLOP : DCX B\r\n      MOV A, B\r\n      ORA C\r\n      JNZ LOP",
+        "question_img_link": null,
+        "options": [
+            "05",
+            "07",
+            "09",
+            "00"
+        ],
+        "correct_option": "07"
+    },
+    {
+        "topic": "Microprocessor",
+        "question_no": "Question57",
+        "question_text": "Specify the contents of the accumulator and the status of the S, Z and CY flags when 8085 microprocessor performs addition of 87 H and 79 H.",
+        "question_img_link": null,
+        "options": [
+            "11, 1, 1, 1",
+            "10, 0, 1, 0",
+            "1, 1, 0, 0",
+            "00, 0, 1, 1"
+        ],
+        "correct_option": "00, 0, 1, 1"
+    }
+]
