@@ -2,6 +2,9 @@
 pip install langchain
 pip install langchain-groq
 pip install -U langchain-community
-pip install chromadb
-pip install chroma-migrate
-
+pip install pinecone
+pip install ServerlessSpec
+pip install sentence_transformers
+pip install json
+pip install CORS
+pip install Flask
