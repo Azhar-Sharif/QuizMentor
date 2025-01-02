@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Mentor</title>
+</head>
+<body>
+  <h1>Welcome to Quiz Mentor</h1>
+  <form action="/" method="get">
+    <input type="text" name="query" placeholder="Enter your topic or question" required>
+    <button type="submit">Search</button>
+  </form>
+
+  {% if error %}
+    <p style="color:red">{{ error }}</p>
+  {% endif %}
+
+  {% if questions %}
+    <h2>Quiz Questions</h2>
+    <form action="/" method="POST">
+      {% for question in questions %}
+        <div>
+          <h3>{{ question.question }}</h3>
+          <ul>
+            {% for option in question.options %}
+              <li>
+                <input type="radio" name="answers" value="{{ option }}" 
+                {% if option == answers[loop.index0] %} checked {% endif %} required>
+                {{ option }}
+              </li>
+            {% endfor %}
+          </ul>
+          <input type="hidden" name="correct_answers" value="{{ question.correct_answer }}">
+          <input type="hidden" name="questions" value="{{ question.question }}">
+        </div>
+      {% endfor %}
+      <button type="submit">Submit</button>
+    </form>
+  {% endif %}
+
+  {% if feedback %}
+    <h2>Your Results</h2>
+    <p>Your Score: {{ score }} / {{ total }}</p>
+    <ul>
+      {% for item in feedback %}
+        <li>
+          <strong>{{ item.question }}</strong><br>
+          You selected: {{ item.selected_answer }}<br>
+          Correct answer: {{ item.correct_answer }}<br>
+          {% if item.is_correct %}
+            <span style="color:green;">Correct!</span>
+          {% else %}
+            <span style="color:red;">Incorrect.</span>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</body>
+</html>
