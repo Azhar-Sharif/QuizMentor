@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Search App</title>
+</head>
+<body>
+    <h1>Welcome to the MCQ Search App</h1>
+    <p>Use the search bar below to find MCQs.</p>
+
+    <form id="search-form">
+        <input type="text" id="query" placeholder="Enter your query">
+        <button type="submit">Search</button>
+    </form>
+
+    <div id="results">
+        <!-- Search results will be displayed here -->
+    </div>
+
+    <script>
+        const form = document.getElementById('search-form');
+        const resultsDiv = document.getElementById('results');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault(); // Prevent default form submission
+
+            const query = document.getElementById('query').value;
+
+            const response = await fetch('/search', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ query })
+            });
+
+            const results = await response.json();
+
+            // Clear previous results
+            resultsDiv.innerHTML = '';
+
+            // Display new results
+            results.forEach(result => {
+                const resultElement = document.createElement('div');
+                resultElement.innerHTML = `
+                    <h2>${result.question_text}</h2>
+                    <p>Topic: ${result.topic}</p>
+                    <ul>
+                        ${result.options.map(option => `<li>${option}</li>`).join('')}
+                    </ul>
+                    <p>Correct Option: ${result.correct_option}</p>
+                    <hr>
+                `;
+                resultsDiv.appendChild(resultElement);
+            });
+        });
+    </script>
+</body>
+</html>
