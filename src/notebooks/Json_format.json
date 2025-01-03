@@ -1,0 +1,84 @@
+{
+    "quiz_title": "CPU Quiz",
+    "quiz_description": "A quiz on CPU concepts",
+    "questions": [
+        {
+            "question_no": "Question50",
+            "question_text": "In a system using single processor, a new process arrives at the rate of six processes per minute and each such process requires seven seconds of service time. What is the CPU utilization?",
+            "question_img_link": "",
+            "options": [
+                {
+                    "option": "70%",
+                    "is_correct": true
+                },
+                {
+                    "option": "30%",
+                    "is_correct": false
+                },
+                {
+                    "option": "60%",
+                    "is_correct": false
+                },
+                {
+                    "option": "64%",
+                    "is_correct": false
+                }
+            ],
+            "correct_answer": "70%",
+            "correct_answer_explanation": "To find the CPU utilization, we can use the formula: CPU utilization = (arrival rate * service time) / 60. Given the arrival rate is 6 processes per minute and the service time is 7 seconds, we can calculate the CPU utilization as (6 * 7) / 60 = 0.7 or 70%.",
+            "topic": "Cpu Scheduling"
+        },
+        {
+            "question_no": "Question51",
+            "question_text": "A CPU has a five-stage pipeline and runs at 1 GHz frequency. Instruction fetch happens in the first stage of the pipeline. A conditional branch instruction computes the target address and evaluates the condition in the third stage of the pipeline. The processor stops fetching new instructions following a conditional branch until the branch outcome is known. A program executes 10^9 instructions out of which 20% are conditional branches. If each instruction takes one cycle to complete on average, the total execution time of the program is:",
+            "question_img_link": "",
+            "options": [
+                {
+                    "option": "1.0 second",
+                    "is_correct": false
+                },
+                {
+                    "option": "1.2 seconds",
+                    "is_correct": false
+                },
+                {
+                    "option": "1.4 seconds",
+                    "is_correct": true
+                },
+                {
+                    "option": "1.6 seconds",
+                    "is_correct": false
+                }
+            ],
+            "correct_answer": "1.4 seconds",
+            "correct_answer_explanation": "To find the total execution time, we need to consider the pipeline stalls caused by the conditional branches. Since 20% of the instructions are conditional branches, the number of branches is 0.2 * 10^9 = 2 * 10^8. Each branch causes a 2-cycle stall (since the branch is resolved in the 3rd stage), so the total stall time is 2 * 2 * 10^8 = 4 * 10^8 cycles. The total execution time is then (10^9 + 4 * 10^8) / 10^9 = 1.4 seconds.",
+            "topic": "Computer Organization Architecture"
+        },
+        {
+            "question_no": "Question204",
+            "question_text": "On receiving an interrupt from an I/O device, the CPU",
+            "question_img_link": "",
+            "options": [
+                {
+                    "option": "Halts for a predetermined time",
+                    "is_correct": false
+                },
+                {
+                    "option": "Branches off to the interrupt service routine after completion of the current instruction",
+                    "is_correct": true
+                },
+                {
+                    "option": "Branches off to the interrupt service routine immediately",
+                    "is_correct": false
+                },
+                {
+                    "option": "Hands over control of address bus and data bus to the interrupting device",
+                    "is_correct": false
+                }
+            ],
+            "correct_answer": "Branches off to the interrupt service routine after completion of the current instruction",
+            "correct_answer_explanation": "When the CPU receives an interrupt from an I/O device, it will finish executing the current instruction and then branch off to the interrupt service routine to handle the interrupt.",
+            "topic": "Computer Organization Architecture"
+        }
+    ]
+}
