@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Generator|input.html</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="container mx-auto px-4 py-8 max-w-2xl">
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h1 class="text-2xl font-bold mb-6 text-center">Generate Quiz</h1>
+            
+            {% if error %}
+            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
+                <span class="block sm:inline">{{ error }}</span>
+            </div>
+            {% endif %}
+
+            <!-- Loading State -->
+            <div id="loadingState" class="hidden">
+                <div class="flex items-center justify-center mb-4">
+                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+                </div>
+                <p id="loadingQuote" class="text-center text-gray-600 italic"></p>
+            </div>
+
+            <!-- Tabs for selection method -->
+            <div class="mb-6">
+                <div class="border-b border-gray-200">
+                    <nav class="-mb-px flex" aria-label="Tabs">
+                        <button onclick="switchTab('dropdown')" id="dropdownTab" class="w-1/2 py-4 px-1 text-center border-b-2 font-medium text-sm cursor-pointer">
+                            Select from Topics
+                        </button>
+                        <button onclick="switchTab('query')" id="queryTab" class="w-1/2 py-4 px-1 text-center border-b-2 font-medium text-sm cursor-pointer">
+                            Custom Query
+                        </button>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Dropdown Selection Form -->
+            <form id="dropdownForm" action="{{ url_for('generate_quiz') }}" method="POST" class="space-y-4" onsubmit="return handleSubmit('dropdown')">
+                <input type="hidden" name="input_type" value="dropdown">
+                
+                <div>
+                    <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Select Subject</label>
+                    <select id="subject" name="subject" onchange="updateTopics()" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                        <option value="">Select a subject</option>
+                        <option value="computer_organization">Computer Organization</option>
+                        <option value="operating_system">Operating System</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="topic" class="block text-sm font-medium text-gray-700 mb-1">Select Topic</label>
+                    <select id="topic" name="topic" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                        <option value="">Select a topic</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="num_questions" class="block text-sm font-medium text-gray-700 mb-1">Number of Questions</label>
+                    <input type="number" 
+                           id="num_questions" 
+                           name="num_questions" 
+                           required 
+                           min="1" 
+                           max="20" 
+                           value="10"
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+
+                <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                    Generate Quiz
+                </button>
+            </form>
+
+            <!-- Custom Query Form -->
+            <form id="queryForm" action="{{ url_for('generate_quiz') }}" method="POST" class="space-y-4 hidden" onsubmit="return handleSubmit('query')">
+                <input type="hidden" name="input_type" value="query">
+                
+                <div>
+                    <label for="custom_query" class="block text-sm font-medium text-gray-700 mb-1">Enter Your Query</label>
+                    <input type="text" 
+                           id="custom_query" 
+                           name="topic" 
+                           required
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                           placeholder="Enter your query (e.g., Process Scheduling in Operating Systems)">
+                </div>
+
+                <div>
+                    <label for="num_questions_query" class="block text-sm font-medium text-gray-700 mb-1">Number of Questions</label>
+                    <input type="number" 
+                           id="num_questions_query" 
+                           name="num_questions" 
+                           required 
+                           min="1" 
+                           max="20" 
+                           value="10"
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+
+                <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                    Generate Quiz
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const topics = {
+            'computer_organization': [
+                'Digital Logic Number Representation',
+                'Number Representation',
+                'Computer Organization Architecture',
+                'Microprocessor'
+            ],
+            'operating_system': [
+                'Unix',
+                'Input Output Systems',
+                'Process Management',
+                'Cpu Scheduling',
+                'Dead Lock',
+                'Memory Management'
+            ]
+        };
+
+        const funnyQuotes = [
+            "wait... you don't have supercomputer",
+            "Teaching robots to write better questions...",
+            "Gathering questions from wise computers...",
+            "buy some more RAM",
+        ];
+
+        function updateTopics() {
+            const subjectSelect = document.getElementById('subject');
+            const topicSelect = document.getElementById('topic');
+            const selectedSubject = subjectSelect.value;
+
+            topicSelect.innerHTML = '<option value="">Select a topic</option>';
+
+            if (selectedSubject) {
+                topics[selectedSubject].forEach(topic => {
+                    const option = document.createElement('option');
+                    option.value = topic;
+                    option.textContent = topic;
+                    topicSelect.appendChild(option);
+                });
+            }
+        }
+
+        function switchTab(tab) {
+            const dropdownForm = document.getElementById('dropdownForm');
+            const queryForm = document.getElementById('queryForm');
+            const dropdownTab = document.getElementById('dropdownTab');
+            const queryTab = document.getElementById('queryTab');
+
+            if (tab === 'dropdown') {
+                dropdownForm.classList.remove('hidden');
+                queryForm.classList.add('hidden');
+                dropdownTab.classList.add('border-blue-500', 'text-blue-600');
+                queryTab.classList.remove('border-blue-500', 'text-blue-600');
+            } else {
+                dropdownForm.classList.add('hidden');
+                queryForm.classList.remove('hidden');
+                dropdownTab.classList.remove('border-blue-500', 'text-blue-600');
+                queryTab.classList.add('border-blue-500', 'text-blue-600');
+            }
+        }
+
+        function updateLoadingQuote() {
+            const quoteElement = document.getElementById('loadingQuote');
+            const randomQuote = funnyQuotes[Math.floor(Math.random() * funnyQuotes.length)];
+            quoteElement.textContent = randomQuote;
+        }
+
+        function handleSubmit(formType) {
+            const loadingState = document.getElementById('loadingState');
+            const forms = document.querySelectorAll('form');
+            
+            forms.forEach(form => form.classList.add('hidden'));
+            loadingState.classList.remove('hidden');
+            
+            // Start cycling through quotes
+            updateLoadingQuote();
+            setInterval(updateLoadingQuote, 3000);
+            
+            return true;
+        }
+
+        // Initialize the first tab
+        switchTab('dropdown');
+    </script>
+</body>
+</html>
