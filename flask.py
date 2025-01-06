@@ -1,65 +1,49 @@
-from flask import Flask, request, jsonify
-from pinecone import Pinecone, ServerlessSpec
+from flask import Flask, jsonify, render_template, request, redirect, url_for
 from langchain_groq import ChatGroq
+from sentence_transformers import SentenceTransformer
+import pinecone
+from pinecone import Pinecone
+import json
+from llm_integrate.py import *
 
-# Initialize Flask app
-app = Flask(__name__)
+app = Flask(_name_)
+# Session variable to store quiz data
+quiz_data = None
 
-# Initialize Pinecone
-pc = Pinecone(api_key="pcsk_3CYnJi_TZbGr8CeCcVxAsz4Li7J5n5hNBRqM7PA7k6xGKx7ftNXUYMYUJLJcb3PZrTneH4", environment="us-west1-gcp")
-index_name = "quiz-index"
-index = pc.Index(index_name)
-
-# Initialize ChatGroq
-llm = ChatGroq(
-    temperature=0,
-    groq_api_key="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",
-    model_name="llama-3.1-70b-versatile"
-)
-
-@app.route("/")
+@app.route('/')
 def home():
-    return jsonify({"message": "Welcome to QuizMentor Backend!"})
+    """Route to serve the input page"""
+    return render_template('input.html')
 
-@app.route("/generate-quiz", methods=["POST"])
+@app.route('/generate_quiz', methods=['POST'])
 def generate_quiz():
-    # Get the query from the request body
-    data = request.get_json()
-    query = data.get("query")
-    if not query:
-        return jsonify({"error": "Query not provided"}), 400
-
+    """Handle quiz generation from form submission"""
+    global quiz_data
+    
+    topic = request.form.get('topic')
+    num_questions = int(request.form.get('num_questions'))
+    namespaces = ["computer_organization", "operating_system"]  # Add your namespaces
+    
     try:
-        # Generate query embedding
-        query_embedding = pc.inference.embed(
-            model="multilingual-e5-large",
-            inputs=[query],
-            parameters={"input_type": "query"}
-        )
-
-        # Retrieve relevant context
-        results = index.query(
-            namespace="example-namespace",
-            vector=query_embedding[0].values,
-            top_k=3,
-            include_metadata=True
-        )
-        if not results["matches"]:
-            return jsonify({"error": "No relevant context found"}), 404
-
-        retrieved_context = "\n".join([match["metadata"]["text"] for match in results["matches"]])
-
-        # Generate quiz with ChatGroq
-        groq_prompt = f"""
-        Based on the following context, create a quiz with 10 multiple-choice questions:
-        {retrieved_context}
-        """
-        response = llm.invoke(groq_prompt)
-        return jsonify({"quiz": response.content})
-
+        quiz_data = generate_quiz_from_pinecone(topic, namespaces, top_k=10, num_questions=num_questions)
+        if quiz_data.get("error"):
+            return render_template('input.html', error=quiz_data["error"])
+        return redirect(url_for('quiz_page'))
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        return render_template('input.html', error=str(e))
 
-# Run the Flask app
-if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
+@app.route('/quiz')
+def quiz_page():
+    """Route to serve the quiz page"""
+    return render_template('index.html')
+
+@app.route('/api/quiz')
+def quiz_api():
+    """API endpoint to get quiz data"""
+    global quiz_data
+    if quiz_data is None:
+        return jsonify({"error": "No quiz data available"})
+    return jsonify(quiz_data)
+
+if _name_ == '_main_':
+    app.run(debug=True)
