@@ -8,3 +8,4 @@ pip install sentence_transformers
 pip install json
 pip install CORS
 pip install Flask
+pip install flask_sqlalchemy
