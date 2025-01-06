@@ -1,1 +1,227 @@
-#html file
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Back Button -->
+        <div class="mb-6">
+            <a href="/" class="inline-block bg-gray-100 hover:bg-gray-200 text-blue-600 font-semibold py-2 px-4 rounded">
+                ← Back to Quiz Generator
+            </a>
+        </div>
+
+        <!-- Query Display -->
+        <div id="queryDisplay" class="mb-6 bg-white rounded-lg shadow-md p-4">
+            <h2 class="text-xl font-semibold text-gray-800"></h2>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loadingState" class="text-center py-8">
+            <p class="text-xl text-gray-600">Loading quiz...</p>
+        </div>
+
+        <!-- Quiz Content -->
+        <div id="quizContent" class="hidden space-y-6">
+            <!-- Progress Tracker -->
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <div class="flex items-center justify-between">
+                    <span id="progressText" class="text-lg font-semibold">Question 0 of 0</span>
+                    <div class="w-64 bg-gray-200 rounded-full h-2.5">
+                        <div id="progressBar" class="bg-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Questions Container -->
+            <div id="questionsContainer" class="space-y-6"></div>
+
+            <!-- Submit Button -->
+            <div class="mt-8">
+                <button id="submitQuiz" onclick="submitQuiz()" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors">
+                    Submit Quiz
+                </button>
+            </div>
+        </div>
+
+        <!-- Results Modal -->
+        <div id="resultsModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
+            <div class="bg-white p-8 rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+                <h2 class="text-2xl font-bold mb-4">Quiz Results</h2>
+                <div id="resultsContent"></div>
+                <button onclick="closeModal()" class="mt-6 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let quizData = null;
+
+        async function loadQuiz() {
+            document.getElementById('loadingState').classList.remove('hidden');
+            document.getElementById('quizContent').classList.add('hidden');
+
+            try {
+                const response = await fetch('/api/quiz');
+                if (!response.ok) throw new Error('Failed to fetch quiz data');
+                
+                quizData = await response.json();
+                
+                // Set the query text in the header
+                const urlParams = new URLSearchParams(window.location.search);
+                const queryDisplay = document.querySelector('#queryDisplay h2');
+                queryDisplay.textContent = `Here is your quiz on: ${quizData?.query || 'Selected Topic'}`;
+                
+                initializeQuiz(quizData);
+                
+                document.getElementById('loadingState').classList.add('hidden');
+                document.getElementById('quizContent').classList.remove('hidden');
+                updateProgress();
+            } catch (error) {
+                console.error('Error loading quiz:', error);
+                document.getElementById('loadingState').innerHTML = `
+                    <p class="text-xl text-red-600">Error loading quiz. Please try again.</p>
+                    <a href="/" class="inline-block mt-4 bg-blue-500 text-white px-4 py-2 rounded">Return to Quiz Generator</a>
+                `;
+            }
+        }
+
+        function initializeQuiz(data) {
+            if (!data || !data.questions) {
+                throw new Error('Invalid quiz data');
+            }
+
+            const questionsContainer = document.getElementById('questionsContainer');
+            questionsContainer.innerHTML = '';
+            
+            data.questions.forEach((question, index) => {
+                const questionElement = createQuestionElement(question, index);
+                questionsContainer.appendChild(questionElement);
+            });
+        }
+
+        function createQuestionElement(question, index) {
+            const questionDiv = document.createElement('div');
+            questionDiv.className = 'bg-white rounded-lg shadow-md p-6';
+            questionDiv.innerHTML = `
+                <div class="mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Question ${index + 1}</h3>
+                    <p class="text-gray-800">${question.question_text}</p>
+                    ${question.question_img_link && question.question_img_link !== 'No image available' 
+                        ? `<img src="${question.question_img_link}" alt="Question Image" class="mt-4 max-w-full h-auto">` 
+                        : ''}
+                </div>
+                <div class="space-y-3">
+                    ${question.options.map((option, optionIndex) => `
+                        <div class="flex items-center">
+                            <input type="radio" 
+                                   id="q${index}_${optionIndex}" 
+                                   name="question${index}" 
+                                   value="${option}"
+                                   class="mr-3">
+                            <label for="q${index}_${optionIndex}" class="text-gray-700">
+                                ${option}
+                            </label>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            return questionDiv;
+        }
+
+        function updateProgress() {
+            if (!quizData || !quizData.questions) return;
+            
+            const totalQuestions = quizData.questions.length;
+            const answeredQuestions = document.querySelectorAll('input[type="radio"]:checked').length;
+            
+            document.getElementById('progressText').textContent = 
+                `Question ${answeredQuestions} of ${totalQuestions}`;
+            
+            const progressPercentage = (answeredQuestions / totalQuestions) * 100;
+            document.getElementById('progressBar').style.width = `${progressPercentage}%`;
+        }
+
+        function submitQuiz() {
+            if (!quizData || !quizData.questions) return;
+
+            const totalQuestions = quizData.questions.length;
+            const answeredQuestions = document.querySelectorAll('input[type="radio"]:checked').length;
+
+            if (answeredQuestions < totalQuestions) {
+                alert(`Please answer all questions before submitting. You have answered ${answeredQuestions} out of ${totalQuestions} questions.`);
+                return;
+            }
+
+            const results = [];
+            quizData.questions.forEach((question, index) => {
+                const selectedOption = document.querySelector(`input[name="question${index}"]:checked`);
+                const isCorrect = selectedOption ? 
+                    selectedOption.value === question.correct_answer : 
+                    false;
+
+                results.push({
+                    questionNumber: index + 1,
+                    questionText: question.question_text,
+                    selectedAnswer: selectedOption ? selectedOption.value : 'Not answered',
+                    isCorrect: isCorrect,
+                    correctAnswer: question.correct_answer,
+                    explanation: question.Explanation_of_correct_answer || 'No explanation provided'
+                });
+            });
+
+            showResults(results);
+        }
+
+        function showResults(results) {
+            const resultsContent = document.getElementById('resultsContent');
+            const correctAnswers = results.filter(r => r.isCorrect).length;
+            const totalQuestions = results.length;
+
+            let html = `
+                <div class="mb-6">
+                    <p class="text-xl font-bold">Score: ${correctAnswers}/${totalQuestions}</p>
+                    <p class="text-gray-600">Percentage: ${((correctAnswers/totalQuestions) * 100).toFixed(2)}%</p>
+                </div>
+                <div class="space-y-6">
+            `;
+
+            results.forEach(result => {
+                html += `
+                    <div class="border-b pb-4">
+                        <h4 class="font-semibold">Question ${result.questionNumber}</h4>
+                        <p class="mt-2 text-gray-700">${result.questionText}</p>
+                        <p class="mt-2">Your answer: <span class="${result.isCorrect ? 'text-green-600' : 'text-red-600'}">${result.selectedAnswer}</span></p>
+                        ${!result.isCorrect ? `<p class="mt-1 text-gray-700">Correct answer: ${result.correctAnswer}</p>` : ''}
+                        <p class="mt-2 text-sm text-gray-600"><strong>Explanation:</strong> ${result.explanation}</p>
+                    </div>
+                `;
+            });
+
+            html += '</div>';
+            resultsContent.innerHTML = html;
+            document.getElementById('resultsModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('resultsModal').classList.add('hidden');
+        }
+
+        // Add event listener for radio buttons to track progress
+        document.addEventListener('change', function(e) {
+            if (e.target.type === 'radio') {
+                updateProgress();
+            }
+        });
+
+        // Initialize quiz when page loads
+        document.addEventListener('DOMContentLoaded', loadQuiz);
+    </script>
+</body>
+</html>
