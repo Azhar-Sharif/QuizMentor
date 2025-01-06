@@ -1,11 +1,102 @@
-from flask import Flask, jsonify, render_template, request, redirect, url_for
+from flask import Flask, jsonify, render_template, request, redirect, url_for, session, make_response
+from werkzeug.security import generate_password_hash, check_password_hash
+from flask_sqlalchemy import SQLAlchemy
 from langchain_groq import ChatGroq
 from sentence_transformers import SentenceTransformer
 import pinecone
 from pinecone import Pinecone
 import json
+import os
 
+# Initialize Flask app
 app = Flask(__name__)
+
+# Use environment variable for secret_key
+app.secret_key = os.getenv('FLASK_SECRET_KEY', 'default_secret_key')
+
+# Configure database (PostgreSQL)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:7384625@localhost/Users'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# Initialize SQLAlchemy
+db = SQLAlchemy(app)
+
+# Users model for storing credentials
+class Users(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    password = db.Column(db.String(120), nullable=False)
+
+@app.before_request
+def check_user_status():
+    """Middleware to validate the session user against the database."""
+    if 'user' in session:  # Check if a user is logged in
+        user_email = session['user']  # Get the logged-in user's email from the session
+        
+        # Query the database to check if the user exists
+        user_exists = Users.query.filter_by(email=user_email).first()
+        
+        if not user_exists:  # If the user doesn't exist in the database
+            session.pop('user', None)  # Clear the session
+            return redirect(url_for('login'))  # Redirect to login page
+
+
+# Routes
+@app.route('/')
+def home():
+    if 'user' not in session:
+        return redirect(url_for('login'))
+    return render_template('input.html')
+
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    """Signup route to create new user accounts"""
+    if request.method == 'POST':
+        email = request.form['email']
+        password = request.form['password']
+        existing_user = Users.query.filter_by(email=email).first()
+
+        if existing_user:
+            return render_template('signup.html', error="Email already registered!")
+
+        # Hash the password before saving
+        hashed_password = generate_password_hash(password)
+        new_user = Users(email=email, password=hashed_password)
+        db.session.add(new_user)
+        db.session.commit()
+        return redirect(url_for('login'))  # Redirect to login after signup
+
+    return render_template('signup.html')
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        email = request.form.get('email')  # Assuming `username` is the email
+        password = request.form.get('password')
+
+        # Fetch the user from the database
+        user = Users.query.filter_by(email=email).first()
+
+        if user and check_password_hash(user.password, password):
+            session['user'] = user.email  # Store user email in session
+            return redirect(url_for('home'))
+        else:
+            error = "Invalid credentials. Please try again."
+            return render_template('login.html', error=error)
+
+    return render_template('login.html')
+
+@app.route('/input')
+def input_page():
+    """Route to display the input page after login"""
+    if 'user_id' not in session:
+        return redirect(url_for('login'))  # Ensure user is logged in
+    return render_template('input.html')
+
+@app.route('/logout')
+def logout():
+    session.pop('user', None)
+    return redirect(url_for('login'))
 
 def clean_response(response_content):
     if response_content.startswith("```") and response_content.endswith("```"):
@@ -112,13 +203,18 @@ def generate_quiz_from_pinecone(query, namespaces, top_k=10, num_questions=10):
 
     return generate_quiz_with_groq(llm, retrieved_data, query, num_questions)
 
-# Session variable to store quiz data
-quiz_data = None
+@app.route('/quiz')
+def quiz_page():
+    """Route to serve the quiz page"""
+    return render_template('index.html')
 
-@app.route('/')
-def home():
-    """Route to serve the input page"""
-    return render_template('input.html')
+@app.route('/api/quiz')
+def quiz_api():
+    """API endpoint to get quiz data"""
+    global quiz_data
+    if quiz_data is None:
+        return jsonify({"error": "No quiz data available"})
+    return jsonify(quiz_data)
 
 @app.route('/generate_quiz', methods=['POST'])
 def generate_quiz():
@@ -137,18 +233,17 @@ def generate_quiz():
     except Exception as e:
         return render_template('input.html', error=str(e))
 
-@app.route('/quiz')
-def quiz_page():
-    """Route to serve the quiz page"""
-    return render_template('index.html')
+if __name__ == '__main__':
+    app.run(debug=True)
 
-@app.route('/api/quiz')
-def quiz_api():
-    """API endpoint to get quiz data"""
-    global quiz_data
-    if quiz_data is None:
-        return jsonify({"error": "No quiz data available"})
-    return jsonify(quiz_data)
+# Session variable to store quiz data
+quiz_data = None
+
+@app.route('/')
+def home():
+    """Route to serve the input page"""
+    return render_template('input.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
+
