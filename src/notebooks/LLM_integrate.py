@@ -3,18 +3,33 @@ from sentence_transformers import SentenceTransformer
 import pinecone
 from pinecone import Pinecone
 import json
-
-import json
-
 def clean_response(response_content):
     """
-    Cleans the response by removing the triple backticks (if present), 
-    replacing single quotes with double quotes in the 'options' list, 
-    and parsing the cleaned JSON.
+    Cleans and parses JSON response content in two phases:
+    1. Initial parsing after escaping special characters and extracting JSON content.
+    2. If the first attempt fails, performs additional cleaning (like removing backticks, fixing quotes, etc.) and retries.
     """
-    # Remove the starting and ending triple backticks if present
+    # Phase 1: Direct Parsing
+    try:
+        # Escape special characters
+        response_content = response_content.replace('%', '%%')  # Escape '%'
+
+        # Extract JSON content if it's within text
+        start_index = response_content.find("[")
+        end_index = response_content.rfind("]") + 1  # Include the closing brace
+        if start_index != -1 and end_index != -1:
+            response_content = response_content[start_index:end_index]
+
+        # Attempt to parse directly
+        return json.loads(response_content)
+
+    except json.JSONDecodeError:
+        print("Initial parsing failed. Proceeding to additional cleaning.")
+
+    # Phase 2: Additional Cleaning and Parsing
+    # Remove triple backticks
     if response_content.startswith("```") and response_content.endswith("```"):
-        response_content = response_content[3:-3]  # Remove the first and last three characters
+        response_content = response_content[3:-3]  # Remove first and last three characters
 
     # Trim whitespace
     response_content = response_content.strip()
@@ -23,17 +38,17 @@ def clean_response(response_content):
         # Parse the JSON content
         parsed_response = json.loads(response_content)
 
-        # Loop through each question and modify the options
+        # Loop through each question and modify the 'options' list
         for question in parsed_response.get('questions', []):
             if 'options' in question:
                 # Replace single quotes with double quotes in each option
                 question['options'] = [option.replace("'", '"') for option in question['options']]
 
         return parsed_response
-    
+
     except json.JSONDecodeError as e:
-        print(f"Error parsing JSON: {e}")
-        print("Original Response Content:", response_content)
+        print(f"Error parsing JSON after additional cleaning: {e}")
+        print("Final Response Content:", response_content)
         return None
 
 
@@ -90,23 +105,9 @@ def generate_quiz_with_groq(llm, retrieved_data, query, num_questions):
     groq_prompt = f"""
 Create a quiz with exactly {num_questions} multiple-choice questions aligned with the query: "{query}".
 Use the following MCQs as much as possible, and generate new ones only if required.Rewrite or enhance questions if needed to ensure clarity, conciseness, and relevance.
-
+AND gnerate in provided json format and add explaination of correct answer also, i repeat IN json foramt.
 MCQs:
 {formatted_mcqs}
-
-
-Return the quiz in this exact JSON format (starting directly with a valid JSON object):
-{{
-    "questions": [
-        {{
-            "question_text": "The question here",
-            "question_img_link": "img_link here",
-            "options": ["Option A", "Option B", "Option C", "Option D"],
-            "correct_answer": "Correct option text",
-            "Explanation_of_correct_answer":"Some text"
-        }}
-    ]
-}}
 """
 
     # Get the response from the LLaMA model
@@ -154,15 +155,15 @@ def generate_quiz_from_pinecone(query, namespaces, top_k=50, num_questions=10):
     # Initialize ChatGroq LLM
     llm = ChatGroq(
         temperature=0,
-        groq_api_key="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",  # Replace with your actual API key
+        groq_api_key="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",  # Replace with your actual API key
         model_name="llama-3.3-70b-versatile"
     )
 
     # Generate quiz using ChatGroq
     return generate_quiz_with_groq(llm, retrieved_data, query, num_questions)
 
-def main():
 
+def main():
     # Example usage
     query = input("Enter your search query: ")
     namespaces = ["computer_organization", "operating_system"]  # Add or modify namespaces as needed
@@ -171,6 +172,7 @@ def main():
 
     # Generate quiz based on user query
     quiz = generate_quiz_from_pinecone(query, namespaces, top_k, num_questions)
-    return quiz
+    print(quiz)
+
 if __name__ == "__main__":
     main()
