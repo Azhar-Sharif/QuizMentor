@@ -1,11 +1,16 @@
 #here are all requirements required to run the project
-pip install langchain
-pip install langchain-groq
-pip install -U langchain-community
-pip install pinecone
-pip install ServerlessSpec
-pip install sentence_transformers
-pip install json
-pip install CORS
-pip install Flask
-pip install flask_sqlalchemy
+
+Flask==3.0.3
+Flask-Cors==5.0.0
+Flask-SQLAlchemy==3.1.1
+langchain==0.3.10
+langchain-community==0.3.10
+langchain-core==0.3.22
+langchain-groq==0.2.1
+langchain-text-splitters==0.3.2
+pinecone==5.4.2
+pinecone-client==5.0.1
+pinecone-plugin-assistant==0.4.2
+pinecone-plugin-inference==1.1.0
+pinecone-plugin-interface==0.0.7
+psycopg2-binary==2.9.9
