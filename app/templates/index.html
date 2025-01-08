@@ -53,6 +53,7 @@
             <div class="bg-white p-8 rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto">
                 <h2 class="text-2xl font-bold mb-4">Quiz Results</h2>
                 <div id="resultsContent"></div>
+                <div id="saveStatus" class="mt-4 text-sm"></div>
                 <button onclick="closeModal()" class="mt-6 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
                     Close
                 </button>
@@ -74,9 +75,8 @@
                 quizData = await response.json();
                 
                 // Set the query text in the header
-                const urlParams = new URLSearchParams(window.location.search);
                 const queryDisplay = document.querySelector('#queryDisplay h2');
-                queryDisplay.textContent = `Here is your quiz on: ${quizData?.query || 'Selected Topic'}`;
+                queryDisplay.textContent = `Results for: ${quizData.query || quizData.topic ||'Selected Topic'}`;
                 
                 initializeQuiz(quizData);
                 
@@ -179,21 +179,21 @@
             showResults(results);
         }
 
-        function showResults(results) {
-            const resultsContent = document.getElementById('resultsContent');
-            const correctAnswers = results.filter(r => r.isCorrect).length;
-            const totalQuestions = results.length;
+        
+        async function showResults(results) {
+        const resultsContent = document.getElementById('resultsContent');
+        const correctAnswers = results.filter(r => r.isCorrect).length;
+        const totalQuestions = results.length;
+        const score = ((correctAnswers/totalQuestions) * 100);
 
-            let html = `
-                <div class="mb-6">
-                    <p class="text-xl font-bold">Score: ${correctAnswers}/${totalQuestions}</p>
-                    <p class="text-gray-600">Percentage: ${((correctAnswers/totalQuestions) * 100).toFixed(2)}%</p>
-                </div>
-                <div class="space-y-6">
-            `;
-
-            results.forEach(result => {
-                html += `
+        // First display results
+        resultsContent.innerHTML = `
+            <div class="mb-6">
+                <p class="text-xl font-bold">Score: ${correctAnswers}/${totalQuestions}</p>
+                <p class="text-gray-600">Percentage: ${score.toFixed(2)}%</p>
+            </div>
+            <div class="space-y-6">
+                ${results.map(result => `
                     <div class="border-b pb-4">
                         <h4 class="font-semibold">Question ${result.questionNumber}</h4>
                         <p class="mt-2 text-gray-700">${result.questionText}</p>
@@ -201,16 +201,45 @@
                         ${!result.isCorrect ? `<p class="mt-1 text-gray-700">Correct answer: ${result.correctAnswer}</p>` : ''}
                         <p class="mt-2 text-sm text-gray-600"><strong>Explanation:</strong> ${result.explanation}</p>
                     </div>
-                `;
+                `).join('')}
+            </div>`;
+
+        // Show the modal immediately after displaying results
+        document.getElementById('resultsModal').classList.remove('hidden');
+
+        // Then save results
+        try {
+            const saveResponse = await fetch('/save_quiz_result', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    topic: quizData.topic || quizData.query || 'General Quiz',
+                    score: score,
+                    total_questions: totalQuestions
+                })
             });
 
-            html += '</div>';
-            resultsContent.innerHTML = html;
-            document.getElementById('resultsModal').classList.remove('hidden');
+            const saveStatusElement = document.getElementById('saveStatus');
+            if (saveResponse.ok) {
+                saveStatusElement.textContent = 'Quiz results saved successfully!';
+                saveStatusElement.className = 'mt-4 text-sm text-green-600';
+            } else {
+                throw new Error('Failed to save quiz results');
+            }
+        } catch (error) {
+            console.error('Error saving quiz results:', error);
+            const saveStatusElement = document.getElementById('saveStatus');
+            saveStatusElement.textContent = 'Failed to save quiz results. Please try again later.';
+            saveStatusElement.className = 'mt-4 text-sm text-red-600';
         }
+    }
 
         function closeModal() {
             document.getElementById('resultsModal').classList.add('hidden');
+            // Redirect to dashboard after closing results
+            window.location.href = '/';
         }
 
         // Add event listener for radio buttons to track progress
