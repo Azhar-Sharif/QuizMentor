@@ -14,7 +14,7 @@ app = Flask(__name__)
 app.secret_key = os.getenv('FLASK_SECRET_KEY', 'default_secret_key')
 
 # Configure database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:123@localhost:5432/quiz_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:7384625@localhost/Users'   #use your database_username, Password and database_name according to your database. Format = username:Password@localhost/database_name
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Initialize SQLAlchemy
@@ -67,6 +67,10 @@ def signup():
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
+
+        if not email.endswith('@gmail.com'):
+            return render_template('signup.html', error="Email must end with @gmail.com")
+
         existing_user = Users.query.filter_by(email=email).first()
 
         if existing_user:
@@ -77,8 +81,8 @@ def signup():
         db.session.add(new_user)
         db.session.commit()
         return redirect(url_for('login'))
-
     return render_template('signup.html')
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
