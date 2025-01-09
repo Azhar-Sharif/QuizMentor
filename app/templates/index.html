@@ -5,6 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Application</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Animations */
+        @keyframes countdown {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); color: #ef4444; }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes celebrationGood {
+            0% { transform: scale(0.3) rotate(0deg); opacity: 0; }
+            50% { transform: scale(1.2) rotate(10deg); }
+            100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+
+        @keyframes celebrationBad {
+            0% { transform: translateY(-20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .timer-warning {
+            animation: countdown 1s infinite;
+        }
+
+        .option-row {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .option-row:hover {
+            background-color: rgb(243 244 246);
+            transform: translateX(10px);
+        }
+
+        .question-card {
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .celebration-good {
+            animation: celebrationGood 1s ease-out;
+        }
+
+        .celebration-bad {
+            animation: celebrationBad 1s ease-out;
+        }
+
+        .modal-content {
+            animation: fadeIn 0.5s ease-out;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 min-h-screen">
     <div class="container mx-auto px-4 py-8">
@@ -20,6 +84,13 @@
             <h2 class="text-xl font-semibold text-gray-800"></h2>
         </div>
 
+        <!-- Timer Display -->
+        <div id="timerDisplay" class="mb-6 bg-white rounded-lg shadow-md p-4">
+            <div class="flex items-center justify-between">
+                <span id="timeRemaining" class="text-xl font-semibold">Time: 00:00</span>
+            </div>
+        </div>
+
         <!-- Loading State -->
         <div id="loadingState" class="text-center py-8">
             <p class="text-xl text-gray-600">Loading quiz...</p>
@@ -32,7 +103,7 @@
                 <div class="flex items-center justify-between">
                     <span id="progressText" class="text-lg font-semibold">Question 0 of 0</span>
                     <div class="w-64 bg-gray-200 rounded-full h-2.5">
-                        <div id="progressBar" class="bg-blue-600 h-2.5 rounded-full" style="width: 0%"></div>
+                        <div id="progressBar" class="bg-blue-600 h-2.5 rounded-full transition-all duration-300" style="width: 0%"></div>
                     </div>
                 </div>
             </div>
@@ -42,7 +113,7 @@
 
             <!-- Submit Button -->
             <div class="mt-8">
-                <button id="submitQuiz" onclick="submitQuiz()" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors">
+                <button id="submitQuiz" onclick="submitQuiz()" class="w-full bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors">
                     Submit Quiz
                 </button>
             </div>
@@ -50,8 +121,8 @@
 
         <!-- Results Modal -->
         <div id="resultsModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
-            <div class="bg-white p-8 rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto">
-                <h2 class="text-2xl font-bold mb-4">Quiz Results</h2>
+            <div class="bg-white p-8 rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto modal-content">
+                <div id="resultsAnimation" class="mb-6 text-center"></div>
                 <div id="resultsContent"></div>
                 <div id="saveStatus" class="mt-4 text-sm"></div>
                 <button onclick="closeModal()" class="mt-6 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
@@ -63,6 +134,37 @@
 
     <script>
         let quizData = null;
+        let timeLeft = null;
+        let timerInterval = null;
+
+        function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = seconds % 60;
+            return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+        }
+
+        function startTimer() {
+            const timerDisplay = document.getElementById('timeRemaining');
+            timeLeft = quizData.questions.length * 60; // 1 minute per question
+            
+            function updateTimer() {
+                timerDisplay.textContent = `Time: ${formatTime(timeLeft)}`;
+                if (timeLeft <= 60) {
+                    timerDisplay.classList.add('timer-warning');
+                }
+                
+                if (timeLeft === 0) {
+                    clearInterval(timerInterval);
+                    submitQuiz();
+                }
+            }
+            
+            updateTimer();
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                updateTimer();
+            }, 1000);
+        }
 
         async function loadQuiz() {
             document.getElementById('loadingState').classList.remove('hidden');
@@ -74,11 +176,11 @@
                 
                 quizData = await response.json();
                 
-                // Set the query text in the header
                 const queryDisplay = document.querySelector('#queryDisplay h2');
-                queryDisplay.textContent = `Results for: ${quizData.query || quizData.topic ||'Selected Topic'}`;
+                queryDisplay.textContent = `Quiz: ${quizData.query || quizData.topic || 'Selected Topic'}`;
                 
                 initializeQuiz(quizData);
+                startTimer();
                 
                 document.getElementById('loadingState').classList.add('hidden');
                 document.getElementById('quizContent').classList.remove('hidden');
@@ -108,7 +210,7 @@
 
         function createQuestionElement(question, index) {
             const questionDiv = document.createElement('div');
-            questionDiv.className = 'bg-white rounded-lg shadow-md p-6';
+            questionDiv.className = 'question-card bg-white rounded-lg shadow-md p-6';
             questionDiv.innerHTML = `
                 <div class="mb-4">
                     <h3 class="text-xl font-semibold mb-2">Question ${index + 1}</h3>
@@ -119,13 +221,13 @@
                 </div>
                 <div class="space-y-3">
                     ${question.options.map((option, optionIndex) => `
-                        <div class="flex items-center">
+                        <div class="option-row" onclick="selectOption(${index}, '${option.replace(/'/g, "\\'")}')">
                             <input type="radio" 
                                    id="q${index}_${optionIndex}" 
                                    name="question${index}" 
                                    value="${option}"
                                    class="mr-3">
-                            <label for="q${index}_${optionIndex}" class="text-gray-700">
+                            <label for="q${index}_${optionIndex}" class="flex-grow cursor-pointer">
                                 ${option}
                             </label>
                         </div>
@@ -135,8 +237,16 @@
             return questionDiv;
         }
 
+        function selectOption(questionIndex, optionValue) {
+            const radio = document.querySelector(`input[name="question${questionIndex}"][value="${optionValue}"]`);
+            if (radio) {
+                radio.checked = true;
+                updateProgress();
+            }
+        }
+
         function updateProgress() {
-            if (!quizData || !quizData.questions) return;
+            if (!quizData) return;
             
             const totalQuestions = quizData.questions.length;
             const answeredQuestions = document.querySelectorAll('input[type="radio"]:checked').length;
@@ -149,15 +259,17 @@
         }
 
         function submitQuiz() {
-            if (!quizData || !quizData.questions) return;
+            if (!quizData) return;
 
             const totalQuestions = quizData.questions.length;
             const answeredQuestions = document.querySelectorAll('input[type="radio"]:checked').length;
 
-            if (answeredQuestions < totalQuestions) {
-                alert(`Please answer all questions before submitting. You have answered ${answeredQuestions} out of ${totalQuestions} questions.`);
+            if (answeredQuestions < totalQuestions && timeLeft > 0) {
+                alert(`Please answer all questions. You have answered ${answeredQuestions} out of ${totalQuestions} questions.`);
                 return;
             }
+
+            clearInterval(timerInterval);
 
             const results = [];
             quizData.questions.forEach((question, index) => {
@@ -179,75 +291,88 @@
             showResults(results);
         }
 
-        
         async function showResults(results) {
-        const resultsContent = document.getElementById('resultsContent');
-        const correctAnswers = results.filter(r => r.isCorrect).length;
-        const totalQuestions = results.length;
-        const score = ((correctAnswers/totalQuestions) * 100);
+            const correctAnswers = results.filter(r => r.isCorrect).length;
+            const totalQuestions = results.length;
+            const score = ((correctAnswers/totalQuestions) * 100);
 
-        // First display results
-        resultsContent.innerHTML = `
-            <div class="mb-6">
-                <p class="text-xl font-bold">Score: ${correctAnswers}/${totalQuestions}</p>
-                <p class="text-gray-600">Percentage: ${score.toFixed(2)}%</p>
-            </div>
-            <div class="space-y-6">
-                ${results.map(result => `
-                    <div class="border-b pb-4">
-                        <h4 class="font-semibold">Question ${result.questionNumber}</h4>
-                        <p class="mt-2 text-gray-700">${result.questionText}</p>
-                        <p class="mt-2">Your answer: <span class="${result.isCorrect ? 'text-green-600' : 'text-red-600'}">${result.selectedAnswer}</span></p>
-                        ${!result.isCorrect ? `<p class="mt-1 text-gray-700">Correct answer: ${result.correctAnswer}</p>` : ''}
-                        <p class="mt-2 text-sm text-gray-600"><strong>Explanation:</strong> ${result.explanation}</p>
-                    </div>
-                `).join('')}
-            </div>`;
+            // Show animation based on score
+            const resultsAnimation = document.getElementById('resultsAnimation');
+            resultsAnimation.className = score >= 70 ? 'celebration-good' : 'celebration-bad';
+            resultsAnimation.innerHTML = `
+                <div class="text-4xl font-bold mb-4 ${score >= 70 ? 'text-green-600' : 'text-blue-600'}">
+                    ${score >= 70 ? 'Excellent Work!' : 'Keep Learning!'}
+                </div>
+                <p class="text-xl text-gray-600">
+                    ${score >= 70 ? 
+                        'Outstanding performance! You\'re mastering this topic!' : 
+                        'Every challenge makes you stronger. Keep pushing forward!'}
+                </p>
+            `;
 
-        // Show the modal immediately after displaying results
-        document.getElementById('resultsModal').classList.remove('hidden');
+            // Show detailed results
+            const resultsContent = document.getElementById('resultsContent');
+            resultsContent.innerHTML = `
+                <div class="mb-6">
+                    <p class="text-xl font-bold">Score: ${correctAnswers}/${totalQuestions}</p>
+                    <p class="text-gray-600">Percentage: ${score.toFixed(2)}%</p>
+                </div>
+                <div class="space-y-6">
+                    ${results.map(result => `
+                        <div class="border-b pb-4">
+                            <h4 class="font-semibold">Question ${result.questionNumber}</h4>
+                            <p class="mt-2 text-gray-700">${result.questionText}</p>
+                            <p class="mt-2">Your answer: 
+                                <span class="${result.isCorrect ? 'text-green-600' : 'text-red-600'}">
+                                    ${result.selectedAnswer}
+                                </span>
+                            </p>
+                            ${!result.isCorrect ? 
+                                `<p class="mt-1 text-gray-700">Correct answer: 
+                                    <span class="text-green-600">${result.correctAnswer}</span>
+                                </p>` : ''}
+                            <p class="mt-2 text-sm text-gray-600">
+                                <strong>Explanation:</strong> ${result.explanation}
+                            </p>
+                        </div>
+                    `).join('')}
+                </div>`;
 
-        // Then save results
-        try {
-            const saveResponse = await fetch('/save_quiz_result', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    topic: quizData.topic || quizData.query || 'General Quiz',
-                    score: score,
-                    total_questions: totalQuestions
-                })
-            });
+            document.getElementById('resultsModal').classList.remove('hidden');
 
-            const saveStatusElement = document.getElementById('saveStatus');
-            if (saveResponse.ok) {
-                saveStatusElement.textContent = 'Quiz results saved successfully!';
-                saveStatusElement.className = 'mt-4 text-sm text-green-600';
-            } else {
-                throw new Error('Failed to save quiz results');
+            // Save results
+            try {
+                const saveResponse = await fetch('/save_quiz_result', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        topic: quizData.topic || quizData.query || 'General Quiz',
+                        score: score,
+                        total_questions: totalQuestions
+                    })
+                });
+
+                const saveStatusElement = document.getElementById('saveStatus');
+                if (saveResponse.ok) {
+                    saveStatusElement.textContent = 'Quiz results saved successfully!';
+                    saveStatusElement.className = 'mt-4 text-sm text-green-600';
+                } else {
+                    throw new Error('Failed to save quiz results');
+                }
+            } catch (error) {
+                console.error('Error saving quiz results:', error);
+                const saveStatusElement = document.getElementById('saveStatus');
+                saveStatusElement.textContent = 'Failed to save quiz results. Please try again later.';
+                saveStatusElement.className = 'mt-4 text-sm text-red-600';
             }
-        } catch (error) {
-            console.error('Error saving quiz results:', error);
-            const saveStatusElement = document.getElementById('saveStatus');
-            saveStatusElement.textContent = 'Failed to save quiz results. Please try again later.';
-            saveStatusElement.className = 'mt-4 text-sm text-red-600';
         }
-    }
 
         function closeModal() {
             document.getElementById('resultsModal').classList.add('hidden');
-            // Redirect to dashboard after closing results
             window.location.href = '/';
         }
-
-        // Add event listener for radio buttons to track progress
-        document.addEventListener('change', function(e) {
-            if (e.target.type === 'radio') {
-                updateProgress();
-            }
-        });
 
         // Initialize quiz when page loads
         document.addEventListener('DOMContentLoaded', loadQuiz);
