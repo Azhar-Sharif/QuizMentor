@@ -33,7 +33,7 @@ class QuizHistory(db.Model):
     topic = db.Column(db.String(200), nullable=False)
     score = db.Column(db.Float, nullable=False)
     total_questions = db.Column(db.Integer, nullable=False)
-    date_taken = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    date_taken = db.Column(db.DateTime, nullable=False, default=lambda: datetime.now(pytz.timezone('Asia/Karachi')))
 
 # Session variable to store quiz data
 quiz_data = None
