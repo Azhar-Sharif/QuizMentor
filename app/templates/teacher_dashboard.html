@@ -1,0 +1,208 @@
+d.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header Section -->
+        <div class="flex justify-between items-center mb-8">
+            <div>
+                <h1 class="text-3xl font-bold text-gray-800" id="greeting">Teacher Dashboard</h1>
+                <p class="text-gray-600 mt-1" id="userEmail"></p>
+            </div>
+            <div class="space-x-4">
+                <a href="/create-quiz" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+                    Create New Quiz
+                </a>
+                <a href="/logout" class="bg-gray-500 text-white px-6 py-2 rounded-lg hover:bg-gray-600 transition-colors">
+                    Logout
+                </a>
+            </div>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+                <div class="flex items-center">
+                    <div class="p-3 rounded-full bg-blue-100 text-blue-600">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-sm font-medium text-gray-600">Total Students</p>
+                        <p class="text-2xl font-bold text-gray-900" id="totalStudents">0</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+                <div class="flex items-center">
+                    <div class="p-3 rounded-full bg-green-100 text-green-600">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-sm font-medium text-gray-600">Active Quizzes</p>
+                        <p class="text-2xl font-bold text-gray-900" id="activeQuizzes">0</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+                <div class="flex items-center">
+                    <div class="p-3 rounded-full bg-yellow-100 text-yellow-600">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-sm font-medium text-gray-600">Average Class Score</p>
+                        <p class="text-2xl font-bold text-gray-900" id="avgClassScore">0%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Student Performance Table -->
+        <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 mb-8">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Student Performance</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full table-auto">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Student Name</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Quizzes Taken</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Average Score</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200" id="studentTableBody">
+                        <!-- Student rows will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Assign Quiz Section -->
+        <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Assign Quiz</h2>
+            <form id="assignQuizForm" class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Select Quiz</label>
+                        <select class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                            <option>Quiz 1</option>
+                            <option>Quiz 2</option>
+                            <!-- More options will be populated dynamically -->
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Select Students</label>
+                        <select multiple class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                            <!-- Students will be populated dynamically -->
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Due Date</label>
+                        <input type="date" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    </div>
+                </div>
+                <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+                    Assign Quiz
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+    // Initialize dashboard
+    loadUserInfo();
+    loadDashboardStats();
+    loadStudentPerformance();
+    loadQuizList();
+    setupAssignQuizForm();
+
+    async function loadUserInfo() {
+        const response = await fetch('/api/teacher/info');
+        const data = await response.json();
+        document.getElementById('userEmail').textContent = data.email;
+        document.getElementById('greeting').textContent = `Welcome, ${data.email}`;
+    }
+
+    async function loadDashboardStats() {
+        const response = await fetch('/api/teacher/stats');
+        const data = await response.json();
+        
+        document.getElementById('totalStudents').textContent = data.totalStudents;
+        document.getElementById('activeQuizzes').textContent = data.activeQuizzes;
+        document.getElementById('avgClassScore').textContent = `${data.averageScore}%`;
+    }
+
+    async function loadStudentPerformance() {
+        const response = await fetch('/api/teacher/student-performance');
+        const students = await response.json();
+        const tableBody = document.getElementById('studentTableBody');
+        
+        tableBody.innerHTML = students.map(student => `
+            <tr>
+                <td class="px-6 py-4 whitespace-nowrap">${student.email}</td>
+                <td class="px-6 py-4 whitespace-nowrap">${student.quizzesTaken}</td>
+                <td class="px-6 py-4 whitespace-nowrap">${student.averageScore}%</td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                    <button onclick="viewStudentDetails(${student.id})" 
+                            class="text-blue-600 hover:text-blue-900">
+                        View Details
+                    </button>
+                </td>
+            </tr>
+        `).join('');
+    }
+
+    async function loadQuizList() {
+        const response = await fetch('/api/teacher/quizzes');
+        const quizzes = await response.json();
+        const quizSelect = document.querySelector('select');
+        
+        quizSelect.innerHTML = quizzes.map(quiz => `
+            <option value="${quiz.id}">${quiz.title}</option>
+        `).join('');
+    }
+
+    function setupAssignQuizForm() {
+        const form = document.getElementById('assignQuizForm');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            try {
+                const response = await fetch('/api/teacher/assign-quiz', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                if (result.success) {
+                    alert('Quiz assigned successfully!');
+                    loadDashboardStats();
+                } else {
+                    alert('Failed to assign quiz: ' + result.message);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while assigning the quiz');
+            }
+        });
+    }
+});
+    </script>
+</body>
+</html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
 </head>
 <body class="bg-gray-50">
     <div class="container mx-auto px-4 py-8">
@@ -72,83 +73,62 @@
             </div>
         </div>
 
-        <!-- Quiz History -->
-        <div class="bg-white rounded-xl shadow-sm border border-gray-100">
-            <div class="p-6">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4">Recent Quiz History</h2>
-                {% if quiz_history %}
-                <div class="overflow-x-auto">
-                    <table class="min-w-full divide-y divide-gray-200">
-                        <thead class="bg-gray-50">
-                            <tr>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Topic</th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Score</th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Questions</th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-200">
-                            {% for quiz in quiz_history %}
-                            <tr class="hover:bg-gray-50 transition-colors">
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                                        {{ quiz.topic }}
-                                    </span>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="flex items-center">
-                                        <div class="w-16 bg-gray-200 rounded-full h-2.5">
-                                            <div class="bg-blue-600 h-2.5 rounded-full" style="width: {{ quiz.score }}%"></div>
-                                        </div>
-                                        <span class="ml-3 text-sm text-gray-900">{{ "%.1f"|format(quiz.score) }}%</span>
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                    {{ quiz.total_questions }} questions
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                    {{ (quiz.date_taken.astimezone(('Asia/Karachi'|timezone))).strftime('%b %d, %Y %I:%M %p') }}
-                                </td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
-                {% else %}
-                <div class="text-center py-12">
-                    <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
-                    </svg>
-                    <h3 class="mt-2 text-sm font-medium text-gray-900">No quizzes yet</h3>
-                    <p class="mt-1 text-sm text-gray-500">Get started by generating your first quiz!</p>
-                    <div class="mt-6">
-                        <a href="/input" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700">
-                            Generate New Quiz
-                        </a>
-                    </div>
-                </div>
-                {% endif %}
+        <!-- Analytics Charts Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <!-- Performance Trend Chart -->
+            <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Performance Trend</h2>
+                <canvas id="performanceTrendChart" height="300"></canvas>
             </div>
+
+            <!-- Topic Distribution Chart -->
+            <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Quiz Topics Distribution</h2>
+                <canvas id="topicDistributionChart" height="300"></canvas>
+            </div>
+        </div>
+
+        <!-- Performance Analysis Section -->
+        <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 mb-8">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">Performance Analysis</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Score Distribution Chart -->
+                <div>
+                    <canvas id="scoreDistributionChart" height="300"></canvas>
+                </div>
+                <!-- Performance Insights -->
+                <div id="performanceInsights" class="space-y-4">
+                    <!-- Insights will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz History Table (Existing) -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100">
+            <!-- ... (existing quiz history table code) ... -->
         </div>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Set greeting based on time of day
+            // Existing greeting code
             const hour = new Date().getHours();
             const greeting = hour < 12 ? 'Good Morning' : hour < 18 ? 'Good Afternoon' : 'Good Evening';
             document.getElementById('greeting').textContent = `${greeting}!`;
 
-            // Calculate statistics from quiz history
+            // Get quiz history data from template
             const quizzes = [
                 {% for quiz in quiz_history %}
                     {
+                        topic: "{{ quiz.topic }}",
                         score: {{ quiz.score }},
-                        questions: {{ quiz.total_questions }}
+                        total_questions: {{ quiz.total_questions }},
+                        date_taken: "{{ quiz.date_taken.strftime('%Y-%m-%d') }}"
                     },
                 {% endfor %}
             ];
 
+            // Update statistics
             if (quizzes.length > 0) {
                 const avgScore = quizzes.reduce((acc, quiz) => acc + quiz.score, 0) / quizzes.length;
                 const bestScore = Math.max(...quizzes.map(quiz => quiz.score));
@@ -156,8 +136,152 @@
                 document.getElementById('averageScore').textContent = `${avgScore.toFixed(1)}%`;
                 document.getElementById('totalQuizzes').textContent = quizzes.length;
                 document.getElementById('bestScore').textContent = `${bestScore.toFixed(1)}%`;
+
+                // Initialize charts
+                createPerformanceTrendChart(quizzes);
+                createTopicDistributionChart(quizzes);
+                createScoreDistributionChart(quizzes);
+                updatePerformanceInsights(quizzes);
             }
         });
+
+        function createPerformanceTrendChart(quizzes) {
+            const ctx = document.getElementById('performanceTrendChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: quizzes.map(quiz => quiz.date_taken),
+                    datasets: [{
+                        label: 'Score',
+                        data: quizzes.map(quiz => quiz.score),
+                        borderColor: 'rgb(59, 130, 246)',
+                        tension: 0.1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100
+                        }
+                    }
+                }
+            });
+        }
+
+        function createTopicDistributionChart(quizzes) {
+            const topicCounts = quizzes.reduce((acc, quiz) => {
+                acc[quiz.topic] = (acc[quiz.topic] || 0) + 1;
+                return acc;
+            }, {});
+
+            const ctx = document.getElementById('topicDistributionChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: Object.keys(topicCounts),
+                    datasets: [{
+                        data: Object.values(topicCounts),
+                        backgroundColor: [
+                            'rgb(59, 130, 246)',
+                            'rgb(16, 185, 129)',
+                            'rgb(245, 158, 11)',
+                            'rgb(239, 68, 68)'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right'
+                        }
+                    }
+                }
+            });
+        }
+
+        function createScoreDistributionChart(quizzes) {
+            const scoreRanges = {
+                'Excellent (90-100)': 0,
+                'Good (80-89)': 0,
+                'Average (70-79)': 0,
+                'Needs Improvement (<70)': 0
+            };
+
+            quizzes.forEach(quiz => {
+                if (quiz.score >= 90) scoreRanges['Excellent (90-100)']++;
+                else if (quiz.score >= 80) scoreRanges['Good (80-89)']++;
+                else if (quiz.score >= 70) scoreRanges['Average (70-79)']++;
+                else scoreRanges['Needs Improvement (<70)']++;
+            });
+
+            const ctx = document.getElementById('scoreDistributionChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(scoreRanges),
+                    datasets: [{
+                        label: 'Number of Quizzes',
+                        data: Object.values(scoreRanges),
+                        backgroundColor: 'rgb(59, 130, 246)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 1
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function updatePerformanceInsights(quizzes) {
+            const insights = document.getElementById('performanceInsights');
+            
+            // Calculate insights
+            const avgScore = quizzes.reduce((acc, quiz) => acc + quiz.score, 0) / quizzes.length;
+            const topicPerformance = {};
+            quizzes.forEach(quiz => {
+                if (!topicPerformance[quiz.topic]) {
+                    topicPerformance[quiz.topic] = [];
+                }
+                topicPerformance[quiz.topic].push(quiz.score);
+            });
+
+            const bestTopic = Object.entries(topicPerformance)
+                .map(([topic, scores]) => ({
+                    topic,
+                    avg: scores.reduce((a, b) => a + b) / scores.length
+                }))
+                .sort((a, b) => b.avg - a.avg)[0];
+
+            // Generate HTML for insights
+            insights.innerHTML = `
+                <div class="p-4 bg-blue-50 rounded-lg">
+                    <h3 class="font-semibold text-blue-900">Overall Performance</h3>
+                    <p class="text-blue-800">Your average score is ${avgScore.toFixed(1)}%</p>
+                </div>
+                <div class="p-4 bg-green-50 rounded-lg">
+                    <h3 class="font-semibold text-green-900">Strongest Topic</h3>
+                    <p class="text-green-800">${bestTopic.topic} (${bestTopic.avg.toFixed(1)}% average)</p>
+                </div>
+                <div class="p-4 bg-yellow-50 rounded-lg">
+                    <h3 class="font-semibold text-yellow-900">Recent Trend</h3>
+                    <p class="text-yellow-800">${
+                        quizzes[quizzes.length - 1].score > avgScore 
+                        ? 'Your latest quiz was above your average!' 
+                        : 'Keep practicing to improve your scores.'
+                    }</p>
+                </div>
+            `;
+        }
     </script>
 </body>
 </html>

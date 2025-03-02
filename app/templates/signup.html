@@ -77,6 +77,15 @@
         <label for="password">Password</label>
         <input type="password" id="password" name="password" required>
     </div>
+    <!-- Add this inside the form, before the button -->
+<div class="form-group">
+    <label for="role">I am a:</label>
+    <select id="role" name="role" required class="form-select">
+        <option value="">Select Role</option>
+        <option value="student">Student</option>
+        <option value="teacher">Teacher</option>
+    </select>
+</div>
     <button type="submit">Sign Up</button>
 </form>
 <p>Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
