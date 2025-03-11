@@ -1,0 +1,174 @@
+_quiz.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ quiz.title }} - Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto">
+            <!-- Quiz Header -->
+            <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 mb-8">
+                <h1 class="text-2xl font-bold text-gray-800">{{ quiz.title }}</h1>
+                <p class="text-gray-600 mt-2">Topic: {{ quiz.topic }}</p>
+                <div class="flex justify-between items-center mt-4">
+                    <div id="timer" class="text-lg font-semibold text-blue-600"></div>
+                    <div id="progress" class="text-gray-600">Question <span id="currentQuestion">1</span> of <span id="totalQuestions">0</span></div>
+                </div>
+            </div>
+
+            <!-- Quiz Content -->
+            <div id="quizContent" class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+                <div id="questionContainer">
+                    <!-- Questions will be loaded here -->
+                </div>
+
+                <div class="flex justify-between mt-6">
+                    <button id="prevBtn" onclick="previousQuestion()" class="bg-gray-500 text-white px-6 py-2 rounded-lg hover:bg-gray-600 disabled:opacity-50">Previous</button>
+                    <button id="nextBtn" onclick="nextQuestion()" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentQuestionIndex = 0;
+        let questions = [];
+        let answers = {};
+        let quizStartTime = new Date();
+
+        document.addEventListener('DOMContentLoaded', function() {
+            loadQuiz();
+        });
+
+        async function loadQuiz() {
+            const currentQuiz = {{ session['current_quiz']|tojson|safe }};
+            questions = currentQuiz.questions;
+            document.getElementById('totalQuestions').textContent = questions.length;
+            displayQuestion(0);
+            startTimer();
+        }
+
+        function displayQuestion(index) {
+            const question = questions[index];
+            const container = document.getElementById('questionContainer');
+            
+            container.innerHTML = `
+                <div class="mb-6">
+                    <h3 class="text-lg font-medium text-gray-900 mb-4">${question.question_text}</h3>
+                    <div class="space-y-3">
+                        ${question.options.map((option, optIndex) => `
+                            <div class="flex items-center">
+                                <input type="radio" 
+                                    id="option${optIndex}" 
+                                    name="question${index}" 
+                                    value="${option}"
+                                    ${answers[index] === option ? 'checked' : ''}
+                                    onchange="saveAnswer(${index}, '${option}')"
+                                    class="h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500">
+                                <label for="option${optIndex}" class="ml-3 text-gray-700">
+                                    ${option}
+                                </label>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+
+            updateNavigationButtons();
+            document.getElementById('currentQuestion').textContent = index + 1;
+        }
+
+        function saveAnswer(questionIndex, answer) {
+            answers[questionIndex] = answer;
+            updateNavigationButtons();
+        }
+
+        function previousQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                displayQuestion(currentQuestionIndex);
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                displayQuestion(currentQuestionIndex);
+            } else if (Object.keys(answers).length === questions.length) {
+                submitQuiz();
+            }
+        }
+
+        function updateNavigationButtons() {
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            
+            prevBtn.disabled = currentQuestionIndex === 0;
+            
+            if (currentQuestionIndex === questions.length - 1) {
+                nextBtn.textContent = 'Submit Quiz';
+                nextBtn.disabled = !answers[currentQuestionIndex];
+            } else {
+                nextBtn.textContent = 'Next';
+                nextBtn.disabled = false;
+            }
+        }
+// Update the submitQuiz function
+async function submitQuiz() {
+    const currentQuiz = {{ session['current_quiz']|tojson|safe }};
+    
+    try {
+        const score = calculateScore();
+        const response = await fetch('/api/submit-assigned-quiz', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                assignment_id: currentQuiz.assignment_id,
+                answers: answers,
+                score: score,
+                time_taken: Math.floor((new Date() - quizStartTime) / 1000)
+            })
+        });
+
+        const result = await response.json();
+        if (result.success) {
+            window.location.href = '/quiz-result/' + currentQuiz.assignment_id;
+        } else {
+            alert('Failed to submit quiz: ' + result.error);
+        }
+    } catch (error) {
+        console.error('Error submitting quiz:', error);
+        alert('Failed to submit quiz. Please try again.');
+    }
+}
+
+        function calculateScore() {
+            let correct = 0;
+            questions.forEach((question, index) => {
+                if (answers[index] === question.correct_answer) {
+                    correct++;
+                }
+            });
+            return (correct / questions.length) * 100;
+        }
+
+        function startTimer() {
+            const timerElement = document.getElementById('timer');
+            let seconds = 0;
+            
+            setInterval(() => {
+                seconds++;
+                const minutes = Math.floor(seconds / 60);
+                const remainingSeconds = seconds % 60;
+                timerElement.textContent = `Time: ${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
