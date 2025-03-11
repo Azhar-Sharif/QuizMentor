@@ -21,21 +21,22 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             width: 100%;
             max-width: 400px;
+            text-align: center;
         }
         h1 {
             margin-bottom: 20px;
-            text-align: center;
             color: #333;
         }
         .form-group {
             margin-bottom: 15px;
+            text-align: left;
         }
         label {
             display: block;
             margin-bottom: 5px;
             color: #555;
         }
-        input[type="email"], input[type="password"] {
+        input[type="email"], input[type="password"], select {
             width: 95%;
             padding: 10px;
             border: 1px solid #ccc;
@@ -59,37 +60,64 @@
             text-align: center;
             margin-bottom: 15px;
         }
+        /* Hidden popup message */
+        .popup {
+            display: none;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
     </style>
 </head>
 <body>
     <div class="form-container">
-        <!-- Sign-up page -->
-<h1>Sign Up</h1>
-{% if error %}
-<p class="error">{{ error }}</p>
-{% endif %}
-<form method="POST" action="/signup">
-    <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+        <h1>Sign Up</h1>
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+        <form id="signupForm" method="POST" action="/signup">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="role">I am a:</label>
+                <select id="role" name="role" required class="form-select">
+                    <option value="">Select Role</option>
+                    <option value="student">Student</option>
+                    <option value="teacher">Teacher</option>
+                </select>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
     </div>
-    <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required>
-    </div>
-    <!-- Add this inside the form, before the button -->
-<div class="form-group">
-    <label for="role">I am a:</label>
-    <select id="role" name="role" required class="form-select">
-        <option value="">Select Role</option>
-        <option value="student">Student</option>
-        <option value="teacher">Teacher</option>
-    </select>
-</div>
-    <button type="submit">Sign Up</button>
-</form>
-<p>Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
 
+    <!-- Hidden popup message -->
+    <div id="popupMessage" class="popup">
+        Check your email for account confirmation!
     </div>
+
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent actual form submission
+            let popup = document.getElementById("popupMessage");
+            popup.style.display = "block"; // Show popup
+            setTimeout(() => {
+                popup.style.display = "none"; // Hide after 3 seconds
+                event.target.submit(); // Submit form after showing message
+            }, 3000);
+        });
+    </script>
 </body>
 </html>
