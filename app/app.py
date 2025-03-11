@@ -5,6 +5,7 @@ from functools import wraps
 from flask import Flask, jsonify, render_template, request, redirect, url_for, session
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
+from flask_session import Session
 from datetime import datetime, timezone, timedelta
 from quiz_flow import generate_quiz_from_pinecone
 
@@ -12,20 +13,31 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
+from supabase import create_client, Client
+from sqlalchemy import func
+from sqlalchemy.dialects.postgresql import JSONB
+from gotrue.errors import AuthApiError
+from sqlalchemy import create_engine
+import bcrypt  # For password hashing
+
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 # Initialize Flask app
 app = Flask(__name__)
 app.secret_key = os.getenv('FLASK_SECRET_KEY', 'default_secret_key')
 
 # Configure database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:123@localhost/mentor'   #use your database_username, Password and database_name according to your database. Format = username:Password@localhost/database_name
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+
+# Set up the database configuration
+DATABASE_URL = os.getenv("DATABASE_URL")  # Fetch from system variables
+app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
+engine = create_engine(DATABASE_URL, pool_size=10, max_overflow=20)
 
 # Initialize SQLAlchemy
-# Add these imports at the top with other imports
-from sqlalchemy import func
-from sqlalchemy.dialects.postgresql import JSONB
 db = SQLAlchemy(app)
+
 # Add these models after the existing QuizHistory model
 class Users(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -81,13 +93,17 @@ quiz_data = None
 
 @app.before_request
 def check_user_status():
-    if 'user' in session:
-        user_email = session['user']
-        user_exists = Users.query.filter_by(email=user_email).first()
-        if not user_exists:
-            session.pop('user', None)
+    """Check if user session is valid"""
+    if 'user' in session and 'access_token' in session:
+        try:
+            user = supabase.auth.get_user(session['access_token'])  # ✅ Use access token
+            if not user:
+                session.clear()  # Clear all session data
+                return redirect(url_for('login'))
+        except Exception as e:
+            print("Error checking user status:", str(e))
+            session.clear()
             return redirect(url_for('login'))
-
 
 
 # Update the dashboard route
@@ -102,7 +118,7 @@ def home():
     print("1. User:", user.email, user.id, user.role)
     
     if user.role == 'teacher':
-        return render_template('teacher_dashboard.html', user_email=user_email)
+        return redirect(url_for('teacher_dashboard'))
     else:
         # Get current time in UTC
         current_time = datetime.now(timezone.utc)
@@ -138,22 +154,37 @@ def input_page():
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':
-        email = request.form['email']
-        password = request.form['password']
-        role = request.form['role']
+        email = request.form.get('email')
+        password = request.form.get('password')
+        role = request.form.get('role')
 
         if not email.endswith('@gmail.com'):
             return render_template('signup.html', error="Email must end with @gmail.com")
 
-        existing_user = Users.query.filter_by(email=email).first()
-        if existing_user:
-            return render_template('signup.html', error="Email already registered!")
+        try:
+            # Hash the password
+            hashed_password = generate_password_hash(password)
 
-        hashed_password = generate_password_hash(password)
-        new_user = Users(email=email, password=hashed_password, role=role)
-        db.session.add(new_user)
-        db.session.commit()
-        return redirect(url_for('login'))
+            # Create a new user in the database
+            new_user = Users(email=email, password=hashed_password, role=role)
+            db.session.add(new_user)
+            db.session.commit()
+
+            # Sign up user in Supabase
+            response = supabase.auth.sign_up({"email": email, "password": password})
+
+            if response.user is None:
+                return render_template('signup.html', error="Signup failed. Please try again.")
+
+            return render_template('signup.html', message="Check your email to confirm your account.")
+
+        except AuthApiError as e:
+            return render_template('signup.html', error=f"Error: {e}")
+
+        except Exception as e:
+            db.session.rollback()
+            return render_template('signup.html', error=f"Unexpected error: {str(e)}")
+
     return render_template('signup.html')
 
 
@@ -163,17 +194,45 @@ def login():
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('password')
-        user = Users.query.filter_by(email=email).first()
 
-        if user and check_password_hash(user.password, password):
-            session['user'] = user.email
-            session['role'] = user.role  # Store role in session
-            return redirect(url_for('home'))
-        else:
-            error = "Invalid credentials. Please try again."
-            return render_template('login.html', error=error)
+        try:
+            # Authenticate with Supabase
+            response = supabase.auth.sign_in_with_password({"email": email, "password": password})
+
+            # ✅ Debug Login Response
+            print("Login Response:", response)
+
+            if not response or not response.session:
+                return render_template('login.html', error="Invalid login credentials.")
+
+            session_data = response.session
+            user_data = session_data.user  # ✅ Correct way to access user data
+
+            # ✅ Store Supabase Access Token in Flask Session
+            session['user'] = user_data.email
+            user = Users.query.filter_by(email=email).first()
+            if user:
+                session['role'] = user.role
+            else:
+                return render_template('login.html', error="User not found.")
+            session['access_token'] = session_data.access_token  # Store token
+            session.modified = True  # Ensure session is updated
+
+            print("\n=== Debug: User Logged In ===", session)
+
+            # Redirect based on role
+            if 'role' in session and session['role'] == 'teacher':
+                return redirect(url_for('teacher_dashboard'))
+            else:
+                return redirect(url_for('dashboard'))
+
+        except Exception as e:
+            return render_template('login.html', error=f"An unexpected error occurred: {str(e)}")
 
     return render_template('login.html')
+
+
+
 # Update the teacher_required decorator if you haven't already
 def teacher_required(f):
     @wraps(f)
@@ -200,10 +259,6 @@ def timezone_filter(date):
             date = date.replace(tzinfo=timezone.utc)
         return date.strftime('%Y-%m-%d %H:%M:%S %Z')
     return date
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-from datetime import datetime
 
 def send_quiz_notification(student_email, quiz_title, due_date):
     try:
@@ -248,7 +303,22 @@ def send_quiz_notification(student_email, quiz_title, due_date):
         print(f"❌ Error sending email notification: {str(e)}")
         return False
     
+@app.route('/dashboard')
+def dashboard():
+    if 'user' not in session:
+        return redirect(url_for('login'))
+    return render_template('dashboard.html')
 
+@app.route('/teacher_dashboard')
+def teacher_dashboard():
+    if 'user' not in session:
+        return redirect(url_for('login'))
+    
+    user_email = session['user']
+    user = Users.query.filter_by(email=user_email).first()
+    if user.role != 'teacher':
+        return redirect(url_for('dashboard'))
+    return render_template('teacher_dashboard.html', user_email=user_email)
 
 @app.route('/quiz')
 def quiz_page():
