@@ -1,8 +1,9 @@
 import os
+import time
 from datetime import datetime
 import pytz
 from functools import wraps
-from flask import Flask, jsonify, render_template, request, redirect, url_for, session
+from flask import Flask, jsonify, render_template, request, redirect, url_for, session,flash
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
 from flask_session import Session
@@ -19,6 +20,7 @@ from sqlalchemy.dialects.postgresql import JSONB
 from gotrue.errors import AuthApiError
 from sqlalchemy import create_engine
 import bcrypt  # For password hashing
+import re
 
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 # Initialize Flask app
@@ -158,11 +160,13 @@ def signup():
         password = request.form.get('password')
         role = request.form.get('role')
 
-        if not email.endswith('@gmail.com'):
-            return render_template('signup.html', error="Email must end with @gmail.com")
+        # **1️⃣ Validate password before sending it to Supabase**
+        password_regex = re.compile(r'^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,}$')
+        if not password_regex.match(password):
+            return render_template('signup.html', error="Password must have at least 6 characters, one uppercase letter, one number, and one special character.", email=email, role=role)
 
         try:
-            # Hash the password
+             # Hash the password
             hashed_password = generate_password_hash(password)
 
             # Create a new user in the database
@@ -171,23 +175,24 @@ def signup():
             db.session.commit()
 
             # Sign up user in Supabase
-            response = supabase.auth.sign_up({"email": email, "password": password})
+            response = supabase.auth.sign_up({
+                "email": email,
+                "password": password
+            })
 
-            if response.user is None:
-                return render_template('signup.html', error="Signup failed. Please try again.")
+            # **Check for errors in response**
+            if response.user is None and response.error is not None:
+                return render_template('signup.html', error=response.error.message, email=email, role=role)
 
             return render_template('signup.html', message="Check your email to confirm your account.")
 
         except AuthApiError as e:
             return render_template('signup.html', error=f"Error: {e}")
-
         except Exception as e:
             db.session.rollback()
             return render_template('signup.html', error=f"Unexpected error: {str(e)}")
 
     return render_template('signup.html')
-
-
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -198,9 +203,6 @@ def login():
         try:
             # Authenticate with Supabase
             response = supabase.auth.sign_in_with_password({"email": email, "password": password})
-
-            # ✅ Debug Login Response
-            print("Login Response:", response)
 
             if not response or not response.session:
                 return render_template('login.html', error="Invalid login credentials.")
@@ -218,8 +220,6 @@ def login():
             session['access_token'] = session_data.access_token  # Store token
             session.modified = True  # Ensure session is updated
 
-            print("\n=== Debug: User Logged In ===", session)
-
             # Redirect based on role
             if 'role' in session and session['role'] == 'teacher':
                 return redirect(url_for('teacher_dashboard'))
@@ -230,7 +230,6 @@ def login():
             return render_template('login.html', error=f"An unexpected error occurred: {str(e)}")
 
     return render_template('login.html')
-
 
 
 # Update the teacher_required decorator if you haven't already
