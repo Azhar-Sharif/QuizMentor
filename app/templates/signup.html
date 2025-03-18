@@ -55,11 +55,6 @@
         button:hover {
             background: #45a049;
         }
-        .error {
-            color: red;
-            text-align: center;
-            margin-bottom: 15px;
-        }
         /* Hidden popup message */
         .popup {
             display: none;
@@ -73,29 +68,35 @@
             transform: translateX(-50%);
             z-index: 1000;
         }
+        small {
+            font-size: 0.875rem;
+            color: #6c757d;
+            margin-top: 5px;
+            display: block;
+        }
     </style>
 </head>
 <body>
     <div class="form-container">
         <h1>Sign Up</h1>
-        {% if error %}
-        <p class="error">{{ error }}</p>
-        {% endif %}
         <form id="signupForm" method="POST" action="/signup">
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" value="{{ request.form.get('email', '') }}" required>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
+                <small class="text-muted">
+                    Password must be at least 6 characters long and include a number, uppercase letter, and special character.
+                </small>
             </div>
             <div class="form-group">
                 <label for="role">I am a:</label>
                 <select id="role" name="role" required class="form-select">
                     <option value="">Select Role</option>
-                    <option value="student">Student</option>
-                    <option value="teacher">Teacher</option>
+                    <option value="student" {% if request.form.get('role') == "student" %}selected{% endif %}>Student</option>
+                    <option value="teacher" {% if request.form.get('role') == "teacher" %}selected{% endif %}>Teacher</option>
                 </select>
             </div>
             <button type="submit">Sign Up</button>
@@ -104,19 +105,41 @@
     </div>
 
     <!-- Hidden popup message -->
-    <div id="popupMessage" class="popup">
-        Check your email for account confirmation!
+    <div id="popupMessage" class="popup" style="display: none;">
+        <span id="popupText"></span>
     </div>
-
+    
     <script>
-        document.getElementById("signupForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent actual form submission
+        document.addEventListener("DOMContentLoaded", function () {
             let popup = document.getElementById("popupMessage");
-            popup.style.display = "block"; // Show popup
-            setTimeout(() => {
-                popup.style.display = "none"; // Hide after 3 seconds
-                event.target.submit(); // Submit form after showing message
-            }, 3000);
+            let popupText = document.getElementById("popupText");
+            let passwordField = document.getElementById("password"); 
+            let emailField = document.getElementById("email"); 
+            let roleField = document.getElementById("role"); 
+
+            if (!popup || !popupText || !passwordField || !emailField || !roleField) return;
+
+            let message = "{{ message | safe }}";
+            let error = "{{ error | safe }}";
+            let displayText = message || error;
+
+            if (displayText) {
+                popupText.innerText = displayText;
+                popup.style.display = "block";
+
+                setTimeout(() => {
+                    popup.style.display = "none";
+                }, 3000);
+
+                if (error) {  
+                    passwordField.value = "";  // Clear password
+
+                    if (!error.toLowerCase().includes("password")) {
+                        emailField.value = "";  
+                        roleField.selectedIndex = 0; 
+                    }
+                }
+            }
         });
     </script>
 </body>
