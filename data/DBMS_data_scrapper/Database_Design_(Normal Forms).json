@@ -1,0 +1,985 @@
+[
+    {
+        "question": "Question1",
+        "question_paragraph": "For the relation R(ABCDEFGH) with FD's= {CH->G, A->BC, B->CHF, E->A, F->EG such that F+ is exactly the set of FDs that hold for R.} Consider the FDs given in above question. The relation R is",
+        "options": [
+            "in 1NF, but not in 2NF.",
+            "in 2NF, but not in 3NF.",
+            "in 3NF, but not in BCNF.",
+            "in BCNF"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "Which of the following isTRUE?",
+        "options": [
+            "Every relation in 3NF is also in BCNF",
+            "A relation R is in 3NF if every non-prime attribute of R is fully functionally dependent on every key of R",
+            "Every relation in BCNF is also in 3NF",
+            "No relation can be in both BCNF and 3NF"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "Consider a relational table with a single record for each registered student with the following attributes.1.Registration_Num: Unique registration number\r\n   of each registered student\r\n2.UID: Unique identity number, unique at the \r\n   national level for each citizen\r\n3.BankAccount_Num: Unique account number at\r\n   the bank. A student can have multiple accounts\r\n   or join accounts. This attribute stores the \r\n   primary account number.\r\n4.Name: Name of the student\r\n5.Hostel_Room: Room number of the hostelWhich one of the following option isINCORRECT?",
+        "options": [
+            "BankAccount_Num is candidate key",
+            "Registration_Num can be a primary key",
+            "UID is candidate key if all students are from the same country",
+            "If S is a superkey such that S\u2229UID is NULL then S\u222aUID is also a superkey"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "Consider the following relational schema:Suppliers(sid:integer, sname:string, city:string, street:string)\r\nParts(pid:integer, pname:string, color:string)\r\nCatalog(sid:integer, pid:integer, cost:real)Assume that, in the suppliers relation above, each supplier and each street within a city has a unique name, and (sname, city) forms a candidate key. No other functional dependencies are implied other than those implied by primary and candidate keys. Which one of the following is TRUE about the above schema?",
+        "options": [
+            "The schema is in BCNF",
+            "The schema is in 3NF but not in BCNF",
+            "The schema is in 2NF but not in 3NF",
+            "The schema is not in 2NF"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "Consider the following relational schemes for a library database:\r\nBook (Title, Author, Catalog_no, Publisher, Year, Price)\r\nCollection (Title, Author, Catalog_no)\r\n\r\nwith in the following functional dependencies:I. Title Author --> Catalog_no\r\nII. Catalog_no --> Title, Author, Publisher, Year\r\nIII. Publisher Title Year --> PriceAssume {Author, Title} is the key for both schemes. Which of the following statements is true?",
+        "options": [
+            "Both Book and Collection are in BCNF",
+            "Both Book and Collection are in 3NF only",
+            "Book is in 2NF and Collection is in 3NF",
+            "Both Book and Collection are in 2NF only"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Consider the relation scheme R = {E, F, G, H, I, J, K, L, M, N} and the set of functional dependencies {{E, F} -> {G}, {F} -> {I, J}, {E, H} -> {K, L}, K -> {M}, L -> {N} on R. What is the key for R?",
+        "options": [
+            "{E, F}",
+            "{E, F, H}",
+            "{E, F, H, K, L}",
+            "{E}"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "Given the following two statements:S1: Every table with two single-valued \r\n      attributes is in 1NF, 2NF, 3NF and BCNF.\r\n\r\n  S2: AB->C, D->E, E->C is a minimal cover for \r\n      the set of functional dependencies \r\n      AB->C, D->E, AB->E, E->C.Which one of the following is CORRECT?",
+        "options": [
+            "S1 is TRUE and S2 is FALSE.",
+            "Both S1 and S2 are TRUE.",
+            "S1 is FALSE and S2 is TRUE.",
+            "Both S1 and S2 are FALSE."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "The maximum number of superkeys for the relation schema R(E,F,G,H) with E as the key is",
+        "options": [
+            "5",
+            "6",
+            "7",
+            "8"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "Given the STUDENTS relation as shown below. For (StudentName, StudentAge) to be the key for this instance, the value X should not be equal to",
+        "options": [
+            "18",
+            "19",
+            "17",
+            "20"
+        ],
+        "image_link": "https://www.geeksforgeeks.org/wp-content/uploads/gq/2014/04/GATECS2014Q221.png"
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "Which one of the following statements about normal forms is FALSE?",
+        "options": [
+            "BCNF is stricter than 3NF",
+            "Lossless, dependency-preserving decomposi\u00adtion into 3NF is always possible",
+            "Lossless, dependency-preserving decomposi\u00adtion into BCNF is always possible",
+            "Any relation with two attributes is in BCNF"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question1",
+        "question_paragraph": "Let r be a relation instance with schema R = (A, B, C, D). We define r1= \u03a0A, B, C(r) and r2= \u03a0A.D(r). Let s = r1* r2where * denotes natural join. Given that the decomposition of r into r1and r2is lossy, which one of the following is TRUE?",
+        "options": [
+            "s \u2282 r",
+            "r \u222a s",
+            "r \u2282 s",
+            "r * s = s"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "Consider a relation scheme R = (A, B, C, D, E, H) on which the following functional dependencies hold: {A\u2013>B, BC\u2013>D, E\u2013>C, D\u2013>A}. What are the candidate keys of R?",
+        "options": [
+            "AE, BE",
+            "AE, BE, DE",
+            "AEH, BEH, BCH",
+            "AEH, BEH, DEH"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "Let R1 (A, B, C) and R2 (D, E) be two relation schema, where the primary keys are shown underlined, and let C be a foreign key in R1 referring to R2. Suppose there is no violation of the above referential integrity constraint in the corresponding relation instances r1 and r2. Which one of the following relational algebra expressions would necessarily produce an empty relation ? Question4",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2014/09/GATECS2004.png"
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "The relation scheme Student Performance (name, courseNo, rollNo, grade) has the following functional dependencies:name, courseNo \u2192 grade\r\nrollNo, courseNo \u2192 grade\r\nname \u2192 rollNo\r\nrollNo \u2192 nameThe highest normal form of this relation scheme is",
+        "options": [
+            "2 NF",
+            "3 NF",
+            "BCNF",
+            "4NF"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "Consider the relation Student (name, sex, marks), where the primary key is shown underlined, pertaining to students in a class that has at least one boy and one girl. What does the following relational algebra expression produce? (Note: r is the rename operator).The condition in join is \"(sex = female ^ x = male ^ marks \u2264 m)\" Question6",
+        "options": [
+            "names of girl students with the highest marks",
+            "names of girl students with more marks than some boy student",
+            "names of girl students with marks not less than some boy students4)",
+            "names of girl students with more marks than all the boy students"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2014/09/GATECS2004Q51.png"
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Consider the following functional dependencies in a database:Data_of_Birth \u2192 Age\r\n  Age \u2192 Eligibility\r\n  Name \u2192 Roll_number\r\n  Roll_number \u2192 Name\r\n  Course_number \u2192 Course_name\r\n  Course_number \u2192 Instructor\r\n  (Roll_number, Course_number) \u2192 GradeThe relation (Roll_number, Name, Date_of_birth, Age) is:",
+        "options": [
+            "In second normal form but not in third normal form",
+            "In third normal form but not in BCNF",
+            "In BCNF",
+            "None of the above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "Relation R with an associated set of functional dependencies, F is decomposed into BCNF. The redundancy (arising out of functional dependencies) in the resulting set relations is.",
+        "options": [
+            "Zero",
+            "More than zero but less than that of an equivalent 3NF decomposition",
+            "Proportional to the size of F+",
+            "Indeterminate"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "With regard to the expressive power of the formal relational query languages, which of the following statements is true?",
+        "options": [
+            "Relational algebra is more powerful than relational calculus",
+            "Relational algebra has the same power as relational calculus",
+            "Relational algebra has the same power as safe relational calculus",
+            "None of the above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "Relation R is decomposed using a set of functional dependencies, F and relation S is decomposed using another set of functional dependencies G. One decomposition is definitely BCNF, the other is definitely 3NF, but it is not known which is which. To make a guaranteed identification, which one of the following tests should be used on the decompositions? (Assume that the closures of F and G are available).",
+        "options": [
+            "Dependency-preservation",
+            "Lossless-join",
+            "BCNF definition",
+            "3NF definition"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "From the following instance of a relation scheme R (A, B, C), we can conclude that :ABC111110232232",
+        "options": [
+            "A functionally determines B and B function\u00adally determines C",
+            "A functionally determines B and B does not functionally determine C",
+            "B does not functionally determine C",
+            "A does not functionally determine B and B does not functionally determine C"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question1",
+        "question_paragraph": "Consider a schema R(A,B,C,D) and functional dependencies A->B and C->D.\r\n\r\nThen the decomposition of R into R1(AB) and R2(CD) is",
+        "options": [
+            "dependency preserving and lossless join",
+            "lossless join but not dependency preserving",
+            "dependency preserving but not lossless join",
+            "not dependency preserving and not lossless join"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "Suppose the adjacency relation of vertices in a graph is represented in a table Adj(X,Y). Which of the following queries cannot be expressed by a relational algebra expression of constant length?",
+        "options": [
+            "List of all vertices adjacent to a given vertex",
+            "List all vertices which have self loops",
+            "List all vertices which belong to cycles of less than three vertices",
+            "List all vertices reachable from a given vertex"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "Let r and s be two relations over the relation schemes R and S respectively, and let A be an attribute in R. then the relational algebra expressionis always equal to Question4",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2014/12/GATECS200Q25B.png"
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "R(A,B,C,D) is a relation. Which of the following does not have a lossless join, dependency preserving BCNF decomposition?",
+        "options": [
+            "A->B,  B->CD",
+            "A->B,  B->C, C->D",
+            "AB->C,  C->AD",
+            "A ->BCD"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "Which of the following relational calculus expressions is not safe? Question6",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2014/12/GATECS2000Q49.png"
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Consider a relation geq which represents \u201cgreater than or equal to\u201d, that is, (x,y) \u2208 geq only if y >= x.create table geq\r\n( \r\n  ib integer not null\r\n  ub integer not null\r\n  primary key 1b\r\n  foreign key (ub) references geq on delete cascade \r\n)Which of the following is possible if a tuple (x,y) is deleted?",
+        "options": [
+            "A tuple (z,w) with z > y is deleted",
+            "A tuple (z,w) with z > x is deleted",
+            "A tuple (z,w) with w < x is deleted",
+            "The deletion of (x,y) is prohibited"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "Given the relationsemployee (name, salary, deptno) and\r\ndepartment (deptno, deptname, address)Which of the following queries cannot be expressed using the basic relational algebra operations (U, -, x, [Tex]\\\\pi[/Tex], [Tex]\\\\sigma[/Tex] , p)?",
+        "options": [
+            "Department address of every employee",
+            "Employees whose name is the same as their department name",
+            "The sum of all employees\u2019 salaries",
+            "All employees of a given department"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "Given the following relation instance.x  y  z\r\n1  4  2\r\n1  5  3\r\n1  6  3\r\n3  2  2Which of the following functional dependencies are satisfied by the instance? (GATE CS 2000)",
+        "options": [
+            "XY -> Z and Z -> Y",
+            "YZ -> X and Y -> Z",
+            "YZ -> X and X -> Z",
+            "XZ -> Y and Y -> X"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "Consider an Entity-Relationship (ER) model in which entity sets E1 and E2 are connected by an m : n relationship R12, E1 and E3 are connected by a 1 : n (1 on the side of E1 and n on the side of E3) relationship R13.\r\n\r\nE1 has two single-valued attributes a11and a12of which a11is the key attribute. E2 has two single-valued attributes a21and a22is the key attribute. E3 has two single-valued attributes a31and a32of which a31is the key attribute. The relationships do not have any attributes.\r\n\r\nIf a relational model is derived from the above ER model, then the minimum number of relations that would be generated if all the relations are in 3NF is ___________.",
+        "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "Consider the relation X(P, Q, R, S, T, U) with the following set of functional dependencies",
+        "options": [
+            "{P,R}\u2192{S,T}",
+            "{P,R}\u2192{R,T}",
+            "{P,S}\u2192{S}",
+            "{P,S,U}\u2192{Q}"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question1",
+        "question_paragraph": "Consider the following entity relationship diagram (ERD), where two entities E1 and E2 have a relation R of cardinality 1 : m.The attributes of E1 are A11, A12 and A13 where A11 is the key attribute. The attributes of E2 are A21, A22 and A23 where A21 is the key attribute and A23 is a multi-valued attribute. Relation R does not have any attribute. A relational database containing minimum number of tables with each table satisfying the requirements of the third normal form (3NF) is designed from the above ERD. The number of tables in the database is Question2",
+        "options": [
+            "2",
+            "3",
+            "5",
+            "4"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2015/12/err.jpg"
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "A relational database contains two tables student and department in which student table has columns roll_no, name and dept_id and department table has columns dept_id and dept_name. The following insert statements were executed successfully to populate the empty tables:Insert into department values (1, 'Mathematics')\r\nInsert into department values (2, 'Physics')\r\nInsert into student values (l, 'Navin', 1)\r\nInsert into student values (2, 'Mukesh', 2)\r\nInsert into student values (3, 'Gita', 1)How many rows and columns will be retrieved by the following SQL statement?Select * from student, department",
+        "options": [
+            "0 row and 4 columns",
+            "3 rows and 4 columns",
+            "3 rows and 5 columns",
+            "6 rows and 5 columns"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "Consider the entities 'hotel room', and 'person' with a many to many relationship 'lodging' as shown below:If we wish to store information about the rent payment to be made by person (s) occupying different hotel rooms, then this information should appear as an attribute of Question4",
+        "options": [
+            "Person",
+            "Hotel Room",
+            "Lodging",
+            "None of these"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2015/12/er00.jpg"
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "A table has fields Fl, F2, F3, F4, F5 with the following functional dependenciesF1 \u2192 F3 \u00a0 F2\u2192 F4 \u00a0 (F1 . F2) \u2192 F5\r\nIn terms of Normalization, this table is in",
+        "options": [
+            "1 NF",
+            "2 NF",
+            "3 NF",
+            "none"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "Which   of   the   following   is NOT a   superkey   in   a   relational   schema   with   attributes V, W, X, Y, Z and primary key V Y ?",
+        "options": [
+            "V X Y Z",
+            "V W X Z",
+            "V W X Y",
+            "V W X Y Z"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Let R (A, B, C, D, E, P, G) be a relational schema in which the following functional depen\u00addencies are known to hold: AB \u2192 CD, DE \u2192 P, C \u2192 E, P \u2192 C and B \u2192 G. The relational schema R is",
+        "options": [
+            "in BCNF",
+            "in 3NF, but not in BCNF",
+            "in 2NF, but not in 3NF",
+            "not in 2NF"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "Which option is true about the SQL query given below?",
+        "options": [
+            "It will display all the employees having last names starting with the alphabets 'A' till 'D' inclusive of A and exclusive of D.",
+            "It will throw an error as BETWEEN can only be used for Numbers and not strings.",
+            "It will display all the employees having last names starting from 'A' and ending with 'D'.",
+            "It will display all the employees having last names in the range of starting alphabets as 'A' and 'D' excluding the names starting with 'A' and 'D'."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "Which of the given options define a transaction correctly?",
+        "options": [
+            "A transaction consists of DDL statements on the database schema.",
+            "A transaction consists of COMMIT or ROLLBACK in a database session.",
+            "A transaction consists of either a collection of DML statements or a DDL or DCL or TCL statement to form a logical unit of work in a database session.",
+            "A transaction consists of collection of DML and DDL statements in different sessions of the database."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "LetR =( A, B, C, D, E, F ) be a relation scheme with the following dependencies:\r\n\r\nC\u2192F, E\u2192A, EC\u2192D, A\u2192B. Which of the following is a key of R?",
+        "options": [
+            "CD",
+            "EC",
+            "AE",
+            "AC"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "Consider the schema R= ( S, T, U, V ) and the dependencies S\u2192T, T\u2192U, U\u2192V and V\u2192S. Let R (R1 and R2) be a decomposition such that R1\u2229R2\u00a0\u2260\u00a0\u00d8. The decomposition is:",
+        "options": [
+            "Not in 2NF",
+            "In 2NF but not in 3NF",
+            "In 3NF but not in 2NF",
+            "In both 2NF and 3NF"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question1",
+        "question_paragraph": "Which normal form is considered adequate for normal relational database design?",
+        "options": [
+            "2NF",
+            "5NF",
+            "4NF",
+            "3NF"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "Consider the following database relations containing the attributesBook_id\r\nSubject_Category_of_book\r\nName_of_Author\r\nNationality_of_Author\r\n\r\nwith Book_id as the Primary Key.(a).What is the highest normal form satisfied by this relation ?(b).Suppose the attributesBook_titleandAuthor_addressare added to the relation, and the primary key is changed to (Name_of_Author, Book_Title), what will be the highest normal form satisfied by the relation?",
+        "options": [
+            "(a).What is the highest normal form satisfied by this relation ?",
+            "(b).Suppose the attributesBook_titleandAuthor_addressare added to the relation, and the primary key is changed to (Name_of_Author, Book_Title), what will be the highest normal form satisfied by the relation?"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "For a database relation R(a,b,c,d), where the domains a, b, c, d include only atomic values, only the following functional dependencies and those that can be inferred from them hold:{ a \u2192 c, b \u2192 d }This relation is",
+        "options": [
+            "in first normal form but not in second normal form",
+            "in second normal form but not in first normal form",
+            "in third normal form",
+            "None of the above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "Which of the following FD can\u2019t be implied from FD set: {A->B, A->BC, C->D} ?",
+        "options": [
+            "A->C",
+            "B->D",
+            "BC->D",
+            "All of the above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "Consider a database with the following schema:Person ( name, age, gender )\r\nname is a key\r\nFrequents ( name, pizzeria )\r\n(name, pizzeria) is a key\r\nEats ( name, pizza )\r\n(name, pizza) is a key\r\nServes ( pizzeria, pizza, price )\r\n(pizzeria, pizza) is a keyRelational algebra expression for query \"Names of all people who frequent only pizzeria's serving at least one pizza they eat\" is",
+        "options": [
+            "",
+            "",
+            "",
+            "None of the above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "How many minimum relation tables are required which satisfy 1NF? Question7",
+        "options": [
+            "2, 2, and 1 respectively",
+            "2, 2, and 2 respectively",
+            "1, 2, and 1 respectively",
+            "1, 1, and 1 respectively"
+        ],
+        "image_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/333336.png"
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "Consider the following four relational schemas. For each schema, all non-trivial functional dependencies are listed, The underlined attributes are the respective primary keys.",
+        "options": [
+            "Schema I:Registration(rollno, courses)Field\u2018courses\u2019is a set-valued attribute containing the set of courses a student has registered for. Non-trivial functional dependencyrollno \u2192 courses",
+            "Schema II:Registration (rollno, coursid, email)Non-trivial functional dependencies:rollno, courseid \u2192 emailemail \u2192 rollno",
+            "Schema III:Registration (rollno, courseid, marks, grade)Non-trivial functional dependencies:rollno, courseid, \u2192 marks, grademarks \u2192 grade",
+            "Schema IV:Registration (rollno, courseid, credit)Non-trivial functional dependencies:rollno, courseid \u2192 creditcourseid \u2192 credit",
+            "Schema I",
+            "Schema II",
+            "Schema III",
+            "Schema IV"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "Consider the following table : Faculty (facName, dept, office, rank, dateHired)facNamedeptofficerankdateHiredRaviArtA101Professor1975MuraliMathM201Assistant2000NarayananArtA101Associate1992LakshmiMathM201Professor1982MohanCSCC101Professor1980LakshmiMathM201Professor1982SreeniMathM203Associate1990TanujaCSCC101Instructor2001GaneshCSCC105Associate1995(Assume that no faculty member within a single department has same name. Each faculty member has only one office identified inoffice). 3NF refers to third normal form and BCNF refers to Boyee-Codd Normal Form\r\n\r\nThen Faculty is",
+        "options": [
+            "Not in 3NF, in BCNF",
+            "In 3NF, not in BCNF",
+            "In 3NF, in BCNF",
+            "Not in 3NF, not in BCNF"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "If every non-key attribute is functionally dependent on the primary key, then the relation is in __________ .",
+        "options": [
+            "First normal form",
+            "Second normal form",
+            "Third normal form",
+            "Fourth normal form"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "Consider a schema R(A, B, C, D) and following functional dependencies.A \u2192 B\r\nB \u2192 C\r\nC \u2192 D\r\nD \u2192 BThen decomposition of R into R1(A, B), R2(B, C) and R3(B, D) is __________ .",
+        "options": [
+            "Dependency preserving and lossless join.",
+            "Lossless join but not dependency preserving.",
+            "Dependency preserving but not lossless join.",
+            "Not dependency preserving and not lossless join."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question1",
+        "question_paragraph": "An attribute A of datatype varchar (20) has value \u2018Ram\u2019 and the attribute B of datatype char (20) has value \u2018Sita\u2019 in oracle. The attribute A has _______ memory spaces and B has _______ memory spaces.",
+        "options": [
+            "20,20",
+            "3,20",
+            "3,4",
+            "20,4"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "Consider a schema R(MNPQ) and functional dependencies M \u2192 N, P \u2192 Q. Then the decomposition of R into R1(MN) and R2(PQ) is________.",
+        "options": [
+            "Dependency preserving but not lossless join",
+            "Dependency preserving and lossless join",
+            "Lossless join but not dependency preserving",
+            "Neither dependency preserving nor lossless join."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "For a database relation R(A, B, C, D) where the domains of A, B, C and D include only atomic values, only the following functional dependencies and those that can be inferred from them are :\r\nA \u2192 C\r\nB \u2192 D\r\nThe relation R is in _______.",
+        "options": [
+            "First normal form but not in second normal form.",
+            "Both in first normal form as well as in second normal form.",
+            "Second normal form but not in third normal form.",
+            "Both in second normal form as well as in third normal form."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "Let R = (A, B, C, D, E, F) be a relation schema with the following dependencies C->F, E->A, EC->D, A->B. Which of the following is a key of R?",
+        "options": [
+            "CD",
+            "EC",
+            "AE",
+            "AC"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "DBMS provides the facility of accessing data from a database through",
+        "options": [
+            "DDL",
+            "DML",
+            "DBA",
+            "Schema"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Consider a database table R with attributes A and B. Which of the following SQL queries is illegal ?",
+        "options": [
+            "SELECT A FROM R;",
+            "SELECT A, COUNT(*) FROM R;",
+            "SELECT A, COUNT(*) FROM R GROUP BY A;",
+            "SELECT A, B, COUNT(*) FROM R GROUP BY A, B;"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "Consider the schema R(A, B, C, D) and the functional dependencies A->B and C->D. If the decomposition is made as R1(A,B) and R2(C,D), then which of the following is TRUE?",
+        "options": [
+            "Preserves dependency but cannot perform lossless join",
+            "Preserves dependency and performs lossless join",
+            "Does not perform dependency and cannot perform lossless join",
+            "Does not preserve dependency but perform lossless join"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "Which of the following statements is/are True regarding some advantages that an object-oriented DBMS (OODBMS) offers over a relational database ?\r\nI. An OODBMS avoids the \u201cimpedance mismatch\u201d problem.\r\nII. An OODBMS avoids the \u201cphantom\u201d problem.\r\nIII. An OODBMS provides higher performance concurrency control than most relational databases.\r\nIV. An OODBMS provides faster access to individual data objects once they have been read from disk.",
+        "options": [
+            "II and III only",
+            "I and IV only",
+            "I, II, and III only",
+            "I, III and IV only"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "Let x, y, z, a, b, c be the attributes of an entity set E. If {x}, {x,y}, {a,b}, {a,b,c}, {x,y,z} are superkeys then which of the following are the candidate keys?",
+        "options": [
+            "{x,y} and {a,b}",
+            "{x} and {a,b}",
+            "{x,y,z} and {a,b,c}",
+            "{z} and {c}"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "Which one of the following pairs is correctly matched in the context of database design? Boost yourGATE 2025 rankwith ourGATE CS & IT Test Series! Get60 PYQ quizzes,60 subject-wise mocks,4500+ practice questions, and20+ full-length tests\u2014designed by GATE toppers and industry experts. Track your progress with personalized rankings. Exclusive features:All India Mock Test, Live GATE CSE Mentorship ClassesandLive Doubt Solving Sessions",
+        "options": [
+            "(1)",
+            "(2)",
+            "(3)",
+            "(4)"
+        ],
+        "image_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/12-2.png"
+    },
+    {
+        "question": "Question1",
+        "question_paragraph": "Consider the following table\r\n\r\n< img src = \"https://www.cdn.geeksforgeeks.org/wp-content/uploads/ISRO64.png \">\r\n\r\nThe table is in which normal form?",
+        "options": [
+            "First Normal Form",
+            "Second Normal Form",
+            "Third Normal Form but not BCNF",
+            "Third Normal Form but not BCNF"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "In RDBMS, the constraint that no key attribute (column) may be NULL is referred to as:",
+        "options": [
+            "Referential integrity",
+            "Multi-valued dependency",
+            "Entity Integrity",
+            "Functional dependency"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "Which of the following statements is TRUE?\r\nD1: The decomposition of the schema R(A, B, C) into R1(A, B) and R2(A, C) is always lossless.\r\nD2: The decomposition of the schema R(A, B, C, D, E) having AD \u2192 B, C \u2192 DE, B \u2192 AE and AE \u2192 C, into R1(A, B, D) and R2(A, C, D, E) is lossless.",
+        "options": [
+            "Both D1and D2",
+            "Neither D1nor D2",
+            "Only  D1",
+            "Only  D2"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "Consider the following dependencies and the BOOK table in a relational database design. Determine the normal form of the given relation.ISBN \u2192 Title\r\n ISBN \u2192 Publisher\r\n Publisher \u2192 Address",
+        "options": [
+            "First Normal Form",
+            "Second Normal Form",
+            "Third Normal Form",
+            "BCNF"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "Consider a \u201cCUSTOMERS\u201d database table having a column \u201cCITY\u201d filled with all the names of Indian cities (in capital letters). The SQL statement that finds all cities that have \u201cGAR\u201d somewhere in its name, is:",
+        "options": [
+            "Select * from customers where city = \u2018%GAR%\u2019;",
+            "Select * from customers where city = \u2018$GAR$\u2019;",
+            "Select * from customers where city like \u2018%GAR%\u2019;",
+            "Select * from customers where city as \u2018%GAR\u2019;"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "match the following datbase terms to their function: (1)",
+        "options": [
+            "(1)",
+            "(2)",
+            "(3)",
+            "(4)"
+        ],
+        "image_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/14-3.png"
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "Data which improves the performance and accessibility of the database are called:",
+        "options": [
+            "Indexes",
+            "User Data",
+            "Application Metadata",
+            "Data Dictionary"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "Which type of DBMS provides support for maintaining several versions of the same entity?",
+        "options": [
+            "Relational Database Management System",
+            "Hierarchical",
+            "Object Oriented Database Management System",
+            "Network"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "Which normal form is based on the concept of 'full functional dependency'?",
+        "options": [
+            "First Normal Form",
+            "Second Normal Form",
+            "Third Normal Form",
+            "Fourth Normal Form"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "Consider the following database table: \r\nCreate table test( \r\n                  one integer, \r\n                  two integer, \r\n                  primary key(one), \r\n                  unique(two), \r\n                  check(one >= 1 and <= 10), \r\n                  check(two >= 1 and <= 5) \r\n                  );\t\t\t\t\t\r\nHow many data records/tuples atmost can this table containt?",
+        "options": [
+            "5",
+            "10",
+            "15",
+            "50"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question1",
+        "question_paragraph": "Consider the following three tables R, S and T. In this question, all the join operations are natural joins (\u2a1d). (\u03c0) is the projection operation of a relation:(a)(b)(c)(d) Question2",
+        "options": [
+            "(a)",
+            "(b)",
+            "(c)",
+            "(d)"
+        ],
+        "image_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/69-1.png"
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "Purpose of 'Foreign Key' in a table is to ensure",
+        "options": [
+            "Null Integrity",
+            "Referential Integrity",
+            "Domain Integrity",
+            "Null and Domain Integrity"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "Select the 'False' statement from the following statements about Normal Forms:",
+        "options": [
+            "Lossless preserving decomposition into 3NF is always possible",
+            "Lossless preserving decomposition into BCNF is always possible",
+            "Any Relation with two attributes is in BCNF",
+            "BCNF is stronger than 3NF"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "The best normal form of relation scheme R(A, B, C, D) along with the set of functional dependencies F = {AB \u2192 C, AB \u2192 D, C \u2192 A, D \u2192 B} is",
+        "options": [
+            "Boyce-Codd Normal form",
+            "Third Normal form",
+            "Second Normal form",
+            "First Normal form"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "Which of the following is false?",
+        "options": [
+            "Every binary relation is never be in BCNF.",
+            "Every BCNF relation is in 3NF.",
+            "1 NF, 2 NF, 3 NF and BCNF are based on functional dependencies.",
+            "Multivalued Dependency (MVD) is a special case of Join Dependency (JD)."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "For a database relation R(a,b,c,d) where the domains of a, b, c and d include only atomic values, only the following functional dependencies and those that can be inferred from them holda -> c\r\nb -> dThe relation is in",
+        "options": [
+            "First normal form but not in second normal form",
+            "Second normal form but not in third normal form",
+            "Third normal form",
+            "None of the above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "The set of attributes X will be fully functionally dependent on the set of attributes Y if the following conditions are satisfied.",
+        "options": [
+            "X is functionally dependent on Y",
+            "X is not functionally dependent on any subset of Y",
+            "Both (a) and (b)",
+            "None of these"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "For a database relation R(a, b, c, d) where the domains of a, b, c and d include only atomic\r\nvalues, and only the following functional dependencies and those that can be inferred from\r\nthem hold :\r\na \u2192 c\r\nb \u2192 d\r\nThe relation is in _________.",
+        "options": [
+            "First normal form but not in second normal form",
+            "Second normal form but not in third normal form",
+            "Third normal form",
+            "BCNF"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "Consider a relational table R that is in 3NF, but not in BCNF. Which one of the following statements is TRUE ?",
+        "options": [
+            "R has a nontrivial functional dependency X\u2192A, where X is not a superkey and A is a prime attribute",
+            "R has a nontrivial functional dependency X\u2192A, where X is not a superkey and A is a non-prime attribute and X is not a proper subset of any key",
+            "R has a nontrivial functional dependency X\u2192A, where X is not a superkey and A is a non-prime attribute and X is a proper subset of some key",
+            "A cell in R holds a set instead of an atomic value"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "Consider the following statements S1 and S2 about the relational data model:S1:A relation scheme can have at most one foreign key.S2:A foreign key in a relation scheme R cannot be used to refer to tuples of R.Which one of the following choices is correct?",
+        "options": [
+            "S1:A relation scheme can have at most one foreign key.",
+            "S2:A foreign key in a relation scheme R cannot be used to refer to tuples of R.",
+            "Both S1 and S2 are true",
+            "S1 is true and S2 is false",
+            "S1 is false and S2 is true",
+            "Both S1 and S2 are false"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question1",
+        "question_paragraph": "Suppose the following functional dependencies hold on a relation U with attributes P,Q,R,S, and T:P \u2192 QR\r\nRS \u2192 TWhich of the following functional dependencies can be inferred from the above functional dependencies?",
+        "options": [
+            "PS \u2192 T",
+            "R \u2192 T",
+            "P \u2192 R",
+            "PS \u2192 Q"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "Relation R has eight attributes ABCDEFGH. Fields of R contain only atomic values. F = {CH -> G, A -> BC, B -> CFH, E -> A, F -> EG} is a set of functional dependencies (FDs) so that F+ is exactly the set of FDs that hold for R.\r\n\r\nHow many candidate keys does the relation R have?",
+        "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "In RDBMS, different classes of relations are created using __________ technique to prevent modification anomalies.",
+        "options": [
+            "Functional Dependencies",
+            "Data integrity",
+            "Referential integrity",
+            "Normal Forms"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "A relation r(A,B) in a relational database has 1200 tuples. The attribute A has integer values ranging from 6 to 20, and the attribute B has integer values ranging from 1 to 20. Assume that the attributes A and B are independently distributed.  The estimated number of tuples in the output of \u03c3(A>10)\u2228(B=18)(r) is ____________.",
+        "options": [
+            "820",
+            "1200",
+            "960",
+            "1000"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "Relations produced from E - R Model will always be in ________.",
+        "options": [
+            "1 NF",
+            "2 NF",
+            "3 NF",
+            "4 NF"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Consider the relation R (ABCDE):\r\nFD = { A \u2192 B, B \u2192 C, C \u2192 D, D \u2192 E}\r\nFind out the highest normal form.",
+        "options": [
+            "1 NF",
+            "2 NF",
+            "3 NF",
+            "BCNF"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "Let R = ABCDE is a relational scheme with functional dependency set F = {A \u2192 B, B \u2192 C, AC \u2192 D}. The attribute closures of A and E are",
+        "options": [
+            "ABCD, \u03c6",
+            "ABCD, E",
+            "\u03a6, \u03c6",
+            "ABC, E"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "BCNF is not used for cases where a relation has",
+        "options": [
+            "Two (or more) candidate keys",
+            "Two candidate keys and composite",
+            "The candidate key overlap",
+            "Two mutually exclusive foreign keys"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "The Relation\r\nVendor Order (V_no, V_ord_no, V_name, Qty_sup, unit_price) is in 2NF because:",
+        "options": [
+            "Non_key attribute V_name is dependent on V_no which is part of composite key",
+            "Non_key attribute V_name is dependent on Qty_sup",
+            "Key attribute Qty_sup is dependent on primary_key unit price",
+            "Key attribute V_ord_no is dependent on primary_key unit price"
+        ],
+        "image_link": null
+    }
+]
