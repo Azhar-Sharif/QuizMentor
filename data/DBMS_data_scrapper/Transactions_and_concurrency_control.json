@@ -1,0 +1,535 @@
+[
+    {
+        "question": "Question1",
+        "question_paragraph": "Consider the following schedule for transactions T1, T2 and T3: Which one of the schedules below is the correct serialization of the above?",
+        "options": [
+            "T1->>T3->>T2",
+            "T2->>T1->>T3",
+            "T2->>T3->>T1",
+            "T3->>T1->>T2"
+        ],
+        "image_link": "https://media.geeksforgeeks.org/wp-content/uploads/20230502000922/a.png"
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "Consider the following four schedules due to three transactions (indicated by the subscript) using read and write on a data item x, denoted by r(x) and w(x) respectively. Which one of them is conflict serializable. Question3",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2014/04/GATECS2014Q39.png"
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "Consider the following schedule S of transactions T1, T2, T3, T4:Which one of the following statements is CORRECT? Question4",
+        "options": [
+            "S is conflict-serializable but not recoverable",
+            "S is not conflict-serializable but is recoverable",
+            "S is both conflict-serializable and recoverable",
+            "S is neither conflict-serializable nor is it recoverable"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2014/04/GATECS2014Q29.png"
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "Consider the transactions T1, T2, and T3 and the schedules S1 and S2 given below.T1: r1(X); r1(Z); w1(X); w1(Z)\r\nT2: r2(Y); r2(Z); w2(Z)\r\nT3: r3(Y); r3(X); w3(Y)\r\nS1: r1(X); r3(Y); r3(X); r2(Y); r2(Z);\r\n    w3(Y); w2(Z); r1(Z); w1(X); w1(Z)\r\nS2: r1(X); r3(Y); r2(Y); r3(X); r1(Z);\r\n    r2(Z); w3(Y); w1(X); w2(Z); w1(Z)Which one of the following statements about the schedules is TRUE?",
+        "options": [
+            "Only S1 is conflict-serializable.",
+            "Only S2 is conflict-serializable.",
+            "Both S1 and S2 are conflict-serializable.",
+            "Neither S1 nor S2 is conflict-serializable."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "Consider the following log sequence of two transactions on a bank account, with initial balance 12000, that transfer 2000 to a mortgage payment and then apply a 5% interest.1. T1 start\r\n  2. T1 B old=12000 new=10000\r\n  3. T1 M old=0 new=2000\r\n  4. T1 commit\r\n  5. T2 start\r\n  6. T2 B old=10000 new=10500\r\n  7. T2 commitSuppose the database system crashes just before log record 7 is written. When the system is restarted,  which one statement is true of the recovery procedure?",
+        "options": [
+            "We must redo log record 6 to set B to 10500",
+            "We must undo log record 6 to set B to 10000 and then redo log records 2 and 3.",
+            "We need not redo log records 2 and 3 because transaction T1 has committed.",
+            "We can apply redo and undo operations in arbitrary order because they are idempotent"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Consider the given schedule and choose the suitable option.S = T1:R(x), T1:R(y), T1:W(x), T2:R(y), T3:W(y), T1:W(x), T2:R(y)",
+        "options": [
+            "Schedule is view serializable",
+            "Schedule is conflict serializable but not view serializable",
+            "Schedule is view serializable but not conflict serializable",
+            "Neither  view serializable nor conflict serializable"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "Which of the following scenarios may lead to an irrecoverable error in a database system ?",
+        "options": [
+            "A transaction writes a data item after it is read by an uncommitted transaction",
+            "A transaction reads a data item after it is read by an uncommitted transaction",
+            "A transaction reads a data item after it is written by a committed transaction",
+            "A transaction reads a data item after it is written by an uncommitted transaction"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "Consider three data items D1, D2 and D3 and the following execution schedule of transactions T1, T2 and T3. In the diagram, R(D) and W(D) denote the actions reading and writing the data item D respectively.Which of the following statements is correct? Question9",
+        "options": [
+            "The schedule is serializable as T2; T3; T1",
+            "The schedule is serializable as T2; T1; T3",
+            "The schedule is serializable as T3; T2; T1",
+            "The schedule is not serializable"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2014/11/GATECS2003Q87.png"
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "Consider the following transaction involving two bank accounts x and y.read(x);  x := x \u2013 50;  write(x);  read(y);  y := y + 50;  write(y)The constraint that the sum of the accounts x and y should remain constant is that of",
+        "options": [
+            "Atomicity",
+            "Consistency",
+            "Isolation",
+            "Durability"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "Consider a simple checkpointing protocol and the following set of operations in the log.(start, T4); (write, T4, y, 2, 3); (start, T1); (commit, T4); (write, T1, z, 5, 7);\r\n(checkpoint);\r\n(start, T2); (write, T2, x, 1, 9); (commit, T2); (start, T3); (write, T3, z, 7, 2);If a crash happens now and the system tries to recover using both undo and redo operations, what are the contents of the undo list and the redo list",
+        "options": [
+            "Undo: T3, T1; Redo: T2",
+            "Undo: T3, T1; Redo: T2, T4",
+            "Undo: none; Redo: T2, T4, T3; T1",
+            "Undo: T3, T1, T4; Redo: T2"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question1",
+        "question_paragraph": "Consider the following partial Schedule S involving two transactions T1 and T2. Only the read and the write operations have been shown. The read operation on data item P is denoted by read(P) and the write operation on data item P is denoted by write(P).Suppose that the transaction T1 fails immediately after time instance 9. Which one of the following statements is correct? T2 must be aborted and then both T1 and T2 must be re-started to ensure transaction atomicity",
+        "options": [
+            "T2 must be aborted and then both T1 and T2 must be re-started to ensure transaction atomicity",
+            "Schedule S is non-recoverable and cannot ensure transaction atomicity",
+            "Only T2 must be aborted and then re-started to ensure transaction atomicity",
+            "Schedule S is recoverable and can ensure atomicity and nothing else needs to be done"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2015/02/Q39.png"
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "Which level of locking provides the highest degree of concurrency in a relational data base?",
+        "options": [
+            "Page",
+            "Table",
+            "Row",
+            "Page, table and row level locking allow the same degree of concurrency"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "Consider the following schedule S of transactions T1 and T2:T1T2Read(A)A = A - 10Read (A)Temp = 0.2*A\r\n\r\nWrite(A)\r\n\r\nRead(B)Write(A)Read(B)\r\n\r\nB = B + 10\r\n\r\nWrite(B)B = B + TempWrite(B)",
+        "options": [
+            "S is serializable only as T1, T2",
+            "S is serializable only as T2, T1",
+            "S is serializable both as T1, T2 and T2, T1",
+            "S is serializable either as T1 or as T2",
+            "None of these"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "Which one of the following is NOT a part of the ACID properties of database transactions?",
+        "options": [
+            "Atomicity",
+            "Consistency",
+            "Isolation",
+            "Deadlock-freedom"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "Consider the following two phase locking protocol. Suppose a transaction T accesses (for read or write operations), a certain set of objects {O1,...,Ok}. This is done in the following manner:Step 1. T acquires exclusive locks to O1, . . . , Ok in increasing order of their addresses.Step 2. The required operations are performed.Step 3. All locks are released.\r\n\r\nThis protocol will",
+        "options": [
+            "guarantee serializability and deadlock-freedom",
+            "guarantee neither serializability nor deadlock-freedom",
+            "guarantee serializability but not deadlock-freedom",
+            "guarantee deadlock-freedom but not serializability"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Suppose a database schedule S involves transactions T1, ....Tn.   Construct the precedence graph of S with vertices representing the transactions and edges representing the conflicts.  If S is serializable, which one of the following orderings of the vertices of the precedence graph is guaranteed to yield a serial schedule?",
+        "options": [
+            "Topological order",
+            "Depth-first order",
+            "Breadth-first order",
+            "Ascending order of transaction indices"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "Consider the following database schedule with two transactions, T1 and T2.S = r2(X); r1(X); r2(Y); w1(X); r1(Y); w2(X); a1; a2;where ri(Z) denotes a read operation by transaction Ti on a variable Z, wi(Z) denotes a write operation by Ti on a variable Z and ai denotes an abort by transaction Ti .\r\nWhich one of the following statements about the above schedule is TRUE?",
+        "options": [
+            "S is non-recoverable",
+            "S is recoverable, but has a cascading abort",
+            "S does not have a cascading abort",
+            "S is strict"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "Consider the following three schedules of transactions T1, T2 and T3. [Notation: In the following NYO represents the action Y (R for read, W for write) performed by transac\u00adtion N on object O.](S1)2RA\t2WA\t3RC\t2WB\t3WA\t3WC\t1RA\t1RB\t1WA\t1WB(S2)3RC\t2RA\t2WA\t2WB\t3WA\t1RA\t1RB\t1WA\t1WB\t3WC(S3)2RA\t3RC\t3WA\t2WA\t2WB\t3WC\t1RA\t1RB\t1WA\t1WBWhich of the following statements is TRUE?",
+        "options": [
+            "S1, S2 and S3 are all conflict equivalent to each other",
+            "No two of S1, S2 and S3 are conflict equivalent to each other",
+            "S2 is conflict equivalent to S3, but not to S1",
+            "S1 is conflict equivalent to S2, but not to S3"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "Which of the following statement is/are incorrect?A schedule following strict two phase locking protocol is conflict serializable as well as recoverable.Checkpoint in schedules are inserted to ensure recoverability.",
+        "options": [
+            "A schedule following strict two phase locking protocol is conflict serializable as well as recoverable.",
+            "Checkpoint in schedules are inserted to ensure recoverability.",
+            "Only 1",
+            "Only 2",
+            "Both 1 and 2",
+            "None"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "For the schedule given below, which of the following is Correct?1\u00a0 \u00a0Read A\r\n2\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0Read B\r\n3\u00a0 \u00a0Write A\r\n4\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0Read A\r\n5\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0Write A\r\n6\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0  \u00a0 Write B\r\n7\u00a0 \u00a0Read B\r\n8\u00a0 \u00a0Write B",
+        "options": [
+            "This schedule is serialisable and can occur in a scheme using 2PL protocol.",
+            "This schedule is serialisable  but cannot occur in a scheme using 2PL protocol.",
+            "This schedule is not serialisable but can occur in a scheme using 2PL protocol.",
+            "This schedule is not serialisable and cannot occur in a scheme using 2PL protocol."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question1",
+        "question_paragraph": "LetR(a,b,c)andS(d,e,f)be two relations in whichdis the foreign key ofSthat refers to the primary key ofR. Consider the following four operationsRandS1. Insert into R\r\n2. Insert into S\r\n3. Delete from R\r\n4. Delete from S\r\n\r\nWhich of the following can cause violation of the referential integrity constraint above?",
+        "options": [
+            "None of (1), (2), (3) or (4) can cause its violation",
+            "All of (1), (2), (3) and (4) can cause its violation",
+            "Both (1) and (4) can cause its violation",
+            "Both (2) and (3) can cause its violation"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "Assume that Ti requests a lock held by Tj. The following table summarizes the actions taken for wait-die and wound-wait scheme:Fill correct status of Ti and Tj at W, Y, X, and Z respectively. Question3",
+        "options": [
+            "Ti dies, Ti waits, Ti waits,  and Tj aborts respectively.",
+            "Ti dies, Ti waits, Ti waits, and Tj aborts respectively.",
+            "Ti waits, Ti dies, Ti waits, and Tj aborts respectively.",
+            "None of these"
+        ],
+        "image_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/2-1.png"
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "Consider the following four schedules due to three transactions (indicated by the subscript) using read and write on a data item X, denoted by r(X) and w(X) respectively. Which one of them is conflict serializable ?S1: r1(X); r2(X); w1(X); r3(X); w2(X)\r\n\r\nS2: r2(X); r1(X); w2(X); r3(X); w1(X)\r\n\r\nS3: r3(X); r2(X); r1(X); w2(X); w1(X)\r\n\r\nS4: r2(X); w2(X); r3(X); r1(X); w1(X)",
+        "options": [
+            "S1",
+            "S2",
+            "S3",
+            "S4"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "Suppose a database schedule S involves transactions T1, T2, .............,Tn. Consider the precedence graph of S with vertices representing the transactions and edges representing the conflicts. If S is serializable, which one of the following orderings of the vertices of the precedence graph is guaranteed to yield a serial schedule ?",
+        "options": [
+            "Topological order",
+            "Depth - first order",
+            "Breadth - first order",
+            "Ascending order of transaction indices"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "ACID properties of a transactions are",
+        "options": [
+            "Atomicity, consistency, isolation, database",
+            "Atomicity, consistency, isolation, durability",
+            "Atomicity, consistency, integrity, durability",
+            "Atomicity, consistency, integrity, database"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Which of the following concurrency control protocol ensures both conflict serializability and free from deadlock?",
+        "options": [
+            "Time stamp ordering",
+            "2 Phase locking",
+            "Both (a) and (b)",
+            "None of the above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "Which one of these is characteristic of RAID 5?",
+        "options": [
+            "Dedicated parity",
+            "Double parity",
+            "Hamming code parity",
+            "Distributed parity"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "Consider following schedules involving two transactions:\r\nS1 : r1(X); r1(Y); r2(X); r2(Y); w2(Y); w1(X)\r\nS2 : r1(X); r2(X); r2(Y); w2(Y); r1(Y); w1(X)\r\nWhich of the following statement is true?",
+        "options": [
+            "Both S1 and S2 are conflict serializable.",
+            "S1 is conflict serializable and S2 is not conflict serializable.",
+            "S1 is not conflict serializable and S2 is conflict serializable.",
+            "Both S1 and S2 are not conflict serializable."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "Consider the following relation:Works (emp_name, company_name, salary)Here, emp_name is primary key.\r\nConsider the following SQL querySelect emp_name\r\nFrom works T\r\nwhere salary > (select avg (salary)\r\n                from works S\r\n                where T.company _ name = S.company _ name)The above query is for following :",
+        "options": [
+            "Find the highest paid employee who earns more than the average salary of all employees of his company.",
+            "Find the highest paid employee who earns more than the average salary of all the employees of all the companies.",
+            "Find all employees who earn more than the average salary of all employees of all the companies.",
+            "Find all employees who earn more than the average salary of all employees of their company."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "Consider the following log sequence of two transactions on a bank account, with initial balance 12000, that transfer 2000 to a mortgage payment and then apply a 5% interest. 1. T1 start 2. T1 B old=1200 new=10000 3. T1 M old=0 new=2000 4. T1 commit 5. T2 start 6. T2 B old=10000 new=10500 7. T2 commit Suppose the database system crashes just before log record 7 is written. When the system is restarted, which one statement is true of the recovery procedure?",
+        "options": [
+            "We must redo log record 6 to set B to 10500",
+            "We must undo log record 6 to set B to 10000 and then redo log records 2 and 3",
+            "We need not redo log records 2 and 3 because transaction T1 has committed",
+            "We can apply redo and undo operations in arbitrary order because they are idempotent."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question1",
+        "question_paragraph": "Consider the table R with attributes A, B and C. The functional dependencies that hold on R are : A \u2192 B, C \u2192 AB. Which of the following statements is/are True ?\r\nI. The decomposition of R into R1(C, A) and R2(A, B) is lossless.\r\nII. The decomposition of R into R1(A, B) and R2(B, C) is lossy.",
+        "options": [
+            "Only I",
+            "Only II",
+            "Both I and II",
+            "Neither I nor II"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "Which of the following concurrency protocol ensures both conflict serializability and freedom from deadlock? \r\n(a)z - phase Locking \r\n(b)Time stamp - ordering",
+        "options": [
+            "Both (a) and (b)",
+            "(a) only",
+            "(b) only",
+            "Neither (a) nor (b)"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "Which of the following contains complete record of all activity that affected the contents of a database during a certain period of time?",
+        "options": [
+            "Transaction log",
+            "Query language",
+            "Report writer",
+            "Data manipulation language"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "Which of the following scenarios may lead to an irrecoverable error in a database system?",
+        "options": [
+            "A transaction writes a data item after it is read by an uncommitted transaction",
+            "A transaction reads a data item after it is read by an uncommitted transaction",
+            "A transaction reads a data item after it is written by a committed transaction",
+            "A transaction reads a data item after it is written by an uncommitted transaction"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "Which of the following is correct with respect to Two phase commit protocol?",
+        "options": [
+            "Ensures serializability",
+            "Prevents Deadlock",
+            "Detects Deadlock",
+            "Recover from Deadlock"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Which of the following is correct ?\r\nI.Two phase locking is an optimistic protocol.\r\nII. Two phase locking is pessimistic protocol\r\nIII. Time stamping is an optimistic protocol.\r\nIV. Time stamping is pessimistic protocol.",
+        "options": [
+            "I and III",
+            "II and IV",
+            "I and IV",
+            "II and III"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "Let us assume that transaction T1 has arrived before transaction T2. Consider the scheduleS=r1(A); r2(B) ; w2(A); w1(B)Which of the following is true?",
+        "options": [
+            "Allowed under basic timestamp protocol.",
+            "Not allowed under basic timestamp protocols because T1 is rolled back",
+            "Not allowed under basic timestamp protocols because T2 is rolled back",
+            "None of these"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "Consider the following schedules involving two transactions.\r\nS1: r1(X) ; r1(Y) ; r2(X) ; r2(Y) ; w2(Y) ; w1(X)\r\nS2: r1(X) ; r2(X) ; r2(Y) ; w2(Y) ; r1(Y) ; w1(X)\r\nWhich one of the following statements is correct with respect to above ?",
+        "options": [
+            "Both S1and S2is  conflict serializable.",
+            "Both S1and S2are not conflict serializable.",
+            "S1is conflict serializable and S2is not conflict serializable.",
+            "S1is not conflict serializable and S2is  conflict serializable."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "Consider the relation R(P,Q,S,T,X,Y,Z,W) with the following functional dependencies.Consider the decomposition of the relation R into the constituent relations according to the following two decomposition schemes.Which one of the following options is correct? D1 is a lossless decomposition, but D2 is a lossy decomposition",
+        "options": [
+            "D1 is a lossless decomposition, but D2 is a lossy decomposition",
+            "D1 is a lossy decomposition, but D2 is a lossless decomposition",
+            "Both D1 and D2 are lossless decompositions",
+            "Both D1 and D2 are lossy decompositions"
+        ],
+        "image_link": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210226184738/4412.png"
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "Let S be the following schedule of operations of three transactions T1, T2 and T3 in a relational database system:",
+        "options": [
+            "P:S is conflict-serializable.",
+            "Q:If T3 commits before T1 finishes, then S is recoverable.",
+            "Both P and Q are true",
+            "P is true and Q is false",
+            "P is false and Q is true",
+            "Both P and Q are false"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question1",
+        "question_paragraph": "Which of the following concurrency control protocols ensure both conflict serializability and freedom from deadlock? I. 2-phase locking II. Time-stamp ordering",
+        "options": [
+            "I only",
+            "II only",
+            "Both I and II",
+            "Neither I nor II"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "Consider the following transactions with data items P and Q initialized to zero:",
+        "options": [
+            "A serializable schedule",
+            "A schedule that is not conflict serializable",
+            "A conflict serializable schedule",
+            "A schedule for which a precedence graph cannot be drawn"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "Assume the following information:\r\nOriginal timestamp value = 46\r\nReceive timestamp value = 59\r\nTransmit timestamp value = 60\r\nTimestamp at arrival of packet = 69\r\nWhich of the following statements is correct?",
+        "options": [
+            "Receive clock should go back by 3 milliseconds",
+            "Transmit and Receive clocks are synchronized",
+            "Transmit clock should go back by 3 milliseconds",
+            "Receive clock should go ahead by 1 milliseconds"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "Suppose a database system crashes again while recovering from a previous crash. Assume checkpointing is not done by the database either during the transactions or during recovery.\r\n\r\nWhich of the following statements is/are correct?",
+        "options": [
+            "The same undo and redo list will be used while recovering again",
+            "The system cannot recover any further",
+            "All the transactions that are already undone and redone will not be recovered again",
+            "The database will become inconsistent"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "__________ rules used to limit the volume of log information that has to be handled and processed in the event of system failure involving the loss of volatile information.",
+        "options": [
+            "Write-ahead log",
+            "Check-pointing",
+            "Log buffer",
+            "Thomas"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Which of the following RAID level provides the highest Data Transfer Rate (Read/Write)",
+        "options": [
+            "RAID 1",
+            "RAID 3",
+            "RAID 4",
+            "RAID 5"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "What is the equivalent serial schedule for the following transactions?T1          T2          T3R(Y)\r\n                       R(Z)\r\nR(X)\r\nW(X) \r\n                       W(Y)\r\n                       W(Z)\r\n           W(Z)\r\nR(Y)\r\nW(Y) \r\n           R(Y)\r\n           W(Y)\r\n           R(X)\r\n           W(X)",
+        "options": [
+            "T1 \u2212 T2 \u2212 T3",
+            "T3 \u2212 T1 \u2212 T2",
+            "T2 \u2212 T1 \u2212 T3",
+            "T1 \u2212 T3 \u2212 T2"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "Which of the following is the highest isolation level in transaction management?",
+        "options": [
+            "Serializable",
+            "Repeated Read",
+            "Committed Read",
+            "Uncommitted Read"
+        ],
+        "image_link": null
+    }
+]
