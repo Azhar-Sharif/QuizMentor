@@ -1,0 +1,713 @@
+[
+    {
+        "question": "Question1",
+        "question_paragraph": "Consider a database table T containing two columns X and Y each of type integer. After the creation of the table, one record (X=1, Y=1) is inserted in the table.\r\n\r\n        Let MX and My denote the respective maximum values of X and Y among all records in the table at any point in time. Using MX and MY, new records are inserted in the table 128 times with X and Y values being MX+1, 2*MY+1 respectively. It may be noted that each time after the insertion, values of MX and MY change. What will be the output of the following SQL query after the steps mentioned above are carried out?SELECT Y FROM T WHERE X=7;",
+        "options": [
+            "127",
+            "255",
+            "129",
+            "257"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "A relational schema for a train reservation database is given below.\r\nPassenger (pid, pname, age)\r\nReservation (pid, class, tid)Table: Passengerpid   pname   age\r\n-----------------\r\n 0    Sachin   65\r\n 1    Rahul    66\r\n 2    Sourav   67\r\n 3    Anil     69Table : Reservationpid  class  tid\r\n---------------\r\n 0    AC   8200\r\n 1    AC   8201\r\n 2    SC   8201\r\n 5    AC   8203\r\n 1    SC   8204\r\n 3    AC   8202What pids are returned by the following SQL query for the above instance of the tables?SLECT pid\r\nFROM Reservation ,\r\nWHERE class \u2018AC\u2019 AND\r\n    EXISTS (SELECT *\r\n       FROM Passenger\r\n       WHERE age > 65 AND\r\n       Passenger. pid = Reservation.pid)",
+        "options": [
+            "1, 0",
+            "1, 2",
+            "1, 3",
+            "1, 5"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "Let R and S be relational schemes such that R={a,b,c} and S={c}. Now consider\u00a0the following queries on the database:IV) SELECT R.a, R.b\r\n       FROM R,S\r\n            WHERE R.c=S.cWhich of the above queries are equivalent? Question4",
+        "options": [
+            "I and II",
+            "I and III",
+            "II and IV",
+            "III and IV"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2015/09/gateqa.png"
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "Consider the table employee(empId, name, department, salary) and the two queries  Q1 ,Q2 below. Assuming that department 5 has more than one employee, and we want to find the employees who get higher salary than anyone in the department 5, which one of the statements is TRUE for any arbitrary employee table?Q1 : Select e.empId\r\n     From employee e\r\n     Where not exists\r\n        (Select * From employee s where s.department = \u201c5\u201d and \r\n                                        s.salary >=e.salary)\r\nQ2 : Select e.empId\r\n     From employee e\r\n     Where e.salary > Any\r\n    (Select distinct salary From employee s Where s.department = \u201c5\u201d)",
+        "options": [
+            "Q1 is the correct query",
+            "Q2 is the correct query",
+            "Both Q1 and Q2 produce the same answer.",
+            "Neither   Q1 nor Q2 is the correct query"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "Given the following schema:employees(emp-id, first-name, last-name, hire-date, dept-id, salary)\r\n     departments(dept-id, dept-name, manager-id, location-id)You want to display the last names and hire dates of all latest hires in their respective departments in the location ID 1700. You issue the following query:SQL> SELECT last-name, hire-date\r\n     FROM employees\r\n     WHERE (dept-id, hire-date) IN ( SELECT dept-id, MAX(hire-date)\r\n                                     FROM employees JOIN departments USING(dept-id)\r\n                                     WHERE location-id = 1700\r\n                                     GROUP BY dept-id);What is the outcome?",
+        "options": [
+            "It executes but does not give the correct result.",
+            "It executes and gives the correct result.",
+            "It generates an error because of pairwise comparison.",
+            "It generates an error because the GROUP BY clause cannot be used with table joins in a subquery"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "SQL allows tuples in relations, and correspondingly defines the multiplicity of tuples in the result of joins. Which one of the following queries always gives the same answer as the nested query shown below:select * from R where a in (select S.a from S)",
+        "options": [
+            "select R.* from R, S where R.a=S.a\r(D)",
+            "select distinct R.* from R,S where R.a=S.a",
+            "select R.* from R,(select distinct a from S) as S1 where\rR.a=S1.a",
+            "select R.* from R,S where R.a=S.a and is unique R"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "Consider the relation account (customer, balance) where customer is a primary key and there are no null values. We would like to rank customers according to decreasing balance. The customer with the largest balance gets rank 1. ties are not broke but ranks are skipped: if exactly two customers have the largest balance they each get rank 1 and rank 2 is not assignedQuery1:select A.customer, count(B.customer)\r\n  from account A, account B\r\n  where A.balance <=B.balance\r\n  group by A.customerQuery2:select A.customer, 1+count(B.customer)\r\n  from account A, account B\r\n  where A.balance < B.balance\r\n  group by A.customerConsider these statements about Query1 and Query2.1. Query1 will produce the same row set as Query2 for \r\n   some but not all databases.\r\n2. Both Query1 and Query2 are correct implementation \r\n   of the specification\r\n3. Query1 is a correct implementation of the specification\r\n   but Query2 is not\r\n4. Neither Query1 nor Query2 is a correct implementation\r\n   of the specification\r\n5. Assigning rank with a pure relational query takes \r\n   less time than scanning in decreasing balance order \r\n   assigning ranks using ODBC.Which two of the above statements are correct?",
+        "options": [
+            "2 and 5",
+            "1 and 3",
+            "1 and 4",
+            "3 and 5"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "The following table has two attributes A and C where A is the primary key and C is the foreign key referencing A with on-delete cascade.A   C\r\n-----\r\n2   4\r\n3   4\r\n4   3\r\n5   2\r\n7   2\r\n9   5\r\n6   4The set of all tuples that must be additionally deleted to preserve referential integrity when the tuple (2,4) is deleted is:",
+        "options": [
+            "(3,4) and (6,4)",
+            "(5,2) and (7,2)",
+            "(5,2), (7,2) and (9,5)",
+            "(3,4), (4,3) and (6,4)"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "The relation book (title, price) contains the titles and prices of different books. Assuming that no two books have the same price, what does the following SQL query list?select title\r\n  from book as B\r\n  where (select count(*)\r\n     from book as T\r\n     where T.price > B.price) < 5",
+        "options": [
+            "Titles of the four most expensive books",
+            "Title of the fifth most inexpensive book",
+            "Title of the fifth most expensive bookTitles of the five most expensive books",
+            "Titles of the five most expensive books"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "Consider the following SQL queryselectdistinctal, a2,........., anfromr1, r2,........, rmwherePFor an arbitrary predicate P, this query is equivalent to which of the following relational algebra expressions ?\r\nA: [Tex]\\\\prod_{a_{1},a_{2},...a_{n}}\\\\sigma_{\\\\rho} (r_{1}\\\\times r_{2}\\\\times r_{3}....\\\\times r_{m})[/Tex]\r\nB: [Tex]\\\\prod_{a_{1},a_{2},...a_{n}}\\\\sigma_{\\\\rho} (r_{1}\\\\bowtie r_{2}\\\\bowtie r_{3}....\\\\bowtie r_{m})[/Tex]\r\nC: [Tex]\\\\prod_{a_{1},a_{2},...a_{n}}\\\\sigma_{\\\\rho} (r_{1}\\\\cup r_{2}\\\\cup r_{3}....\\\\cup r_{m})[/Tex]\r\nD: [Tex]\\\\prod_{a_{1},a_{2},...a_{n}}\\\\sigma_{\\\\rho} (r_{1}\\\\cap r_{2}\\\\cap r_{3}....\\\\cap r_{m})[/Tex]",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question1",
+        "question_paragraph": "Consider the set of relations shown below and the SQL query that follows.Students: (Roll_number, Name, Date_of_birth)\r\n  Courses: (Course number, Course_name, Instructor)\r\n  Grades: (Roll_number, Course_number, Grade)selectdistinctNamefromStudents, Courses, GradeswhereStudents. Roll_number = Grades.Roll_numberandCourses.Instructor = KorthandCourses.Course_number = Grades.Course_numberandGrades.grade = AWhich of the following sets is computed by the above query?",
+        "options": [
+            "Names of students who have got an A grade in all courses taught by Korth",
+            "Names of students who have got an A grade in all courses",
+            "Names of students who have got an A grade in at least one of the courses taught by Korth",
+            "None of the above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "Given relations r(w, x) and s(y, z), the result ofSELECT DISTINCT w, x\r\n       FROM r, sis guaranteed to be same as r, provided",
+        "options": [
+            "r has no duplicates and s is non-empty",
+            "r and s have no duplicates",
+            "s has no duplicates and r is non-empty",
+            "r and s have the same number of tuples"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "In SQL, relations can contain null values, and comparisons with null values are treated as unknown. Suppose all comparisons with a null value are treated as false. Which of the following pairs is not equivalent?",
+        "options": [
+            "x = 5  AND        not(not(x = 5))",
+            "x = 5   AND        x> 4 and x < 6, where x is an integer",
+            "x  \u2260  5  AND   not (x = 5)",
+            "None of the above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "Consider the following three table to store student enrollements in different courses.",
+        "options": [
+            "Name of all students who are either enrolled in \"DBMS\" or \"OS\" courses",
+            "Name of all students who are enrolled in \"DBMS\" and \"OS\"",
+            "Name of all students who are either enrolled in \"DBMS\" or \"OS\" or both.",
+            "None of the above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "Consider the following Employee table",
+        "options": [
+            "6",
+            "5",
+            "4",
+            "0"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Consider the following relations:SELECT S. Student_Name, sum(P.Marks)\r\n     FROM Student S, Performance P\r\n     WHERE S.Roll_No = P.Roll_No\r\n     GROUP BY S.Student_NameThe number of rows that will be returned by the SQL query is _________ Question7",
+        "options": [
+            "0",
+            "1",
+            "2",
+            "3"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2015/02/Q45-266x300.png"
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "Consider the following relation",
+        "options": [
+            "WHERE P1. Capacity> = All (select P2. Capacity from Cinema P2)",
+            "WHERE P1. Capacity> = Any (select P2. Capacity from Cinema P2)",
+            "WHERE P1. Capacity > All (select max(P2. Capacity) from Cinema P2)",
+            "WHERE P1. Capacity > Any (select max (P2. Capacity) from Cinema P2)"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "Which of the following options of running these transactions will update the commission of all salespersons correctly",
+        "options": [
+            "Execute T1 followed by T2 followed by T3",
+            "Execute T2, followed by T3; T1 running concurrently throughout",
+            "Execute T3 followed by T2; T1 running concurrently throughout",
+            "Execute T3 followed by T2 followed by T1"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "A table 'student' with schema (roll, name, hostel, marks), and another table 'hobby' with schema (roll, hobbyname) contains records as shown below:Table: StudentRollNameHostelMarks1798Manoj Rathod7952154Soumic Banerjee5682369Gumma Reddy7862581Pradeep Pendse6922643Suhas Kulkarni5782711Nitin Kadam8722872Kiran Vora5922926Manoj Kunkalikar5942959Hemant Karkhanis7883125Rajesh Doshi582Table: hobbyRollHobbyname1798chess1798music2154music2369swimming2581cricket2643chess2643hockey2711volleyball2872football2926cricket2959photography3125music3125chessThe following SQL query is executed on the above tables:select hostel\r\nfrom student natural join hobby\r\nwhere marks > = 75 and roll between 2000 and 3000;Relations S and H with the same schema as those of these two tables respectively contain the same information as tuples. A new relation S\u2019 is obtained by the following relational algebra operation:\r\n\r\nS\u2019 = \u220fhostel((\u03c3s.roll = H.roll(\u03c3marks > 75 and roll > 2000 and roll < 3000(S)) X (H))\r\n\r\nThe difference between the number of rows output by the SQL statement and the number of tuples in S\u2019 is",
+        "options": [
+            "6",
+            "4",
+            "2",
+            "0"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "In an inventory management system implemented at a trading corporation, there are several tables designed to hold all the information. Amongst these, the following two tables hold information on which items are supplied by which suppliers, and which warehouse keeps which items along with the stock-level of these items.\r\n\r\nSupply = (supplierid, itemcode)\r\nInventory = (itemcode, warehouse, stocklevel)\r\n\r\nFor a specific information required by the management, following SQL query has been writtenSelect distinct STMP.supplierid\r\nFrom Supply as STMP\r\nWhere not unique (Select ITMP.supplierid\r\n                  From Inventory, Supply as ITMP\r\n                  Where STMP.supplierid = ITMP.supplierid\r\n                  And ITMP.itemcode = Inventory.itemcode\r\n                  And Inventory.warehouse = 'Nagpur');For the warehouse at Nagpur, this query will find all suppliers who",
+        "options": [
+            "do not supply any item",
+            "supply exactly one item",
+            "supply one or more items",
+            "supply two or more items"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question1",
+        "question_paragraph": "Consider the following database table named water_schemes :The number of tuples returned by the following SQL query iswithtotal(name, capacity)asselectdistrict_name,sum(capacity)fromwater_schemesgroup bydistrict_namewithtotal_avg(capacity)asselect avg(capacity)fromtotalselectnamefromtotal, total_avgwheretotal.capacity >= total_avg.capacity Question2",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "image_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2016/02/x1.png"
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "Student (school-id, sch-roll-no, sname, saddress)School (school-id, sch-name, sch-address, sch-phone)Enrolment(school-id sch-roll-no, erollno, examname)ExamResult(erollno, examname, marks)What does the following SQL query output?CSELECTsch-name,COUNT(*)FROMSchoolC,EnrolmentE,ExamResultRWHEREE.school-id=C.school-idANDE.examname=R.examnameANDE.erollno=R.erollnoANDR.marks=100ANDS.school-idIN(SELECTschool-idFROMstudentGROUPBYschool-idHAVINGCOUNT(*)>200)GROUPByschool-id/* Add code here. Remove these lines if not writing code */",
+        "options": [
+            "for each school with more than 200 students appearing in exams, the name of the school and the number of 100s scored by its students",
+            "for each school with more than 200 students in it, the name of the school and the number of 100s scored by its students",
+            "for each school with more than 200 students in it, the name of the school and the number of its students scoring 100 in at least one exam",
+            "nothing; the query has a syntax error"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "Which of the following is/are correct?",
+        "options": [
+            "An SQL query automatically eliminates the duplicates",
+            "An SQL query will not work if there are no indexes on the relations",
+            "SQL permits attribute names to be repeated in the same relation",
+            "None of the above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "Suppose we have a database consisting of the following three relations.FREQUENTS(student, parlor) giving the parlors each student visits.\r\nSERVES(parlor, ice-cream) indicating what kind of ice-creams each parlor serves.\r\nLIKES(student, ice-cream) indicating what ice-creams each parlor serves.\r\n\r\n(Assuming that each student likes at least one ice-cream and frequents at least one parlor)Express the following in SQL:\r\nPrint the students that frequent at least one parlor that serves some ice-cream that they like.",
+        "options": [],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "Consider the following relational database schemes:COURSES(Cno, name)\r\nPRE-REQ(Cno, pre_Cno)\r\nCOMPLETED(student_no, Cno)COURSES give the number and the name of all the available courses.\r\nPRE-REQ gives the information about which course are pre-requisites for a given course.\r\nCOMPLETED indicates what courses have been completed by students.\r\n\r\nExpress the following using relational algebra:List all the courses for which a student with student_no 2310 has completed all the \r\npre-requisites.",
+        "options": [],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Consider the following relational database schema:EMP (enoname, age)\r\nPROJ (pnoname)\r\nINVOLVED (eno, pno)EMP contains information about employees. PROJ about projects and INVOLVED about which employees involved in which projects. The underlined attributes are the primary keys for the respective relations.\r\na). What is the relational algebra expression containing one or more of {\u03c3,\u03c0,x,u,\u2212} which is equivalent to SQL query.select eno\r\nfrom EMP, INVOLVED \r\nwhere EMP.eno=INVOLVED.eno  \r\nand INVOLVED.pno=3b). State in English (in not more than 15 words).\r\nWhat the following relational algebra expressions are designed to determine(i) \u03c0eno(INVOLVED) \u2212 \u03c0eno((\u03c0eno(INVOLVED) X \u03c0pno(PROJ))\u2212INVOLVED)\r\n(ii)\u00a0\u03c0age(EMP) \u2212 \u03c0Eage<EMP.age(\u03c1E(EMP) x EMP))(Note:\u03c1E(EMP)\u00a0conceptually makes a copy of EMP and names it K (\u03c1 is called the rename operator))",
+        "options": [],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "Consider the following relational schema:EmployeeDetail (EmpId, FullName, ManagerID, DateOfJoining)\r\nEmployeeSalary (EmpID, Project, Salary)Consider the following relational query on the above database:SELECT Salary\r\nFROM EmployeeSalary Emp1\r\nWHERE 2 = (\r\n                SELECT COUNT( DISTINCT ( Emp2.Salary ) )\r\n                FROM EmployeeSalary Emp2\r\n                WHERE Emp2.Salary > Emp1.Salary\r\n            )Assume that relations corresponding to the above schema are not empty. Which one of the following is the correct interpretation of the above query?",
+        "options": [
+            "find the highest salary from table",
+            "find the 2nd highest salary from table",
+            "find the 3rd highest salary from table",
+            "None of above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "Consider the following two tables and four queries in SQL.Book (isbn, bname), Stock (isbn, copies)Query 1:SELECT B.isbn, S.copies\r\nFROM Book B INNER JOIN Stock S\r\nON B.isbn = S.isbn;Query 2:SELECT B.isbn, S.copies\r\nFROM B B LEFT OUTER JOIN Stock S\r\nON B.isbn = S.isbn;Query 3:SELECT B.isbn, S.copies\r\nFROM Book B RIGHT OUTER JOIN Stock S\r\nON B.isbn = S.isbn;Query 4:SELECT B.isbn, S.copies\r\nFROM B B FULL OUTER JOIN Stock S\r\nON B.isbn = S.isbn;Which one of the queries above is certain to have an output that is a superset of the outputs of the other three queries?",
+        "options": [
+            "Query 1",
+            "Query 2",
+            "Query 3",
+            "Query 4"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "Which of the following is/are true with reference to \u2018view\u2019 in DBMS ?\r\n(a) A \u2018view\u2019 is a special stored procedure executed when certain event occurs.\r\n(b) A \u2018view\u2019 is a virtual table, which occurs after executing a pre-compiled query.\r\ncode:",
+        "options": [
+            "Only (a) is true",
+            "Only (b) is true",
+            "Both (a) and (b) are true",
+            "Neither (a) nor (b) are true"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "In SQL, __________ is an Aggregate function.",
+        "options": [
+            "SELECT",
+            "CREATE",
+            "AVG",
+            "MODIFY"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question1",
+        "question_paragraph": "__________ SQL command changes one or more fields in a record.",
+        "options": [
+            "LOOK-UP",
+            "INSERT",
+            "MODIFY",
+            "CHANGE"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "Consider the schema Sailors(sid, sname, rating, age) with the following data",
+        "options": [
+            "6",
+            "5",
+            "4",
+            "3"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "Given two relations R1(A, B) and R2(C, D), the result of following querySelect distinct A, B\r\nfrom R1, R2is guaranteed to be same as R1 provided one of the following condition is satisfied.",
+        "options": [
+            "R1 has no duplicates and R2 is empty.",
+            "R1 has no duplicates and R2 is non - empty.",
+            "Both R1 and R2 have no duplicates.",
+            "R2 has no duplicates and R1 is non - empty."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "What is the output of the following SQL query?select count(*) from ((select Employee, Department from Overtime_allowance) as S\r\nnatural join (select Department, OT_allowance from Overtime_allowance) as T); Question5",
+        "options": [
+            "16",
+            "4",
+            "8",
+            "None of the above",
+            "none"
+        ],
+        "image_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/t1.png"
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "The relation book (title,price) contains the titles and prices of different books. Assuming that no two books have the same price, what does the following SQL query list?\r\nselect title\r\nfrom book as B\r\nwhere (select count(*)\r\nfrom book as T\r\nwhere T.price>B.price)<5",
+        "options": [
+            "Titles of the four most expensive books",
+            "Title of the fifth most inexpensive book",
+            "Title of the fifth most expensive book",
+            "Titles of the five most expensive books"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Consider the following relational schema:Suppliers(sid:integer, sname:string, city:string, street:string)\r\nParts(pid:integer, pname:string, color:string)\r\nCatalog(sid:integer, pid:integer, cost:real)Consider the following relational query on the above database:SELECT S.sname\r\n    FROM Suppliers S\r\n        WHERE S.sid NOT IN (SELECT C.sid\r\n                            FROM Catalog C\r\n                            WHERE C.pid NOT IN (SELECT P.pid  \r\n                                                FROM Parts P\r\n                                                WHERE P.color<> 'blue'))Assume that relations corresponding to the above schema are not empty. Which one of the following is the correct interpretation of the above query?",
+        "options": [
+            "Find the names of all suppliers who have supplied a non-blue part.",
+            "Find the names of all suppliers who have not supplied a non-blue part",
+            "Find the names of all suppliers who have supplied only non blue parts.",
+            "Find the names of all suppliers who have not supplied only non-blue parts."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "Consider the following schema:Emp (Empcode, Name, Sex, Salary, Deptt)A simple SQL query is executed as follows:SELECT Deptt FROM Emp\r\nWHERE sex = 'M'\r\nGROUP by Dept\r\nHaving avg (Salary) > {select avg (Salary) from Emp}The output will be",
+        "options": [
+            "Average salary of male employee is the average salary of the organization",
+            "Average salary of male employee is less than the average salary of the organization",
+            "Average salary of male employee is equal to the average salary of the organization",
+            "Average salary of male employee is more than the average salary of the organization"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "Consider the following ORACLE relations :\r\nOne (x, y) = {<2, 5>, <1, 6>, <1, 6>, <1, 6>, <4, 8>, <4, 8>}\r\nTwo (x, y) = {<2, 55>, <1, 1>, <4, 4>, <1, 6>, <4, 8>, <4, 8>, <9, 9>, <1, 6>}\r\nConsider the following two SQL queries SQ1 and SQ2 :SQ1 : SELECT * FROM One)\r\n           EXCEPT\r\n      (SELECT * FROM Two);\r\nSQ2 : SELECT * FROM One)\r\n        EXCEPT ALL\r\n      (SELECT * FROM Two);For each of the SQL queries, what is the cardinality (number of rows) of the result obtained when applied to the instances above ?",
+        "options": [
+            "2 and 1 respectively",
+            "1 and 2 respectively",
+            "2 and 2 respectively",
+            "1 and 1 respectively"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "In distributed databases, location transparency allows for database users, programmers and administrators to treat the data as if it is at one location. A SQL query with location transparency needs to specify:",
+        "options": [
+            "Inheritances",
+            "Fragments",
+            "Locations",
+            "Local formats"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "Consider the following ORACLE relations :\r\nR (A, B, C) = {<1, 2, 3>, <1, 2, 0>, <1, 3, 1>, <6, 2, 3>, <1, 4, 2>, <3, 1, 4> }\r\nS (B, C, D) = {<2, 3, 7>, <1, 4, 5>, <1, 2, 3>, <2, 3, 4>, <3, 1, 4>}.\r\nConsider the following two SQL queries SQ1and SQ2:\r\nSQ1: SELECT R\u22c5B, AVG (S\u22c5B)\r\nFROM R, S\r\nWHERE R\u22c5A = S\u22c5C AND S\u22c5D < 7\r\nGROUP BY R\u22c5B;SQ2: SELECT DISTINCT S\u22c5B, MIN (S\u22c5C)\r\nFROM S\r\nGROUP BY S\u22c5B\r\nHAVING COUNT (DISTINCT S\u22c5D) > 1;\r\nIf M is the number of tuples returned by SQ1and N is the number of tuples returned by SQ2then",
+        "options": [
+            "M = 4, N = 2",
+            "M = 5, N = 3",
+            "M = 2, N = 2",
+            "M = 3, N = 3"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question1",
+        "question_paragraph": "Consider the following relational schema:Suppliers (sid:integer, sname:string, saddress:string)\r\n Parts (pid:integer, pname:string, pcolor:string)\r\n Catalog (sid:integer, pid:integer, pcost:real)What is the result of the following query?(SELECT Catalog.pid from Suppliers, Catalog\r\nWHERE Suppliers.sid = Catalog.pid)\r\n MINUS\r\n(SELECT Catalog.pid from Suppliers, Catalog\r\nWHERE Suppliers.sname <> 'sachin' and Suppliers.sid = Catalog.sid)",
+        "options": [
+            "pid of Parts supplied by all except sachin",
+            "pid of Parts supplied only by sachin",
+            "pid of Parts available in catalog supplied by sachin",
+            "pid of Parts available in catalogs supplied by all except sachin"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "An Assertion is a predicate expressing a condition we wish database to always satisfy. The correct syntax for Assertion is :",
+        "options": [
+            "CREATE ASSERTION \u2018ASSERTION Name\u2019 CHECK \u2018Predicate\u2019",
+            "CREATE ASSERTION \u2018ASSERTION Name\u2019",
+            "CREATE ASSERTION, CHECK Predicate",
+            "SELECT ASSERTION"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "Suppose ORACLE relation R(A, B) currently has tuples {(1, 2), (1, 3), (3, 4)} and relation S(B, C) currently has {(2, 5), (4, 6), (7, 8)}. Consider the following two SQL queries SQ1and SQ2: \r\nSQ1: Select *\r\n      From R Full Join S \r\n      On R.B = S.B;\r\nSQ2: Select *\r\n      From R Inner Join S \r\n      On R.B = S.B;\r\nThe numbers of tuples in the result of the SQL query SQ1and the SQL query SQ2are given by:",
+        "options": [
+            "2 and 6 respectively",
+            "6 and 2 respectively",
+            "2 and 4 respectively",
+            "4 and 2 respectively"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "Consider the following three SQL queries (Assume the data in the people table): \r\n(a)Select Name from people where  Age > 21; \r\n(b)Select Name from people where Height > 180; \r\n(c)Select Name from people where (Age > 21) or (Height > 180); \r\nIf the SQL queries (a) and (b) above, return 10 rows and 7 rows in the result set respectively, then what is one possible number of rows returned by the SQL query (c) ?",
+        "options": [
+            "3",
+            "7",
+            "10",
+            "21"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "The STUDENT information in a university stored in the relation STUDENT (Name, SEX, Marks, DEPT_Name)\r\nConsider the following SQL Query SELECT DEPT_Name from STUDENT where SEX = 'M' group by DEPT_Name having avg (Marks)>SELECT avg (Marks) from STUDENT. It Returns the Name of the Department for which:",
+        "options": [
+            "The Average marks of Male students is more than the average marks of students in the same Department",
+            "The average marks of male students is more than the average marks of students in the University",
+            "The average marks of male students is more than the average marks of male students in the University",
+            "The average marks of students is more than the average marks of male students in the University"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Which of the following is aggregate function in SQL?",
+        "options": [
+            "Avg",
+            "Select",
+            "Ordered by",
+            "distinct"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "Which of the following is true ?\r\nI.   Implementation of self-join is possible in SQL with table alias.\r\nII.  Outer-join operation is basic operation in relational algebra.\r\nIII. Natural join and outer join operations are equivalent.",
+        "options": [
+            "I and II are correct.",
+            "II and III are correct.",
+            "Only III is correct.",
+            "Only I is correct."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "Consider the set of relations given below and the SQL query that followsStudents : (Roll number, Name, Date of birth)\r\nCourses: (Course number, Course name, instructor)\r\nGrades: (Roll number, Course number, Grade)\r\nSELECT DISTINCT Name\r\nFROM Students, Courses, Grades\r\nWHERE Students.Roll_number = Grades.Roll_number\r\n       AND Courses.Instructor =Sriram\r\n       AND Courses.Course_number = Grades.Course_number\r\n       AND Grades.Grade = AWhich of the following sets is computed by the above query?",
+        "options": [
+            "Names of Students who have got an A grade in all courses taught by Sriram",
+            "Names of Students who have got an A grade in all courses",
+            "Names of Students who have got an A grade in at least one of the courses taught by Sriram",
+            "None of the above"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "Given relations R(w,x) and S(y,z), the result ofSELECT DISTINCT w, x\r\nFROM R, SIs guaranteed to be same as R, if",
+        "options": [
+            "R has no duplicates and S is non-empty",
+            "R and S have no duplicates",
+            "S has no duplicates and R is non-empty",
+            "R and S have the same number of tuples"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "Consider a relation book (title, price) which contains the titles and prices of different books.\r\nAssuming that no two books have the same price, what does the following SQL query list ?Select title\r\nfrom book as B\r\nwhere (select count ( * )\r\nfrom book as T\r\nwhere T.price > B.price) < 7",
+        "options": [
+            "Titles of the six most expensive books.",
+            "Title of the sixth most expensive books.",
+            "Titles of the seven most expensive books.",
+            "Title of the seventh most expensive books."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question1",
+        "question_paragraph": "The relation scheme given below is used to store information about the employees of a company, where empId is the key and deptId indicates the department to which the employee is assigned. Each employee is assigned to exactly one department.emp(empId, name, gender, salary, deptId)Consider the following SQL query:select deptId, count(*)\r\nfrom emp\r\nwhere gender = \u201cfemale\u201d and salary > (select avg(salary)from emp)\r\ngroup by deptId;The above query gives, for each department in the company, the number of female employees whose salary is greater than the average salary of",
+        "options": [
+            "employees in the department",
+            "employees in the company",
+            "female employees in the department",
+            "female employees in the company"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "Consider the relations r1(P, Q, R) and r2(R, S, T) with primary keys P and R respectively. The relation r1contains 2000 tuples and r2contains 2500 tuples. The maximum size of the join r1\u22c8\u00a0r2is :",
+        "options": [
+            "2000",
+            "2500",
+            "4500",
+            "5000"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "A library relational database system uses the following schema Show all the Book Title which have been issued by User# 6.",
+        "options": [
+            "Show all the Book Title which have been issued by User# 6.",
+            "The user who\u2019s home town is Delhi and issued a book, Show all the name authors of the book he/she have issued."
+        ],
+        "image_link": "https://media.geeksforgeeks.org/wp-content/uploads/20240322121136/schema.jpg"
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "Given the following statements:S1: A foreign key declaration can always \r\n        be replaced by an equivalent check\r\n        assertion in SQL.\r\n    S2: Given the table R(a,b,c) where a and\r\n        b together form the primary key, the \r\n        following is a valid table definition.\r\n        CREATE TABLE S (\r\n            a INTEGER,\r\n            d INTEGER,\r\n            e INTEGER,\r\n            PRIMARY KEY (d),\r\n            FOREIGN KEY (a) references R)Which one of the following statements is CORRECT?",
+        "options": [
+            "S1 is TRUE and S2 is FALSE.",
+            "Both S1 and S2 are TRUE.",
+            "S1 is FALSE and S2 is TRUE.",
+            "Both S1 and S2 are FALSE."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "Consider the following relational schema:employee(empId, empName, empDept)\r\n  customer(custId, custName, salesRepId, rating)salesRepId is a foreign key referring to empId of the employee relation. Assume that each employee makes a sale to at least one customer. What does the following query return?SELECT empName\r\n       FROM employee E\r\n       WHERE NOT EXISTS ( SELECT custId\r\n                          FROM customer C\r\n                          WHERE C.salesRepId = E.empId\r\n                            AND C.rating <> `GOOD`);",
+        "options": [
+            "Names of all the employees with at least one of their customers having a \u2018GOOD\u2019 rating.",
+            "Names of all the employees with at most one of their customers having a \u2018GOOD\u2019 rating.",
+            "Names of all the employees with none of their customers having a \u2018GOOD\u2019 rating.",
+            "Names of all the employees with all their customers having a \u2018GOOD\u2019 rating."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Consider the relation \"enrolled(student, course)\" in which (student, course) is the primary key, and the relation \"paid(student, amount)\" where student is the primary key. Assume no null values and no foreign keys or integrity constraints. Given the following four queries:Query1: select student from enrolled where \r\n        student in (select student from paid)\r\nQuery2: select student from paid where \r\n        student in (select student from enrolled)\r\nQuery3: select E.student from enrolled E, paid P \r\n         where E.student = P.student\r\nQuery4:  select student from paid where exists\r\n        (select * from enrolled where enrolled.student\r\n         = paid.student)Which one of the following statements is correct?",
+        "options": [
+            "All queries return identical row sets for any database",
+            "Query2 and Query4 return identical row sets for all databases but there exist databases for which Query1 and Query2 return different row sets.",
+            "There exist databases for which Query3 returns strictly fewer rows than Query2",
+            "There exist databases for which Query4 will encounter an integrity violation at runtime."
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question7",
+        "question_paragraph": "Database table by name Loan_Records is given below.Borrower    Bank_Manager   Loan_Amount\r\n Ramesh      Sunderajan     10000.00\r\n Suresh      Ramgopal       5000.00\r\n Mahesh      Sunderajan     7000.00What is the output of the following SQL query?SELECT Count(*) \r\nFROM  ( ( SELECT Borrower, Bank_Manager \r\n          FROM Loan_Records) AS S \r\n          NATURAL JOIN ( SELECT Bank_Manager, Loan_Amount \r\n                         FROM Loan_Records) AS T );",
+        "options": [
+            "3",
+            "9",
+            "5",
+            "6"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question8",
+        "question_paragraph": "The statement that is executed automatically by the system as a side effect of the modification of the database is",
+        "options": [
+            "backup",
+            "assertion",
+            "recovery",
+            "trigger"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question9",
+        "question_paragraph": "Consider the following relation schema pertaining to a students database:Student (rollno, name, address)\r\nEnroll (rollno, courseno, coursename)where the primary keys are shown underlined. The number of tuples in the Student and Enroll tables are 120 and 8 respectively. What are the maximum and minimum number of tuples that can be present in (Student * Enroll), where '*' denotes natural join ?",
+        "options": [
+            "8, 8",
+            "120, 8",
+            "960, 8",
+            "960, 120"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question10",
+        "question_paragraph": "Consider the following relational schema:",
+        "options": [
+            "Find the names of all suppliers who have supplied a non-blue part.",
+            "Find the names of all suppliers who have not supplied a non-blue part.",
+            "Find the names of all suppliers who have supplied only blue parts.",
+            "Find the names of all suppliers who have not supplied only blue parts.",
+            "None"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question1",
+        "question_paragraph": "Table A\r\nId   Name    Age\r\n----------------\r\n12   Arun    60\r\n15   Shreya  24\r\n99   Rohit   11\r\n\r\n\r\nTable B\r\nId   Name   Age\r\n----------------\r\n15   Shreya  24\r\n25   Hari    40\r\n98   Rohit   20\r\n99   Rohit   11\r\n\r\n\r\nTable C\r\nId   Phone  Area\r\n-----------------\r\n10   2200   02  \r\n99   2100   01Consider the above tables A, B and C. How many tuples does the result of the following SQL query contains?SELECT A.id \r\nFROM   A \r\nWHERE  A.age > ALL (SELECT B.age \r\n                    FROM   B \r\n                    WHERE  B. name = \"arun\")",
+        "options": [
+            "4",
+            "3",
+            "0",
+            "1"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question2",
+        "question_paragraph": "Which of the following statements are TRUE about an SQL query? P : An SQL query can contain a HAVING clause even if it does not have a GROUP BY clause Q : An SQL query can contain a HAVING clause only if it has a GROUP BY clause R : All attributes used in the GROUP BY clause must appear in the SELECT clause S : Not all attributes used in the GROUP BY clause need to appear in the SELECT clause",
+        "options": [
+            "P and R",
+            "P and S",
+            "Q and R",
+            "Q and S"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question3",
+        "question_paragraph": "Which of the following command is used to delete a table in SQL?",
+        "options": [
+            "delete",
+            "truncate",
+            "remove",
+            "drop"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question4",
+        "question_paragraph": "The employee information in a company is stored in the relationEmployee (name, sex, salary, deptName)Consider the following SQL queryselect deptName\r\n       from Employee\r\n       where sex = 'M'\r\n       group by deptName\r\n       having avg (salary) > (select avg (salary) from Employee)It returns the names of the department in which",
+        "options": [
+            "the average salary is more than the average salary in the company",
+            "the average salary of male employees is more than the average salary of all male employees in the company",
+            "the average salary of male employees is more than the average salary of employees in the same department",
+            "the average salary of male employees is more than the average salary in the company"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question5",
+        "question_paragraph": "Select operation in SQL is equivalent to",
+        "options": [
+            "the selection operation in relational algebra",
+            "the selection operation in relational algebra, except that select in SQL retains duplicates",
+            "the projection operation in relational algebra",
+            "the projection operation in relational algebra, except that select in SQL retains duplicates"
+        ],
+        "image_link": null
+    },
+    {
+        "question": "Question6",
+        "question_paragraph": "Consider the following tables :What will be the output of following SQL query ?SELECT * FROM EMPLOYEE E    \r\nWHERE 2 = (SELECT COUNT(DISTINCT E1.SALARY)    \r\nFROM EMPLOYEE E1    \r\nWHERE E1.SALARY>E.SALARY) Boost yourGATE 2025 rankwith ourGATE CS & IT Test Series! Get60 PYQ quizzes,60 subject-wise mocks,4500+ practice questions, and20+ full-length tests\u2014designed by GATE toppers and industry experts. Track your progress with personalized rankings. Exclusive features:All India Mock Test, Live GATE CSE Mentorship ClassesandLive Doubt Solving Sessions",
+        "options": [
+            "Second highest salary",
+            "Two distinct salary of employees",
+            "Third highest salary",
+            "Employee with  second highest salary"
+        ],
+        "image_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/2-1.jpg"
+    }
+]
