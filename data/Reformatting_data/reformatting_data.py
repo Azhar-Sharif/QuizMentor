@@ -36,8 +36,8 @@ def update_scraped_data(input_dir, output_dir):
             print(f"Updated {filename} for topic: {topic_name}")
 
 # Directories for input and output files
-input_directory = "Coal_mcqs_data" 
-output_directory = "Final_Coal_mcqs_data" 
+input_directory = "data\Reformatting_data\DBMS_MCQS" 
+output_directory = "Final_DBMS_MCQS_data" 
 
 
 update_scraped_data(input_directory, output_directory)
