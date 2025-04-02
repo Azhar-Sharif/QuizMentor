@@ -1,372 +1,298 @@
 [
     {
         "question_number": 1,
-        "correct_answer": "A\nI, II, III and IV",
-        "question": "Question1"
+        "correct_answer": "I, II, III and IV"
     },
     {
         "question_number": 2,
-        "correct_answer": "C\nIn a row of a relational table, an attribute can have more than one value",
-        "question": "Question2"
+        "correct_answer": "In a row of a relational table, an attribute can have more than one value"
     },
     {
         "question_number": 3,
-        "correct_answer": "A\nA",
-        "question": "Question3"
+        "correct_answer": "A"
     },
     {
         "question_number": 4,
-        "correct_answer": "A\n7",
-        "question": "Question4"
+        "correct_answer": "7"
     },
     {
         "question_number": 5,
-        "correct_answer": "C\nHashing will outperform ordered indexing on Q1, but not on Q2",
-        "question": "Question5"
+        "correct_answer": "Hashing will outperform ordered indexing on Q1, but not on Q2"
     },
     {
         "question_number": 6,
-        "correct_answer": "C\nIII only",
-        "question": "Question6"
+        "correct_answer": "III only"
     },
     {
         "question_number": 7,
-        "correct_answer": "D\nOnly I, III and IV",
-        "question": "Question7"
+        "correct_answer": "Only I, III and IV"
     },
     {
         "question_number": 8,
-        "correct_answer": "B\n3",
-        "question": "Question8"
+        "correct_answer": "3"
     },
     {
         "question_number": 9,
-        "correct_answer": "A\n{M1, M2, M3, P1}",
-        "question": "Question9"
+        "correct_answer": "{M1, M2, M3, P1}"
     },
     {
         "question_number": 10,
-        "correct_answer": "B\nCourses in which a proper subset of female students are enrolled.",
-        "question": "Question10"
+        "correct_answer": "Courses in which a proper subset of female students are enrolled."
     },
     {
         "question_number": 11,
-        "correct_answer": "C\nNames of employees with no immediate female subordinates.",
-        "question": "Question11"
+        "correct_answer": "Names of employees with no immediate female subordinates."
     },
     {
         "question_number": 12,
-        "correct_answer": "A\nrelation r(R) is in the outer loop.",
-        "question": "Question12"
+        "correct_answer": "relation r(R) is in the outer loop."
     },
     {
         "question_number": 13,
-        "correct_answer": "A\nA",
-        "question": "Question13"
+        "correct_answer": "A"
     },
     {
         "question_number": 14,
-        "correct_answer": "D\nall of his/her dependents.",
-        "question": "Question14"
+        "correct_answer": "all of his/her dependents."
     },
     {
         "question_number": 15,
-        "correct_answer": "B\n3",
-        "question": "Question15"
+        "correct_answer": "3"
     },
     {
         "question_number": 16,
-        "correct_answer": "B\nBD → CD",
-        "question": "Question16"
+        "correct_answer": "BD → CD"
     },
     {
         "question_number": 17,
-        "correct_answer": "B\n2NF",
-        "question": "Question17"
+        "correct_answer": "2NF"
     },
     {
         "question_number": 18,
-        "correct_answer": "null",
-        "question": "Question18"
+        "correct_answer": "null"
     },
     {
         "question_number": 19,
-        "correct_answer": "C\n3",
-        "question": "Question19"
+        "correct_answer": "3"
     },
     {
         "question_number": 20,
-        "correct_answer": "C\nMin 2 and max 3",
-        "question": "Question20"
+        "correct_answer": "Min 2 and max 3"
     },
     {
         "question_number": 21,
-        "correct_answer": "B\nmn and 0",
-        "question": "Question21"
+        "correct_answer": "mn and 0"
     },
     {
         "question_number": 22,
-        "correct_answer": "C\nc",
-        "question": "Question22"
+        "correct_answer": "c"
     },
     {
         "question_number": 23,
-        "correct_answer": "D\nd",
-        "question": "Question23"
+        "correct_answer": "d"
     },
     {
         "question_number": 24,
-        "correct_answer": "D\nd",
-        "question": "Question24"
+        "correct_answer": "d"
     },
     {
         "question_number": 25,
-        "correct_answer": "null",
-        "question": "Question25"
+        "correct_answer": "null"
     },
     {
         "question_number": 26,
-        "correct_answer": "A\n0",
-        "question": "Question26"
+        "correct_answer": "0"
     },
     {
         "question_number": 27,
-        "correct_answer": "A\nEvery entity in E1 is associated with exactly one entity in E2.",
-        "question": "Question27"
+        "correct_answer": "Every entity in E1 is associated with exactly one entity in E2."
     },
     {
         "question_number": 28,
-        "correct_answer": "C\nr LOJ (σB<5(s))",
-        "question": "Question28"
+        "correct_answer": "r LOJ (σB<5(s))"
     },
     {
         "question_number": 29,
-        "correct_answer": "B\n(2)",
-        "question": "Question29"
+        "correct_answer": "(2)"
     },
     {
         "question_number": 30,
-        "correct_answer": "A\nNames of sailors who have reserved all boats called Ganga",
-        "question": "Question30"
+        "correct_answer": "Names of sailors who have reserved all boats called Ganga"
     },
     {
         "question_number": 31,
-        "correct_answer": "A\nin 1NF but not in 2NF",
-        "question": "Question31"
+        "correct_answer": "in 1NF but not in 2NF"
     },
     {
         "question_number": 32,
-        "correct_answer": "B\nDashed ellipse",
-        "question": "Question32"
+        "correct_answer": "Dashed ellipse"
     },
     {
         "question_number": 33,
-        "correct_answer": "C\n(A) and (B) are true; (C) false.",
-        "question": "Question33"
+        "correct_answer": "(A) and (B) are true; (C) false."
     },
     {
         "question_number": 34,
-        "correct_answer": "D\n3",
-        "question": "Question34"
+        "correct_answer": "3"
     },
     {
         "question_number": 35,
-        "correct_answer": "B\nprimary key ⊆ candidate key ⊆ super key",
-        "question": "Question35"
+        "correct_answer": "primary key ⊆ candidate key ⊆ super key"
     },
     {
         "question_number": 36,
-        "correct_answer": "B\npk(R1) → pk(R2)",
-        "question": "Question36"
+        "correct_answer": "pk(R1) → pk(R2)"
     },
     {
         "question_number": 37,
-        "correct_answer": "B\nmn & 0",
-        "question": "Question37"
+        "correct_answer": "mn & 0"
     },
     {
         "question_number": 38,
-        "correct_answer": "B\nBoth II and III",
-        "question": "Question38"
+        "correct_answer": "Both II and III"
     },
     {
         "question_number": 39,
-        "correct_answer": "D\nAll of the above",
-        "question": "Question39"
+        "correct_answer": "All of the above"
     },
     {
         "question_number": 40,
-        "correct_answer": "C\nExam (ExamID, NID, ExamName)",
-        "question": "Question40"
+        "correct_answer": "Exam (ExamID, NID, ExamName)"
     },
     {
         "question_number": 41,
-        "correct_answer": "B\nD1xD2x...xDn",
-        "question": "Question41"
+        "correct_answer": "D1xD2x...xDn"
     },
     {
         "question_number": 42,
-        "correct_answer": "A\nreducing the number of joins required to satisfy a query.",
-        "question": "Question42"
+        "correct_answer": "reducing the number of joins required to satisfy a query."
     },
     {
         "question_number": 43,
-        "correct_answer": "D\n(a), (b) and (c) are true.",
-        "question": "Question43"
+        "correct_answer": "(a), (b) and (c) are true."
     },
     {
         "question_number": 44,
-        "correct_answer": "A\nI only",
-        "question": "Question44"
+        "correct_answer": "I only"
     },
     {
         "question_number": 45,
-        "correct_answer": "B\nA small open diamond at the end of a line connecting two tables",
-        "question": "Question45"
+        "correct_answer": "A small open diamond at the end of a line connecting two tables"
     },
     {
         "question_number": 46,
-        "correct_answer": "B\nA ->B, A->>C",
-        "question": "Question46"
+        "correct_answer": "A ->B, A->>C"
     },
     {
         "question_number": 47,
-        "correct_answer": "D\n3, 4, 1 respectively",
-        "question": "Question47"
+        "correct_answer": "3, 4, 1 respectively"
     },
     {
         "question_number": 48,
-        "correct_answer": "D\nII, III and IV only",
-        "question": "Question48"
+        "correct_answer": "II, III and IV only"
     },
     {
         "question_number": 49,
-        "correct_answer": "C\nII and III only",
-        "question": "Question49"
+        "correct_answer": "II and III only"
     },
     {
         "question_number": 50,
-        "correct_answer": "C\nII only",
-        "question": "Question50"
+        "correct_answer": "II only"
     },
     {
         "question_number": 51,
-        "correct_answer": "A\nTo allow duplicate tuples in the table by filling the primary key column(s) with NULL.",
-        "question": "Question51"
+        "correct_answer": "To allow duplicate tuples in the table by filling the primary key column(s) with NULL."
     },
     {
         "question_number": 52,
-        "correct_answer": "D\nABD",
-        "question": "Question52"
+        "correct_answer": "ABD"
     },
     {
         "question_number": 53,
-        "correct_answer": "C\n(d)",
-        "question": "Question53"
+        "correct_answer": "(d)"
     },
     {
         "question_number": 54,
-        "correct_answer": "C\nOwner Entity Set",
-        "question": "Question54"
+        "correct_answer": "Owner Entity Set"
     },
     {
         "question_number": 55,
-        "correct_answer": "B\nJoin",
-        "question": "Question55"
+        "correct_answer": "Join"
     },
     {
         "question_number": 56,
-        "correct_answer": "A\na cartesian product of two relations followed by a selection",
-        "question": "Question56"
+        "correct_answer": "a cartesian product of two relations followed by a selection"
     },
     {
         "question_number": 57,
-        "correct_answer": "B\nGRANT & REVOKE",
-        "question": "Question57"
+        "correct_answer": "GRANT & REVOKE"
     },
     {
         "question_number": 58,
-        "correct_answer": "D\nAdding suitable attributes",
-        "question": "Question58"
+        "correct_answer": "Adding suitable attributes"
     },
     {
         "question_number": 59,
-        "correct_answer": "B\nAE",
-        "question": "Question59"
+        "correct_answer": "AE"
     },
     {
         "question_number": 60,
-        "correct_answer": "B\nLogical Data Independence",
-        "question": "Question60"
+        "correct_answer": "Logical Data Independence"
     },
     {
         "question_number": 61,
-        "correct_answer": "A\nInner Join",
-        "question": "Question61"
+        "correct_answer": "Inner Join"
     },
     {
         "question_number": 62,
-        "correct_answer": "A\nPk(r1 ) → Pk(r 2)",
-        "question": "Question62"
+        "correct_answer": "Pk(r1 ) → Pk(r 2)"
     },
     {
         "question_number": 63,
-        "correct_answer": "A\nDiamonds with double/bold border",
-        "question": "Question63"
+        "correct_answer": "Diamonds with double/bold border"
     },
     {
         "question_number": 64,
-        "correct_answer": "C\nThe sum of all employees' salaries",
-        "question": "Question64"
+        "correct_answer": "The sum of all employees' salaries"
     },
     {
         "question_number": 65,
-        "correct_answer": "B\nIf Y is deleted, then X is also deleted",
-        "question": "Question65"
+        "correct_answer": "If Y is deleted, then X is also deleted"
     },
     {
         "question_number": 66,
-        "correct_answer": "D\nOperations (d) and (a) will cause violation.",
-        "question": "Question66"
+        "correct_answer": "Operations (d) and (a) will cause violation."
     },
     {
         "question_number": 67,
-        "correct_answer": "A\n(A)",
-        "question": "Question67"
+        "correct_answer": "(A)"
     },
     {
         "question_number": 68,
-        "correct_answer": "B\nSubschema",
-        "question": "Question68"
+        "correct_answer": "Subschema"
     },
     {
         "question_number": 69,
-        "correct_answer": "A\nProject",
-        "question": "Question69"
+        "correct_answer": "Project"
     },
     {
         "question_number": 70,
-        "correct_answer": "C\n(a) and (c) happens",
-        "question": "Question70"
+        "correct_answer": "(a) and (c) happens"
     },
     {
         "question_number": 71,
-        "correct_answer": "B\nTransitivity, Augmentation and Reflexivity",
-        "question": "Question71"
+        "correct_answer": "Transitivity, Augmentation and Reflexivity"
     },
     {
         "question_number": 72,
-        "correct_answer": "D\nTuples in a weak entity set are not partitioned according to their relationship with tuples in a strong entity set.",
-        "question": "Question72"
+        "correct_answer": "Tuples in a weak entity set are not partitioned according to their relationship with tuples in a strong entity set."
     },
     {
         "question_number": 73,
-        "correct_answer": "D\nNormal Forms",
-        "question": "Question73"
+        "correct_answer": "Normal Forms"
     },
     {
         "question_number": 74,
-        "correct_answer": "A\nA relation with only two attributes is always in BCNF.",
-        "question": "Question74"
+        "correct_answer": "A relation with only two attributes is always in BCNF."
     }
 ]

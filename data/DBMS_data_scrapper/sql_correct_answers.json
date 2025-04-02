@@ -1,95 +1,95 @@
 [
     {
         "question_number": 1,
-        "correct_answer": "A\n127"
+        "correct_answer": "127"
     },
     {
         "question_number": 2,
-        "correct_answer": "C\n1, 3"
+        "correct_answer": "1, 3"
     },
     {
         "question_number": 3,
-        "correct_answer": "A\nI and II"
+        "correct_answer": "I and II"
     },
     {
         "question_number": 4,
-        "correct_answer": "A\nQ1 is the correct query"
+        "correct_answer": "Q1 is the correct query"
     },
     {
         "question_number": 5,
-        "correct_answer": "B\nIt executes and gives the correct result."
+        "correct_answer": "It executes and gives the correct result."
     },
     {
         "question_number": 6,
-        "correct_answer": "C\nselect R.* from R,(select distinct a from S) as S1 where R.a=S1.a"
+        "correct_answer": "select R.* from R,(select distinct a from S) as S1 where R.a=S1.a"
     },
     {
         "question_number": 7,
-        "correct_answer": "C\n1 and 4"
+        "correct_answer": "1 and 4"
     },
     {
         "question_number": 8,
-        "correct_answer": "C\n(5,2), (7,2) and (9,5)"
+        "correct_answer": "(5,2), (7,2) and (9,5)"
     },
     {
         "question_number": 9,
-        "correct_answer": "D\nTitles of the five most expensive books"
+        "correct_answer": "Titles of the five most expensive books"
     },
     {
         "question_number": 10,
-        "correct_answer": "A\nA"
+        "correct_answer": "A"
     },
     {
         "question_number": 11,
-        "correct_answer": "C\nNames of students who have got an A grade in at least one of the courses taught by Korth"
+        "correct_answer": "Names of students who have got an A grade in at least one of the courses taught by Korth"
     },
     {
         "question_number": 12,
-        "correct_answer": "A\nr has no duplicates and s is non-empty"
+        "correct_answer": "r has no duplicates and s is non-empty"
     },
     {
         "question_number": 13,
-        "correct_answer": "C\nx \u2260 5 AND not (x = 5)"
+        "correct_answer": "x ≠ 5 AND not (x = 5)"
     },
     {
         "question_number": 14,
-        "correct_answer": "B\nName of all students who are enrolled in \"DBMS\" and \"OS\""
+        "correct_answer": "Name of all students who are enrolled in \"DBMS\" and \"OS\""
     },
     {
         "question_number": 15,
-        "correct_answer": "B\n5"
+        "correct_answer": "5"
     },
     {
         "question_number": 16,
-        "correct_answer": "C\n2"
+        "correct_answer": "2"
     },
     {
         "question_number": 17,
-        "correct_answer": "A\nWHERE P1. Capacity> = All (select P2. Capacity from Cinema P2)"
+        "correct_answer": "WHERE P1. Capacity> = All (select P2. Capacity from Cinema P2)"
     },
     {
         "question_number": 18,
-        "correct_answer": "D\nExecute T3 followed by T2 followed by T1"
+        "correct_answer": "Execute T3 followed by T2 followed by T1"
     },
     {
         "question_number": 19,
-        "correct_answer": "B\n4"
+        "correct_answer": "4"
     },
     {
         "question_number": 20,
-        "correct_answer": "D\nsupply two or more items"
+        "correct_answer": "supply two or more items"
     },
     {
         "question_number": 21,
-        "correct_answer": "B\n2"
+        "correct_answer": "2"
     },
     {
         "question_number": 22,
-        "correct_answer": "D\nnothing; the query has a syntax error"
+        "correct_answer": "nothing; the query has a syntax error"
     },
     {
         "question_number": 23,
-        "correct_answer": "D\nNone of the above"
+        "correct_answer": "None of the above"
     },
     {
         "question_number": 24,
@@ -105,107 +105,107 @@
     },
     {
         "question_number": 27,
-        "correct_answer": "C\nfind the 3rd highest salary from table"
+        "correct_answer": "find the 3rd highest salary from table"
     },
     {
         "question_number": 28,
-        "correct_answer": "D\nQuery 4"
+        "correct_answer": "Query 4"
     },
     {
         "question_number": 29,
-        "correct_answer": "B\nOnly (b) is true"
+        "correct_answer": "Only (b) is true"
     },
     {
         "question_number": 30,
-        "correct_answer": "C\nAVG"
+        "correct_answer": "AVG"
     },
     {
         "question_number": 31,
-        "correct_answer": "C\nMODIFY"
+        "correct_answer": "MODIFY"
     },
     {
         "question_number": 32,
-        "correct_answer": "D\n3"
+        "correct_answer": "3"
     },
     {
         "question_number": 33,
-        "correct_answer": "B\nR1 has no duplicates and R2 is non - empty."
+        "correct_answer": "R1 has no duplicates and R2 is non - empty."
     },
     {
         "question_number": 34,
-        "correct_answer": "B\n4"
+        "correct_answer": "4"
     },
     {
         "question_number": 35,
-        "correct_answer": "D\nTitles of the five most expensive books"
+        "correct_answer": "Titles of the five most expensive books"
     },
     {
         "question_number": 36,
-        "correct_answer": "A\nFind the names of all suppliers who have supplied a non-blue part."
+        "correct_answer": "Find the names of all suppliers who have supplied a non-blue part."
     },
     {
         "question_number": 37,
-        "correct_answer": "D\nAverage salary of male employee is more than the average salary of the organization"
+        "correct_answer": "Average salary of male employee is more than the average salary of the organization"
     },
     {
         "question_number": 38,
-        "correct_answer": "B\n1 and 2 respectively"
+        "correct_answer": "1 and 2 respectively"
     },
     {
         "question_number": 39,
-        "correct_answer": "B\nFragments"
+        "correct_answer": "Fragments"
     },
     {
         "question_number": 40,
-        "correct_answer": "A\nM = 4, N = 2"
+        "correct_answer": "M = 4, N = 2"
     },
     {
         "question_number": 41,
-        "correct_answer": "B\npid of Parts supplied only by sachin"
+        "correct_answer": "pid of Parts supplied only by sachin"
     },
     {
         "question_number": 42,
-        "correct_answer": "A\nCREATE ASSERTION \u2018ASSERTION Name\u2019 CHECK \u2018Predicate\u2019"
+        "correct_answer": "CREATE ASSERTION ‘ASSERTION Name’ CHECK ‘Predicate’"
     },
     {
         "question_number": 43,
-        "correct_answer": "D\n4 and 2 respectively"
+        "correct_answer": "4 and 2 respectively"
     },
     {
         "question_number": 44,
-        "correct_answer": "C\n10"
+        "correct_answer": "10"
     },
     {
         "question_number": 45,
-        "correct_answer": "B\nThe average marks of male students is more than the average marks of students in the University"
+        "correct_answer": "The average marks of male students is more than the average marks of students in the University"
     },
     {
         "question_number": 46,
-        "correct_answer": "A\nAvg"
+        "correct_answer": "Avg"
     },
     {
         "question_number": 47,
-        "correct_answer": "D\nOnly I is correct."
+        "correct_answer": "Only I is correct."
     },
     {
         "question_number": 48,
-        "correct_answer": "C\nNames of Students who have got an A grade in at least one of the courses taught by Sriram"
+        "correct_answer": "Names of Students who have got an A grade in at least one of the courses taught by Sriram"
     },
     {
         "question_number": 49,
-        "correct_answer": "A\nR has no duplicates and S is non-empty"
+        "correct_answer": "R has no duplicates and S is non-empty"
     },
     {
         "question_number": 50,
-        "correct_answer": "C\nTitles of the seven most expensive books."
+        "correct_answer": "Titles of the seven most expensive books."
     },
     {
         "question_number": 51,
-        "correct_answer": "B\nemployees in the company"
+        "correct_answer": "employees in the company"
     },
     {
         "question_number": 52,
-        "correct_answer": "A\n2000"
+        "correct_answer": "2000"
     },
     {
         "question_number": 53,
@@ -213,54 +213,54 @@
     },
     {
         "question_number": 54,
-        "correct_answer": "D\nBoth S1 and S2 are FALSE."
+        "correct_answer": "Both S1 and S2 are FALSE."
     },
     {
         "question_number": 55,
-        "correct_answer": "D\nNames of all the employees with all their customers having a \u2018GOOD\u2019 rating."
+        "correct_answer": "Names of all the employees with all their customers having a ‘GOOD’ rating."
     },
     {
         "question_number": 56,
-        "correct_answer": "B\nQuery2 and Query4 return identical row sets for all databases but there exist databases for which Query1 and Query2 return different row sets."
+        "correct_answer": "Query2 and Query4 return identical row sets for all databases but there exist databases for which Query1 and Query2 return different row sets."
     },
     {
         "question_number": 57,
-        "correct_answer": "C\n5"
+        "correct_answer": "5"
     },
     {
         "question_number": 58,
-        "correct_answer": "D\ntrigger"
+        "correct_answer": "trigger"
     },
     {
         "question_number": 59,
-        "correct_answer": "A\n8, 8"
+        "correct_answer": "8, 8"
     },
     {
         "question_number": 60,
-        "correct_answer": "D\nFind the names of all suppliers who have not supplied only blue parts."
+        "correct_answer": "Find the names of all suppliers who have not supplied only blue parts."
     },
     {
         "question_number": 61,
-        "correct_answer": "B\n3"
+        "correct_answer": "3"
     },
     {
         "question_number": 62,
-        "correct_answer": "B\nP and S"
+        "correct_answer": "P and S"
     },
     {
         "question_number": 63,
-        "correct_answer": "D\ndrop"
+        "correct_answer": "drop"
     },
     {
         "question_number": 64,
-        "correct_answer": "D\nthe average salary of male employees is more than the average salary in the company"
+        "correct_answer": "the average salary of male employees is more than the average salary in the company"
     },
     {
         "question_number": 65,
-        "correct_answer": "D\nthe projection operation in relational algebra, except that select in SQL retains duplicates"
+        "correct_answer": "the projection operation in relational algebra, except that select in SQL retains duplicates"
     },
     {
         "question_number": 66,
-        "correct_answer": "C\nThird highest salary"
+        "correct_answer": "Third highest salary"
     }
 ]

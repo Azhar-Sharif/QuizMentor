@@ -1,447 +1,358 @@
 [
     {
         "question_number": 1,
-        "correct_answer": "A\nin 1NF, but not in 2NF.",
-        "question": "Question1"
+        "correct_answer": "in 1NF, but not in 2NF."
     },
     {
         "question_number": 2,
-        "correct_answer": "C\nEvery relation in BCNF is also in 3NF",
-        "question": "Question2"
+        "correct_answer": "Every relation in BCNF is also in 3NF"
     },
     {
         "question_number": 3,
-        "correct_answer": "A\nBankAccount_Num is candidate key",
-        "question": "Question3"
+        "correct_answer": "BankAccount_Num is candidate key"
     },
     {
         "question_number": 4,
-        "correct_answer": "A\nThe schema is in BCNF",
-        "question": "Question4"
+        "correct_answer": "The schema is in BCNF"
     },
     {
         "question_number": 5,
-        "correct_answer": "C\nBook is in 2NF and Collection is in 3NF",
-        "question": "Question5"
+        "correct_answer": "Book is in 2NF and Collection is in 3NF"
     },
     {
         "question_number": 6,
-        "correct_answer": "B\n{E, F, H}",
-        "question": "Question6"
+        "correct_answer": "{E, F, H}"
     },
     {
         "question_number": 7,
-        "correct_answer": "A\nS1 is TRUE and S2 is FALSE.",
-        "question": "Question7"
+        "correct_answer": "S1 is TRUE and S2 is FALSE."
     },
     {
         "question_number": 8,
-        "correct_answer": "D\n8",
-        "question": "Question8"
+        "correct_answer": "8"
     },
     {
         "question_number": 9,
-        "correct_answer": "B\n19",
-        "question": "Question9"
+        "correct_answer": "19"
     },
     {
         "question_number": 10,
-        "correct_answer": "C\nLossless, dependency-preserving decomposi­tion into BCNF is always possible",
-        "question": "Question10"
+        "correct_answer": "Lossless, dependency-preserving decomposi­tion into BCNF is always possible"
     },
     {
         "question_number": 11,
-        "correct_answer": "C\nr ⊂ s",
-        "question": "Question11"
+        "correct_answer": "r ⊂ s"
     },
     {
         "question_number": 12,
-        "correct_answer": "D\nAEH, BEH, DEH",
-        "question": "Question12"
+        "correct_answer": "AEH, BEH, DEH"
     },
     {
         "question_number": 13,
-        "correct_answer": "B\n2",
-        "question": "Question13"
+        "correct_answer": "2"
     },
     {
         "question_number": 14,
-        "correct_answer": "B\n3 NF",
-        "question": "Question14"
+        "correct_answer": "3 NF"
     },
     {
         "question_number": 15,
-        "correct_answer": "D\nnames of girl students with more marks than all the boy students",
-        "question": "Question15"
+        "correct_answer": "names of girl students with more marks than all the boy students"
     },
     {
         "question_number": 16,
-        "correct_answer": "D\nNone of the above",
-        "question": "Question16"
+        "correct_answer": "None of the above"
     },
     {
         "question_number": 17,
-        "correct_answer": "A\nZero",
-        "question": "Question17"
+        "correct_answer": "Zero"
     },
     {
         "question_number": 18,
-        "correct_answer": "C\nRelational algebra has the same power as safe relational calculus",
-        "question": "Question18"
+        "correct_answer": "Relational algebra has the same power as safe relational calculus"
     },
     {
         "question_number": 19,
-        "correct_answer": "C\nBCNF definition",
-        "question": "Question19"
+        "correct_answer": "BCNF definition"
     },
     {
         "question_number": 20,
-        "correct_answer": "C\nB does not functionally determine C",
-        "question": "Question20"
+        "correct_answer": "B does not functionally determine C"
     },
     {
         "question_number": 21,
-        "correct_answer": "C\ndependency preserving but not lossless join",
-        "question": "Question21"
+        "correct_answer": "dependency preserving but not lossless join"
     },
     {
         "question_number": 22,
-        "correct_answer": "D\nList all vertices reachable from a given vertex",
-        "question": "Question22"
+        "correct_answer": "List all vertices reachable from a given vertex"
     },
     {
         "question_number": 23,
-        "correct_answer": "C\nC",
-        "question": "Question23"
+        "correct_answer": "C"
     },
     {
         "question_number": 24,
-        "correct_answer": "C\nAB->C, C->AD",
-        "question": "Question24"
+        "correct_answer": "AB->C, C->AD"
     },
     {
         "question_number": 25,
-        "correct_answer": "C\nC",
-        "question": "Question25"
+        "correct_answer": "C"
     },
     {
         "question_number": 26,
-        "correct_answer": "C\nA tuple (z,w) with w < x is deleted",
-        "question": "Question26"
+        "correct_answer": "A tuple (z,w) with w < x is deleted"
     },
     {
         "question_number": 27,
-        "correct_answer": "C\nThe sum of all employees’ salaries",
-        "question": "Question27"
+        "correct_answer": "The sum of all employees’ salaries"
     },
     {
         "question_number": 28,
-        "correct_answer": "B\nYZ -> X and Y -> Z",
-        "question": "Question28"
+        "correct_answer": "YZ -> X and Y -> Z"
     },
     {
         "question_number": 29,
-        "correct_answer": "C\n4",
-        "question": "Question29"
+        "correct_answer": "4"
     },
     {
         "question_number": 30,
-        "correct_answer": "C\n{P,S}→{S}",
-        "question": "Question30"
+        "correct_answer": "{P,S}→{S}"
     },
     {
         "question_number": 31,
-        "correct_answer": "B\n3",
-        "question": "Question31"
+        "correct_answer": "3"
     },
     {
         "question_number": 32,
-        "correct_answer": "D\n6 rows and 5 columns",
-        "question": "Question32"
+        "correct_answer": "6 rows and 5 columns"
     },
     {
         "question_number": 33,
-        "correct_answer": "C\nLodging",
-        "question": "Question33"
+        "correct_answer": "Lodging"
     },
     {
         "question_number": 34,
-        "correct_answer": "A\n1 NF",
-        "question": "Question34"
+        "correct_answer": "1 NF"
     },
     {
         "question_number": 35,
-        "correct_answer": "B\nV W X Z",
-        "question": "Question35"
+        "correct_answer": "V W X Z"
     },
     {
         "question_number": 36,
-        "correct_answer": "D\nnot in 2NF",
-        "question": "Question36"
+        "correct_answer": "not in 2NF"
     },
     {
         "question_number": 37,
-        "correct_answer": "A\nIt will display all the employees having last names starting with the alphabets 'A' till 'D' inclusive of A and exclusive of D.",
-        "question": "Question37"
+        "correct_answer": "It will display all the employees having last names starting with the alphabets 'A' till 'D' inclusive of A and exclusive of D."
     },
     {
         "question_number": 38,
-        "correct_answer": "C\nA transaction consists of either a collection of DML statements or a DDL or DCL or TCL statement to form a logical unit of work in a database session.",
-        "question": "Question38"
+        "correct_answer": "A transaction consists of either a collection of DML statements or a DDL or DCL or TCL statement to form a logical unit of work in a database session."
     },
     {
         "question_number": 39,
-        "correct_answer": "B\nEC",
-        "question": "Question39"
+        "correct_answer": "EC"
     },
     {
         "question_number": 40,
-        "correct_answer": "D\nIn both 2NF and 3NF",
-        "question": "Question40"
+        "correct_answer": "In both 2NF and 3NF"
     },
     {
         "question_number": 41,
-        "correct_answer": "D\n3NF",
-        "question": "Question41"
+        "correct_answer": "3NF"
     },
     {
         "question_number": 42,
-        "correct_answer": "null",
-        "question": "Question42"
+        "correct_answer": "null"
     },
     {
         "question_number": 43,
-        "correct_answer": "A\nin first normal form but not in second normal form",
-        "question": "Question43"
+        "correct_answer": "in first normal form but not in second normal form"
     },
     {
         "question_number": 44,
-        "correct_answer": "B\nB->D",
-        "question": "Question44"
+        "correct_answer": "B->D"
     },
     {
         "question_number": 45,
-        "correct_answer": "B",
-        "question": "Question45"
+        "correct_answer": "B"
     },
     {
         "question_number": 46,
-        "correct_answer": "A\n2, 2, and 1 respectively",
-        "question": "Question46"
+        "correct_answer": "2, 2, and 1 respectively"
     },
     {
         "question_number": 47,
-        "correct_answer": "null",
-        "question": "Question47"
+        "correct_answer": "null"
     },
     {
         "question_number": 48,
-        "correct_answer": "B\nIn 3NF, not in BCNF",
-        "question": "Question48"
+        "correct_answer": "In 3NF, not in BCNF"
     },
     {
         "question_number": 49,
-        "correct_answer": "B\nSecond normal form",
-        "question": "Question49"
+        "correct_answer": "Second normal form"
     },
     {
         "question_number": 50,
-        "correct_answer": "A\nDependency preserving and lossless join.",
-        "question": "Question50"
+        "correct_answer": "Dependency preserving and lossless join."
     },
     {
         "question_number": 51,
-        "correct_answer": "B\n3,20",
-        "question": "Question51"
+        "correct_answer": "3,20"
     },
     {
         "question_number": 52,
-        "correct_answer": "A\nDependency preserving but not lossless join",
-        "question": "Question52"
+        "correct_answer": "Dependency preserving but not lossless join"
     },
     {
         "question_number": 53,
-        "correct_answer": "A\nFirst normal form but not in second normal form.",
-        "question": "Question53"
+        "correct_answer": "First normal form but not in second normal form."
     },
     {
         "question_number": 54,
-        "correct_answer": "B\nEC",
-        "question": "Question54"
+        "correct_answer": "EC"
     },
     {
         "question_number": 55,
-        "correct_answer": "B\nDML",
-        "question": "Question55"
+        "correct_answer": "DML"
     },
     {
         "question_number": 56,
-        "correct_answer": "B\nSELECT A, COUNT(*) FROM R;",
-        "question": "Question56"
+        "correct_answer": "SELECT A, COUNT(*) FROM R;"
     },
     {
         "question_number": 57,
-        "correct_answer": "A\nPreserves dependency but cannot perform lossless join",
-        "question": "Question57"
+        "correct_answer": "Preserves dependency but cannot perform lossless join"
     },
     {
         "question_number": 58,
-        "correct_answer": "B\nI and IV only",
-        "question": "Question58"
+        "correct_answer": "I and IV only"
     },
     {
         "question_number": 59,
-        "correct_answer": "B\n{x} and {a,b}",
-        "question": "Question59"
+        "correct_answer": "{x} and {a,b}"
     },
     {
         "question_number": 60,
-        "correct_answer": "D\n(4)",
-        "question": "Question60"
+        "correct_answer": "(4)"
     },
     {
         "question_number": 61,
-        "correct_answer": "C\nThird Normal Form but not BCNF",
-        "question": "Question61"
+        "correct_answer": "Third Normal Form but not BCNF"
     },
     {
         "question_number": 62,
-        "correct_answer": "C\nEntity Integrity",
-        "question": "Question62"
+        "correct_answer": "Entity Integrity"
     },
     {
         "question_number": 63,
-        "correct_answer": "D\nOnly D2",
-        "question": "Question63"
+        "correct_answer": "Only D2"
     },
     {
         "question_number": 64,
-        "correct_answer": "B\nSecond Normal Form",
-        "question": "Question64"
+        "correct_answer": "Second Normal Form"
     },
     {
         "question_number": 65,
-        "correct_answer": "C\nSelect * from customers where city like ‘%GAR%’;",
-        "question": "Question65"
+        "correct_answer": "Select * from customers where city like ‘%GAR%’;"
     },
     {
         "question_number": 66,
-        "correct_answer": "B\n(2)",
-        "question": "Question66"
+        "correct_answer": "(2)"
     },
     {
         "question_number": 67,
-        "correct_answer": "A\nIndexes",
-        "question": "Question67"
+        "correct_answer": "Indexes"
     },
     {
         "question_number": 68,
-        "correct_answer": "C\nObject Oriented Database Management System",
-        "question": "Question68"
+        "correct_answer": "Object Oriented Database Management System"
     },
     {
         "question_number": 69,
-        "correct_answer": "B\nSecond Normal Form",
-        "question": "Question69"
+        "correct_answer": "Second Normal Form"
     },
     {
         "question_number": 70,
-        "correct_answer": "A\n5",
-        "question": "Question70"
+        "correct_answer": "5"
     },
     {
         "question_number": 71,
-        "correct_answer": "A\n(a)",
-        "question": "Question71"
+        "correct_answer": "(a)"
     },
     {
         "question_number": 72,
-        "correct_answer": "B\nReferential Integrity",
-        "question": "Question72"
+        "correct_answer": "Referential Integrity"
     },
     {
         "question_number": 73,
-        "correct_answer": "B\nLossless preserving decomposition into BCNF is always possible",
-        "question": "Question73"
+        "correct_answer": "Lossless preserving decomposition into BCNF is always possible"
     },
     {
         "question_number": 74,
-        "correct_answer": "B\nThird Normal form",
-        "question": "Question74"
+        "correct_answer": "Third Normal form"
     },
     {
         "question_number": 75,
-        "correct_answer": "A\nEvery binary relation is never be in BCNF.",
-        "question": "Question75"
+        "correct_answer": "Every binary relation is never be in BCNF."
     },
     {
         "question_number": 76,
-        "correct_answer": "A\nFirst normal form but not in second normal form",
-        "question": "Question76"
+        "correct_answer": "First normal form but not in second normal form"
     },
     {
         "question_number": 77,
-        "correct_answer": "C\nBoth (a) and (b)",
-        "question": "Question77"
+        "correct_answer": "Both (a) and (b)"
     },
     {
         "question_number": 78,
-        "correct_answer": "A\nFirst normal form but not in second normal form",
-        "question": "Question78"
+        "correct_answer": "First normal form but not in second normal form"
     },
     {
         "question_number": 79,
-        "correct_answer": "A\nR has a nontrivial functional dependency X→A, where X is not a superkey and A is a prime attribute",
-        "question": "Question79"
+        "correct_answer": "R has a nontrivial functional dependency X→A, where X is not a superkey and A is a prime attribute"
     },
     {
         "question_number": 80,
-        "correct_answer": "null",
-        "question": "Question80"
+        "correct_answer": "null"
     },
     {
         "question_number": 81,
-        "correct_answer": "null",
-        "question": "Question81"
+        "correct_answer": "null"
     },
     {
         "question_number": 82,
-        "correct_answer": "B\n4",
-        "question": "Question82"
+        "correct_answer": "4"
     },
     {
         "question_number": 83,
-        "correct_answer": "D\nNormal Forms",
-        "question": "Question83"
+        "correct_answer": "Normal Forms"
     },
     {
         "question_number": 84,
-        "correct_answer": "A\n820",
-        "question": "Question84"
+        "correct_answer": "820"
     },
     {
         "question_number": 85,
-        "correct_answer": "A\n1 NF",
-        "question": "Question85"
+        "correct_answer": "1 NF"
     },
     {
         "question_number": 86,
-        "correct_answer": "B\n2 NF",
-        "question": "Question86"
+        "correct_answer": "2 NF"
     },
     {
         "question_number": 87,
-        "correct_answer": "B\nABCD, E",
-        "question": "Question87"
+        "correct_answer": "ABCD, E"
     },
     {
         "question_number": 88,
-        "correct_answer": "D\nTwo mutually exclusive foreign keys",
-        "question": "Question88"
+        "correct_answer": "Two mutually exclusive foreign keys"
     },
     {
         "question_number": 89,
-        "correct_answer": "A\nNon_key attribute V_name is dependent on V_no which is part of composite key",
-        "question": "Question89"
+        "correct_answer": "Non_key attribute V_name is dependent on V_no which is part of composite key"
     }
 ]
