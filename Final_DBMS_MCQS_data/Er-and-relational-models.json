@@ -1,0 +1,965 @@
+[
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question1",
+        "question_text": "Consider the following relational schema.Students(rollno: integer, sname: string)\r\n    Courses(courseno: integer, cname: string)\r\n    Registration(rollno: integer, courseno: integer, percent: real)Which of the following queries are equivalent to this query in English?\"Find the distinct names of all students who score \r\n       more than 90% in the course numbered 107\" Question2",
+        "question_img_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2013/10/gatecs201314.png",
+        "options": [
+            "I, II, III and IV",
+            "I, II and III only",
+            "I, II and IV only",
+            "II, III and IV only"
+        ],
+        "correct_option": "I, II, III and IV"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question2",
+        "question_text": "Given the basic ER and relational models, which of the following is INCORRECT?",
+        "question_img_link": null,
+        "options": [
+            "An attribute of an entity can have more than one value",
+            "An attribute of an entity can be composite",
+            "In a row of a relational table, an attribute can have more than one value",
+            "In a row of a relational table, an attribute can have exactly one value or a NULL value"
+        ],
+        "correct_option": "In a row of a relational table, an attribute can have more than one value"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question3",
+        "question_text": "Suppose (A, B) and (C,D) are two relation schemas. Let r1 and r2 be the corresponding relation instances. B is a foreign key that refers to C in r2. If data in r1 and r2 satisfy referential integrity constraints, which of the following is ALWAYS TRUE? Question4",
+        "question_img_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2013/11/DBMSGATE2012.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "correct_option": "A"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question4",
+        "question_text": "Consider the following relations A, B, C. How many tuples does the result of the following relational algebra expression contain? Assume that the schema of A U B is the same as that of A. 7",
+        "question_img_link": "https://media.geeksforgeeks.org/wp-content/uploads/20231223190621/DBMSGATE20124-300x47.png",
+        "options": [
+            "7",
+            "4",
+            "5",
+            "9"
+        ],
+        "correct_option": "7"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question5",
+        "question_text": "Consider a relational table r with sufficient number of records, having attributes A1, A2,…, An and let 1 <= p <= n. Two queries Q1 and Q2 are given below.The database can be configured to do ordered indexing on Ap or hashing on Ap. Which of the following statements is TRUE? Question6",
+        "question_img_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2013/12/GATE2011DBMS1.png",
+        "options": [
+            "Ordered indexing will always outperform hashing for both queries",
+            "Hashing will always outperform ordered indexing for both queries",
+            "Hashing will outperform ordered indexing on Q1, but not on Q2",
+            "Hashing will outperform ordered indexing on Q2, but not on Q1."
+        ],
+        "correct_option": "Hashing will outperform ordered indexing on Q1, but not on Q2"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question6",
+        "question_text": "Which of the following tuple relational calculus expression(s) is/are equivalent to",
+        "question_img_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2014/01/18.gif",
+        "options": [
+            "I only",
+            "II only",
+            "III only",
+            "III and IV only"
+        ],
+        "correct_option": "III only"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question7",
+        "question_text": "1) Let R and S be two relations with the following schema\r\nR (P,Q,R1,R2,R3)\r\nS (P,Q,S1,S2)\r\nWhere {P, Q} is the key for both schemas. Which of the following queries are equivalent? Question8",
+        "question_img_link": "http://www.geeksforgeeks.org/wp-content/uploads/GATE2008DBMS1.gif",
+        "options": [
+            "Only I and II",
+            "Only I and III",
+            "Only I, II and III",
+            "Only I, III and IV"
+        ],
+        "correct_option": "Only I, III and IV"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question8",
+        "question_text": "Consider the following ER diagram.The minimum number of tables needed to represent M, N, P, R1, R2 is Question9",
+        "question_img_link": "http://www.geeksforgeeks.org/wp-content/uploads/GATE2008DBMS_ERDIA.gif",
+        "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "correct_option": "3"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question9",
+        "question_text": "Consider the data given in above question. Which of the following is a correct attribute set for one of the tables for the correct answer to the above question? Question10",
+        "question_img_link": "http://www.geeksforgeeks.org/wp-content/uploads/GATE2008DBMS_ERDIA.gif",
+        "options": [
+            "{M1, M2, M3, P1}",
+            "{M1, P1, N1, N2}",
+            "{M1, P1, N1}",
+            "{M1, P1}"
+        ],
+        "correct_option": "{M1, M2, M3, P1}"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question10",
+        "question_text": "Information about a collection of students is given by the relationstudinfo(studId, name, sex). The relationenroll(studId, courseId)gives which student has enrolled for (or taken)  that course(s). Assume that every course is taken by at least one male and at least one female student. What does the following relational algebra expression represent? Boost yourGATE 2025 rankwith ourGATE CS & IT Test Series! Get60 PYQ quizzes,60 subject-wise mocks,4500+ practice questions, and20+ full-length tests—designed by GATE toppers and industry experts. Track your progress with personalized rankings. Exclusive features:All India Mock Test, Live GATE CSE Mentorship ClassesandLive Doubt Solving Sessions",
+        "question_img_link": "http://www.geeksforgeeks.org/wp-content/uploads/GATE2009DBMS12.gif",
+        "options": [
+            "Courses in which all the female students are enrolled.",
+            "Courses in which a proper subset of female students are enrolled.",
+            "Courses in which only male students are enrolled.",
+            "None of the above"
+        ],
+        "correct_option": "Courses in which a proper subset of female students are enrolled."
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question11",
+        "question_text": "Consider the relation employee(name, sex, supervisorName) with name as the key. supervisorName gives the name of the supervisor of the employee under consideration. What does the following Tuple Relational Calculus query produce? Question2",
+        "question_img_link": "http://www.geeksforgeeks.org/wp-content/uploads/GATE2009DBMS22.gif",
+        "options": [
+            "Names of employees with a male supervisor.",
+            "Names of employees with no immediate male subordinates.",
+            "Names of employees with no immediate female subordinates.",
+            "Names of employees with a female supervisor."
+        ],
+        "correct_option": "Names of employees with no immediate female subordinates."
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question12",
+        "question_text": "Consider a join (relation algebra) between relations r(R)and s(S) using the nested loop method. There are 3 buffers each of size equal to disk block size, out of which one buffer is reserved for intermediate results. Assuming size(r(R)) < size(s(S)), the join will have fewer number of disk block accesses if",
+        "question_img_link": null,
+        "options": [
+            "relation r(R) is in the outer loop.",
+            "relation s(S) is in the outer loop.",
+            "join selection factor between r(R) and s(S) is more than 0.5.",
+            "join selection factor between r(R) and s(S) is less than 0.5."
+        ],
+        "correct_option": "relation r(R) is in the outer loop."
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question13",
+        "question_text": "Question4",
+        "question_img_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2014/04/GATECS2014Q301.png",
+        "options": [
+            "A",
+            "B",
+            "C",
+            "D"
+        ],
+        "correct_option": "A"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question14",
+        "question_text": "Consider the relational schema given below, where eId of the relation dependent is a foreign key referring to empId of the relation employee. Assume that every employee has at least one associated dependent in the dependent relation.employee (empId, empName, empAge)\r\ndependent(depId, eId, depName, depAge)Consider the following relational algebra query:The above query evaluates to the set ofempIdsof employees whose age is greater than that of Question5",
+        "question_img_link": "http://www.geeksforgeeks.org/wp-content/uploads/gq/2014/04/GATECS2014Q40.png",
+        "options": [
+            "some dependent.",
+            "all dependents.",
+            "some of his/her dependents",
+            "all of his/her dependents."
+        ],
+        "correct_option": "all of his/her dependents."
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question15",
+        "question_text": "Let E1 and E2 be two entities in an E/R diagram with simple single-valued attributes. R1 and R2 are two relationships between E1 and E2, where R1 is one-to-many and R2 is many-to-many. R1 and R2 do not have any attributes of their own. What is the minimum number of tables required to represent this situation in the relational model?",
+        "question_img_link": null,
+        "options": [
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "correct_option": "3"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question16",
+        "question_text": "In a schema with attributes A, B, C, D and E following set of functional dependencies are givenA → B\r\nA → C\r\nCD → E\r\nB → D\r\nE → AWhich of the following functional dependencies is NOT implied by the above set?",
+        "question_img_link": null,
+        "options": [
+            "CD → AC",
+            "BD → CD",
+            "BC → CD",
+            "AC → BC"
+        ],
+        "correct_option": "BD → CD"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question17",
+        "question_text": "A database of research articles in a journal uses the following schema.",
+        "question_img_link": null,
+        "options": [
+            "1NF",
+            "2NF",
+            "3NF",
+            "BCNF"
+        ],
+        "correct_option": "2NF"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question18",
+        "question_text": "Which of the following relational query languages have the same expressive power?",
+        "question_img_link": null,
+        "options": [
+            "Relational algebra",
+            "Tuple relational calculus restricted to safe expressions",
+            "Domain relational calculus restricted to safe expressions",
+            "II and III only",
+            "I and II only",
+            "I and III only",
+            "I, II and III"
+        ],
+        "correct_option": "null"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question19",
+        "question_text": "A Relation R with FD set  {A->BC, B->A, A->C, A->D, D->A}.  How many candidate keys will be there in R?",
+        "question_img_link": null,
+        "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "correct_option": "3"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question20",
+        "question_text": "What is the min and max number of tables required to convert an ER diagram with 2 entities and 1 relationship between them with partial participation constraints of both entities?",
+        "question_img_link": null,
+        "options": [
+            "Min 1 and max 2",
+            "Min 1 and max 3",
+            "Min 2 and max 3",
+            "Min 2 and max 2"
+        ],
+        "correct_option": "Min 2 and max 3"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question21",
+        "question_text": "Consider the join of a relation R with a relation S. If K hasm tuplesand S hasn tuples, then the maximum and minimum sizes of the join respectively are:",
+        "question_img_link": null,
+        "options": [
+            "m+n and 0",
+            "mn and 0",
+            "m+n and m-n",
+            "mn and m+n"
+        ],
+        "correct_option": "mn and 0"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question22",
+        "question_text": "The relational algebra expression equivalent to the following tuple calculus expression{ t | t ∈ r ∧ (t[A] = 10 ∧ t[B] = 20 }is Question3",
+        "question_img_link": "http://www.cdn.geeksforgeeks.org/wp-content/uploads/q5.png",
+        "options": [
+            "a",
+            "b",
+            "c",
+            "d"
+        ],
+        "correct_option": "c"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question23",
+        "question_text": "Given two union compatible relations R1(A,B) and R2(C,D). What is the result of the operation\r\nR1⋈A=C∧ B=DR2A. R1∪ R2B. R1Χ R2C. R1- R2D. R1∩ R2",
+        "question_img_link": null,
+        "options": [
+            "a",
+            "b",
+            "c",
+            "d"
+        ],
+        "correct_option": "d"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question24",
+        "question_text": "Which of the following query transformations (i.e., replacing the l.h.s. expression by the r.h.s. expression) is incorrect? R1and R2are relations. C1, C2are selection conditions and A1, A2are attributes of R1.\r\n\r\na.  σC1( σC2R1)) → σC2(σC1(R1))\r\n\r\nb.  σC1( πA1R1)) → πA1(σC1(R1))\r\n\r\nc.  σC1( R1∪ R2) → σC1(R1) ∪ σC1(R2)\r\n\r\nd.  πA1(σC1(R1)) → σC1(πA1(R1))",
+        "question_img_link": null,
+        "options": [
+            "a",
+            "b",
+            "c",
+            "d"
+        ],
+        "correct_option": "d"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question25",
+        "question_text": "A library relational database system uses the following schema Show all the Book Title which have been issued by User# 6.",
+        "question_img_link": "https://media.geeksforgeeks.org/wp-content/uploads/20240322121136/schema.jpg",
+        "options": [
+            "Show all the Book Title which have been issued by User# 6.",
+            "The user who’s home town is Delhi and issued a book, Show all the name authors of the book he/she have issued."
+        ],
+        "correct_option": "null"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question26",
+        "question_text": "Consider the following tables T1 and T2: In table T1, P is the primary key, Q is the foreign key referencing R in table T2 with on-delete cascade and on-update cascade. In table T2, R is the primary key and S is the foreign key referencing P in the table T1 with on-delete set NULL and on-update cascade. In order to delete record (3,8) from table, numbers of additional record that need to be deleted from table T1 is ______.",
+        "question_img_link": "https://media.geeksforgeeks.org/wp-content/uploads/gate-21.png",
+        "options": [
+            "0",
+            "1",
+            "2",
+            "3"
+        ],
+        "correct_option": "0"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question27",
+        "question_text": "In an Entity-Relationship (ER) model, suppose R is a many-to-one relationship from entity set E1 to entity set E2. Assume that E1 and E2 participate totally in R and that the cardinality of E1 is greater that the cardinality of E2.\r\n\r\nWhich one of the following is true about R?",
+        "question_img_link": null,
+        "options": [
+            "Every entity in E1 is associated with exactly one entity in E2.",
+            "Some entity in E1 is associated with more than one entity in E2.",
+            "Every entity in E2 is associated with exactly one entity in E1.",
+            "Every entity in E2 is associated with at most one entity in E1."
+        ],
+        "correct_option": "Every entity in E1 is associated with exactly one entity in E2."
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question28",
+        "question_text": "Consider the relations r(A, B) and s(B, C), where s.B is a primary key and r.B is a foreign key referencing s.B. Consider the queryQ: r⋈(σB<5(s))Let LOJ denote the natural left outer-join operation. Assume that r and s contain no null values.\r\n\r\nWhich one of the following is NOT equivalent to Q?",
+        "question_img_link": null,
+        "options": [
+            "σB<5(r ⋈ s)",
+            "σB<5(r LOJ s)",
+            "r LOJ (σB<5(s))",
+            "σB<5(r)LOJ s"
+        ],
+        "correct_option": "r LOJ (σB<5(s))"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question29",
+        "question_text": "Match the following with respect to RDBMS : Question10",
+        "question_img_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/q18.png",
+        "options": [
+            "(1)",
+            "(2)",
+            "(3)",
+            "(4)"
+        ],
+        "correct_option": "(2)"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question30",
+        "question_text": "Consider the following schema :Sailors (sid, sname, rating, age)\r\nBoats (bid, bname, colour)\r\nReserves (sid, bid, day)Two boats can have the same name but the colour differentiates them. The two relationsρ (Tempsids, (Ⲡsid, bidReserves)/(Ⲡbid( σbname ='Ganga'Boats))),\r\nⲠsname(Tempsids ⋈ Sailors)If / is division operation, the above set of relations represents the query",
+        "question_img_link": null,
+        "options": [
+            "Names of sailors who have reserved all boats calledGanga",
+            "Names of sailors who have not reserved anyGangaboat",
+            "Names of sailors who have reserved at least oneGangaboat",
+            "Names of sailors who have reserved at most oneGangaboat"
+        ],
+        "correct_option": "Names of sailors who have reserved all boats called Ganga"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question31",
+        "question_text": "Consider a relation R (A, B, C, D, E, F, G, H), where each attribute is atomic, and following functional dependencies exist.CH → G\r\nA → BC\r\nB → CFH\r\nE → A\r\nF → EGThe relation R is __________ .",
+        "question_img_link": null,
+        "options": [
+            "in 1NF but not in 2NF",
+            "in 2NF but not in 3NF",
+            "in 3NF but not in BCNF",
+            "in BCNF"
+        ],
+        "correct_option": "in 1NF but not in 2NF"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question32",
+        "question_text": "Which symbol denote derived attributes in ER Model?",
+        "question_img_link": null,
+        "options": [
+            "Double ellipse",
+            "Dashed ellipse",
+            "Squared ellipse",
+            "Ellipse with attribute name underlined"
+        ],
+        "correct_option": "Dashed ellipse"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question33",
+        "question_text": "Integrity constraints ensure that changes made to the database by authorized users do not result into loss of data consistency. Which of the following statement(s) is (are) true w.r.t. the examples of integrity constraints ?(A) An instructor Id. No. cannot be null, provided Instructor Id No. being primary key.(B) No two citizens have same Aadhaar-Id.(C) Budget of a company must be zero.",
+        "question_img_link": null,
+        "options": [
+            "(A), (B) and (C) are true.",
+            "(A) false, (B) and (C) are true.",
+            "(A) and (B) are true; (C) false.",
+            "(A), (B) and (C) are false"
+        ],
+        "correct_option": "(A) and (B) are true; (C) false."
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question34",
+        "question_text": "Let M and N be two entities in an E-R diagram with simple single value attributes. R1and R2are two relationship between M and N, where as R1is one-to-many and R2is many-to-many.\r\nThe minimum number of tables required to represent M, N, R1and R2in the relational model are _______.",
+        "question_img_link": null,
+        "options": [
+            "4",
+            "6",
+            "7",
+            "3"
+        ],
+        "correct_option": "3"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question35",
+        "question_text": "Which one is correct w.r.t. RDBMS ?",
+        "question_img_link": null,
+        "options": [
+            "primary key ⊆ super key ⊆ candidate key",
+            "primary key ⊆ candidate key ⊆ super key",
+            "super key ⊆ candidate key ⊆ primary key",
+            "super key ⊆ primary key ⊆ candidate key"
+        ],
+        "correct_option": "primary key ⊆ candidate key ⊆ super key"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question36",
+        "question_text": "Let pk(R) denotes primary key of relation R. A many-to-one relationship that exists between two relations R1and R2can be expressed as follows :",
+        "question_img_link": null,
+        "options": [
+            "pk(R2) → pk(R1)",
+            "pk(R1) → pk(R2)",
+            "pk(R2) → R1∩ R2",
+            "pk(R1) → R1∩ R2"
+        ],
+        "correct_option": "pk(R1) → pk(R2)"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question37",
+        "question_text": "Consider the join of a relation R , with a relation S . If R has m number of tuples and S has n number of tuples then the maximum and minimum sizes of the join respectively are:",
+        "question_img_link": null,
+        "options": [
+            "m + n & 0",
+            "mn & 0",
+            "m + n & | m - n |",
+            "mn & m + n"
+        ],
+        "correct_option": "mn & 0"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question38",
+        "question_text": "Let R(a, b, c) and S(d, e, f) be two relations in which d is the foreign key of S that refers to the primary key of R. Consider the following four operations R and S.\r\nI. Insert into R\r\nII. Insert into S\r\nIII. Delete from R\r\nIV. Delete from S\r\nWhich of the following can cause violation of the referential integrity constraint above?",
+        "question_img_link": null,
+        "options": [
+            "Both I and IV",
+            "Both II and III",
+            "All of these",
+            "None of these"
+        ],
+        "correct_option": "Both II and III"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question39",
+        "question_text": "Goals for the design of the logical scheme include",
+        "question_img_link": null,
+        "options": [
+            "avoiding data inconsistency",
+            "being able to construct query easily",
+            "being able to access data efficiently",
+            "All of the above"
+        ],
+        "correct_option": "All of the above"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question40",
+        "question_text": "Consider the following Relationship Entity Diagram(ERD)Which of the following possible relations will not hold if the above ERD is mapped into a relation model? Boost yourGATE 2025 rankwith ourGATE CS & IT Test Series! Get60 PYQ quizzes,60 subject-wise mocks,4500+ practice questions, and20+ full-length tests—designed by GATE toppers and industry experts. Track your progress with personalized rankings. Exclusive features:All India Mock Test, Live GATE CSE Mentorship ClassesandLive Doubt Solving Sessions",
+        "question_img_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/AATTTT.png",
+        "options": [
+            "Person (NID, Name)",
+            "Qualification (NID, ExamID, QualifiedDate)",
+            "Exam (ExamID, NID, ExamName)",
+            "Exam (ExamID, ExamName)"
+        ],
+        "correct_option": "Exam (ExamID, NID, ExamName)"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question41",
+        "question_text": "If D1, D2...Dnare domains in a relational model, then the relation is a table, which is a subset of",
+        "question_img_link": null,
+        "options": [
+            "D1⊕D2⊕...⊕Dn",
+            "D1xD2x...xDn",
+            "D1∪D2∪...∪Dn",
+            "D1∩D2∩...∩Dn"
+        ],
+        "correct_option": "D1xD2x...xDn"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question42",
+        "question_text": "Relational database schema normalization is NOT for:",
+        "question_img_link": null,
+        "options": [
+            "reducing the number of joins required to satisfy a query.",
+            "eliminating uncontrolled redundancy of data stored in the database.",
+            "eliminating number of anomalies that could otherwise occur with inserts and deletes.",
+            "ensuring that functional dependencies are enforced."
+        ],
+        "correct_option": "reducing the number of joins required to satisfy a query."
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question43",
+        "question_text": "Consider the following statements regarding relational database model:\r\n(a) NULL values can be used to opt a tuple out of enforcement of a foreign key.\r\n(b) Suppose that table T has only one candidate key. If Q is in 3NF, then it is also in BCNF.\r\n(c) The difference between the project operator (Π) in relational algebra and the SELECT keyword in SQL is that if the resulting table/set has more than one occurrences of the same tuple, then Π will return only one of them, while SQL SELECT will return all.\r\nOne can determine that:",
+        "question_img_link": null,
+        "options": [
+            "(a) and (b) are true.",
+            "(a) and (c) are true.",
+            "(b) and (c) are true.",
+            "(a), (b) and (c) are true."
+        ],
+        "correct_option": "(a), (b) and (c) are true."
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question44",
+        "question_text": "Consider the following Entity-Relationship (E-R) diagram and three possible relationship sets (I, II and III) for this E-R diagram:IIIIIIf different symbols stand for different values (e.g., t1is definitely not equal to t2), then which of the above could not be the relationship set for the E-R diagram ? Question5",
+        "question_img_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/19-1.png",
+        "options": [
+            "I only",
+            "I and II only",
+            "II only",
+            "I, II and III"
+        ],
+        "correct_option": "I only"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question45",
+        "question_text": "An aggregation association is drawn using which symbol?",
+        "question_img_link": null,
+        "options": [
+            "A line which loops back on to the same table",
+            "A small open diamond at the end of a line connecting two tables",
+            "A small closed diamond at the end of a line connecting two tables",
+            "A small closed triangle at the end of a line connecting two tables"
+        ],
+        "correct_option": "A small open diamond at the end of a line connecting two tables"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question46",
+        "question_text": "Every time the attribute A appears, it is matched with the same value of attribute B but not the same value of attribute C. Which of the following is true?",
+        "question_img_link": null,
+        "options": [
+            "A-> (B,C)",
+            "A ->B, A->>C",
+            "A->B, C->>A",
+            "A->>B, B->C"
+        ],
+        "correct_option": "A ->B, A->>C"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question47",
+        "question_text": "Suppose database table T1(P, R) currently has tuples {(10, 5), (15, 8), (25, 6)} and table T2(A, C) currently has {(10, 6), (25, 3), (10, 5)}. Consider the following three relational algebra queries RA1, RA2and RA3:RA1: T1⨝T1.P = T2.AT2where ⨝is natural join symbolRA2: T1⟕T1.P = T2.AT2where ⟕ is left outer join symbolRA3: T1⨝T1.P = T2.A and T1.R = T2.CT2The number of tuples in the resulting table of RA1, RA2and RA3are given by:",
+        "question_img_link": null,
+        "options": [
+            "2, 4, 2 respectively",
+            "2, 3, 2 respectively",
+            "3, 3, 1 respectively",
+            "3, 4, 1 respectively"
+        ],
+        "correct_option": "3, 4, 1 respectively"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question48",
+        "question_text": "Which of the following statement(s) is/are FALSE in the context of Relational DBMS ?\r\nI. Views in a database system are important because they help with access control by allowing users to see only a particular subset of the data in the database.\r\nII. E-R diagrams are useful to logically model concepts.\r\nIII. An update anomaly is when it is not possible to store information unless some other, unrelated information is stored as well.\r\nIV. SQL is a procedural language.",
+        "question_img_link": null,
+        "options": [
+            "I and IV only",
+            "III and IV only",
+            "I, II and III only",
+            "II, III and IV only"
+        ],
+        "correct_option": "II, III and IV only"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question49",
+        "question_text": "Consider the following two commands C1 and C2 on the relation R from an SQL database:\r\nC1 : drop table R;\r\nC2 : delete from R;\r\nWhich of the following statements is TRUE ?\r\nI. Both C1 and C2 delete the schema for R.\r\nII. C2 retains relation R, but deletes all tuples in R.\r\nIII. C1 deletes not only all tuples of R, but also the schema for R.",
+        "question_img_link": null,
+        "options": [
+            "I only",
+            "I and II only",
+            "II and III only",
+            "I, II and III"
+        ],
+        "correct_option": "II and III only"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question50",
+        "question_text": "Consider the following database table having A, B, C and D as its four attributes and four\r\npossible candidate keys (I, II, III and IV) for this table :I   : {B} \r\nII  : {B, C} \r\nIII : {A, D} \r\nIV  : {C, D}\r\nIf different symbols stand for different values in the table (e.g., d1is definitely not equal to d2), then which of the above could not be the candidate key for the database table ? Boost yourGATE 2025 rankwith ourGATE CS & IT Test Series! Get60 PYQ quizzes,60 subject-wise mocks,4500+ practice questions, and20+ full-length tests—designed by GATE toppers and industry experts. Track your progress with personalized rankings. Exclusive features:All India Mock Test, Live GATE CSE Mentorship ClassesandLive Doubt Solving Sessions",
+        "question_img_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/20.png",
+        "options": [
+            "I and III only",
+            "III and IV only",
+            "II only",
+            "I only"
+        ],
+        "correct_option": "II only"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question51",
+        "question_text": "In a relational database model, NULL values can be used for all but which one of the following ?",
+        "question_img_link": null,
+        "options": [
+            "To allow duplicate tuples in the table by filling the primary key column(s) with NULL.",
+            "To avoid confusion with actual legitimate data values like 0 (zero) for integer columns and ’’ (the empty string) for string columns.",
+            "To leave columns in a tuple marked as ’’unknown’’ when the actual value is unknown.",
+            "To fill a column in a tuple when that column does not really ”exist” for that particular tuple."
+        ],
+        "correct_option": "To allow duplicate tuples in the table by filling the primary key column(s) with NULL."
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question52",
+        "question_text": "A relation R = {A, B, C, D, E, F,G} is given with following set of functional dependencies:\r\nF = {AD → E, BE → F, B → C, AF → G}\r\nWhich of the following is a candidate key ?",
+        "question_img_link": null,
+        "options": [
+            "A",
+            "AB",
+            "ABC",
+            "ABD"
+        ],
+        "correct_option": "ABD"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question53",
+        "question_text": "Drop Table cannot be used to drop a Table referenced by __________ constraint. \r\n(a)Primary key\t\r\n(b)Sub key\t\r\n(c)Super key\t\r\n(d)Foreign key",
+        "question_img_link": null,
+        "options": [
+            "(a)",
+            "(a), (b) and (c)",
+            "(d)",
+            "(a) and (d)"
+        ],
+        "correct_option": "(d)"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question54",
+        "question_text": "For a weak entity set to be meaningful, it must be associated with another entity set in combination with some of their attribute values, is called as:",
+        "question_img_link": null,
+        "options": [
+            "Neighbour Set",
+            "Strong Entity Set",
+            "Owner Entity Set",
+            "Weak Set"
+        ],
+        "correct_option": "Owner Entity Set"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question55",
+        "question_text": "The 'command' used to change contents of one database using the contents of another database by linking them on a common key field?",
+        "question_img_link": null,
+        "options": [
+            "Replace",
+            "Join",
+            "Change",
+            "Update"
+        ],
+        "correct_option": "Join"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question56",
+        "question_text": "The join operation can be defined as",
+        "question_img_link": null,
+        "options": [
+            "a cartesian product of two relations followed by a selection",
+            "a cartesian product of two relations",
+            "a union of two relations followed by cartesian product of the two relations",
+            "a union of two relations"
+        ],
+        "correct_option": "a cartesian product of two relations followed by a selection"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question57",
+        "question_text": "Which commands are used to control access over objects in relational database?",
+        "question_img_link": null,
+        "options": [
+            "CASCADE & MVD",
+            "GRANT & REVOKE",
+            "QUE & QUIST",
+            "None of these"
+        ],
+        "correct_option": "GRANT & REVOKE"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question58",
+        "question_text": "What kind of mechanism is to be taken into account for converting a weak entity set into strong entity set in entity-relationship diagram?",
+        "question_img_link": null,
+        "options": [
+            "Generalization",
+            "Aggregation",
+            "Specialization",
+            "Adding suitable attributes"
+        ],
+        "correct_option": "Adding suitable attributes"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question59",
+        "question_text": "Identify the minimal key for relational scheme R(A, B, C, D, E) with functional dependencies F = {A → B, B → C, AC → D}",
+        "question_img_link": null,
+        "options": [
+            "A",
+            "AE",
+            "BE",
+            "CE"
+        ],
+        "correct_option": "AE"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question60",
+        "question_text": "Immunity of the external schemas (or application programs) to changes in the conceptual schema is referred to as:",
+        "question_img_link": null,
+        "options": [
+            "Physical Data Independence",
+            "Logical Data Independence",
+            "Both (a) and (b)",
+            "None of the above"
+        ],
+        "correct_option": "Logical Data Independence"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question61",
+        "question_text": "In RDBMS, which type of Join returns all rows that satisfy the join condition?",
+        "question_img_link": null,
+        "options": [
+            "Inner Join",
+            "Outer Join",
+            "Semi Join",
+            "Anti Join"
+        ],
+        "correct_option": "Inner Join"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question62",
+        "question_text": "A many-to-one relationship exists between entity sets r 1 and r 2 . How will it be represented using functional dependencies if Pk(r) denotes the primary key attribute of relation r ?",
+        "question_img_link": null,
+        "options": [
+            "Pk(r1) → Pk(r2)",
+            "Pk(r2) → Pk(r1)",
+            "Pk(r2) → Pk(r1) and Pk(r1) → Pk(r2)",
+            "Pk(r2) → Pk(r1) or Pk(r1) → Pk(r2)"
+        ],
+        "correct_option": "Pk(r1 ) → Pk(r 2)"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question63",
+        "question_text": "Which one of the following is used to represent the supporting many-one relationships of a weak entity set in an entity-relationship diagram ?",
+        "question_img_link": null,
+        "options": [
+            "Diamonds with double/bold border",
+            "Rectangles with double/bold border",
+            "Ovals with double/bold border",
+            "Ovals that contain underlined identifiers"
+        ],
+        "correct_option": "Diamonds with double/bold border"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question64",
+        "question_text": "Given the relations employee (name, salary, dept-no), and department (dept-no, dept-name,address)  Which of the following queries cannot be expressed using the basic relational algebra operations (σ, π, x, -, ∪, p)",
+        "question_img_link": null,
+        "options": [
+            "Department address of every employee",
+            "Employees whose name is the same as their department name",
+            "The sum of all employees' salaries",
+            "All employees of a given department"
+        ],
+        "correct_option": "The sum of all employees' salaries"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question65",
+        "question_text": "In E-R model, Y is the dominant entity and X is subordinate entity",
+        "question_img_link": null,
+        "options": [
+            "None of the above",
+            "If Y is deleted, then X is also deleted",
+            "If Y is deleted, then X is not deleted",
+            "If X is deleted, then Y is also deleted"
+        ],
+        "correct_option": "If Y is deleted, then X is also deleted"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question66",
+        "question_text": "Let R1(a, b, c) and R2(x, y, z) be two relations in which a is the foreign key of R1that refers to the primary key of R2. Consider following four options.\r\n(a)Insert into R1(b)Insert into R2(c)Delete from R1(d)Delete from R2Which of the following is correct about the referential integrity constraint with respect to above?",
+        "question_img_link": null,
+        "options": [
+            "Operations (a) and (b) will cause violation.",
+            "Operations (b) and (c) will cause violation.",
+            "Operations (c) and (d) will cause violation.",
+            "Operations (d) and (a) will cause violation."
+        ],
+        "correct_option": "Operations (d) and (a) will cause violation."
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question67",
+        "question_text": "How to express that some person keeps animals as pets? Question8",
+        "question_img_link": "https://www.cdn.geeksforgeeks.org/wp-content/uploads/Screenshot-from-2018-06-27-170457.png",
+        "options": [
+            "(A)",
+            "(B)",
+            "(C)",
+            "(D)"
+        ],
+        "correct_option": "(A)"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question68",
+        "question_text": "A view of database that appears to an application program is known as",
+        "question_img_link": null,
+        "options": [
+            "Schema",
+            "Subschema",
+            "Virtual table",
+            "Index Table"
+        ],
+        "correct_option": "Subschema"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question69",
+        "question_text": "Which operation is used to extract specified columns from a table?",
+        "question_img_link": null,
+        "options": [
+            "Project",
+            "Join",
+            "Extract",
+            "Substitute"
+        ],
+        "correct_option": "Project"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question70",
+        "question_text": "The relation schemas R1and R2form a Lossless join decomposition of R if and only if:\r\n(a) R1∩ R2↠ (R1- R2)\r\n(b) R1→ R2(c) R1∩ R2↠ (R2- R1)\r\n(d)(R2→ R1) ∩ R2",
+        "question_img_link": null,
+        "options": [
+            "(a) and (b) happens",
+            "(a) and (d) happens",
+            "(a) and (c) happens",
+            "(b) and (c) happens"
+        ],
+        "correct_option": "(a) and (c) happens"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question71",
+        "question_text": "In functional dependency Armstrong inference rules refers to",
+        "question_img_link": null,
+        "options": [
+            "Reflexivity, Augmentation and Decomposition",
+            "Transitivity, Augmentation and Reflexivity",
+            "Augmentation, Transitivity, Reflexivity and Decomposition",
+            "Reflexivity, Transitivity and Decomposition"
+        ],
+        "correct_option": "Transitivity, Augmentation and Reflexivity"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question72",
+        "question_text": "Which of the following statements is FALSE about weak entity set?",
+        "question_img_link": null,
+        "options": [
+            "Weak entities can be deleted automatically when their strong entity is deleted.",
+            "Weak entity set avoids the data duplication and consequent possible inconsistencies caused by duplicating the key of the strong entity.",
+            "A weak entity set has no primary keys unless attributes of the strong entity set on which it depends are included",
+            "Tuples in a weak entity set are not partitioned according to their relationship with tuples in a strong entity set."
+        ],
+        "correct_option": "Tuples in a weak entity set are not partitioned according to their relationship with tuples in a strong entity set."
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question73",
+        "question_text": "In RDBMS, different classes of relations are created using __________ technique to prevent modification anomalies.",
+        "question_img_link": null,
+        "options": [
+            "Functional Dependencies",
+            "Data integrity",
+            "Referential integrity",
+            "Normal Forms"
+        ],
+        "correct_option": "Normal Forms"
+    },
+    {
+        "topic": "Er-And-Relational-Models",
+        "question_no": "Question74",
+        "question_text": "In a relational data model, which one of the following statements is TRUE?",
+        "question_img_link": null,
+        "options": [
+            "A relation with only two attributes is always in BCNF.",
+            "If all attributes of a relation are prime attributes, then the relation is in BCNF.",
+            "Every relation has at least one non-prime attribute",
+            "BCNF decompositions preserve functional dependencies"
+        ],
+        "correct_option": "A relation with only two attributes is always in BCNF."
+    }
+]
