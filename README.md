@@ -6,7 +6,28 @@
 ## Features  
 - **Personalized Quizzes**: Generate quizzes tailored to the user’s learning preferences and performance.  
 - **Adaptive Feedback**: Provide detailed explanations to enhance understanding.  
-- **User-Friendly Interface**: A visually appealing and easy-to-navigate design.  
+- **User-Friendly Interface**: A visually appealing and easy-to-navigate design.
+- 
+## 🎓 Teacher Dashboard (New!)
+
+Allow instructors to build, customize and assign quizzes all from one place:
+
+- **Dashboard Access**  
+  Teachers now get a dedicated dashboard to view and manage all their quizzes and assignments.
+
+- **Smart Quiz Creation**  
+  - Generate quizzes automatically from our **QuizBank** library  
+  - Use LLM‑powered question generation for fresh, adaptive content
+
+- **Manual Editing**  
+  Fine‑tune any auto‑generated quiz—add, remove or tweak questions before publishing.
+
+- **Assignment & Scheduling**  
+  - Assign quizzes to individual students or entire classes  
+  - Set start/end times and time‑limits for each quiz
+
+- **Live Management**  
+  Monitor quiz progress in real time, review submissions and extend deadlines on the fly.
 
 ## User Stories  
 The development of **QuizMentor** was guided by comprehensive user stories to address real-world learning challenges:  
