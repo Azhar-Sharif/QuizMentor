@@ -1,4 +1,10 @@
 Flask
+supabase
+python-dotenv
+email
+pytz
+smtplib
+Werkzeug
 Flask-Cors
 Flask-SQLAlchemy
 langchain
