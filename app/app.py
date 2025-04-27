@@ -120,7 +120,19 @@ class ClassroomStudent(db.Model):
     classroom_id = db.Column(db.Integer, db.ForeignKey('classroom.id'), nullable=False)
     student_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     joined_at = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
-    
+class ClassroomAssignment(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    classroom_id = db.Column(db.Integer, db.ForeignKey('classroom.id'), nullable=False)
+    quiz_id = db.Column(db.Integer, db.ForeignKey('quiz.id'), nullable=False)
+    due_date = db.Column(db.DateTime, nullable=False)
+    created_at = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
+
+# Add utility function to generate classroom code
+def generate_classroom_code():
+    while True:
+        code = ''.join(random.choices(string.ascii_uppercase + string.digits, k=8))
+        if not Classroom.query.filter_by(code=code).first():
+            return code
 
 # Session variable to store quiz data
 quiz_data = None
