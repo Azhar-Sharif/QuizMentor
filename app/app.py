@@ -24,6 +24,9 @@ import re
 import jwt
 from flask import jsonify
 from langchain_groq import ChatGroq
+import random
+import string
+import pandas as pd
 
 # Initialize the ChatGroq LLM
 llm = ChatGroq(
@@ -100,6 +103,25 @@ class QuizHistory(db.Model):
     score = db.Column(db.Float, nullable=False)
     total_questions = db.Column(db.Integer, nullable=False)
     date_taken = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
+
+class Classroom(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    code = db.Column(db.String(8), unique=True, nullable=False)
+    teacher_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    created_at = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
+    
+    # Relationships
+    students = db.relationship('ClassroomStudent', backref='classroom', lazy=True)
+    assignments = db.relationship('ClassroomAssignment', backref='classroom', lazy=True)
+
+class ClassroomStudent(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    classroom_id = db.Column(db.Integer, db.ForeignKey('classroom.id'), nullable=False)
+    student_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    joined_at = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
+    
+
 # Session variable to store quiz data
 quiz_data = None
 
