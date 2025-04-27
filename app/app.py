@@ -22,6 +22,15 @@ from sqlalchemy import create_engine
 import bcrypt  # For password hashing
 import re
 import jwt
+from flask import jsonify
+from langchain_groq import ChatGroq
+
+# Initialize the ChatGroq LLM
+llm = ChatGroq(
+    temperature=0,
+    groq_api_key="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",
+    model_name="llama-3.3-70b-versatile"
+)
 
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 # Initialize Flask app
@@ -378,7 +387,29 @@ def send_quiz_notification(student_email, quiz_title, due_date):
 def dashboard():
     if 'user' not in session:
         return redirect(url_for('login'))
-    return render_template('dashboard.html')
+    
+    user_email = session['user']
+    user = Users.query.filter_by(email=user_email).first()
+    current_time = datetime.now(timezone.utc)  # Ensure `now` is timezone-aware
+    
+    assigned_quizzes = AssignedQuiz.query.filter_by(
+        student_id=user.id,
+        status='pending'
+    ).order_by(AssignedQuiz.due_date.asc()).all()
+    
+    # Make `due_date` timezone-aware
+    for assignment in assigned_quizzes:
+        if assignment.due_date.tzinfo is None:
+            assignment.due_date = assignment.due_date.replace(tzinfo=timezone.utc)
+    
+    quiz_history = QuizHistory.query.filter_by(user_id=user.id).order_by(QuizHistory.date_taken.desc()).all()
+
+    return render_template('dashboard.html', 
+                           quiz_history=quiz_history, 
+                           assigned_quizzes=assigned_quizzes,
+                           user_email=user_email,
+                           user_id=user.id,  # Pass user_id for feedback
+                           now=current_time)
 
 @app.route('/teacher_dashboard')
 def teacher_dashboard():
@@ -554,8 +585,6 @@ def get_student_performance():
         } for r in results]
     })
 
-
-
 @app.route('/teacher/assignment/<int:assignment_id>')
 @teacher_required
 def view_assignment(assignment_id):
@@ -699,7 +728,7 @@ def take_assigned_quiz(assignment_id):
     if 'user' not in session:
         return redirect(url_for('login'))
         
-    assignment = AssignedQuiz.query.filter_by(id=assignment_id).first_or_404()
+    assignment = AssignedQuiz.query.get_or_404(assignment_id)
     
     # Verify this quiz is assigned to the current user
     user = Users.query.filter_by(email=session['user']).first()
@@ -708,16 +737,13 @@ def take_assigned_quiz(assignment_id):
         
     if assignment.status != 'pending':
         return "Quiz already completed", 400
-        
-    # Store quiz data in session
-    session['current_quiz'] = {
-        'assignment_id': assignment_id,
-        'questions': assignment.quiz.questions,
-        'title': assignment.quiz.title,
-        'topic': assignment.quiz.topic
-    }
     
-    return render_template('take_quiz.html', quiz=assignment.quiz)
+    # Get quiz data
+    quiz = assignment.quiz
+    quiz.assignment_id = assignment_id
+    
+    # No need to modify explanations as they already exist in the questions
+    return render_template('take_quiz.html', quiz=quiz)
 
 @app.route('/api/submit-assigned-quiz', methods=['POST'])
 def submit_assigned_quiz():
@@ -726,35 +752,41 @@ def submit_assigned_quiz():
         
     try:
         data = request.get_json()
-        assignment_id = data['assignment_id']
-        score = data['score']
-        answers = data['answers']
+        if not data:
+            return jsonify({"error": "No data provided"}), 400
+            
+        assignment_id = data.get('assignment_id')
+        if not assignment_id:
+            return jsonify({"error": "No assignment ID provided"}), 400
+            
+        score = data.get('score')
+        answers = data.get('answers')
         
         # Get the assignment
         assignment = AssignedQuiz.query.get_or_404(assignment_id)
         
-        # Update questions with user answers
-        questions = assignment.quiz.questions
-        for i, question in enumerate(questions):
-            question['user_answer'] = answers.get(str(i))
+        # Verify the current user is the assigned student
+        user = Users.query.filter_by(email=session['user']).first()
+        if assignment.student_id != user.id:
+            return jsonify({"error": "Unauthorized"}), 403
         
-        # Update assignment
+        # Update assignment status and score
         assignment.status = 'completed'
         assignment.completed_date = datetime.now(timezone.utc)
         assignment.score = score
-        assignment.quiz.questions = questions  # Save updated questions with user answers
         
         # Create quiz history entry
         quiz_history = QuizHistory(
-            user_id=assignment.student_id,
+            user_id=user.id,
             quiz_id=assignment.quiz_id,
             assigned_quiz_id=assignment_id,
             topic=assignment.quiz.topic,
             score=score,
-            total_questions=len(questions),
+            total_questions=len(assignment.quiz.questions),
             date_taken=datetime.now(timezone.utc)
         )
         
+        # Save changes
         db.session.add(quiz_history)
         db.session.commit()
         
@@ -790,6 +822,38 @@ def quiz_result(assignment_id):
                          correct_answers=int((quiz_history.score/100) * quiz_history.total_questions),
                          total_questions=quiz_history.total_questions,
                          questions=questions_with_answers)
+@app.route('/quiz/details/<int:quiz_id>')
+def quiz_details(quiz_id):
+    print(f"Fetching details for quiz ID: {quiz_id}")
+    quiz = Quiz.query.get_or_404(quiz_id)
+    print(f"Quiz found: {quiz.title}")
+    return render_template('see_details.html', quiz=quiz)
+
+@app.route('/generate-feedback/<int:user_id>', methods=['GET'])
+def generate_feedback(user_id):
+    # Fetch the user's quiz history
+    quiz_history = QuizHistory.query.filter_by(user_id=user_id).all()
+    
+    if not quiz_history:
+        return jsonify({"error": "No quiz history found for this user."}), 404
+
+    # Prepare performance data
+    performance_data = []
+    for quiz in quiz_history:
+        performance_data.append(f"{quiz.topic}: {quiz.score}%")
+
+    # Create the prompt for the LLM
+    groq_prompt = f"Given the following quiz performance: {', '.join(performance_data)}, provide personalized study advice and content links (like here is the link of video you can learn.) ."
+
+    # Call the ChatGroq API
+    try:
+        response = llm.invoke(groq_prompt)
+        feedback = response.content.strip()  # Extract the feedback from the response
+    except Exception as e:
+        print(f"Error generating feedback: {str(e)}")
+        return jsonify({"error": "Failed to generate feedback."}), 500
+
+    return jsonify({"feedback": feedback})
 
 if __name__ == '__main__':
     with app.app_context():
