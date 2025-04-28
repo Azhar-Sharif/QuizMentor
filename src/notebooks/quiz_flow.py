@@ -3,7 +3,7 @@ from sentence_transformers import SentenceTransformer
 from pinecone import Pinecone
 from langchain_groq import ChatGroq
 import json
-
+# Clean the data return from llm
 def clean_response(response_content):
     """
     Cleans and parses JSON response content in two phases:
