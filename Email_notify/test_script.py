@@ -41,4 +41,5 @@ QuizMentor Team"""
 
 if __name__ == "__main__":
     # Example usage
+# any numbers of reciever add to this
     send_email("Operating Systems", "azharsharif042@gmail.com")
