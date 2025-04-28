@@ -1,6 +1,6 @@
 import json
 import os
-
+# function to correct the fromat of data
 def update_scraped_data(input_dir, output_dir):
     
     os.makedirs(output_dir, exist_ok=True)
