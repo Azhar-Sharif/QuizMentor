@@ -7,6 +7,7 @@ from email.mime.multipart import MIMEMultipart
 # Load environment variables
 load_dotenv(".env")
 
+# This is the test file for Email Notify functionality
 QUIZMENTOR_EMAIL = os.getenv("QUIZMENTOR_EMAIL")
 QUIZMENTOR_PASS = os.getenv("QUIZMENTOR_PASS")
 # Debugging: Check if variables are loaded
