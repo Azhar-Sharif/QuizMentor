@@ -1,4 +1,3 @@
-_quiz.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,169 +5,276 @@ _quiz.html
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ quiz.title }} - Quiz</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Animations */
+        @keyframes slideIn {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes celebrationGood {
+            0% { transform: scale(0.3) rotate(0deg); opacity: 0; }
+            50% { transform: scale(1.2) rotate(10deg); }
+            100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+
+        .option-row {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .option-row:hover {
+            background-color: rgb(243 244 246);
+            transform: translateX(10px);
+        }
+
+        .question-card {
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .modal-content {
+            animation: fadeIn 0.5s ease-out;
+        }
+    </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-100 min-h-screen">
     <div class="container mx-auto px-4 py-8">
-        <div class="max-w-4xl mx-auto">
-            <!-- Quiz Header -->
-            <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 mb-8">
-                <h1 class="text-2xl font-bold text-gray-800">{{ quiz.title }}</h1>
-                <p class="text-gray-600 mt-2">Topic: {{ quiz.topic }}</p>
-                <div class="flex justify-between items-center mt-4">
-                    <div id="timer" class="text-lg font-semibold text-blue-600"></div>
-                    <div id="progress" class="text-gray-600">Question <span id="currentQuestion">1</span> of <span id="totalQuestions">0</span></div>
+        <!-- Back Button -->
+        <div class="mb-6">
+            <a href="/dashboard" class="inline-block bg-gray-100 hover:bg-gray-200 text-blue-600 font-semibold py-2 px-4 rounded">
+                ← Back to Dashboard
+            </a>
+        </div>
+
+        <!-- Quiz Header -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h1 class="text-2xl font-bold text-gray-800">{{ quiz.title }}</h1>
+            <p class="text-gray-600 mt-2">Topic: {{ quiz.topic }}</p>
+        </div>
+
+        <!-- Progress Tracker -->
+        <div class="bg-white rounded-lg shadow-md p-4 mb-6">
+            <div class="flex items-center justify-between">
+                <span id="progressText" class="text-lg font-semibold">Question 0 of {{ quiz.questions|length }}</span>
+                <div class="w-64 bg-gray-200 rounded-full h-2.5">
+                    <div id="progressBar" class="bg-blue-600 h-2.5 rounded-full transition-all duration-300" style="width: 0%"></div>
                 </div>
             </div>
+        </div>
 
-            <!-- Quiz Content -->
-            <div id="quizContent" class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
-                <div id="questionContainer">
-                    <!-- Questions will be loaded here -->
+        <!-- Quiz Questions -->
+        <div id="questionsContainer" class="space-y-6">
+            {% for question in quiz.questions %}
+            {% set question_index = loop.index0 %}
+            <div class="question-card bg-white rounded-lg shadow-md p-6">
+                <div class="mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Question {{ loop.index }}</h3>
+                    <p class="text-gray-800">{{ question.question_text }}</p>
                 </div>
+                <div class="space-y-3">
+                    {% for option in question.options %}
+                    <div class="option-row">
+                        <input type="radio" 
+                            id="question{{ question_index }}_option{{ loop.index }}" 
+                            name="question{{ question_index }}" 
+                            value="{{ option }}"
+                            onclick="selectOption({{ question_index }}, '{{ option|replace("'", "\\'") }}')"
+                            {% if question_index in answers and answers[question_index] == option %}checked{% endif %}
+                            class="mr-3">
+                        <label for="question{{ question_index }}_option{{ loop.index }}" 
+                            class="flex-grow cursor-pointer">
+                            {{ option }}
+                        </label>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
 
-                <div class="flex justify-between mt-6">
-                    <button id="prevBtn" onclick="previousQuestion()" class="bg-gray-500 text-white px-6 py-2 rounded-lg hover:bg-gray-600 disabled:opacity-50">Previous</button>
-                    <button id="nextBtn" onclick="nextQuestion()" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">Next</button>
-                </div>
+            <!-- Submit Button -->
+            <button type="button" 
+                onclick="submitQuiz()" 
+                id="submitButton"
+                class="w-full bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors">
+                Submit Quiz
+            </button>
+        </div>
+
+        <!-- Results Modal -->
+        <div id="resultsModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
+            <div class="bg-white p-8 rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto modal-content">
+                <div id="resultsAnimation" class="mb-6 text-center"></div>
+                <div id="resultsContent"></div>
+                <button onclick="closeModal()" class="mt-6 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                    Close
+                </button>
             </div>
         </div>
     </div>
 
     <script>
-        let currentQuestionIndex = 0;
-        let questions = [];
-        let answers = {};
-        let quizStartTime = new Date();
+        const answers = {};  // Store answers globally
 
-        document.addEventListener('DOMContentLoaded', function() {
-            loadQuiz();
-        });
-
-        async function loadQuiz() {
-            const currentQuiz = {{ session['current_quiz']|tojson|safe }};
-            questions = currentQuiz.questions;
-            document.getElementById('totalQuestions').textContent = questions.length;
-            displayQuestion(0);
-            startTimer();
-        }
-
-        function displayQuestion(index) {
-            const question = questions[index];
-            const container = document.getElementById('questionContainer');
-            
-            container.innerHTML = `
-                <div class="mb-6">
-                    <h3 class="text-lg font-medium text-gray-900 mb-4">${question.question_text}</h3>
-                    <div class="space-y-3">
-                        ${question.options.map((option, optIndex) => `
-                            <div class="flex items-center">
-                                <input type="radio" 
-                                    id="option${optIndex}" 
-                                    name="question${index}" 
-                                    value="${option}"
-                                    ${answers[index] === option ? 'checked' : ''}
-                                    onchange="saveAnswer(${index}, '${option}')"
-                                    class="h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500">
-                                <label for="option${optIndex}" class="ml-3 text-gray-700">
-                                    ${option}
-                                </label>
-                            </div>
-                        `).join('')}
-                    </div>
-                </div>
-            `;
-
-            updateNavigationButtons();
-            document.getElementById('currentQuestion').textContent = index + 1;
-        }
-
-        function saveAnswer(questionIndex, answer) {
-            answers[questionIndex] = answer;
-            updateNavigationButtons();
-        }
-
-        function previousQuestion() {
-            if (currentQuestionIndex > 0) {
-                currentQuestionIndex--;
-                displayQuestion(currentQuestionIndex);
-            }
-        }
-
-        function nextQuestion() {
-            if (currentQuestionIndex < questions.length - 1) {
-                currentQuestionIndex++;
-                displayQuestion(currentQuestionIndex);
-            } else if (Object.keys(answers).length === questions.length) {
-                submitQuiz();
-            }
-        }
-
-        function updateNavigationButtons() {
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            
-            prevBtn.disabled = currentQuestionIndex === 0;
-            
-            if (currentQuestionIndex === questions.length - 1) {
-                nextBtn.textContent = 'Submit Quiz';
-                nextBtn.disabled = !answers[currentQuestionIndex];
-            } else {
-                nextBtn.textContent = 'Next';
-                nextBtn.disabled = false;
-            }
-        }
-// Update the submitQuiz function
-async function submitQuiz() {
-    const currentQuiz = {{ session['current_quiz']|tojson|safe }};
-    
-    try {
-        const score = calculateScore();
-        const response = await fetch('/api/submit-assigned-quiz', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                assignment_id: currentQuiz.assignment_id,
-                answers: answers,
-                score: score,
-                time_taken: Math.floor((new Date() - quizStartTime) / 1000)
-            })
-        });
-
-        const result = await response.json();
-        if (result.success) {
-            window.location.href = '/quiz-result/' + currentQuiz.assignment_id;
-        } else {
-            alert('Failed to submit quiz: ' + result.error);
-        }
-    } catch (error) {
-        console.error('Error submitting quiz:', error);
-        alert('Failed to submit quiz. Please try again.');
-    }
-}
-
-        function calculateScore() {
-            let correct = 0;
-            questions.forEach((question, index) => {
-                if (answers[index] === question.correct_answer) {
-                    correct++;
-                }
+        function selectOption(questionIndex, optionValue) {
+            // Save the answer
+            answers[questionIndex] = optionValue;
+            console.log('Answer saved:', {
+                questionIndex,
+                optionValue,
+                allAnswers: answers
             });
-            return (correct / questions.length) * 100;
+            
+            // Update radio button
+            const radio = document.querySelector(`input[name="question${questionIndex}"][value="${optionValue}"]`);
+            if (radio) {
+                radio.checked = true;
+                updateProgress();
+            }
         }
 
-        function startTimer() {
-            const timerElement = document.getElementById('timer');
-            let seconds = 0;
+        function updateProgress() {
+            const totalQuestions = {{ quiz.questions|length }};
+            const answeredQuestions = Object.keys(answers).length;
             
-            setInterval(() => {
-                seconds++;
-                const minutes = Math.floor(seconds / 60);
-                const remainingSeconds = seconds % 60;
-                timerElement.textContent = `Time: ${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
-            }, 1000);
+            document.getElementById('progressText').textContent = 
+                `Question ${answeredQuestions} of ${totalQuestions}`;
+            
+            const progressPercentage = (answeredQuestions / totalQuestions) * 100;
+            document.getElementById('progressBar').style.width = `${progressPercentage}%`;
         }
+
+        function submitQuiz() {
+            const totalQuestions = {{ quiz.questions|length }};
+            const answeredQuestions = Object.keys(answers).length;
+
+            if (answeredQuestions < totalQuestions) {
+                alert(`Please answer all questions. You have answered ${answeredQuestions} out of ${totalQuestions} questions.`);
+                return false;
+            }
+
+            // Disable submit button to prevent double submission
+            document.getElementById('submitButton').disabled = true;
+
+            const questions = {{ quiz.questions|tojson|safe }};
+            let correctCount = 0;
+            
+            // Format answers for submission
+            const formattedAnswers = {};
+            questions.forEach((question, index) => {
+                const selectedAnswer = answers[index];
+                if (selectedAnswer === question.correct_answer) {
+                    correctCount++;
+                }
+                formattedAnswers[index] = selectedAnswer;
+            });
+
+            const score = (correctCount / totalQuestions) * 100;
+
+            // Submit to backend
+            fetch('/api/submit-assigned-quiz', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    assignment_id: {{ quiz.assignment_id }}, // Make sure this is passed from Flask
+                    answers: formattedAnswers,
+                    score: score
+                })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.success) {
+                    showResults(questions.map((question, index) => ({
+                        questionNumber: index + 1,
+                        questionText: question.question_text,
+                        selectedAnswer: answers[index],
+                        isCorrect: answers[index] === question.correct_answer,
+                        correctAnswer: question.correct_answer,
+                        explanation: question.explanation || 'No explanation provided'
+                    })));
+                } else {
+                    throw new Error(data.error || 'Unknown error');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Failed to submit quiz: ' + error.message);
+                // Re-enable submit button on error
+                document.getElementById('submitButton').disabled = false;
+            });
+
+            return false;
+        }
+
+        function showResults(results) {
+            const correctAnswers = results.filter(r => r.isCorrect).length;
+            const totalQuestions = results.length;
+            const score = ((correctAnswers/totalQuestions) * 100);
+            const questions = {{ quiz.questions|tojson|safe }};
+
+            // Show detailed results
+            const resultsContent = document.getElementById('resultsContent');
+            resultsContent.innerHTML = `
+                <div class="mb-6">
+                    <p class="text-xl font-bold">Score: ${correctAnswers}/${totalQuestions}</p>
+                    <p class="text-gray-600">Percentage: ${score.toFixed(2)}%</p>
+                </div>
+                <div class="space-y-6">
+                    ${results.map((result, index) => {
+                        const question = questions[index];
+                        return `
+                            <div class="border-b pb-4">
+                                <h4 class="font-semibold">Question ${result.questionNumber}</h4>
+                                <p class="mt-2 text-gray-700">${result.questionText}</p>
+                                <p class="mt-2">
+                                    Your answer: 
+                                    <span class="${result.isCorrect ? 'text-green-600' : 'text-red-600'} font-medium">
+                                        ${result.selectedAnswer}
+                                    </span>
+                                </p>
+                                ${!result.isCorrect ? `
+                                    <p class="mt-1 text-gray-700">
+                                        Correct answer: 
+                                        <span class="text-green-600 font-medium">${result.correctAnswer}</span>
+                                    </p>
+                                ` : ''}
+                                <div class="mt-3 bg-blue-50 p-3 rounded-lg">
+                                    <p class="text-sm text-blue-800">
+                                        <span class="font-medium">Explanation:</span> 
+                                        ${question.Explanation_of_correct_answer}
+                                    </p>
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>`;
+
+            document.getElementById('resultsModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('resultsModal').classList.add('hidden');
+            window.location.href = '/dashboard';
+        }
+
+        // Initialize progress bar
+        document.addEventListener('DOMContentLoaded', updateProgress);
     </script>
 </body>
 </html>
