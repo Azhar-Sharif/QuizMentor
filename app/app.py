@@ -24,9 +24,6 @@ import re
 import jwt
 from flask import jsonify
 from langchain_groq import ChatGroq
-import random
-import string
-import pandas as pd
 
 # Initialize the ChatGroq LLM
 llm = ChatGroq(
@@ -103,37 +100,6 @@ class QuizHistory(db.Model):
     score = db.Column(db.Float, nullable=False)
     total_questions = db.Column(db.Integer, nullable=False)
     date_taken = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
-
-class Classroom(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), nullable=False)
-    code = db.Column(db.String(8), unique=True, nullable=False)
-    teacher_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
-    created_at = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
-    
-    # Relationships
-    students = db.relationship('ClassroomStudent', backref='classroom', lazy=True)
-    assignments = db.relationship('ClassroomAssignment', backref='classroom', lazy=True)
-
-class ClassroomStudent(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    classroom_id = db.Column(db.Integer, db.ForeignKey('classroom.id'), nullable=False)
-    student_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
-    joined_at = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
-class ClassroomAssignment(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    classroom_id = db.Column(db.Integer, db.ForeignKey('classroom.id'), nullable=False)
-    quiz_id = db.Column(db.Integer, db.ForeignKey('quiz.id'), nullable=False)
-    due_date = db.Column(db.DateTime, nullable=False)
-    created_at = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
-
-# Add utility function to generate classroom code
-def generate_classroom_code():
-    while True:
-        code = ''.join(random.choices(string.ascii_uppercase + string.digits, k=8))
-        if not Classroom.query.filter_by(code=code).first():
-            return code
-
 # Session variable to store quiz data
 quiz_data = None
 
@@ -877,7 +843,7 @@ def generate_feedback(user_id):
         performance_data.append(f"{quiz.topic}: {quiz.score}%")
 
     # Create the prompt for the LLM
-    groq_prompt = f"Given the following quiz performance: {', '.join(performance_data)}, provide personalized study advice and content links (like here is the link of video you can learn.) ."
+    groq_prompt = f"Given the following quiz performance: {', '.join(performance_data)}, provide personalized study advice and content links (like here is the link of course or article you can learn ).) ."
 
     # Call the ChatGroq API
     try:
