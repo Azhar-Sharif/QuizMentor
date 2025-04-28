@@ -72,7 +72,41 @@
                 </div>
             </div>
         </div>
+<!-- Feedback Section -->
+<div class="bg-white rounded-xl shadow-sm p-4 md:p-6 border border-gray-100 mb-8">
+    <div class="flex justify-between items-center mb-4">
+        <h2 class="text-lg md:text-xl font-semibold text-gray-800">Personalized Feedback</h2>
+        <button id="showFeedbackDetails" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm transition-colors">
+            Show Details
+        </button>
+    </div>
+    <div id="feedback" class="text-gray-600 text-sm md:text-base line-clamp-2">
+        Loading feedback...
+    </div>
+</div>
 
+<!-- Feedback Modal -->
+<div id="feedbackModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50">
+    <div class="relative top-20 mx-auto p-5 border w-full max-w-2xl shadow-lg rounded-lg bg-white">
+        <div class="flex flex-col max-h-[80vh]">
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center border-b pb-4">
+                <h3 class="text-xl font-semibold text-gray-900">Detailed Performance Feedback</h3>
+                <button id="closeFeedbackModal" class="text-gray-400 hover:text-gray-500">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Modal Content -->
+            <div class="overflow-y-auto mt-4 pr-2" style="max-height: calc(80vh - 100px);">
+                <div id="detailedFeedback" class="space-y-6">
+                    <!-- Feedback content will be dynamically populated -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
    <!-- Assigned Quizzes Section -->
 <div class="bg-white rounded-xl shadow-sm p-4 md:p-6 border border-gray-100 mb-8">
     <h2 class="text-lg md:text-xl font-semibold text-gray-800 mb-4">Assigned Quizzes</h2>
@@ -157,9 +191,9 @@
                             {{ quiz.date_taken|timezone }}
                         </td>
                         <td class="px-4 py-3 text-right">
-                            <a href="/quiz/result/{{ quiz.id }}" 
+                            <a href="/quiz/details/{{ quiz.id }}" 
                                class="text-blue-600 hover:text-blue-900 text-sm font-medium">
-                                View Details
+                                See Details
                             </a>
                         </td>
                     </tr>
@@ -203,179 +237,296 @@
 
 
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Existing greeting code
-            const hour = new Date().getHours();
-            const greeting = hour < 12 ? 'Good Morning' : hour < 18 ? 'Good Afternoon' : 'Good Evening';
-            document.getElementById('greeting').textContent = `${greeting}!`;
+<script>
+    // Modal functionality
+    const modal = document.getElementById('feedbackModal');
+    const showButton = document.getElementById('showFeedbackDetails');
+    const closeButton = document.getElementById('closeFeedbackModal');
 
-            // Get quiz history data from template
-            const quizzes = [
-                {% for quiz in quiz_history %}
-                    {
-                        topic: "{{ quiz.topic }}",
-                        score: {{ quiz.score }},
-                        total_questions: {{ quiz.total_questions }},
-                        date_taken: "{{ quiz.date_taken.strftime('%Y-%m-%d') }}"
-                    },
-                {% endfor %}
-            ];
+    showButton.onclick = () => modal.classList.remove('hidden');
+    closeButton.onclick = () => modal.classList.add('hidden');
+    
+    // Close modal when clicking outside
+    window.onclick = (event) => {
+        if (event.target === modal) {
+            modal.classList.add('hidden');
+        }
+    }
 
-            // Update statistics
-            if (quizzes.length > 0) {
-                const avgScore = quizzes.reduce((acc, quiz) => acc + quiz.score, 0) / quizzes.length;
-                const bestScore = Math.max(...quizzes.map(quiz => quiz.score));
+    // Fetch and display feedback
+    const userId = "{{ user_id }}";
+    fetch(`/generate-feedback/${userId}`)
+        .then(response => response.json())
+        .then(data => {
+            const feedbackDiv = document.getElementById('feedback');
+            const detailedFeedbackDiv = document.getElementById('detailedFeedback');
+            
+            if (data.feedback) {
+                // Update preview
+                feedbackDiv.textContent = data.feedback;
                 
-                document.getElementById('averageScore').textContent = `${avgScore.toFixed(1)}%`;
-                document.getElementById('totalQuizzes').textContent = quizzes.length;
-                document.getElementById('bestScore').textContent = `${bestScore.toFixed(1)}%`;
+                // Update modal content with formatted feedback
+                detailedFeedbackDiv.innerHTML = formatDetailedFeedback(data.feedback);
+            } else {
+                feedbackDiv.textContent = "No feedback available.";
+                detailedFeedbackDiv.innerHTML = "<p class='text-gray-600'>No detailed feedback available.</p>";
+            }
+        })
+        .catch(error => {
+            console.error("Error fetching feedback:", error);
+            document.getElementById('feedback').textContent = "Failed to load feedback.";
+        });
 
-                // Initialize charts
-                createPerformanceTrendChart(quizzes);
-                createTopicDistributionChart(quizzes);
-                createScoreDistributionChart(quizzes);
-                updatePerformanceInsights(quizzes);
+    function formatDetailedFeedback(feedback) {
+        // First, process the feedback to separate sections
+        const sections = {
+            weakAreas: "",
+            areasForImprovement: "",
+            strongAreas: "",
+            recommendations: ""
+        };
+
+        // Convert URLs to clickable links
+        const linkedText = feedback.replace(
+            /(https?:\/\/[^\s]+)/g,
+            '<a href="$1" class="text-blue-600 hover:text-blue-800 underline" target="_blank">$1</a>'
+        );
+
+        // Style headers and content
+        const formattedText = linkedText.replace(
+            /\*\*(.*?)\*\*/g,
+            '<h3 class="text-lg font-semibold text-gray-900 mt-4 mb-2">$1</h3>'
+        );
+
+        return `
+            <div class="space-y-4 text-gray-700">
+                ${formattedText.split('\n')
+                    .filter(line => line.trim())
+                    .map(line => `<p class="leading-relaxed">${line}</p>`)
+                    .join('')}
+            </div>
+        `;
+    }
+
+    // Update the modal styling
+    const modalContent = `
+        <div class="bg-white rounded-lg p-6 max-w-3xl mx-auto">
+            <div class="prose prose-blue max-w-none">
+                ${formattedText}
+            </div>
+        </div>
+    `;
+</script>
+
+<script>
+    // Initialize all charts when document is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+    // Get quiz history data from template
+    const quizzes = [
+        {% for quiz in quiz_history %}
+        {
+            topic: "{{ quiz.topic }}",
+            score: {{ quiz.score }},
+            date_taken: "{{ quiz.date_taken|timezone }}"
+        },
+        {% endfor %}
+    ];
+
+    // Update Stats Cards
+    if (quizzes.length > 0) {
+        // Calculate average score
+        const avgScore = quizzes.reduce((acc, quiz) => acc + quiz.score, 0) / quizzes.length;
+        document.getElementById('averageScore').textContent = `${avgScore.toFixed(1)}%`;
+
+        // Update total quizzes
+        document.getElementById('totalQuizzes').textContent = quizzes.length;
+
+        // Calculate best score
+        const bestScore = Math.max(...quizzes.map(quiz => quiz.score));
+        document.getElementById('bestScore').textContent = `${bestScore.toFixed(1)}%`;
+    }
+
+        // Performance Trend Chart
+        const performanceTrendCtx = document.getElementById('performanceTrendChart').getContext('2d');
+        new Chart(performanceTrendCtx, {
+            type: 'line',
+            data: {
+                labels: quizzes.map(quiz => quiz.date_taken),
+                datasets: [{
+                    label: 'Quiz Scores',
+                    data: quizzes.map(quiz => quiz.score),
+                    borderColor: 'rgb(59, 130, 246)',
+                    tension: 0.1,
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Your Performance Over Time'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: 'Score (%)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Date'
+                        }
+                    }
+                }
             }
         });
 
-        function createPerformanceTrendChart(quizzes) {
-            const ctx = document.getElementById('performanceTrendChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: quizzes.map(quiz => quiz.date_taken),
-                    datasets: [{
-                        label: 'Score',
-                        data: quizzes.map(quiz => quiz.score),
-                        borderColor: 'rgb(59, 130, 246)',
-                        tension: 0.1
-                    }]
+        // Topic Distribution Chart
+        const topicCounts = quizzes.reduce((acc, quiz) => {
+            acc[quiz.topic] = (acc[quiz.topic] || 0) + 1;
+            return acc;
+        }, {});
+
+        const topicDistributionCtx = document.getElementById('topicDistributionChart').getContext('2d');
+        new Chart(topicDistributionCtx, {
+            type: 'doughnut',
+            data: {
+                labels: Object.keys(topicCounts),
+                datasets: [{
+                    data: Object.values(topicCounts),
+                    backgroundColor: [
+                        'rgb(59, 130, 246)',
+                        'rgb(16, 185, 129)',
+                        'rgb(245, 158, 11)',
+                        'rgb(239, 68, 68)',
+                        'rgb(139, 92, 246)',
+                        'rgb(236, 72, 153)'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'right'
+                    },
+                    title: {
+                        display: true,
+                        text: 'Quiz Topics Distribution'
+                    }
+                }
+            }
+        });
+
+        // Score Distribution Chart
+        const scoreRanges = {
+            'Excellent (90-100%)': 0,
+            'Good (70-89%)': 0,
+            'Average (50-69%)': 0,
+            'Needs Improvement (<50%)': 0
+        };
+
+        quizzes.forEach(quiz => {
+            if (quiz.score >= 90) scoreRanges['Excellent (90-100%)']++;
+            else if (quiz.score >= 70) scoreRanges['Good (70-89%)']++;
+            else if (quiz.score >= 50) scoreRanges['Average (50-69%)']++;
+            else scoreRanges['Needs Improvement (<50%)']++;
+        });
+
+        const scoreDistributionCtx = document.getElementById('scoreDistributionChart').getContext('2d');
+        new Chart(scoreDistributionCtx, {
+            type: 'bar',
+            data: {
+                labels: Object.keys(scoreRanges),
+                datasets: [{
+                    label: 'Number of Quizzes',
+                    data: Object.values(scoreRanges),
+                    backgroundColor: 'rgb(59, 130, 246)',
+                    borderColor: 'rgb(37, 99, 235)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Score Distribution'
+                    }
                 },
-                options: {
-                    responsive: true,
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            max: 100
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 1
+                        },
+                        title: {
+                            display: true,
+                            text: 'Number of Quizzes'
                         }
                     }
                 }
-            });
-        }
+            }
+        });
 
-        function createTopicDistributionChart(quizzes) {
-            const topicCounts = quizzes.reduce((acc, quiz) => {
-                acc[quiz.topic] = (acc[quiz.topic] || 0) + 1;
-                return acc;
-            }, {});
-
-            const ctx = document.getElementById('topicDistributionChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'doughnut',
-                data: {
-                    labels: Object.keys(topicCounts),
-                    datasets: [{
-                        data: Object.values(topicCounts),
-                        backgroundColor: [
-                            'rgb(59, 130, 246)',
-                            'rgb(16, 185, 129)',
-                            'rgb(245, 158, 11)',
-                            'rgb(239, 68, 68)'
-                        ]
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'right'
-                        }
-                    }
-                }
-            });
-        }
-
-        function createScoreDistributionChart(quizzes) {
-            const scoreRanges = {
-                'Excellent (90-100)': 0,
-                'Good (80-89)': 0,
-                'Average (70-79)': 0,
-                'Needs Improvement (<70)': 0
-            };
-
-            quizzes.forEach(quiz => {
-                if (quiz.score >= 90) scoreRanges['Excellent (90-100)']++;
-                else if (quiz.score >= 80) scoreRanges['Good (80-89)']++;
-                else if (quiz.score >= 70) scoreRanges['Average (70-79)']++;
-                else scoreRanges['Needs Improvement (<70)']++;
-            });
-
-            const ctx = document.getElementById('scoreDistributionChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: Object.keys(scoreRanges),
-                    datasets: [{
-                        label: 'Number of Quizzes',
-                        data: Object.values(scoreRanges),
-                        backgroundColor: 'rgb(59, 130, 246)'
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            ticks: {
-                                stepSize: 1
-                            }
-                        }
-                    }
-                }
-            });
-        }
-
-        function updatePerformanceInsights(quizzes) {
-            const insights = document.getElementById('performanceInsights');
-            
-            // Calculate insights
+        // Update performance insights
+        const performanceInsights = document.getElementById('performanceInsights');
+        if (performanceInsights && quizzes.length > 0) {
             const avgScore = quizzes.reduce((acc, quiz) => acc + quiz.score, 0) / quizzes.length;
-            const topicPerformance = {};
-            quizzes.forEach(quiz => {
-                if (!topicPerformance[quiz.topic]) {
-                    topicPerformance[quiz.topic] = [];
-                }
-                topicPerformance[quiz.topic].push(quiz.score);
-            });
+            const recentTrend = quizzes.slice(-3).map(q => q.score);
+            
+            let trendAnalysis = "Steady performance";
+            if (recentTrend[2] > recentTrend[0]) trendAnalysis = "Improving trend";
+            if (recentTrend[2] < recentTrend[0]) trendAnalysis = "Declining trend";
 
-            const bestTopic = Object.entries(topicPerformance)
-                .map(([topic, scores]) => ({
-                    topic,
-                    avg: scores.reduce((a, b) => a + b) / scores.length
-                }))
-                .sort((a, b) => b.avg - a.avg)[0];
-
-            // Generate HTML for insights
-            insights.innerHTML = `
-                <div class="p-4 bg-blue-50 rounded-lg">
-                    <h3 class="font-semibold text-blue-900">Overall Performance</h3>
-                    <p class="text-blue-800">Your average score is ${avgScore.toFixed(1)}%</p>
-                </div>
-                <div class="p-4 bg-green-50 rounded-lg">
-                    <h3 class="font-semibold text-green-900">Strongest Topic</h3>
-                    <p class="text-green-800">${bestTopic.topic} (${bestTopic.avg.toFixed(1)}% average)</p>
-                </div>
-                <div class="p-4 bg-yellow-50 rounded-lg">
-                    <h3 class="font-semibold text-yellow-900">Recent Trend</h3>
-                    <p class="text-yellow-800">${
-                        quizzes[quizzes.length - 1].score > avgScore 
-                        ? 'Your latest quiz was above your average!' 
-                        : 'Keep practicing to improve your scores.'
-                    }</p>
+            performanceInsights.innerHTML = `
+                <div class="space-y-4">
+                    <div class="p-4 bg-blue-50 rounded-lg">
+                        <h3 class="font-semibold text-blue-900">Overall Performance</h3>
+                        <p class="text-blue-800">Average score: ${avgScore.toFixed(1)}%</p>
+                    </div>
+                    <div class="p-4 bg-green-50 rounded-lg">
+                        <h3 class="font-semibold text-green-900">Recent Trend</h3>
+                        <p class="text-green-800">${trendAnalysis}</p>
+                    </div>
+                    <div class="p-4 bg-yellow-50 rounded-lg">
+                        <h3 class="font-semibold text-yellow-900">Most Active Topic</h3>
+                        <p class="text-yellow-800">${Object.entries(topicCounts).sort((a,b) => b[1]-a[1])[0][0]}</p>
+                    </div>
                 </div>
             `;
         }
-    </script>
+    });
+</script>
+
+<!-- Add user greeting -->
+<script>
+    // Add user greeting
+const hour = new Date().getHours();
+const greeting = document.getElementById('greeting');
+const userEmail = document.getElementById('userEmail');
+
+if (greeting && userEmail) {
+    let greetingText = '';
+    if (hour < 12) greetingText = 'Good Morning';
+    else if (hour < 18) greetingText = 'Good Afternoon';
+    else greetingText = 'Good Evening';
+    
+    greeting.textContent = `${greetingText}!`;
+    userEmail.textContent = "{{ session['user'] }}";
+}
+</script>
 </body>
 </html>
