@@ -8,7 +8,6 @@ topic_url = "https://www.geeksforgeeks.org/quizzes/computer-organization-and-arc
 # List to hold questions for the current topic
 topic_questions_data = []
 
-# Loop through the first 2 pages for the topic
 for i in range(1, 26): 
     # Construct the page URL
     url = f"{topic_url}?page={i}"
