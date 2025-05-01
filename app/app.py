@@ -2,6 +2,7 @@ import os
 import time
 from datetime import datetime
 import pytz
+import pandas as pd
 from functools import wraps
 from flask import Flask, jsonify, render_template, request, redirect, url_for, session,flash
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -9,6 +10,17 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_session import Session
 from datetime import datetime, timezone, timedelta
 from quiz_flow import generate_quiz_from_pinecone
+from ml_model import train_model, load_model
+
+from transformers import BertTokenizer
+# Initialize the tokenizer
+tokenizer = BertTokenizer.from_pretrained('bert-base-cased')
+import tensorflow as tf
+
+# Load the question classification model
+questionclassification_model = tf.keras.models.load_model("C:/Users/ik/Downloads/questionclassification_model/questionclassification_model")
+
+tokenizer = BertTokenizer.from_pretrained('bert-base-cased')
 
 import smtplib
 from email.mime.text import MIMEText
@@ -24,6 +36,8 @@ import re
 import jwt
 from flask import jsonify
 from langchain_groq import ChatGroq
+from transformers import BertTokenizer
+import tensorflow as tf
 
 # Initialize the ChatGroq LLM
 llm = ChatGroq(
@@ -100,9 +114,42 @@ class QuizHistory(db.Model):
     score = db.Column(db.Float, nullable=False)
     total_questions = db.Column(db.Integer, nullable=False)
     date_taken = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
+    difficulty = db.Column(db.String(50))  # Add this line
+
+class History(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    quiz_history_id = db.Column(db.Integer, db.ForeignKey('quiz_history.id'), nullable=False)
+    topic = db.Column(db.String(200), nullable=False)  # Add this line to store the topic
+    questions = db.Column(JSONB, nullable=False)  # Store all questions as JSON
+    created_at = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
+
 # Session variable to store quiz data
 quiz_data = None
 
+# # Email configuration
+# SMTP_SERVER = "smtp.gmail.com"
+# SMTP_PORT = 465
+# # Fetch email credentials from environment variables
+# EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS")
+# EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
+
+# # Function to send email
+# def send_email(to_email, subject, body):
+#     msg = MIMEText(body)
+#     msg["Subject"] = subject
+#     msg["From"] = EMAIL_ADDRESS
+#     msg["To"] = to_email
+
+#     try:
+#         # Use SMTP_SSL instead of SMTP when using port 465
+#         server = smtplib.SMTP_SSL(SMTP_SERVER, SMTP_PORT)
+#         server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
+#         server.sendmail(EMAIL_ADDRESS, to_email, msg.as_string())
+#         server.quit()
+#         print("Email sent successfully!")
+#     except Exception as e:
+#         print(f"Email sending failed: {str(e)}")
+# send_email("izohaib714@gmail.com", "Test Email", "This is a test email from Python.")
 
 @app.before_request
 def check_user_status():
@@ -238,10 +285,56 @@ def login():
                 return redirect(url_for('dashboard'))
 
         except Exception as e:
-            return render_template('login.html', error=f"{str(e)}")
+            return render_template('login.html', error=f"An unexpected error occurred: {str(e)}")
 
     return render_template('login.html')
 
+# Route for forgot password
+@app.route('/forgot-password', methods=['GET', 'POST'])
+def forgot_password():
+    if request.method == 'POST':
+        email = request.form['email']
+        response = supabase.from_('users').select('id').eq('email', email).execute()
+        if response.data:
+            token = jwt.encode({
+                'email': email,
+                'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)
+            }, app.secret_key, algorithm='HS256')
+            reset_link = url_for('reset_password', token=token, _external=True)
+            send_email(email, 'Password Reset', f'Click the link to reset your password: {reset_link}')
+            flash('Check your email for reset instructions.', 'success')
+        else:
+            flash('Email not found. Please enter a registered email.', 'error')
+    return render_template('forgot_password.html')
+
+# Route for reset password
+@app.route('/reset-password', methods=['GET', 'POST'])
+def reset_password():
+    token = request.args.get('token')
+    if not token:
+        flash('Invalid or expired token.', 'error')
+        return redirect(url_for('forgot_password'))
+
+    try:
+        decoded_token = jwt.decode(token, app.secret_key, algorithms=['HS256'])
+        email = decoded_token['email']
+    except jwt.ExpiredSignatureError:
+        flash('Token has expired.', 'error')
+        return redirect(url_for('forgot_password'))
+    except jwt.InvalidTokenError:
+        flash('Invalid token.', 'error')
+        return redirect(url_for('forgot_password'))
+
+    if request.method == 'POST':
+        new_password = request.form['password']
+        response = supabase.auth.update_user({"email": email, "password": new_password})
+        if response:
+            flash('Password changed successfully! Please go back to login.', 'success')
+            return redirect(url_for('login'))
+        else:
+            flash('Error updating password. Try again.', 'error')
+
+    return render_template('reset_password.html')
 
 # Update the teacher_required decorator if you haven't already
 def teacher_required(f):
@@ -365,6 +458,23 @@ def quiz_api():
         return jsonify({"error": "No quiz data available"})
     return jsonify(quiz_data)
 
+def prepare_data(input_text):
+    token = tokenizer.batch_encode_plus(
+        input_text,
+        max_length=256,
+        truncation=True,
+        padding='max_length',
+        add_special_tokens=True,
+        return_tensors='tf'
+    )
+    return {
+        'input_ids': tf.cast(token['input_ids'], tf.float64),
+        'attention_mask': tf.cast(token['attention_mask'], tf.float64)
+    }
+
+from collections import Counter
+from bert import classify_questions
+
 @app.route('/generate_quiz', methods=['POST'])
 def generate_quiz():
     global quiz_data
@@ -376,9 +486,22 @@ def generate_quiz():
     namespaces = ["computer_organization", "operating_system"]
     
     try:
+        # Generate quiz questions
         quiz_data = generate_quiz_from_pinecone(topic, namespaces, top_k=10, num_questions=num_questions)
         if quiz_data.get("error"):
             return render_template('input.html', error=quiz_data["error"])
+        
+        # Classify the difficulty of each question
+        quiz_data['questions'] = classify_questions(quiz_data['questions'])
+        
+        # Calculate overall difficulty (most common difficulty level)
+        difficulty_counts = Counter([q['difficulty'] for q in quiz_data['questions']])
+        overall_difficulty = max(difficulty_counts, key=difficulty_counts.get)  # Most common difficulty
+        
+        # Add overall difficulty to quiz_data for frontend display
+        quiz_data['overall_difficulty'] = overall_difficulty
+        quiz_data['topic'] = topic
+        
         return redirect(url_for('quiz_page'))
     except Exception as e:
         return render_template('input.html', error=str(e))
@@ -396,30 +519,46 @@ def save_quiz_result():
         if not user:
             return jsonify({"error": "User not found"}), 404
 
-        # Create quiz history with error handling
-        try:
-            quiz_history = QuizHistory(
-                user_id=user.id,
-                topic=data.get('topic', 'Unknown'),  # Default topic if not provided
-                score=float(data.get('score', 0)),  # Convert to float
-                total_questions=int(data.get('total_questions', 0)),  # Convert to int
-                date_taken=datetime.now(timezone.utc)
-            )
-            
-            db.session.add(quiz_history)
-            db.session.commit()
-            
-            print(f"Quiz saved successfully for user {user_email}")  # Debug log
-            return jsonify({"message": "Quiz result saved successfully"})
-            
-        except (ValueError, KeyError) as e:
-            print(f"Error processing quiz data: {str(e)}")  # Debug log
-            return jsonify({"error": "Invalid quiz data"}), 400
-            
+        # Save a single entry in QuizHistory
+        quiz_history = QuizHistory(
+            user_id=user.id,
+            topic=data.get('topic', 'Unknown'),
+            score=float(data.get('score', 0)),
+            total_questions=int(data.get('total_questions', 0)),
+            date_taken=datetime.now(timezone.utc),
+            difficulty=data.get('overall_difficulty', 'Unknown')  # Save overall difficulty
+        )
+        db.session.add(quiz_history)
+        db.session.flush()  # Get the ID of the newly created quiz history
+
+        # Process questions to include status (correct/incorrect)
+        processed_questions = []
+        for question in quiz_data['questions']:
+            selected_answer = question.get('selected_answer', None)
+            is_correct = selected_answer == question.get('correct_answer', None)
+            processed_questions.append({
+                'question_text': question['question_text'],
+                'options': question['options'],
+                'difficulty': question['difficulty'],
+                'selected_answer': selected_answer,
+                'correct_answer': question['correct_answer'],
+                'status': 'correct' if is_correct else 'incorrect'
+            })
+
+        # Save detailed question data in the History table
+        history = History(
+            quiz_history_id=quiz_history.id,
+            topic=data.get('topic', 'Unknown'),  # Save the topic in the History table
+            questions=processed_questions  # Save all questions with status as JSON
+        )
+        db.session.add(history)
+        db.session.commit()
+
+        return jsonify({"message": "Quiz result saved successfully"})
     except Exception as e:
         db.session.rollback()
-        print(f"Error saving quiz result: {str(e)}")  # Debug log
         return jsonify({"error": "Failed to save quiz result"}), 500
+
 # Add these new routes to your existing Flask app
 @app.route('/api/teacher/info')
 def teacher_info():
@@ -785,7 +924,100 @@ def generate_feedback(user_id):
 
     return jsonify({"feedback": feedback})
 
+@app.route('/api/train-weak-topic-model', methods=['POST'])
+def train_weak_topic_model():
+    """Train the weak topic prediction model."""
+    try:
+        # Fetch user performance data
+        quiz_history = QuizHistory.query.all()
+        data = []
+        for entry in quiz_history:
+            data.append({
+                "user_id": entry.user_id,
+                "topic": entry.topic,
+                "score": entry.score
+            })
+
+        # Convert data to DataFrame
+        df = pd.DataFrame(data)
+        if df.empty:
+            return jsonify({"error": "No data available to train the model."}), 400
+
+        # Train the model
+        train_model(df)
+        return jsonify({"message": "Model trained and saved successfully!"})
+    except Exception as e:
+        print(f"Error training model: {str(e)}")
+        return jsonify({"error": "Failed to train the model."}), 500
+
+@app.route('/api/predict-weak-topics', methods=['GET'])
+@teacher_required
+def predict_weak_topics():
+    """Predict weak topics for the class using the trained model."""
+    try:
+        # Load the trained model and label encoder
+        model, label_encoder = load_model()
+
+        # Fetch user performance data
+        quiz_history = QuizHistory.query.all()
+        data = []
+        for entry in quiz_history:
+            data.append({
+                "user_id": entry.user_id,
+                "topic": entry.topic,
+                "score": entry.score
+            })
+
+        # Convert data to DataFrame
+        df = pd.DataFrame(data)
+        if df.empty:
+            return jsonify({"error": "No data available for prediction."}), 400
+
+        # Preprocess data
+        df['topic_encoded'] = label_encoder.transform(df['topic'])
+
+        # Predict weak topics
+        predictions = model.predict(df[['topic_encoded', 'score']])
+        df['is_weak'] = predictions
+
+        # Aggregate weak topics
+        weak_topics = df[df['is_weak'] == 1]['topic'].unique().tolist()
+
+        return jsonify({"weak_topics": weak_topics})
+    except FileNotFoundError:
+        return jsonify({"error": "Model not found. Train the model first."}), 500
+    except Exception as e:
+        print(f"Error predicting weak topics: {str(e)}")
+        return jsonify({"error": "Failed to predict weak topics."}), 500
+    
+
 if __name__ == '__main__':
     with app.app_context():
+        # Ensure all database tables are created
         db.create_all()
+
+        # Automatically train the weak topic model on startup
+        try:
+            # Fetch user performance data
+            quiz_history = QuizHistory.query.all()
+            data = []
+            for entry in quiz_history:
+                data.append({
+                    "user_id": entry.user_id,
+                    "topic": entry.topic,
+                    "score": entry.score
+                })
+
+            # Convert data to DataFrame
+            df = pd.DataFrame(data)
+            if not df.empty:
+                print("🔍 Training weak topic model on startup...")
+                train_model(df)
+                print("✅ Weak topic model trained successfully!")
+            else:
+                print("❌ No data available to train the weak topic model on startup.")
+        except Exception as e:
+            print(f"❌ Error training weak topic model on startup: {str(e)}")
+
+    # Start the Flask application
     app.run(host='0.0.0.0', port=5000, debug=True)
