@@ -103,30 +103,6 @@ class QuizHistory(db.Model):
 # Session variable to store quiz data
 quiz_data = None
 
-# # Email configuration
-# SMTP_SERVER = "smtp.gmail.com"
-# SMTP_PORT = 465
-# # Fetch email credentials from environment variables
-# EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS")
-# EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
-
-# # Function to send email
-# def send_email(to_email, subject, body):
-#     msg = MIMEText(body)
-#     msg["Subject"] = subject
-#     msg["From"] = EMAIL_ADDRESS
-#     msg["To"] = to_email
-
-#     try:
-#         # Use SMTP_SSL instead of SMTP when using port 465
-#         server = smtplib.SMTP_SSL(SMTP_SERVER, SMTP_PORT)
-#         server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
-#         server.sendmail(EMAIL_ADDRESS, to_email, msg.as_string())
-#         server.quit()
-#         print("Email sent successfully!")
-#     except Exception as e:
-#         print(f"Email sending failed: {str(e)}")
-# send_email("izohaib714@gmail.com", "Test Email", "This is a test email from Python.")
 
 @app.before_request
 def check_user_status():
@@ -262,56 +238,10 @@ def login():
                 return redirect(url_for('dashboard'))
 
         except Exception as e:
-            return render_template('login.html', error=f"An unexpected error occurred: {str(e)}")
+            return render_template('login.html', error=f"{str(e)}")
 
     return render_template('login.html')
 
-# Route for forgot password
-@app.route('/forgot-password', methods=['GET', 'POST'])
-def forgot_password():
-    if request.method == 'POST':
-        email = request.form['email']
-        response = supabase.from_('users').select('id').eq('email', email).execute()
-        if response.data:
-            token = jwt.encode({
-                'email': email,
-                'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)
-            }, app.secret_key, algorithm='HS256')
-            reset_link = url_for('reset_password', token=token, _external=True)
-            send_email(email, 'Password Reset', f'Click the link to reset your password: {reset_link}')
-            flash('Check your email for reset instructions.', 'success')
-        else:
-            flash('Email not found. Please enter a registered email.', 'error')
-    return render_template('forgot_password.html')
-
-# Route for reset password
-@app.route('/reset-password', methods=['GET', 'POST'])
-def reset_password():
-    token = request.args.get('token')
-    if not token:
-        flash('Invalid or expired token.', 'error')
-        return redirect(url_for('forgot_password'))
-
-    try:
-        decoded_token = jwt.decode(token, app.secret_key, algorithms=['HS256'])
-        email = decoded_token['email']
-    except jwt.ExpiredSignatureError:
-        flash('Token has expired.', 'error')
-        return redirect(url_for('forgot_password'))
-    except jwt.InvalidTokenError:
-        flash('Invalid token.', 'error')
-        return redirect(url_for('forgot_password'))
-
-    if request.method == 'POST':
-        new_password = request.form['password']
-        response = supabase.auth.update_user({"email": email, "password": new_password})
-        if response:
-            flash('Password changed successfully! Please go back to login.', 'success')
-            return redirect(url_for('login'))
-        else:
-            flash('Error updating password. Try again.', 'error')
-
-    return render_template('reset_password.html')
 
 # Update the teacher_required decorator if you haven't already
 def teacher_required(f):
