@@ -207,6 +207,19 @@
             </div>
         </div>
 
+        <!-- Weak Topics -->
+        <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 mb-8">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-semibold text-gray-800">Weak Topics</h2>
+                <button onclick="fetchWeakTopics()" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                    Refresh
+                </button>
+            </div>
+            <ul id="weakTopicsList" class="list-disc pl-5 text-gray-700">
+                <!-- Weak topics will be dynamically populated here -->
+            </ul>
+        </div>
+
         <!-- Student Performance Insights -->
         <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
             <div class="flex justify-between items-center mb-4">
