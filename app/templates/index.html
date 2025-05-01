@@ -213,7 +213,7 @@
             questionDiv.className = 'question-card bg-white rounded-lg shadow-md p-6';
             questionDiv.innerHTML = `
                 <div class="mb-4">
-                    <h3 class="text-xl font-semibold mb-2">Question ${index + 1}</h3>
+                    <h3 class="text-xl font-semibold mb-2">Question ${index + 1} (${question.difficulty})</h3>
                     <p class="text-gray-800">${question.question_text}</p>
                     ${question.question_img_link && question.question_img_link !== 'No image available' 
                         ? `<img src="${question.question_img_link}" alt="Question Image" class="mt-4 max-w-full h-auto">` 
