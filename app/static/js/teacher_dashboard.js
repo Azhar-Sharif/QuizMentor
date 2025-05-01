@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadRecentAssignments();
     loadStudentPerformance();
     setupEventListeners();
+    fetchWeakTopics();
 
     // Desktop dropdown toggle
     const profileDropdown = document.getElementById('profileDropdown');
@@ -180,3 +181,30 @@ async function filterPerformance() {
 function viewAssignment(id) {
     window.location.href = `/teacher/assignment/${id}`;
 }
+
+function fetchWeakTopics() {
+    const weakTopicsList = document.getElementById('weakTopicsList');
+    weakTopicsList.innerHTML = '<li>Loading...</li>'; // Show loading state
+
+    fetch('/api/predict-weak-topics')
+        .then(response => response.json())
+        .then(data => {
+            weakTopicsList.innerHTML = ''; // Clear the list
+            if (data.weak_topics && data.weak_topics.length > 0) {
+                data.weak_topics.forEach(topic => {
+                    const li = document.createElement('li');
+                    li.textContent = topic;
+                    weakTopicsList.appendChild(li);
+                });
+            } else {
+                weakTopicsList.innerHTML = '<li>No weak topics found.</li>';
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching weak topics:', error);
+            weakTopicsList.innerHTML = '<li>Error fetching weak topics. Please try again later.</li>';
+        });
+}
+
+// Automatically fetch weak topics when the page loads
+document.addEventListener('DOMContentLoaded', fetchWeakTopics);
